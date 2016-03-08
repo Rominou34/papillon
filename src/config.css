@@ -8,7 +8,7 @@
   --font-title: Verdana;
   --font-header: Impact;
 
-  --font-size-default: 20px;
+  --font-size-default: 18px;
   --font-size-big: calc(1.5 * var(--font-size-default));
   --font-size-bigger: calc(2* var(--font-size-default));
   --font-size-huge: calc(2.5 * var(--font-size-default));
@@ -60,6 +60,11 @@
   --red-dark: #822117;
   --red-darker: #49120d;
 
+  /********** SIZES **********/
 
+  --body-width: 1300px;
+  --main-width: 1024px;
+  --aside-width: 250px;
+  --nav-width: 100%;
 
 }

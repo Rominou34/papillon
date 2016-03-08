@@ -1,13 +1,23 @@
 /*************** CSS INITIALIZATION ***************/
 
-html, body {
+html {
   width: 100%;
   min-height: 100%;
-  font-family: var(--font-default);
   background-color: #fff;
 }
 
-html, body, p, div, article, h1, h2, h3, h4, h5, h6 {
+body {
+  font-family: var(--font-default);
+  background-color: var(--blue-subtle);
+  font-size: var(--font-size-default);
+  width: 100%;
+  max-width: var(--body-width);
+  display: block;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+html, p, div, article, h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   padding: 0px;
 }
@@ -18,8 +28,31 @@ html, body, p, div, article, h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
+/*----- ATTRIBUTES -----*/
+
 .hidden, [hidden] {
   display: none !important;
+}
+
+[text-justify] {
+  text-align: justify !important;
+}
+
+[text-right] {
+  text-align: right !important;
+}
+
+[text-center] {
+  text-align: center !important;
+}
+
+[fullwidth] {
+  display: block;
+  width: 100vw !important;
+}
+
+[fullheight] {
+  height: 100vh !important;
 }
 
 /*************** ELEMENT DEFAULT RULES ***************/
@@ -47,7 +80,22 @@ a:visited {
 
 article {
   padding: 1%;
+  width: 90%;
+  margin: 1% auto;
 }
+
+/***** ASIDE *****/
+
+aside {
+  display: inline-block;
+  width: 100%;
+  max-width: var(--aside-width);
+  margin: 1% auto;
+}
+
+/****
+* B *
+****/
 
 /***** HEADER *****/
 
@@ -89,4 +137,12 @@ h5 {
 
 h6 {
   font-size: var(--font-size-smaller);
+}
+
+/***** MAIN *****/
+
+main {
+  display: inline-block;
+  width: 100%;
+  max-width: var(--main-width);
 }

@@ -11,5 +11,6 @@ overridden ) */
 @import url(buttons.css);
 /* We import the classes for the menus */
 @import url(menus.css);
+@import url(mobile.css);
 /* We import the animations */
 @import url(animations.css);

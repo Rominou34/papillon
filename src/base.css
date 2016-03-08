@@ -1,0 +1,8 @@
+.first-letter-spacing::first-letter {
+  padding-left: 5%;
+}
+
+.first-letter-big::first-letter {
+  line-height: 0.5;
+  font-size: 200%;
+}
