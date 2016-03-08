@@ -11,6 +11,8 @@ overridden ) */
 @import url(forms.css);
 /* We import the classes for the buttons */
 @import url(buttons.css);
+/* We import the layout for grids and columns */
+@import url(grids.css);
 /* We import the classes for the menus */
 @import url(menus.css);
 /* We import the file adapting some things to mobile with media queries */

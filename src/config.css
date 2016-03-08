@@ -7,6 +7,7 @@
   --font-third: "Times New Roman";
   --font-title: Verdana;
   --font-header: Impact;
+  --font-code: "Courier New";
 
   --font-size-default: 18px;
   --font-size-big: calc(1.5 * var(--font-size-default));

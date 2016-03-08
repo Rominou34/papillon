@@ -135,6 +135,27 @@ blockquote p {
   display: inline;
 }
 
+/****
+* C *
+****/
+
+/***** CAPTION *****/
+
+caption {
+  width: 100%;
+  text-align: center;
+}
+
+/***** CODE *****/
+
+code {
+  background-color: var(--white-default);
+  font-family: var(--font-code);
+  border: 1px solid var(--grey-light);
+  border-radius: 0.2em;
+  padding: 0em 0.25em;
+}
+
 /***** HEADER *****/
 
 header {
