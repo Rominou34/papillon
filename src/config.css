@@ -14,7 +14,7 @@
   --font-size-huge: calc(2.5 * var(--font-size-default));
   --font-size-small: calc(0.8 * var(--font-size-default));
   --font-size-smaller: calc(0.5 * var(--font-size-default));
-  --font-size-header: 8vw;
+  --font-size-header: 12vw;
 
   /********** COLORS **********/
 
