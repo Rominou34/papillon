@@ -1,12 +1,15 @@
 /* First we import the values of the variables */
 @import url(config.css);
-/* Then we initialize the default values ( must be done first so they can be
+/* Then we initialize the default values ( must be imported first so they can be
 overridden ) */
 @import url(init.css);
-/* We import the base rules */
+/* We import the base classes */
 @import url(base.css);
+/* We import the classes for the forms */
 @import url(forms.css);
+/* We import the classes for the buttons */
 @import url(buttons.css);
+/* We import the classes for the menus */
 @import url(menus.css);
-@import url(classes.css);
+/* We import the animations */
 @import url(animations.css);
