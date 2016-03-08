@@ -1,0 +1,92 @@
+/*************** CSS INITIALIZATION ***************/
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--font-default);
+  background-color: #fff;
+}
+
+html, body, p, div, article, h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hidden, [hidden] {
+  display: none !important;
+}
+
+/*************** ELEMENT DEFAULT RULES ***************/
+
+/****
+* A *
+****/
+
+/***** LINKS *****/
+
+a {
+  text-decoration: none;
+  color: var(--blue-default);
+}
+
+a:hover, a:visited:hover {
+  color: var(--blue-light);
+}
+
+a:visited {
+  color: var(--blue-dark);
+}
+
+/***** ARTICLES *****/
+
+article {
+  padding: 1%;
+}
+
+/***** HEADER *****/
+
+header {
+  font-size: var(--font-size-header);
+  font-family: var(--font-header);
+  width: 100%;
+  text-align: center;
+}
+
+/***** H1, H1, H2, H3, H4, H5, H6 *****/
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--blue-default);
+  font-family: var(--font-title);
+  line-height: 2;
+  padding-left: 2%;
+}
+
+h1 {
+  font-size: var(--font-size-huge);
+}
+
+h2 {
+  font-size: var(--font-size-bigger);
+}
+
+h3 {
+  font-size: var(--font-size-big);
+}
+
+h4 {
+  font-size: var(--font-size-default);
+}
+
+h5 {
+  font-size: var(--font-size-small);
+}
+
+h6 {
+  font-size: var(--font-size-smaller);
+}

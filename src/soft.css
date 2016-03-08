@@ -1,27 +1,12 @@
+/* First we import the values of the variables */
 @import url(config.css);
+/* Then we initialize the default values ( must be done first so they can be
+overridden ) */
+@import url(init.css);
+/* We import the base rules */
+@import url(base.css);
+@import url(forms.css);
+@import url(buttons.css);
+@import url(menus.css);
 @import url(classes.css);
 @import url(animations.css);
-
-/***** CSS INITIALIZATION *****/
-
-html, body {
-  width: 100%;
-  min-height: 100%;
-  font-family: var(--font-default);
-  background-color: #fff;
-}
-
-html, body, p, div, article, h1, h2, h3, h4, h5, h6 {
-  margin: 0px;
-  padding: 0px;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.hidden, [hidden] {
-  display: none !important;
-}
