@@ -10,8 +10,8 @@ Soft Style is a CSS Framework based on CSS variables, allowing you to develop yo
 
 ## Installation
 
-You don't need to clone the whole repository, just the `stylesheets` folder. The `style.css` stylesheet automatically imports the `config.css` and the `classes.css` so there is no need to import all the files. Just copy the files inside your css / stylesheets folder, and do a basic stylesheet link:
+You don't need to clone the whole repository, just the `src` folder. The `soft.css` stylesheet automatically imports all the files so there is no need to import them all in your HTML. Just copy the files inside your css / stylesheets folder, and do a basic stylesheet link:
 
-`<link rel="stylesheet" type="text/css" href="stylesheets/style.css">`
+`<link rel="stylesheet" type="text/css" href="css/soft.css">`
 
-**To learn about the role of each `.css` file, read the corresponding doc in the `/doc` folder**
+**To learn about the role of each `.css` file, read the corresponding doc in the `/doc/files` folder**
