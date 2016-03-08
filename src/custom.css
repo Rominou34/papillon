@@ -1,17 +1,61 @@
 soft-popup {
+  box-sizing: border-box;
+}
+
+/***** SOFT POPUPS *****/
+soft-popup {
   position: fixed;
   width: 80%;
   max-width: 800px;
   height: 50%;
   max-height: 400px;
-  background-color: #fff;
-  border: 1px solid var(--blue-dark);
   border-radius: 8px;
   -webkit-border-radius: 8px;
-  padding: 5%;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin: auto;
+  text-align: center;
+}
+
+soft-popup span:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--font-size-big);
+  line-height: 2;
+  width: 100%;
+  display: block;
+}
+
+soft-popup::after {
+  display: block;
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+  text-align: center;
+  content: "Click on this message to hide it";
+  font-size: var(--font-size-small);
+}
+soft-popup[success] {
+  background-color: var(--green-subtle);
+  border: 2px solid var(--green-dark);
+  color: var(--green-darker);
+}
+
+soft-popup[notif] {
+  background-color: var(--blue-subtle);
+  border: 2px solid var(--blue-dark);
+  color: var(--blue-darker);
+}
+
+soft-popup[warning] {
+  background-color: var(--yellow-subtle);
+  border: 2px solid var(--yellow-dark);
+  color: var(--yellow-darker);
+}
+
+soft-popup[alert] {
+  background-color: var(--red-subtle);
+  border: 2px solid var(--red-dark);
+  color: var(--red-darker);
 }

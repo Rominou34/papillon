@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: var(--font-default);
-  background-color: var(--blue-subtle);
+  background-color: var(--white-default);
   font-size: var(--font-size-default);
   line-height: 1.2;
   width: 100%;
