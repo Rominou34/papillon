@@ -14,6 +14,7 @@ You don't need to clone the whole repository, just the `src` folder. The `soft.c
 
 ```html
 <link rel="stylesheet" type="text/css" href="src/soft.css">
-<script src="src/soft.js"></script>```
+<script src="src/soft.js"></script>
+```
 
 **To learn about the role of each `.css` file, read the corresponding doc in the `/doc/files` folder**
