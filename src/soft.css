@@ -1,21 +1,33 @@
 /* We reset all the rules so it looks the same for all browsers */
 @import url(reset.css);
+
 /* First we import the values of the variables */
 @import url(config.css);
+
 /* Then we initialize the default values ( must be imported first so they can be
 overridden ) */
 @import url(init.css);
+
 /* We import the base classes */
 @import url(base.css);
+
 /* We import the classes for the forms */
 @import url(forms.css);
+
 /* We import the classes for the buttons */
 @import url(buttons.css);
+
 /* We import the layout for grids and columns */
 @import url(grids.css);
+
 /* We import the classes for the menus */
 @import url(menus.css);
+
+/* We import the custom elements */
+@import url(custom.css);
+
 /* We import the file adapting some things to mobile with media queries */
 @import url(mobile.css);
+
 /* We import the animations */
 @import url(animations.css);
