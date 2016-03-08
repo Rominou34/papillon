@@ -1,0 +1,17 @@
+soft-popup {
+  position: fixed;
+  width: 80%;
+  max-width: 800px;
+  height: 50%;
+  max-height: 400px;
+  background-color: #fff;
+  border: 1px solid var(--blue-dark);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 5%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}

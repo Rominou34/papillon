@@ -7,14 +7,15 @@
   --font-third: "Times New Roman";
   --font-title: Verdana;
   --font-header: Impact;
+  --font-code: "Courier New";
 
-  --font-size-default: 20px;
+  --font-size-default: 18px;
   --font-size-big: calc(1.5 * var(--font-size-default));
   --font-size-bigger: calc(2* var(--font-size-default));
   --font-size-huge: calc(2.5 * var(--font-size-default));
   --font-size-small: calc(0.8 * var(--font-size-default));
   --font-size-smaller: calc(0.5 * var(--font-size-default));
-  --font-size-header: 8vw;
+  --font-size-header: 12vw;
 
   /********** COLORS **********/
 
@@ -60,6 +61,30 @@
   --red-dark: #822117;
   --red-darker: #49120d;
 
+  /* YELLOW */
+  --yellow-subtle: #edeccc;
+  --yellow-lighter: #e6e066;
+  --yellow-light: #e3dc44;
+  --yellow-default: #d4cc21;
+  --yellow-dark: #b5a11d;
+  --yellow-darker: #a48a19;
 
 
+
+
+  /*** OTHERS ***/
+  --color-brown: #79461c;
+  --color-orange: #ed6d1b;
+  --color-gold: #d6aa27;
+  --color-yellow: #e8e62a;
+  --color-yellow-dark: #d4cc21;
+  --color-pink: #de557a;
+  --color-purple: #a52fe4;
+  --color-cyan: #36c7e0;
+  /********** SIZES **********/
+
+  --body-width: 1300px;
+  --main-width: 1024px;
+  --aside-width: 250px;
+  --nav-width: 100%;
 }
