@@ -1,0 +1,66 @@
+button {
+  padding: 1em;
+  border: 2px solid var(--grey-default);
+  border-radius: 0.8em;
+  -webkit-borde-radius: 0.5em;
+  text-shadow: 0px 0px 4px #464646;
+  margin: 0.5em;
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  outline: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button.green, button.blue, button.red, button.yellow, button.black {
+  color: var(--white-default);
+}
+
+/* GREEN */
+button.green {
+  background-color: var(--green-default);
+  border-color: var(--green-dark);
+}
+button.green:hover { background-color: var(--green-dark); }
+button.green:active { background-color: var(--green-darker); border-color: var(--green-darker); }
+
+/* BLUE */
+button.blue {
+  background-color: var(--blue-default);
+  border-color: var(--blue-dark);
+}
+button.blue:hover { background-color: var(--blue-dark); }
+button.blue:active { background-color: var(--blue-darker); border-color: var(--blue-darker); }
+
+/* RED */
+button.red {
+  background-color: var(--red-default);
+  border-color: var(--red-dark);
+}
+button.red:hover { background-color: var(--red-dark); }
+button.red:active { background-color: var(--red-darker); border-color: var(--red-darker); }
+
+/* YELLOW */
+button.yellow {
+  background-color: var(--yellow-default);
+  border-color: var(--yellow-dark);
+}
+button.yellow:hover { background-color: var(--yellow-dark); }
+button.yellow:active { background-color: var(--yellow-darker); border-color: var(--yellow-darker); }
+
+/* BLACK */
+button.black {
+  background-color: var(--black-lighter);
+  border-color: var(--black-default);
+}
+button.black:hover { background-color: var(--black-default); }
+button.black:active { background-color: var(--black-dark); border-color: var(--black-dark); }
