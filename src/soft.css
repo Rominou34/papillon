@@ -1,0 +1,27 @@
+@import url(config.css);
+@import url(classes.css);
+@import url(animations.css);
+
+/***** CSS INITIALIZATION *****/
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  font-family: var(--font-default);
+  background-color: #fff;
+}
+
+html, body, p, div, article, h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.hidden, [hidden] {
+  display: none !important;
+}
