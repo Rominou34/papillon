@@ -18,3 +18,9 @@ You don't need to clone the whole repository, just the `src` folder. The `soft.c
 ```
 
 **To learn about the role of each `.css` file, read the corresponding doc in the `/doc/files` folder**
+
+## Documentation
+
+You can find the documentation for the framework in the `doc/` folder. The `global.md` file acts as a global documentation explaining how to use the framework, while the files in the `files` folder each explain the role of the corresponding files in the `src` folder.
+
+You will want to read `global.md` to learn how to use the framework and all its functions, and learn the doc for the files only if you want to customize the files and to adapt the framework to your needs ( which is the point of it )
