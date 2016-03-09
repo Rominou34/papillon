@@ -3,6 +3,15 @@ soft-popup {
 }
 
 /***** SOFT POPUPS *****/
+soft-popup-mask {
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
 soft-popup {
   z-index: 5;
   position: fixed;
@@ -10,18 +19,17 @@ soft-popup {
   max-width: 800px;
   height: 50%;
   max-height: 400px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin: auto;
   text-align: center;
-  background-color: var(--white-dark);
-  border: 2px solid var(--grey-dark);
+  background-color: var(--white-light);
   color: var(--black-default);
+  box-shadow: 0px 4px 16px 0px #252525;
   vertical-align: middle;
+  overflow: hidden;
 }
 
 soft-popup div {
@@ -42,43 +50,33 @@ soft-popup span:nth-child(1) {
   line-height: 2;
   width: 100%;
   display: block;
+  color: var(--white-light);
+  box-shadow: 0px -2px 16px 2px #121212;
+  background-color: var(--grey-default);
+  border-bottom: 2px solid var(--grey-dark);
 }
 
-soft-popup:hover {
-  cursor: pointer;
+soft-popup button {
+  position: relative;
+  bottom: 2em;
 }
 
-soft-popup::after {
-  display: block;
-  position: absolute;
-  bottom: 2%;
-  width: 100%;
-  text-align: center;
-  content: "Click on this message to hide it";
-  font-size: var(--font-size-small);
-  color: var(--grey-default);
+soft-popup[success] span:nth-child(1) {
+  background-color: var(--green-default);
+  border-color: var(--green-dark);
 }
 
-soft-popup[success] {
-  background-color: var(--green-subtle);
-  border: 2px solid var(--green-dark);
-  color: var(--green-darker);
+soft-popup[info] span:nth-child(1) {
+  background-color: var(--blue-default);
+  border-color: var(--blue-dark);
 }
 
-soft-popup[info] {
-  background-color: var(--blue-subtle);
-  border: 2px solid var(--blue-dark);
-  color: var(--blue-darker);
+soft-popup[warning] span:nth-child(1) {
+  background-color: var(--yellow-default);
+  border-color: var(--yellow-dark);
 }
 
-soft-popup[warning] {
-  background-color: var(--yellow-subtle);
-  border: 2px solid var(--yellow-dark);
-  color: var(--yellow-darker);
-}
-
-soft-popup[alert] {
-  background-color: var(--red-subtle);
-  border: 2px solid var(--red-dark);
-  color: var(--red-darker);
+soft-popup[alert] span:nth-child(1) {
+  background-color: var(--red-default);
+  border-color: var(--red-dark);
 }

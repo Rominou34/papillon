@@ -21,6 +21,7 @@ button:active {
   outline: 0;
   transition: all 0.1s;
   -webkit-transition: all 0.1s;
+  box-shadow: none;
 }
 
 button:focus {
