@@ -4,6 +4,7 @@ soft-popup {
 
 /***** SOFT POPUPS *****/
 soft-popup {
+  z-index: 5;
   position: fixed;
   width: 80%;
   max-width: 800px;
@@ -17,6 +18,9 @@ soft-popup {
   right: 0px;
   margin: auto;
   text-align: center;
+  background-color: var(--white-dark);
+  border: 2px solid var(--grey-dark);
+  color: var(--black-default);
 }
 
 soft-popup span:nth-child(1) {
