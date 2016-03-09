@@ -21,6 +21,19 @@ soft-popup {
   background-color: var(--white-dark);
   border: 2px solid var(--grey-dark);
   color: var(--black-default);
+  vertical-align: middle;
+}
+
+soft-popup div {
+  width: 100%;
+  height: calc(100% - 5 * var(--font-size-default));
+  display: table;
+}
+
+soft-popup p {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 soft-popup span:nth-child(1) {
@@ -39,7 +52,9 @@ soft-popup::after {
   text-align: center;
   content: "Click on this message to hide it";
   font-size: var(--font-size-small);
+  color: var(--grey-default);
 }
+
 soft-popup[success] {
   background-color: var(--green-subtle);
   border: 2px solid var(--green-dark);

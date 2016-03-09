@@ -9,11 +9,20 @@ head.appendChild(link);
 
 var popup = document.registerElement('soft-popup');
 
+/*
+* This function is the constructor to display <soft-popup> notifications
+* param is an array that looks like this:
+* param =
+* ["alert-type" ( defaults are success, info, warning and alert ),
+* "Header message" ( the message displayed in bold at the top ),
+* "Message" ( the message displayed )]
+*/
 var softPopup = function(param) {
   // Creating the element
   var softpopup = new popup();
   // Adding the text inside the element
-  softpopup.innerHTML = "<span>" + param[1] + "</span>" + param[2];
+  softpopup.innerHTML = "<span>" + param[1] + "</span>"+
+  "<div><p>" + param[2] + "</p></div>";
   try {
     softpopup.setAttribute(param[0], "");
   } catch(err) {
