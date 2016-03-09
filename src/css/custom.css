@@ -44,6 +44,10 @@ soft-popup span:nth-child(1) {
   display: block;
 }
 
+soft-popup:hover {
+  cursor: pointer;
+}
+
 soft-popup::after {
   display: block;
   position: absolute;

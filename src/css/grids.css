@@ -1,21 +1,23 @@
 .soft-columns {
   display: flex;
   box-sizing: border-box;
-  align-items: flex-stretch;
-  margin: 5px;
+  align-items: stretch;
   justify-content: space-between;
 }
 
 .soft-columns * {
   box-sizing: border-box;
+  text-align: inherit;
 }
 
 .soft-columns .soft-columns {
-  margin: 0px 4px;
+  margin: 0px;
+  height: auto;
 }
 
-.soft-columns *:not(.soft-columns) {
+.soft-columns div:not(.soft-columns) {
   background-color: var(--blue-lighter);
+  padding: 4px;
   margin: 4px;
 }
 
@@ -34,10 +36,10 @@
 
 /* MOBILE SCREENS */
 @media screen and (max-width: 1024px) {
-  .soft-columns:not([force-hor]) {
+  .soft-columns:not(.force-hor) {
     display: block;
   }
-  .soft-columns:not([force-hor]) * {
+  .soft-columns:not(.force-hor) * {
     display: block;
   }
 }

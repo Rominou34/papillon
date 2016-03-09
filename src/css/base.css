@@ -6,3 +6,44 @@
   line-height: 0.5;
   font-size: 200%;
 }
+
+.hidden, [hidden] {
+  display: none !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.fullWidth {
+  width: 100% !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.fullHeight {
+  height: 100% !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.fullScreenW {
+  display: block;
+  width: 100vw !important;
+}
+
+.fullScreenH {
+  height: 100vh !important;
+}

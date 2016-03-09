@@ -55,9 +55,7 @@ a:visited {
 /***** ARTICLES *****/
 
 article {
-  padding: 1%;
-  width: 90%;
-  margin: 1% auto;
+  display: inline-block;
 }
 
 /***** ASIDE *****/
@@ -102,6 +100,23 @@ blockquote p {
   display: inline;
 }
 
+blockquote footer {
+  font-size: var(--font-size-small);
+  color: var(--grey-default);
+  margin-top: 0.5em;
+}
+
+blockquote cite {
+  font-style: italic;
+}
+blockquote:not([reverse]) footer::before {
+  content: '- ';
+}
+
+blockquote[reverse] footer::after {
+  content: ' -';
+}
+
 /****
 * C *
 ****/
@@ -122,6 +137,14 @@ code {
   padding: 0em 0.2em;
 }
 
+/****
+* D *
+****/
+
+div {
+  display: block;
+}
+
 /***** HEADER *****/
 
 header {
@@ -137,7 +160,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--blue-dark);
   font-family: var(--font-title);
   line-height: 2;
-  padding-left: 2%;
 }
 
 h1 {
