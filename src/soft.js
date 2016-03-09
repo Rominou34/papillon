@@ -1,3 +1,11 @@
+var head  = document.getElementsByTagName('head')[0];
+var link  = document.createElement('link');
+link.rel  = 'stylesheet';
+link.type = 'text/css';
+link.href = '../src/css/soft.css';
+link.media = 'all';
+head.appendChild(link);
+
 var popup = document.registerElement('soft-popup');
 
 var softPopup = function(param) {
