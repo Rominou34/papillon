@@ -3,14 +3,19 @@
 
 /* First we import the values of the variables */
 @import url(config.css);
+
 /* We import the custom attributes */
 @import url(attributes.css);
+
 /* Then we initialize the default values ( must be imported first so they can be
 overridden ) */
 @import url(init.css);
 
 /* We import the base classes */
 @import url(base.css);
+
+/* We import the files for the tables */
+@import url(tables.css);
 
 /* We import the classes for the forms */
 @import url(forms.css);

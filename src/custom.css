@@ -46,7 +46,7 @@ soft-popup[success] {
   color: var(--green-darker);
 }
 
-soft-popup[notif] {
+soft-popup[info] {
   background-color: var(--blue-subtle);
   border: 2px solid var(--blue-dark);
   color: var(--blue-darker);

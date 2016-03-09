@@ -1,26 +1,31 @@
 button {
   padding: 1em;
   border: 0px solid var(--grey-default);
-  border-radius: 0.4em;
-  -webkit-border-radius: 0.4em;
+  border-radius: 0.15em;
+  -webkit-border-radius: 0.15em;
   text-shadow: 0px 0px 3px #464646;
   margin: 0.5em;
   font-family: var(--font-family-default);
   font-size: var(--font-size-default);
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s;
 }
 
 button:hover {
   cursor: pointer;
+  box-shadow: 0px 2px 5px -2px #454545;
+  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
 }
 
 button:active {
   outline: 0;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
 }
 
 button:focus {
   outline: 0;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
 }
 
 button.green, button.blue, button.red, button.yellow, button.black {
@@ -28,36 +33,26 @@ button.green, button.blue, button.red, button.yellow, button.black {
 }
 
 /* GREEN */
-button.green {
-  background-color: var(--green-default);
-  border-color: var(--green-dark);
-}
+button.green { background-color: var(--green-default); }
+button.green:hover { background-color: var(--green-light); }
 button.green:active { background-color: var(--green-dark); }
 
 /* BLUE */
-button.blue {
-  background-color: var(--blue-default);
-  border-color: var(--blue-dark);
-}
+button.blue { background-color: var(--blue-default); }
+button.blue:hover { background-color: var(--blue-light); }
 button.blue:active { background-color: var(--blue-dark); }
 
 /* RED */
-button.red {
-  background-color: var(--red-default);
-  border-color: var(--red-dark);
-}
+button.red { background-color: var(--red-default); }
+button.red:hover { background-color: var(--red-light); }
 button.red:active { background-color: var(--red-dark); }
 
 /* YELLOW */
-button.yellow {
-  background-color: var(--yellow-default);
-  border-color: var(--yellow-dark);
-}
+button.yellow { background-color: var(--yellow-default); }
+button.yellow:hover { background-color: var(--yellow-light); }
 button.yellow:active { background-color: var(--yellow-dark); }
 
 /* BLACK */
-button.black {
-  background-color: var(--black-lighter);
-  border-color: var(--black-default);
-}
+button.black { background-color: var(--black-light); }
+button.black:hover { background-color: var(--black-lighter); }
 button.black:active { background-color: var(--black-default); }
