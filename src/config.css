@@ -9,13 +9,15 @@
   --font-header: Impact;
   --font-code: "Courier New";
 
-  --font-size-default: 18px;
+  --font-size-default: 16px;
   --font-size-big: calc(1.5 * var(--font-size-default));
   --font-size-bigger: calc(2* var(--font-size-default));
   --font-size-huge: calc(2.5 * var(--font-size-default));
   --font-size-small: calc(0.8 * var(--font-size-default));
   --font-size-smaller: calc(0.5 * var(--font-size-default));
   --font-size-header: 12vw;
+
+  --line-height: 1.4;
 
   /********** COLORS **********/
 

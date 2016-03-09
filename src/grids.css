@@ -1,10 +1,22 @@
 .soft-columns {
-  display: flex
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-stretch;
+  margin: 5px;
+  justify-content: space-between;
 }
 
 .soft-columns * {
   box-sizing: border-box;
-  border: 1px solid #000;
+}
+
+.soft-columns .soft-columns {
+  margin: 0px 4px;
+}
+
+.soft-columns *:not(.soft-columns) {
+  background-color: var(--blue-lighter);
+  margin: 4px;
 }
 
 .col-1 { flex: 1 0; }
@@ -27,6 +39,5 @@
   }
   .soft-columns:not([force-hor]) * {
     display: block;
-    width: 100%;
   }
 }
