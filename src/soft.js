@@ -2,6 +2,7 @@ var head  = document.getElementsByTagName('head')[0];
 var link  = document.createElement('link');
 link.rel  = 'stylesheet';
 link.type = 'text/css';
+// This path is FROM THE HTML file and not the JS one
 link.href = '../src/css/soft.css';
 link.media = 'all';
 head.appendChild(link);
