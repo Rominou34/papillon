@@ -39,11 +39,8 @@
   margin-bottom: 0px !important;
 }
 
-.fullScreenW {
-  display: block;
-  width: 100vw !important;
-}
-
 .fullScreenH {
   height: 100vh !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }

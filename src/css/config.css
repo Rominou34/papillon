@@ -6,7 +6,7 @@
   --font-second: Impact;
   --font-third: "Times New Roman";
   --font-title: Verdana;
-  --font-header: Impact;
+  --font-header: Ubuntu;
   --font-code: "Courier New";
 
   --font-size-default: 16px;
@@ -43,23 +43,23 @@
   --blue-subtle: #d3e2f4;
   --blue-lighter: #7bb9e2;
   --blue-light: #51a6de;
-  --blue-default: #2a70c3;
+  --blue-default: #2a70ff;
   --blue-dark: #194082;
   --blue-darker: #0f2849;
 
   /* GREEN */
   --green-subtle: #d1f4da;
   --green-lighter: #74e290;
-  --green-light: #3fde67;
-  --green-default: #1cc346;
+  --green-light: #50de44;
+  --green-default: #44b434;
   --green-dark: #198233;
   --green-darker: #0b491a;
 
   /* RED */
   --red-subtle: #f4d8d5;
   --red-lighter: #e28d85;
-  --red-light: #de5143;
-  --red-default: #c32e1e;
+  --red-light: #de6054;
+  --red-default: #c61b19;
   --red-dark: #822117;
   --red-darker: #49120d;
 
@@ -88,11 +88,13 @@
   --bg-color-html: #fff;
   --bg-color-body: var(--white-default);
   --bg-color-main: var(--blue-subtle);
+  --bg-color-aside: var(--red-subtle);
   --bg-color-footer: var(--blue-darker);
   --bg-color-nav: var(--blue-default);
 
   --font-color-text: var(--black-default);
   --font-color-title: var(--blue-darker);
+  --font-color-footer: var(--white-dark);
 
   --font-color-link: var(--blue-default);
   --font-color-link-h: var(--blue-light);
