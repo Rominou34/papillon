@@ -99,7 +99,7 @@
   --font-color-link-v: var(--color-purple);
   /********** SIZES **********/
 
-  --body-width: 1300px;
+  --body-width: 100%;
   --main-width: 1024px;
   --aside-width: 250px;
   --nav-width: 100%;
