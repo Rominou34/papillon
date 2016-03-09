@@ -31,33 +31,6 @@ html, p, div, article, h1, h2, h3, h4, h5, h6, form {
   box-sizing: border-box;
 }
 
-/*----- ATTRIBUTES -----*/
-
-.hidden, [hidden] {
-  display: none !important;
-}
-
-[text-justify] {
-  text-align: justify !important;
-}
-
-[text-right] {
-  text-align: right !important;
-}
-
-[text-center] {
-  text-align: center !important;
-}
-
-[fullwidth] {
-  display: block;
-  width: 100vw !important;
-}
-
-[fullheight] {
-  height: 100vh !important;
-}
-
 /*************** ELEMENT DEFAULT RULES ***************/
 
 /****
@@ -205,4 +178,5 @@ main {
   display: inline-block;
   width: 100%;
   max-width: var(--main-width);
+  margin: 0px auto;
 }
