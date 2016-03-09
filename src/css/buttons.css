@@ -12,7 +12,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  box-shadow: 0px 2px 5px -2px #454545;
+  box-shadow: 0px 2px 6px -3px #383838;
   transition: all 0.25s ease-out;
   -webkit-transition: all 0.25s ease-out;
 }
@@ -34,9 +34,15 @@ button.green, button.blue, button.red, button.yellow, button.black {
 }
 
 /* GREEN */
-button.green { background-color: var(--green-default); }
-button.green:hover { background-color: var(--green-light); }
-button.green:active { background-color: var(--green-dark); }
+button.green {
+  background-color: var(--green-default);
+}
+button.green:hover {
+  background-color: var(--green-light);
+}
+button.green:active {
+  background-color: var(--green-dark);
+}
 
 /* BLUE */
 button.blue { background-color: var(--blue-default); }

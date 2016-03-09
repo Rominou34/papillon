@@ -3,16 +3,18 @@
 html {
   width: 100%;
   min-height: 100%;
-  background-color: #fff;
+  background-color: var(--bg-color-html);
   -webkit-font-smoothing: antialiased;
 }
 
 body {
   font-family: var(--font-default);
-  background-color: var(--white-default);
+  background-color: var(--bg-color-body);
   font-size: var(--font-size-default);
   line-height: var(--line-height);
+  color: var(--font-color-text);
   width: 100%;
+  min-height: 100%;
   max-width: var(--body-width);
   display: block;
   margin: 0px auto;
@@ -41,15 +43,15 @@ html, p, div, article, h1, h2, h3, h4, h5, h6, form {
 
 a {
   text-decoration: none;
-  color: var(--blue-default);
+  color: var(--font-color-link);
 }
 
 a:hover, a:visited:hover {
-  color: var(--blue-light);
+  color: var(--font-color-link-h);
 }
 
 a:visited {
-  color: var(--blue-dark);
+  color: var(--font-color-link-v);
 }
 
 /***** ARTICLES *****/
@@ -79,9 +81,7 @@ blockquote {
   line-height: 1.5;
   width: auto;
   display: inline-block;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  margin: 1%;
+  margin: 0.8em;
 }
 
 blockquote:not([reverse]) {
@@ -150,6 +150,8 @@ div {
 header {
   font-size: var(--font-size-header);
   font-family: var(--font-header);
+  color: var(--color-header);
+  background-color: var(--bg-color-header);
   width: 100%;
   text-align: center;
 }
@@ -157,7 +159,7 @@ header {
 /***** H1, H1, H2, H3, H4, H5, H6 *****/
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--blue-dark);
+  color: var(--font-color-title);
   font-family: var(--font-title);
   line-height: 2;
 }
@@ -193,4 +195,5 @@ main {
   width: 100%;
   max-width: var(--main-width);
   margin: 0px auto;
+  background-color: var(--font-color-main);
 }

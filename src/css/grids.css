@@ -18,7 +18,7 @@
 .soft-columns div:not(.soft-columns) {
   background-color: var(--blue-lighter);
   padding: 4px;
-  margin: 4px;
+  border: 1px solid #444;
 }
 
 .col-1 { flex: 1 0; }
