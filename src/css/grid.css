@@ -15,10 +15,11 @@
   --soft-col-width-md: 960px;
   --soft-col-width-sm: 768px;
 }
-.soft-col-sm,
-.soft-col-md,
-.soft-col-lg,
-.soft-row {
+.soft-grid-sm,
+.soft-grid-md,
+.soft-grid-lg,
+.soft-row,
+.soft-col {
   display: flex;
   box-sizing: border-box;
   align-items: stretch;
@@ -27,53 +28,55 @@
   flex-wrap: wrap;
 }
 
-.soft-col-lg {
+.soft-grid-lg {
   width: 100%;
   max-width: var(--soft-col-width-lg);
 }
 
-.soft-col-md {
+.soft-grid-md {
   width: 100%;
   max-width: var(--soft-col-width-md);
 }
 
-.soft-col-sm {
+.soft-grid-sm {
   width: 100%;
   max-width: var(--soft-col-width-sm);
 }
 
-.soft-col-m *,
-.soft-col-md *,
-.soft-col-lg * {
+.soft-grid-sm *,
+.soft-grid-md *,
+.soft-grid-lg * {
   box-sizing: border-box;
   text-align: inherit;
 }
 
 .soft-row {
-  flex: 1 0;
-  height: auto;
-  padding: 0px;
-  margin: 0.25em;
+  width: 100%;
 }
 
-[class*="soft-col"] div:not(.soft-row) {
+.soft-row, .soft-col {
+  height: auto;
+  padding: 0px;
+}
+
+[class*="soft-grid"] div:not(.soft-row):not(.soft-col) {
   background-color: var(--blue-lighter);
   padding: 0.5em;
   border: 1px solid #444;
 }
 
-.col-w1 { width: 8%; }
-.col-w2 { width: 16%; }
-.col-w3 { width: 24%; }
-.col-w4 { width: 32%; }
-.col-w5 { width: 40%; }
-.col-w6 { width: 48%; }
-.col-w7 { width: 56%; }
-.col-w8 { width: 64%; }
-.col-w9 { width: 72%; }
-.col-w10 { width: 80%; }
-.col-w11 { width: 88%; }
-.col-w12 { width: 96%; }
+.col-w1 { width: calc(100% / 12); }
+.col-w2 { width: calc(100% / 6); }
+.col-w3 { width: calc(100% / 4); }
+.col-w4 { width: calc(100% / 3); }
+.col-w5 { width: calc(500% / 12); }
+.col-w6 { width: calc(100% / 2); }
+.col-w7 { width: calc(700% / 12); }
+.col-w8 { width: calc(800% / 12); }
+.col-w9 { width: calc(900% / 12); }
+.col-w10 { width: calc(1000% / 12); }
+.col-w11 { width: calc(1100% / 12); }
+.col-w12 { width: 100%; }
 
 .col-1 { flex: 1 0; }
 .col-2 { flex: 2 0; }
@@ -93,21 +96,12 @@
 /* LARGE */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 1200px) {
-  .soft-col-lg:not(.force-hor) {
-    display: block;
-  }
-
-  .soft-col-lg:not(.force-hor) * {
+  .soft-grid-lg .soft-col > * {
     display: block;
     width: 100%;
   }
 
-  .soft-row:not(.force-hor) * {
-    display: block;
-    width: 100%;
-  }
-
-  .soft-col-lg *:not(.soft-row) {
+  .soft-grid-lg *:not(.soft-col) {
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
@@ -116,16 +110,12 @@
 /* MEDIUM */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 960px) {
-  .soft-col-md:not(.force-hor) {
-    display: block;
-  }
-
-  .soft-col-md:not(.force-hor) * {
+  .soft-grid-md .soft-col * {
     display: block;
     width: 100%;
   }
 
-  .soft-col-sm *:not(.soft-row) {
+  .soft-grid-md *:not(.soft-col) {
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
@@ -134,16 +124,12 @@
 /* SMALL */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 768px) {
-  .soft-col-sm:not(.force-hor) {
+  .soft-grid-sm .soft-col * {
     display: block;
+    width: 100% !important;
   }
 
-  .soft-col-sm:not(.force-hor) * {
-    display: block;
-    width: 100%;
-  }
-
-  .soft-col-sm *:not(.soft-row) {
+  .soft-grid-sm *:not(.soft-col) {
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
