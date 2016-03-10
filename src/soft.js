@@ -1,3 +1,8 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
 var head  = document.getElementsByTagName('head')[0];
 var link  = document.createElement('link');
 link.rel  = 'stylesheet';
@@ -46,7 +51,7 @@ var softPopup = function(param) {
   }
 
   try {
-    softpopup.setAttribute(param[0], "");
+    softpopup.setAttribute("class", param[0]);
   } catch(err) {
     console.log(err.message);
   }

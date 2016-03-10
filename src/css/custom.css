@@ -1,3 +1,8 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
 soft-popup {
   box-sizing: border-box;
 }
@@ -25,7 +30,7 @@ soft-popup {
   right: 0px;
   margin: auto;
   text-align: center;
-  background-color: var(--white-light);
+  background-color: var(--white-default);
   color: var(--black-default);
   box-shadow: 0px 4px 16px 0px #252525;
   vertical-align: middle;
@@ -53,7 +58,7 @@ soft-popup span:nth-child(1) {
   color: var(--white-light);
   box-shadow: 0px -2px 16px 2px #121212;
   background-color: var(--grey-default);
-  border-bottom: 2px solid var(--grey-dark);
+  border-bottom: 0.25em solid var(--grey-dark);
 }
 
 soft-popup button {
@@ -61,22 +66,22 @@ soft-popup button {
   bottom: 2em;
 }
 
-soft-popup[success] span:nth-child(1) {
-  background-color: var(--green-default);
-  border-color: var(--green-dark);
+soft-popup.success span:nth-child(1) {
+  background-color: var(--green-dark);
+  border-color: var(--green-default);
 }
 
-soft-popup[info] span:nth-child(1) {
-  background-color: var(--blue-default);
-  border-color: var(--blue-dark);
+soft-popup.info span:nth-child(1) {
+  background-color: var(--blue-dark);
+  border-color: var(--blue-default);
 }
 
-soft-popup[warning] span:nth-child(1) {
-  background-color: var(--yellow-default);
-  border-color: var(--yellow-dark);
+soft-popup.warning span:nth-child(1) {
+  background-color: var(--yellow-dark);
+  border-color: var(--yellow-default);
 }
 
-soft-popup[alert] span:nth-child(1) {
-  background-color: var(--red-default);
-  border-color: var(--red-dark);
+soft-popup.alert span:nth-child(1) {
+  background-color: var(--red-dark);
+  border-color: var(--red-default);
 }

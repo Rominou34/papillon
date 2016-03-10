@@ -1,23 +1,29 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
 :root {
 
+  /*
+  * The names of the components using each of the variables are written
+  * in comments after the variable declaration, just use Ctrl+F
+  */
   /********** FONTS **********/
 
-  --font-default: Arial;
-  --font-second: Impact;
-  --font-third: "Times New Roman";
-  --font-title: Verdana;
-  --font-header: Ubuntu;
-  --font-code: "Courier New";
+  --font-default: Arial; /* basic text */
+  --font-second: Impact; /* basic text bis */
+  --font-third: "Times New Roman"; /* basic text thris ? */
+  --font-title: Verdana; /* h1, h2, h3, h4, h5, h6 */
+  --font-header: Ubuntu; /* Header */
+  --font-code: "Courier New"; /* code */
 
-  --font-size-default: 16px;
-  --font-size-big: calc(1.5 * var(--font-size-default));
-  --font-size-bigger: calc(2* var(--font-size-default));
-  --font-size-huge: calc(2.5 * var(--font-size-default));
-  --font-size-small: calc(0.8 * var(--font-size-default));
-  --font-size-smaller: calc(0.5 * var(--font-size-default));
-  --font-size-header: 12vw;
+  --font-size-default: 16px; /* Basic text */
+  --font-size-big: calc(var(--font-size-default) * 1.5); /* Basic text */
+  --font-size-small: calc(var(--font-size-default) * 0.7); /* Basic text */
+  --font-size-header: 12vw; /* Header */
 
-  --line-height: 1.4;
+  --line-height: 1.5;
 
   /********** COLORS **********/
 

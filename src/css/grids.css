@@ -1,9 +1,15 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
 .soft-columns {
   display: flex;
   box-sizing: border-box;
   align-items: stretch;
   justify-content: space-between;;
   padding: 0.25em;
+  flex-wrap: wrap;
 }
 
 .soft-columns * {
@@ -20,7 +26,6 @@
   background-color: var(--blue-lighter);
   padding: 4px;
   border: 1px solid #444;
-  margin: 0.25em; /* Editing this value will change the space between boxes */
 }
 
 .col-w1 { width: 8%; }
