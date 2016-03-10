@@ -3,12 +3,22 @@
 * Romain Arnaud - 2016
 */
 
+/* Change the values here
+* !!!
+* IMPORTANT: You also need to change them in the RESPONSIVE DESIGN section
+* ( Media queries don't work with CSS variables )
+* !!!
+*/
+
 :root {
   --soft-col-width-lg: 1200px;
   --soft-col-width-md: 960px;
   --soft-col-width-sm: 768px;
 }
-.soft-col {
+.soft-col-sm,
+.soft-col-md,
+.soft-col-lg,
+.soft-row {
   display: flex;
   box-sizing: border-box;
   align-items: stretch;
@@ -17,34 +27,36 @@
   flex-wrap: wrap;
 }
 
-.soft-col.lg {
+.soft-col-lg {
   width: 100%;
   max-width: var(--soft-col-width-lg);
 }
 
-.soft-col.md {
+.soft-col-md {
   width: 100%;
   max-width: var(--soft-col-width-md);
 }
 
-.soft-col.sm {
+.soft-col-sm {
   width: 100%;
   max-width: var(--soft-col-width-sm);
 }
 
-.soft-col * {
+.soft-col-m *,
+.soft-col-md *,
+.soft-col-lg * {
   box-sizing: border-box;
   text-align: inherit;
 }
 
-.soft-col .soft-col {
+.soft-row {
   flex: 1 0;
   height: auto;
   padding: 0px;
   margin: 0.25em;
 }
 
-.soft-col div:not(.soft-col) {
+[class*="soft-col"] div:not(.soft-row) {
   background-color: var(--blue-lighter);
   padding: 0.5em;
   border: 1px solid #444;
@@ -76,34 +88,63 @@
 .col-11 { flex: 11 0; }
 .col-12 { flex: 12 0; }
 
-/* MOBILE SCREENS */
-@media screen and (max-width: 1024px) {
-  .soft-col:not(.force-hor) {
+/*************** RESPONSIVE DESIGN ***************/
+
+/* LARGE */
+/* Set the value according to the one you put at the beginning */
+@media screen and (max-width: 1200px) {
+  .soft-col-lg:not(.force-hor) {
     display: block;
   }
 
-  .soft-col:not(.force-hor) * {
+  .soft-col-lg:not(.force-hor) * {
     display: block;
     width: 100%;
   }
 
-  .soft-col * {
+  .soft-row:not(.force-hor) * {
+    display: block;
+    width: 100%;
+  }
+
+  .soft-col-lg *:not(.soft-row) {
     margin-left: 0px !important;
     margin-right: 0px !important;
   }
+}
 
-  .col-w1,
-  .col-w2,
-  .col-w3,
-  .col-w4,
-  .col-w5,
-  .col-w6,
-  .col-w7,
-  .col-w8,
-  .col-w9,
-  .col-w10,
-  .col-w11,
-  .col-w12 {
-    flex: 1 0;
+/* MEDIUM */
+/* Set the value according to the one you put at the beginning */
+@media screen and (max-width: 960px) {
+  .soft-col-md:not(.force-hor) {
+    display: block;
+  }
+
+  .soft-col-md:not(.force-hor) * {
+    display: block;
+    width: 100%;
+  }
+
+  .soft-col-sm *:not(.soft-row) {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
+
+/* SMALL */
+/* Set the value according to the one you put at the beginning */
+@media screen and (max-width: 768px) {
+  .soft-col-sm:not(.force-hor) {
+    display: block;
+  }
+
+  .soft-col-sm:not(.force-hor) * {
+    display: block;
+    width: 100%;
+  }
+
+  .soft-col-sm *:not(.soft-row) {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 }
