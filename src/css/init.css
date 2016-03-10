@@ -158,6 +158,45 @@ body > footer {
   text-align: center;
 }
 
+/****
+* I *
+****/
+
+img {
+  font-family: 'Helvetica';
+  font-weight: 300;
+  line-height: 2;
+  text-align: center;
+
+  height: auto;
+  display: block;
+  position: relative;
+  min-height: 4em;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+img:after {
+  content: "Problem loading \" " attr(alt) " \"";
+
+  font-size: 16px;
+  font-family: FontAwesome;
+  color: var(--grey-default);
+
+  display: block;
+  position: absolute;
+  border: 2px dashed var(--grey-light);
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background-color: var(--white-dark);
+  box-sizing: border-box;
+}
+
 /***** HEADER *****/
 
 header {

@@ -11,7 +11,7 @@
         <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
     </head>
     <body>
-      <header class="fullWidth fullScreenH">Soft CSS</header>
+      <header>Soft CSS</header>
       <main>
         <h1>Title</h1>
         <h2>Sub-title</h2>
@@ -19,13 +19,17 @@
         <h4>Sub-sub-sub-title</h4>
         <h5>Sub-sub-sub-sub-title</h5>
         <h6>Stop it already</h6>
+        <img src="img.png" alt="Image de test" style="width: 200px"></img>
         <div class="soft-columns force-hor text-center">
-          <div class="col-4 soft-columns">
-            <div class="col-2">2</div>
-            <div class="col-2">2</div>
+          <div class="col-2 soft-columns">
+            <div class="col-w3">3</div>
+            <div class="col-w6">6<br/>6</div>
+            <div class="col-w3">3<br/>3</div>
           </div>
-          <div class="col-2">2</div>
-          <div class="col-3">3</div>
+          <div class="col-1 soft-columns force-hor">
+            <div class="col-w6">6</div>
+            <div class="col-w6">6</div>
+          </div>
         </div>
         <div class="soft-columns text-center">
           <div class="col-1">1</div>

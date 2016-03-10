@@ -2,7 +2,8 @@
   display: flex;
   box-sizing: border-box;
   align-items: stretch;
-  justify-content: space-between;
+  justify-content: space-between;;
+  padding: 0.25em;
 }
 
 .soft-columns * {
@@ -11,15 +12,29 @@
 }
 
 .soft-columns .soft-columns {
-  margin: 0px;
   height: auto;
+  padding: 0px;
 }
 
 .soft-columns div:not(.soft-columns) {
   background-color: var(--blue-lighter);
   padding: 4px;
   border: 1px solid #444;
+  margin: 0.25em; /* Editing this value will change the space between boxes */
 }
+
+.col-w1 { width: 8%; }
+.col-w2 { width: 16%; }
+.col-w3 { width: 24%; }
+.col-w4 { width: 32%; }
+.col-w5 { width: 40%; }
+.col-w6 { width: 48%; }
+.col-w7 { width: 56%; }
+.col-w8 { width: 64%; }
+.col-w9 { width: 72%; }
+.col-w10 { width: 80%; }
+.col-w11 { width: 88%; }
+.col-w12 { width: 96%; }
 
 .col-1 { flex: 1 0; }
 .col-2 { flex: 2 0; }
@@ -39,7 +54,11 @@
   .soft-columns:not(.force-hor) {
     display: block;
   }
+
   .soft-columns:not(.force-hor) * {
     display: block;
+    width: 100%;
+    margin-left: 0px !important;
+    margin-right: 0px !important;;
   }
 }
