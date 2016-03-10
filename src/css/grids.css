@@ -3,28 +3,50 @@
 * Romain Arnaud - 2016
 */
 
-.soft-columns {
+:root {
+  --soft-col-width-lg: 1200px;
+  --soft-col-width-md: 960px;
+  --soft-col-width-sm: 768px;
+}
+.soft-col {
   display: flex;
   box-sizing: border-box;
   align-items: stretch;
   justify-content: space-between;;
-  padding: 0.25em;
+  padding: 0px;
   flex-wrap: wrap;
 }
 
-.soft-columns * {
+.soft-col.lg {
+  width: 100%;
+  max-width: var(--soft-col-width-lg);
+}
+
+.soft-col.md {
+  width: 100%;
+  max-width: var(--soft-col-width-md);
+}
+
+.soft-col.sm {
+  width: 100%;
+  max-width: var(--soft-col-width-sm);
+}
+
+.soft-col * {
   box-sizing: border-box;
   text-align: inherit;
 }
 
-.soft-columns .soft-columns {
+.soft-col .soft-col {
+  flex: 1 0;
   height: auto;
   padding: 0px;
+  margin: 0.25em;
 }
 
-.soft-columns div:not(.soft-columns) {
+.soft-col div:not(.soft-col) {
   background-color: var(--blue-lighter);
-  padding: 4px;
+  padding: 0.5em;
   border: 1px solid #444;
 }
 
@@ -56,14 +78,32 @@
 
 /* MOBILE SCREENS */
 @media screen and (max-width: 1024px) {
-  .soft-columns:not(.force-hor) {
+  .soft-col:not(.force-hor) {
     display: block;
   }
 
-  .soft-columns:not(.force-hor) * {
+  .soft-col:not(.force-hor) * {
     display: block;
     width: 100%;
+  }
+
+  .soft-col * {
     margin-left: 0px !important;
-    margin-right: 0px !important;;
+    margin-right: 0px !important;
+  }
+
+  .col-w1,
+  .col-w2,
+  .col-w3,
+  .col-w4,
+  .col-w5,
+  .col-w6,
+  .col-w7,
+  .col-w8,
+  .col-w9,
+  .col-w10,
+  .col-w11,
+  .col-w12 {
+    flex: 1 0;
   }
 }
