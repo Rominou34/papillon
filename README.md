@@ -24,3 +24,9 @@ You don't need to clone the whole repository, just the `src` folder. The `soft.c
 You can find the documentation for the framework in the `doc/` folder. The `global.md` file acts as a global documentation explaining how to use the framework, while the files in the `files` folder each explain the role of the corresponding files in the `src` folder.
 
 You will want to read `global.md` to learn how to use the framework and all its functions, and learn the doc for the files only if you want to customize the files and to adapt the framework to your needs ( which is the point of it )
+
+## About
+
+This project is being developed by myself only as a personal project. I would like to develop a PHP blog system ( as a personal project too ) and use this CSS framework to to the front-end job of the blog system, I'm developping the CSS framework before attacking the PHP
+
+I would like to thank [sanitize.css](https://github.com/10up/sanitize.css) as I'm using their stylesheet to make the framework look the same in all browsers, thx bros

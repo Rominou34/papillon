@@ -4,7 +4,10 @@
 */
 
 /* We reset all the rules so it looks the same for all browsers */
-@import url(reset.css);
+@import url(sanitize.css);
+
+/* We import the colors */
+@import url(colors.css);
 
 /* First we import the values of the variables */
 @import url(config.css);

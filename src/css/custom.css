@@ -3,11 +3,11 @@
 * Romain Arnaud - 2016
 */
 
-soft-popup {
+soft-popup, soft-progress {
   box-sizing: border-box;
 }
 
-/***** SOFT POPUPS *****/
+/*************** SOFT POPUPS ***************/
 soft-popup-mask {
   width: 100vw;
   height: 100vh;
@@ -84,4 +84,21 @@ soft-popup.warning span:nth-child(1) {
 soft-popup.alert span:nth-child(1) {
   background-color: var(--red-dark);
   border-color: var(--red-default);
+}
+
+/*************** SOFT PROGRESS BARS ***************/
+
+soft-progress {
+  width: 100%;
+  display: block;
+  margin: 0px;
+  height: 0.5em;
+  background-color: var(--white-dark);
+}
+
+soft-progress div {
+  height: 100%;
+  text-align: center;
+  margin: 0px;
+  background-color: var(--blue-default);
 }

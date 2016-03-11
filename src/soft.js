@@ -5,23 +5,27 @@
 
 var popup = document.registerElement('soft-popup');
 var popupmask = document.registerElement('soft-popup-mask');
+var progressbar = document.registerElement('soft-progress');
+
+
+/*************** SOFT POPUP ***************/
 
 /*
 * This function is the constructor to display <soft-popup> notifications
 * param is an array that looks like this:
-* param =
-* ["alert-type" ( defaults are success, info, warning and alert ),
-* "Header message" ( the message displayed in bold at the top ),
-* "Message" ( the message displayed )]
+* params:
+* type = alert type ( defaults are success, info, warning and alert ),
+* header = Header message ( the message displayed in bold at the top ),
+* msg = Message ( the message displayed )
 */
-var softPopup = function(param) {
+var softPopup = function(type, header, msg) {
   // Creating the element and the mask
   var softpopupmask = new popupmask();
   var softpopup = new popup();
 
   // Getting the corresponding color
   var color = null;
-  switch(param[0]) {
+  switch(type) {
     case "success":
       color = "green"; break;
     case "info":
@@ -34,15 +38,15 @@ var softPopup = function(param) {
 
   // Adding the text inside the element
   if(color != null) {
-    softpopup.innerHTML = "<span>" + param[1] + "</span>"+
-    "<div><p>" + param[2] + "</p></div><button class=\""+color+"\">Hide</button>";
+    softpopup.innerHTML = "<span>" + header + "</span>"+
+    "<div><p>" + msg + "</p></div><button class=\""+color+"\">Hide</button>";
   } else {
-    softpopup.innerHTML = "<span>" + param[1] + "</span>"+
-    "<div><p>" + param[2] + "</p></div><button>Hide</button>";
+    softpopup.innerHTML = "<span>" + header + "</span>"+
+    "<div><p>" + msg + "</p></div><button>Hide</button>";
   }
 
   try {
-    softpopup.setAttribute("class", param[0]);
+    softpopup.setAttribute("class", type);
   } catch(err) {
     console.log(err.message);
   }
@@ -54,4 +58,42 @@ var softPopup = function(param) {
   });
   document.body.appendChild(softpopupmask);
   softpopupmask.appendChild(softpopup);
+}
+
+/*************** SOFT PROGRESS BARS ***************/
+
+/*
+* Function used to create progress bars
+* params:
+* minV = minimum value
+* maxV = maximum value
+* prog = current progress
+* type = boolean ( if 0, we display "currentValue/maxValue", if 1, we display
+* "x %" )
+*/
+var softProgressBar = function(minV, maxV, elem) {
+  this.minV = minV;
+  this.maxV = maxV;
+  var softprogress = new progressbar();
+  softprogress.setAttribute("data-minv",this.minV);
+  softprogress.setAttribute("data-maxv",this.maxV);
+  softprogress.innerHTML = "<div></div>";
+  softprogress.querySelector("div").style.width = 0 + "%";
+  this.element = softprogress;
+  elem.appendChild(softprogress);
+}
+
+var createSoftProgress = function(minV, maxV, prog) {
+  var softprogress = new progressbar();
+  softprogress.setAttribute("data-minv",minV);
+  softprogress.setAttribute("data-maxv",maxV);
+  var percent = Math.round(((prog-minV) / (maxV-minV))*100);
+  softprogress.innerHTML = "<div></div>";
+  softprogress.querySelector("div").style.width = percent + "%";
+  document.body.appendChild(softprogress);
+}
+
+softProgressBar.prototype.progress = function(prog) {
+  var percent = Math.round(((prog-this.minV) / (this.maxV-this.minV))*100);
+  this.element.querySelector("div").style.width = percent + "%";
 }

@@ -32,13 +32,16 @@
 
 /* Makes the first letter of the paragraph shifted from the border */
 .first-letter-spacing::first-letter {
-  padding-left: 5%;
+  padding-left: 2em;
 }
 
 /* Makes the first letter of the paragraph bigger */
 .first-letter-big::first-letter {
-  line-height: 0.5;
   font-size: 200%;
+}
+
+.first-letter-huge::first-letter {
+  font-size: 400%;
 }
 
 /* Makes the text float on the left */

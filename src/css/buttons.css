@@ -5,21 +5,34 @@
 
 button {
   padding: 1em;
-  border: 0px solid var(--grey-default);
   border-radius: 0.15em;
+  border: 0px;
   -webkit-border-radius: 0.15em;
-  text-shadow: 0px 0px 3px #464646;
   margin: 0.5em;
   font-family: var(--font-family-default);
   font-size: var(--font-size-default);
   box-sizing: border-box;
+  background-color: var(--grey-light);
+  color: var(--black-default);
 }
 
 button:hover {
   cursor: pointer;
   box-shadow: 0px 4px 12px -2px #858585;
+  background-color: var(--white-dark);
   transition: all 0.25s ease-out;
   -webkit-transition: all 0.25s ease-out;
+}
+
+button:disabled {
+  box-shadow: 0px 0px 6px 0px #474747 inset;
+  background-color: var(--grey-default);
+  color: var(--grey-darker);
+}
+
+button:disabled:hover {
+  background-color: var(--grey-default);
+  cursor: not-allowed;
 }
 
 button:active {
