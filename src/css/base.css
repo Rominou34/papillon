@@ -3,6 +3,31 @@
 * Romain Arnaud - 2016
 */
 
+/********** CONTAINERS **********/
+[class*="container"] {
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.container-sm {
+  max-width: var(--container-sm);
+}
+
+.container-md {
+  max-width: var(--container-md);
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+}
+
+/*
+* The following classes are classes that are never used by default, but you can
+* use them to force the behaviour of an element ( for example if you want to
+* force an element to float on the right use "right" )
+*/
+
 /********** TEXT **********/
 
 /* Makes the first letter of the paragraph shifted from the border */
@@ -16,9 +41,9 @@
   font-size: 200%;
 }
 
-/* Hides the element */
-.hidden, [hidden] {
-  display: none !important;
+/* Makes the text float on the left */
+.text-left {
+  text-align: left !important;
 }
 
 /* Makes the text justified */
@@ -36,8 +61,20 @@
   text-align: center !important;
 }
 
+/********** ELEMENTS **********/
+
+/* Hides the element */
+.hidden, [hidden] {
+  display: none !important;
+}
+
+/* Makes the element float on the left */
+.left {
+  float: left !important;
+}
+
 /* Makes the element float on the right */
-.float-right {
+.right {
   float: right !important;
 }
 

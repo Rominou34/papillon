@@ -248,7 +248,7 @@ h6 {
 /***** MAIN *****/
 
 main {
-  display: inline-block;
+  display: block;
   width: 100%;
   max-width: var(--main-width);
   margin: 0px auto;

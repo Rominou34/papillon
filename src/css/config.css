@@ -112,4 +112,9 @@
   --aside-width: 250px;
   --nav-width: 100%;
 
+  /* Container threshold sizes */
+  --container-sm: 750px;
+  --container-md: 960px;
+  --container-lg: 1200px;
+
 }
