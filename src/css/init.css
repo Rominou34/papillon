@@ -215,10 +215,26 @@ header {
 
 /***** H1, H1, H2, H3, H4, H5, H6 *****/
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--font-color-title);
   font-family: var(--font-title);
   line-height: 2;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: var(--font-color-title-second);
+  padding-left: 0em;
+  font-size: 70%;
 }
 
 h1 {

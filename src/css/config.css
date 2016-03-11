@@ -99,7 +99,8 @@
   --bg-color-nav: var(--blue-default);
 
   --font-color-text: var(--black-default);
-  --font-color-title: var(--blue-darker);
+  --font-color-title: var(--grey-dark);
+  --font-color-title-second: var(--grey-light);
   --font-color-footer: var(--white-dark);
 
   --font-color-link: var(--blue-default);

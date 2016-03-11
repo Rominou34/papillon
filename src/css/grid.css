@@ -69,6 +69,18 @@
 .col-s11 { flex: 11 0; }
 .col-s12 { flex: 12 0; }
 
+.col-offset-1 { margin-left: calc(100% / 12); }
+.col-offset-2 { margin-left: calc(100% / 6); }
+.col-offset-3 { margin-left: calc(100% / 4); }
+.col-offset-4 { margin-left: calc(100% / 3); }
+.col-offset-5 { margin-left: calc(500% / 12); }
+.col-offset-6 { margin-left: calc(100% / 2); }
+.col-offset-7 { margin-left: calc(700% / 12); }
+.col-offset-8 { margin-left: calc(800% / 12); }
+.col-offset-9 { margin-left: calc(900% / 12); }
+.col-offset-10 { margin-left: calc(1000% / 12); }
+.col-offset-11 { margin-left: calc(1100% / 12); }
+
 /*************** RESPONSIVE DESIGN ***************/
 
 /* LARGE */
@@ -81,37 +93,28 @@
   .container-lg .soft-col > *:not(.soft-row) {
     display: block;
   }
-
-  .container-lg *:not(.soft-col) {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
-  }
 }
 
 /* MEDIUM */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 960px) {
-  .container-md .soft-col > *:not(.soft-row) {
-    display: block;
+  .container-md .soft-col > * {
     width: 100%;
   }
 
-  .container-md *:not(.soft-col) {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+  .container-md .soft-col > *:not(.soft-row) {
+    display: block;
   }
 }
 
 /* SMALL */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 750px) {
-  .container-sm .soft-col > *:not(.soft-row) {
-    display: block;
-    width: 100% !important;
+  .container-sm .soft-col > * {
+    width: 100%;
   }
 
-  .container-sm *:not(.soft-col) {
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+  .container-sm .soft-col > *:not(.soft-row) {
+    display: block;
   }
 }
