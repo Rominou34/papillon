@@ -142,7 +142,6 @@ code {
   border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
   padding: 0em 0.2em;
-  border: 1px solid var(--grey-default);
 }
 
 pre > code {
@@ -239,6 +238,14 @@ header {
   text-align: center;
 }
 
+header > small {
+  font-size: 25%;
+  font-family: var(--font-title);
+  color: var(--grey-light);
+  display: block;
+  padding-bottom: 2em;
+}
+
 /***** H1, H1, H2, H3, H4, H5, H6 *****/
 
 h1,
@@ -250,6 +257,7 @@ h6 {
   color: var(--font-color-title);
   font-family: var(--font-title);
   line-height: 2;
+  padding-left: 5%;
 }
 
 h1 small,

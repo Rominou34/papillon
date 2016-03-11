@@ -63,6 +63,7 @@ soft-popup span:nth-child(1) {
 
 soft-popup button {
   position: relative;
+  padding: 0.5em 2em;
   bottom: 2em;
 }
 

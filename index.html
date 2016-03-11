@@ -10,25 +10,198 @@
 
     </head>
     <body>
-      <header>Soft CSS</header>
+      <header>
+        Soft CSS
+        <small>The tweakable, simple to use CSS framework</small>
+      </header>
       <main>
-        <h1>Title</h1>
-        <h2>Sub-title</h2>
-        <h3>Sub-sub-title</h3>
-        <h4>Sub-sub-sub-title</h4>
-        <h5>Sub-sub-sub-sub-title</h5>
-        <h6>Stop it already</h6>
-        <div>This is a div</div>
-        <div>This is another div</div>
-        <a href="#">This is a link</a>
-        <p>This is a paragraph with <code>some code</code></p>
-        <p>This is another paragraph</p>
-        <button class="green">This is a button</button>
-        <button class="blue">This is a button</button>
-        <button class="red">This is a button</button>
-        <button class="yellow">This is a button</button>
-        <button class="black">This is a button</button>
-        <article text-justify class="first-letter-big first-letter-spacing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <!-- TITLES !-->
+        <h1 class="section-title">Titles</h1>
+        <div class="showcase">
+          <h1>
+            H1 Title
+            <small>Secondary text</small>
+          </h1>
+          <h2>
+            H2 Title
+            <small>Secondary text</small>
+          </h2>
+          <h3>
+            H3 Title
+            <small>Secondary text</small>
+          </h3>
+          <h4>
+            H4 Title
+            <small>Secondary text</small>
+          </h4>
+          <h5>
+            H5 Title
+            <small>Secondary text</small>
+          </h5>
+          <h6>
+            H6 Title
+            <small>Secondary text</small>
+          </h6>
+        </div>
+
+        <!-- CONTAINERS !-->
+        <h1 class="section-title">Containers</h1>
+        <div class="showcase">
+          <div class="container-lg bg-subtle border text-center">
+            This is a large container ( 1200 px )
+          </div>
+          <div class="container-md bg-subtle border text-center">
+            This is a medium container ( 960 px )
+          </div>
+          <div class="container-sm bg-subtle border text-center">
+            This is a small container ( 750 px )
+          </div>
+        </div>
+
+        <!-- GRID LAYOUT !-->
+        <h1 class="section-title">Grid Layout</h1>
+        <div class="container-lg">
+          With Soft CSS, you can organize your components using a responsive
+          grid layout. <del>A lot</del> Pretty much all other CSS frameworks
+          can do that, but Soft CSS is different because it's easy to use,
+          and you have full control over it.
+        </div>
+        <div class="container-lg">
+          The layout is based on a 12-tiles grid, in which you put columns which
+          take a certain number of tiles. For example you can put 4 columns of
+          3 tiles each. If your viewport's width is coming under the threshold,
+          the columns will stack on top of each other, becoming rows.
+        </div>
+        <div class="showcase">
+          <div class="container-lg text-center">
+            <div class="soft-col">
+              <div class="col-3">Column</div>
+              <div class="col-3">Column</div>
+              <div class="col-3">Column</div>
+              <div class="col-3">Column</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-lg">
+          If you don't want them to stack like that, put them in a
+          <code>.soft-row</code> instead of a <code>.soft-col</code>
+        </div>
+        <div class="showcase">
+          <div class="container-lg text-center">
+            <div class="soft-row">
+              <div class="col-3">Column</div>
+              <div class="col-3">Column</div>
+              <div class="col-3">Column</div>
+              <div class="col-3">Column</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-lg">
+          The nice thing is that you can use one inside of the other, so you
+          can stack responsive rows inside of a column, like in the example
+          below
+        </div>
+        <div class="showcase">
+          <div class="container-lg force-hor text-center">
+            <div class="soft-row">
+              <div class="soft-col col-4">
+                <div class="col-3">This column ...</div>
+                <div class="col-6">... and this one ...</div>
+                <div class="col-3">... and this one will stack</div>
+              </div>
+              <div class="col-2">This column ...</div>
+              <div class="col-3">... and this one ...</div>
+              <div class="col-3">... and this one will not</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-lg">
+          And in reverse mode, you can stack rows which each contain multiple
+          columns
+        </div>
+        <div class="showcase">
+          <div class="container-md text-center">
+            <div class="soft-col">
+              <div class="soft-row col-4">
+                <div class="col-8">We will always</div>
+                <div class="col-4">stay together &lt;3 </div>
+              </div>
+              <div class="soft-row col-4">
+                <div class="col-7">Don't go below me plz</div>
+                <div class="col-5">k dude chill</div>
+              </div>
+              <div class="soft-row col-4">
+                <div class="col-6">I don't know what text</div>
+                <div class="col-6">I will put here</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-lg">
+          Also, you can offset your columns from the left by a number of tiles
+        </div>
+        <div class="showcase">
+          <div class="container-sm text-center">
+            <div class="soft-col">
+              <div class="soft-row">
+                <div class="col-4 col-offset-4">
+                  Offset of 4 tiles
+                  <br/>( btw I'm in a .soft-row so I won't stack )
+                </div>
+              </div>
+              <div class="col-3 col-offset-2">Offset of 2 tiles</div>
+              <div class="col-2 col-offset-3">Offset of 3 tiles<br/>( not in a
+                .soft-row so I stack, but the offset stays )</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-lg">
+          And finally, if you put tiles that are too big together, they will
+          wrap on a new line
+        </div>
+        <div class="showcase">
+          <div class="container-md text-center">
+            <div class="soft-col">
+              <div class="col-4">4</div>
+              <div class="col-4">4</div>
+              <div class="col-4">4</div>
+              <div class="col-4">4</div>
+              <div class="col-4">4</div>
+              <div class="col-4">4</div>
+              <div class="col-4">4</div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- BUTTONS !-->
+        <h1 class="section-title">Buttons</h1>
+
+        <div class="container-lg">
+          Soft CSS comes with a pack of redefined buttons, with a better and
+          more modern design than the default ones, and a bit of choice for the
+          colors
+        </div>
+        <div class="showcase">
+          <button>Default button</button>
+          <button class="green">.green button</button>
+          <button class="blue">.blue button</button>
+          <button class="red">.red button</button>
+          <button class="yellow">.yellow button</button>
+          <button class="black">.black button</button>
+        </div>
+
+        <!-- CUSTOM ELEMENTS !-->
+        <h1 class="section-title">Custom Elements</h1>
+        <h2><small>( Or the component that makes Soft CSS unique )</small></h2>
+        <!-- OTHER !-->
+        <article text-justify class="first-letter-big first-letter-spacing">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Vestibulum lobortis massa a tristique ultricies. Nullam non ex erat. Sed
            eu nisl a velit efficitur tristique. Duis bibendum mattis metus,
            dignissim mattis eros eleifend vel. Maecenas faucibus, sem in gravida
@@ -44,14 +217,13 @@
               neque eleifend ipsum, vitae efficitur est est ac turpis. Quisque at
               hendrerit nisl.
         </article>
+        <div id="heartbeat">
+        </div>
         <!--<soft-popup>
           Custom element <code>soft-popup</code><br/>
           Click on it to hide it
         </soft-popup>!-->
       </main>
-      <aside>
-        This is the aside
-      </aside>
       <script src="src/soft.js"></script>
     </body>
 </html>

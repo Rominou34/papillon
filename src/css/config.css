@@ -29,6 +29,9 @@
   --color-header: var(--white-default);
   --bg-color-header: var(--blue-default);
 
+  --bg-color-subtle: var(--blue-subtle);
+  --primary-color: var(--blue-default);
+
   --bg-color-html: #fff;
   --bg-color-body: var(--white-default);
   --bg-color-main: var(--blue-subtle);
@@ -45,6 +48,8 @@
   --font-color-link-h: var(--blue-light);
   --font-color-link-v: var(--color-purple);
   /********** SIZES **********/
+
+  --border-width: 1px;
 
   --body-width: 100%;
   --main-width: 1200px;

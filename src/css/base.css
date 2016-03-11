@@ -8,6 +8,7 @@
   display: block;
   width: 100%;
   margin: 1em auto;
+  padding: 0.5em;
 }
 
 .container-sm {
@@ -27,6 +28,24 @@
 * use them to force the behaviour of an element ( for example if you want to
 * force an element to float on the right use "right" )
 */
+
+/********** TITLE **********/
+
+/* Titles of a section with special style added */
+.section-title {
+  position: relative;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 50%;
+  top: 25%;
+  left: 2%;
+  border-right: 6px solid var(--blue-default);
+}
 
 /********** TEXT **********/
 
@@ -64,7 +83,27 @@
   text-align: center !important;
 }
 
-/********** ELEMENTS **********/
+/********** ELEMENTS ASPECT **********/
+
+/* Sets a subtle background */
+.bg-subtle {
+  background-color: var(--bg-color-subtle);
+}
+
+.border {
+  border: var(--border-width) solid var(--primary-color);
+}
+
+/* Change the apsect of a container to showcase something inside */
+.showcase {
+  background-color: #fff;
+  border: var(--grey-light);
+  margin: 2em 1em;
+  padding: 1em;
+  box-shadow: 0px 0px 4px 0px #595959 inset;
+}
+
+/********** ELEMENTS PLACING **********/
 
 /* Hides the element */
 .hidden, [hidden] {

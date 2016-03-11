@@ -53,15 +53,9 @@ button.green, button.blue, button.red, button.yellow, button.black {
 }
 
 /* GREEN */
-button.green {
-  background-color: var(--green-default);
-}
-button.green:hover {
-  background-color: var(--green-light);
-}
-button.green:active {
-  background-color: var(--green-dark);
-}
+button.green { background-color: var(--green-default); }
+button.green:hover { background-color: var(--green-light); }
+button.green:active { background-color: var(--green-dark); }
 
 /* BLUE */
 button.blue { background-color: var(--blue-default); }
