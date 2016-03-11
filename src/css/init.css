@@ -90,13 +90,13 @@ blockquote {
   margin: 0.8em;
 }
 
-blockquote:not([reverse]) {
+blockquote:not(.reverse) {
   border-left: 4px solid #bbb;
   text-align: left;
   float: left;
 }
 
-blockquote[reverse] {
+blockquote.reverse {
   border-right: 4px solid #bbb;
   text-align: right;
   float: right;
@@ -115,11 +115,11 @@ blockquote footer {
 blockquote cite {
   font-style: italic;
 }
-blockquote:not([reverse]) footer::before {
+blockquote:not(.reverse) footer::before {
   content: '- ';
 }
 
-blockquote[reverse] footer::after {
+blockquote.reverse footer::after {
   content: ' -';
 }
 

@@ -198,32 +198,105 @@
 
         <!-- CUSTOM ELEMENTS !-->
         <h1 class="section-title">Custom Elements</h1>
-        <h2><small>( Or the component that makes Soft CSS unique )</small></h2>
+        <h2><small>( Or the components that make Soft CSS unique )</small></h2>
+
+        <div class="container-lg">
+          So while developping Soft CSS, I realized that the number of classes
+          started to grow really fast, and that at one point everybody using
+          the framework would be lost while reading the doc.<br/>
+          Then I learned about the ability to create custom HTML elements<br/>
+          So, when you're using Soft CSS and you want to create a popup alert
+          masking the whole screen, you don't need to do some ugly code like
+          this:<br/>
+          <pre><code data-lang="HTML">
+      &lt;div class="popup alert">
+        &lt;h2 class="popup-header">ALERT&lt;/h2>
+        &lt;p>Alert message&lt;/p>
+      &lt;/div>
+</code></pre>
+        <br/>
+        Instead, you use the custom element <code>soft-popup</code> like this:
+        <pre><code data-lang="HTML">
+      &lt;soft-popup class="alert">
+        &lt;span>ALERT&lt;/span>
+        &lt;p>Alert message&lt;/p>
+      &lt;/soft-popup>
+</code></pre>
+        <br/>
+        Don't see the difference ?<br/>
+        <b>That's because it is only the top of the iceberg.</b><br/>
+        When you want to create your popup dynamically, you have to create a
+        Javascript function creating a div, then set it the "popup" class,
+        then another thing and you end up with a big ass ugly function.<br/>
+        <b>But Soft CSS takes care of all that</b><br/>
+        In the "soft.js" file you will find all the constructors for the
+        custom elements, so if you want to create an alert popup you can do
+        it in <b>literally one line:</b><br/>
+        <pre><code data-lang="Javascript">
+      softPopup('alert', 'Alert header', 'Alert message');
+</code></pre>
+        <br/>
+        You don't trust me ? Enter the line given in the example in the console
+        and watch what happens. You can also replace 'alert' by 'success',
+        'info' or 'warning' for more options.
+        </div>
+
         <!-- OTHER !-->
-        <article text-justify class="first-letter-big first-letter-spacing">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vestibulum lobortis massa a tristique ultricies. Nullam non ex erat. Sed
-           eu nisl a velit efficitur tristique. Duis bibendum mattis metus,
-           dignissim mattis eros eleifend vel. Maecenas faucibus, sem in gravida
-           varius, nisi quam dictum velit, eget fermentum sapien est eget risus.
-           <blockquote>
-             This is a truly verified quote inserted right into the text
-           </blockquote>
-           Nulla est nunc, scelerisque ut lorem lacinia, ultrices mattis arcu.
-           Cras felis urna, iaculis at elementum sit amet, accumsan molestie enim.
-            Suspendisse potenti. Suspendisse potenti. Integer pretium massa augue.
-             Vivamus hendrerit eu nisl a tempor. Curabitur rhoncus diam ornare
-             tempus lacinia. Nullam consectetur, arcu vel tincidunt laoreet, massa
-              neque eleifend ipsum, vitae efficitur est est ac turpis. Quisque at
-              hendrerit nisl.
-        </article>
-        <div id="heartbeat">
+        <h1 class="section-title">Handy classes</h1>
+        <div class="container-lg">
+          Soft CSS will ship with a lot of handy classes you can use to quickly
+          customize elements without a headache. Want an element to float right
+          without having to do some inline CSS or create a new class ? Just
+          use <code>.right</code><br/>
+          Here you can see 2 classes changing the first letter of a paragraph,
+          and the redefined blockquote
+        </div>
+        <div class="showcase">
+          <article text-justify class="first-letter-big first-letter-spacing">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Vestibulum lobortis massa a tristique ultricies. Nullam non ex erat. Sed
+             eu nisl a velit efficitur tristique. Duis bibendum mattis metus,
+             dignissim mattis eros eleifend vel. Maecenas faucibus, sem in gravida
+             varius, nisi quam dictum velit, eget fermentum sapien est eget risus.
+             <blockquote>
+               This is a truly verified quote inserted right into the text
+             </blockquote>
+             Nulla est nunc, scelerisque ut lorem lacinia, ultrices mattis arcu.
+             Cras felis urna, iaculis at elementum sit amet, accumsan molestie enim.
+              Suspendisse potenti. Suspendisse potenti. Integer pretium massa augue.
+               Vivamus hendrerit eu nisl a tempor.
+               <blockquote class="reverse">
+                 A reverse quote with the source
+                 <footer>Romain Arnaud in
+                   <cite>40 ans toujours puceau</cite>
+                 </footer>
+               </blockquote>
+               Curabitur rhoncus diam ornare
+               tempus lacinia. Nullam consectetur, arcu vel tincidunt laoreet, massa
+                neque eleifend ipsum, vitae efficitur est est ac turpis. Quisque at
+                hendrerit nisl.
+          </article>
+        </div>
+
+        <h1 class="section-title">Animations</h1>
+        <div class="container-lg">
+          Soft CSS will also ship with a lot of beautiful CSS animations<br/>
+          Here is a heartbeat one ( actually there are 2 animations: one just
+          changes the scale of the element, the other the background color )
+        </div>
+        <div class="showcase">
+          <div id="heartbeat">
+          </div>
         </div>
         <!--<soft-popup>
           Custom element <code>soft-popup</code><br/>
           Click on it to hide it
         </soft-popup>!-->
       </main>
+      <footer>
+        Soft CSS 2016<br/>
+        Romain Arnaud
+      </footer>
       <script src="src/soft.js"></script>
     </body>
 </html>
