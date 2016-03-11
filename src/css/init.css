@@ -140,7 +140,33 @@ code {
   background-color: var(--white-dark);
   font-family: var(--font-code);
   border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
   padding: 0em 0.2em;
+  border: 1px solid var(--grey-default);
+}
+
+pre > code {
+  display: block;
+  margin: 1em;
+  padding: 0.5em;
+  text-align: left;
+}
+
+pre > code[data-lang] {
+  padding-top: 2em;
+}
+
+pre > code[data-lang]::before {
+  content: attr(data-lang);
+  display: inline-block;
+  background-color: var(--grey-light);
+  position: relative;
+  top: -2em;
+  padding: 0.25em 0.5em;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  left: -0.5em;
+  width: auto;
 }
 
 /****
