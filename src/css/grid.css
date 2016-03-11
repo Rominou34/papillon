@@ -37,6 +37,14 @@
   padding: 0px;
 }
 
+.soft-col *:first-child {
+  margin-top: 0px;
+}
+
+.soft-col *:last-child {
+  margin-bottom: 0px;
+}
+
 [class*="container"] div:not(.soft-row):not(.soft-col) {
   background-color: var(--blue-lighter);
   padding: 0.5em;
