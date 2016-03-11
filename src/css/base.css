@@ -1,0 +1,100 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
+/********** CONTAINERS **********/
+[class*="container"] {
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.container-sm {
+  max-width: var(--container-sm);
+}
+
+.container-md {
+  max-width: var(--container-md);
+}
+
+.container-lg {
+  max-width: var(--container-lg);
+}
+
+/*
+* The following classes are classes that are never used by default, but you can
+* use them to force the behaviour of an element ( for example if you want to
+* force an element to float on the right use "right" )
+*/
+
+/********** TEXT **********/
+
+/* Makes the first letter of the paragraph shifted from the border */
+.first-letter-spacing::first-letter {
+  padding-left: 5%;
+}
+
+/* Makes the first letter of the paragraph bigger */
+.first-letter-big::first-letter {
+  line-height: 0.5;
+  font-size: 200%;
+}
+
+/* Makes the text float on the left */
+.text-left {
+  text-align: left !important;
+}
+
+/* Makes the text justified */
+.text-justify {
+  text-align: justify !important;
+}
+
+/* Makes the text float on the right */
+.text-right {
+  text-align: right !important;
+}
+
+/* Center the text */
+.text-center {
+  text-align: center !important;
+}
+
+/********** ELEMENTS **********/
+
+/* Hides the element */
+.hidden, [hidden] {
+  display: none !important;
+}
+
+/* Makes the element float on the left */
+.left {
+  float: left !important;
+}
+
+/* Makes the element float on the right */
+.right {
+  float: right !important;
+}
+
+/* Makes the element takes the full width of its parent */
+.fullWidth {
+  width: 100% !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+/* Makes the element takes the full height of its parent */
+.fullHeight {
+  height: 100% !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+/* Makes the element take the full height of the screen */
+.fullScreenH {
+  height: 100vh !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}

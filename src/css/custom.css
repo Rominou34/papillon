@@ -1,0 +1,87 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
+soft-popup {
+  box-sizing: border-box;
+}
+
+/***** SOFT POPUPS *****/
+soft-popup-mask {
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+soft-popup {
+  z-index: 5;
+  position: fixed;
+  width: 80%;
+  max-width: 800px;
+  height: 50%;
+  max-height: 400px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  text-align: center;
+  background-color: var(--white-default);
+  color: var(--black-default);
+  box-shadow: 0px 4px 16px 0px #252525;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+soft-popup div {
+  width: 100%;
+  height: calc(100% - 5 * var(--font-size-default));
+  display: table;
+}
+
+soft-popup p {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+soft-popup span:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--font-size-big);
+  line-height: 2;
+  width: 100%;
+  display: block;
+  color: var(--white-light);
+  box-shadow: 0px -2px 16px 2px #121212;
+  background-color: var(--grey-default);
+  border-bottom: 0.25em solid var(--grey-dark);
+}
+
+soft-popup button {
+  position: relative;
+  bottom: 2em;
+}
+
+soft-popup.success span:nth-child(1) {
+  background-color: var(--green-dark);
+  border-color: var(--green-default);
+}
+
+soft-popup.info span:nth-child(1) {
+  background-color: var(--blue-dark);
+  border-color: var(--blue-default);
+}
+
+soft-popup.warning span:nth-child(1) {
+  background-color: var(--yellow-dark);
+  border-color: var(--yellow-default);
+}
+
+soft-popup.alert span:nth-child(1) {
+  background-color: var(--red-dark);
+  border-color: var(--red-default);
+}

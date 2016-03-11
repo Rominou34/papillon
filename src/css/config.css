@@ -1,0 +1,121 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
+:root {
+
+  /*
+  * The names of the components using each of the variables are written
+  * in comments after the variable declaration, just use Ctrl+F
+  */
+  /********** FONTS **********/
+
+  --font-default: Arial; /* basic text */
+  --font-second: Impact; /* basic text bis */
+  --font-third: "Times New Roman"; /* basic text thris ? */
+  --font-title: Verdana; /* h1, h2, h3, h4, h5, h6 */
+  --font-header: Ubuntu; /* Header */
+  --font-code: "Courier New"; /* code */
+
+  --font-size-default: 16px; /* Basic text */
+  --font-size-big: calc(var(--font-size-default) * 1.5); /* Basic text */
+  --font-size-small: calc(var(--font-size-default) * 0.7); /* Basic text */
+  --font-size-header: 12vw; /* Header */
+
+  --line-height: 1.5;
+
+  /********** COLORS **********/
+
+  /* WHITE */
+  --white-default: #ecf0f1;
+  --white-light: #f2f8f9;
+  --white-dark: #d7d9da;
+
+  /* GREY */
+  --grey-default: #83898c;
+  --grey-light: #a8aeb3;
+  --grey-dark: #606466;
+  --grey-darker: #3c3e40;
+
+  /* BLACK */
+  --black-default: #0e0e0e;
+  --black-lighter: #262626;
+  --black-light: #171717;
+  --black-dark: #090909;
+
+  /* BLUE */
+
+  --blue-subtle: #d3e2f4;
+  --blue-lighter: #7bb9e2;
+  --blue-light: #51a6de;
+  --blue-default: #2a70ff;
+  --blue-dark: #194082;
+  --blue-darker: #0f2849;
+
+  /* GREEN */
+  --green-subtle: #d1f4da;
+  --green-lighter: #74e290;
+  --green-light: #50de44;
+  --green-default: #44b434;
+  --green-dark: #198233;
+  --green-darker: #0b491a;
+
+  /* RED */
+  --red-subtle: #f4d8d5;
+  --red-lighter: #e28d85;
+  --red-light: #de6054;
+  --red-default: #c61b19;
+  --red-dark: #822117;
+  --red-darker: #49120d;
+
+  /* YELLOW */
+  --yellow-subtle: #edeccc;
+  --yellow-lighter: #e6e066;
+  --yellow-light: #e3dc44;
+  --yellow-default: #d4cc21;
+  --yellow-dark: #b5a11d;
+  --yellow-darker: #a48a19;
+
+  /*** OTHERS ***/
+  --color-brown: #79461c;
+  --color-orange: #ed6d1b;
+  --color-gold: #d6aa27;
+  --color-yellow: #e8e62a;
+  --color-yellow-dark: #d4cc21;
+  --color-pink: #de557a;
+  --color-purple: #73289c;
+  --color-cyan: #36c7e0;
+
+  /********** ELEMENTS DEFAULT COLORS **********/
+  --color-header: var(--white-default);
+  --bg-color-header: var(--blue-default);
+
+  --bg-color-html: #fff;
+  --bg-color-body: var(--white-default);
+  --bg-color-main: var(--blue-subtle);
+  --bg-color-aside: var(--red-subtle);
+  --bg-color-footer: var(--blue-darker);
+  --bg-color-nav: var(--blue-default);
+
+  --font-color-text: var(--black-default);
+  --font-color-title: var(--grey-dark);
+  --font-color-title-second: var(--grey-light);
+  --font-color-footer: var(--white-dark);
+
+  --font-color-link: var(--blue-default);
+  --font-color-link-h: var(--blue-light);
+  --font-color-link-v: var(--color-purple);
+  /********** SIZES **********/
+
+  --body-width: 100%;
+  --main-width: 1200px;
+  --aside-width: 250px;
+  --nav-width: 100%;
+
+  /* Container threshold sizes */
+  --container-sm: 750px;
+  --container-md: 960px;
+  --container-lg: 1200px;
+
+}
