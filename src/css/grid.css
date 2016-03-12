@@ -51,7 +51,7 @@
 }
 
 [class*="container"] div:not(.soft-row):not(.soft-col) {
-  background-color: var(--blue-lighter);
+  background-color: var(--blue-light);
   padding: 0.5em;
   border: 1px solid #444;
 }

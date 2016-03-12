@@ -137,7 +137,7 @@ caption {
 /***** CODE *****/
 
 code {
-  background-color: var(--white-dark);
+  background-color: var(--bg-color-code);
   font-family: var(--font-code);
   border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
@@ -149,6 +149,7 @@ pre > code {
   margin: 1em;
   padding: 0.5em;
   text-align: left;
+  border-left: 3px solid var(--grey-light);
 }
 
 pre > code[data-lang] {
@@ -158,12 +159,12 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: var(--grey-light);
+  background-color: #d4d4d4;
   position: relative;
   top: -2em;
   padding: 0.25em 0.5em;
-  border-radius: 0.2em;
-  -webkit-border-radius: 0.2em;
+  border-radius: 0.2em 0px 0.2em 0px;
+  -webkit-border-radius: 0.2em 0px 0.2em 0px;
   left: -0.5em;
   width: auto;
 }
@@ -302,5 +303,5 @@ main {
   width: 100%;
   max-width: var(--main-width);
   margin: 0px auto;
-  background-color: var(--font-color-main);
+  background-color: var(--bg-color-main);
 }
