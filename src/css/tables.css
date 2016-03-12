@@ -3,11 +3,73 @@
 * Romain Arnaud - 2016
 */
 
-table > thead {
-  background-color: #d5d5d5;
-  border-bottom: 2px solid #8c8c8c;
+table {
+  margin: 0.5em;
 }
 
 table td {
   padding: 0.2em;
 }
+
+/******** CLASSIC DESIGN ********/
+thead {
+  background-color: #b8b8b8;
+}
+
+tbody {
+  background-color: #fff;
+}
+
+tfoot {
+  background-color: #b8b8b8;
+}
+
+table {
+  border: 1px solid #6d6d6d;
+}
+
+table >:not(:last-child),
+tbody > *:not(:last-child) {
+  border-bottom: 1px solid #6d6d6d;
+}
+
+/******** MINIMALISTIC DESIGN ********/
+
+table.min thead,
+table.min tbody,
+table.min tfoot {
+  background-color: rgba(0,0,0,0);
+}
+
+table.min,
+table.min * {
+  border-width: 0px;
+}
+
+table.min thead {
+  border-bottom: 2px solid #8e8e8e;
+}
+
+table.min > *:last-child {
+  border-bottom: 2px solid #c5c5c5;
+}
+
+table.min tfoot {
+  border-top: 1px solid #a4a4a4;
+}
+
+/******** FLAT DESIGN ********/
+
+table.flat,
+table.flat * {
+  border-width: 0px;
+}
+
+table.flat thead {
+
+}
+
+/******** ALTERNATING ROWS ********/
+
+table.alt tbody > tr:nth-child(even) {background: #e1e1e1}
+table.alt tbody > tr:nth-child(odd) {background: #fff}

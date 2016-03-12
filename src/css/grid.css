@@ -45,7 +45,7 @@
   margin-bottom: 0px;
 }
 
-.soft-col *:not([class*="col"]),
+.soft-col *:not([class*="col"]):not(.soft-row),
 .soft-row *:not([class*="col"]) {
   flex: 1;
 }
