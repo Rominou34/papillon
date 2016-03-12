@@ -47,7 +47,7 @@ html, p, div, article, h1, h2, h3, h4, h5, h6, form {
 /***** LINKS *****/
 
 a {
-  text-decoration: none;
+  border-bottom: 1px dashed var(--font-color-link);
   color: var(--font-color-link);
 }
 

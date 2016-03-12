@@ -41,8 +41,8 @@
   display: block;
   position: absolute;
   width: 0px;
-  height: 50%;
-  top: 25%;
+  height: 60%;
+  top: 20%;
   left: 2%;
   border-right: 6px solid var(--blue-default);
 }
