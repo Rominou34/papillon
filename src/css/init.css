@@ -149,7 +149,8 @@ pre > code {
   margin: 1em;
   padding: 0.5em;
   text-align: left;
-  border-left: 3px solid var(--grey-light);
+  border: 1px solid var(--grey-light);
+  border-width: 1px 1px 1px 3px;
 }
 
 pre > code[data-lang] {
@@ -162,9 +163,9 @@ pre > code[data-lang]::before {
   background-color: #d4d4d4;
   position: relative;
   top: -2em;
-  padding: 0.25em 0.5em;
-  border-radius: 0.2em 0px 0.2em 0px;
-  -webkit-border-radius: 0.2em 0px 0.2em 0px;
+  padding: 0em 0.6em;
+  border-radius: 0px 0px 0.5em 0px;
+  -webkit-border-radius: 0px 0px 0.5em 0px;
   left: -0.5em;
   width: auto;
 }
@@ -172,6 +173,8 @@ pre > code[data-lang]::before {
 /****
 * D *
 ****/
+
+/***** DIV *****/
 
 div {
   display: block;
