@@ -83,17 +83,7 @@ var softProgressBar = function(minV, maxV, elem) {
   elem.appendChild(softprogress);
 }
 
-var createSoftProgress = function(minV, maxV, prog) {
-  var softprogress = new progressbar();
-  softprogress.setAttribute("data-minv",minV);
-  softprogress.setAttribute("data-maxv",maxV);
-  var percent = Math.round(((prog-minV) / (maxV-minV))*100);
-  softprogress.innerHTML = "<div></div>";
-  softprogress.querySelector("div").style.width = percent + "%";
-  document.body.appendChild(softprogress);
-}
-
-softProgressBar.prototype.progress = function(prog) {
+softProgressBar.prototype.setProgress = function(prog) {
   var percent = Math.round(((prog-this.minV) / (this.maxV-this.minV))*100);
   this.element.querySelector("div").style.width = percent + "%";
 }
