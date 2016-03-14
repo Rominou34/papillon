@@ -53,6 +53,27 @@
 	100%{background-color:var(--heartbeat-color-start);}
 }
 
+@keyframes spin-right {
+	0%{
+		-ms-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100%{
+		-ms-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin-right {
+	0%{background-color:var(--heartbeat-color-start);}
+	40%{background-color:var(--heartbeat-color-begin);}
+	60%{background-color:var(--heartbeat-color-peak);}
+	70%{background-color:var(--heartbeat-color-finish);}
+	100%{background-color:var(--heartbeat-color-start);}
+}
+
 #heartbeat {
 	width: 100px;
 	height: 100px;

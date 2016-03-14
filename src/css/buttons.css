@@ -4,19 +4,19 @@
 */
 
 button {
-  padding: 1em;
-  border-radius: 0.25em;
-  -webkit-border-radius: 0.25em;
+  padding: 0.4em;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
   margin: 0.5em;
   font-family: var(--font-family-default);
-  font-size: var(--font-size-default);
+  font-size: 14px;
   box-sizing: border-box;
   background-color: #fff;
   color: var(--black-default);
   border: 1px solid var(--grey-light);
 }
 
-button:not(:disabled):not(.is-loading):hover {
+button:not(:disabled):not(.loading):hover {
   cursor: pointer;
   box-shadow: 0px 0px 5px -1px #252525;
   transition: all 0.25s ease-out;
@@ -35,7 +35,7 @@ button:disabled:hover {
   cursor: not-allowed;
 }
 
-button:not(:disabled):not(.is-loading):active {
+button:not(:disabled):not(.loading):active {
   outline: 0;
   transition: all 0.1s;
   -webkit-transition: all 0.1s;
@@ -50,6 +50,76 @@ button:focus {
   -webkit-transition: all 0.1s;
 }
 
+/********** MODIFIER CLASSES **********/
+
+button.primary {
+  background-color: var(--primary-color);
+  color: var(--white-light);
+  border-color: var(--primary-color);
+}
+
+button.primary:not(:disabled):not(.loading):active {
+  background-color: var(--primary-color-dark);
+  border-color: var(--primary-color);
+}
+
+button.primary:not(:disabled):not(.loading):hover {
+  border-color: var(--primary-color);
+}
+
+button.large {
+  padding: 0.6em;
+  font-size: 20px;
+}
+
+
+button.loading {
+  padding: 0.5em 1.5em;
+  content: '';
+}
+
+button.large.loading {
+  padding: 0.8em 2.5em;
+}
+
+button.primary.loading:after,
+button.green.loading:after,
+button.blue.loading:after,
+button.red.loading:after,
+button.orange.loading:after,
+button.black.loading:after {
+    border-color: transparent transparent white white !important;
+}
+
+button.loading:after {
+    animation: spin-right 500ms infinite linear;
+    border: 2px solid #888;
+    border-radius: 2000px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: calc(var(--font-size-default) * 1.2);
+    position: relative;
+    width: calc(var(--font-size-default) * 1.2);
+}
+
+button.large.loading:after {
+  height: calc(var(--font-size-default) * 1.5);
+  width: calc(var(--font-size-default) * 1.5);
+}
+
+/*button.loading:after {
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    position: absolute !important;
+}*/
+
+/*************** COLORS ***************/
+
 button.green, button.blue, button.red, button.orange, button.black {
   color: var(--white-light);
 }
@@ -59,8 +129,11 @@ button.green {
   background-color: var(--green-default);
   border-color: var(--green-default);
 }
-button.green:not(:disabled):not(.is-loading):active {
+button.green:not(:disabled):not(.loading):active {
   background-color: var(--green-dark);
+  border-color: var(--green-default);
+}
+button.green:not(:disabled):not(.loading):hover {
   border-color: var(--green-default);
 }
 
@@ -69,8 +142,11 @@ button.blue {
   background-color: var(--blue-default);
   border-color: var(--blue-default);
 }
-button.blue:not(:disabled):not(.is-loading):active {
+button.blue:not(:disabled):not(.loading):active {
   background-color: var(--blue-dark);
+  border-color: var(--blue-default);
+}
+button.blue:not(:disabled):not(.loading):hover {
   border-color: var(--blue-default);
 }
 
@@ -79,8 +155,11 @@ button.red {
   background-color: var(--red-default);
   border-color: var(--red-default);
 }
-button.red:not(:disabled):not(.is-loading):active {
+button.red:not(:disabled):not(.loading):active {
   background-color: var(--red-dark);
+  border-color: var(--red-default);
+}
+button.red:not(:disabled):not(.loading):hover {
   border-color: var(--red-default);
 }
 
@@ -89,8 +168,11 @@ button.orange {
   background-color: var(--orange-default);
   border-color: var(--orange-default);
 }
-button.orange:not(:disabled):not(.is-loading):active {
+button.orange:not(:disabled):not(.loading):active {
   background-color: var(--orange-dark);
+  border-color: var(--orange-default);
+}
+button.orange:not(:disabled):not(.loading):hover {
   border-color: var(--orange-default);
 }
 
@@ -99,7 +181,10 @@ button.black {
   background-color: var(--black-light);
   border-color: var(--black-light);
 }
-button.black:not(:disabled):not(.is-loading):active {
+button.black:not(:disabled):not(.loading):active {
   background-color: var(--black-default);
+  border-color: var(--black-light);
+}
+button.black:not(:disabled):not(.loading):hover {
   border-color: var(--black-light);
 }

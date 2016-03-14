@@ -142,6 +142,7 @@ code {
   border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
   padding: 0em 0.2em;
+  border: 1px solid #baced9;
 }
 
 pre > code {
@@ -149,7 +150,6 @@ pre > code {
   margin: 1em;
   padding: 0.5em;
   text-align: left;
-  border: 1px solid var(--grey-light);
   border-width: 1px 1px 1px 3px;
   word-wrap: break-word;
   max-width: 100%;
@@ -171,6 +171,7 @@ pre > code[data-lang]::before {
   -webkit-border-radius: 0px 0px 0.5em 0px;
   left: -0.5em;
   width: auto;
+  float: left;
 }
 
 /****
