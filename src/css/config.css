@@ -5,6 +5,7 @@
 
 :root {
 
+
   /*
   * The names of the components using each of the variables are written
   * in comments after the variable declaration, just use Ctrl+F
@@ -18,11 +19,12 @@
   --font-header: Ubuntu; /* Header */
   --font-code: "Courier New"; /* code */
 
-  --font-size-default: 1em; /* Basic text */
+  --font-size-default: 16px; /* Basic text */
   --font-size-big: calc(var(--font-size-default) * 1.5); /* Basic text */
-  --font-size-small: calc(var(--font-size-default) * 0.7); /* Basic text */
+  --font-size-small: calc(var(--font-size-default) * 0.8); /* Basic text */
   --font-size-header: 12vw; /* Header */
 
+  font-size: var(--font-size-default);
   --line-height: 1.5;
 
   /********** COLORS **********/
@@ -80,11 +82,12 @@
 
   /***** COLOR PALETTE *****/
   --primary-color: var(--blue-default);
-  --secondary-color: var(--blue-dark);
+  --primary-color-dark: var(--blue-dark);
+  --primary-color-light: var(--blue-light);
 
   /* HEADER */
   --color-header: var(--white-default);
-  --bg-color-header: var(--blue-default);
+  --bg-color-header: var(--primary-color);
 
 
 
@@ -102,8 +105,8 @@
   --font-color-title-second: var(--grey-dark);
   --font-color-footer: var(--white-dark);
 
-  --font-color-link: var(--blue-default);
-  --font-color-link-h: var(--blue-light);
+  --font-color-link: var(--primary-color);
+  --font-color-link-h: var(--primary-color-light);
   --font-color-link-v: var(--color-purple);
   /********** SIZES **********/
 

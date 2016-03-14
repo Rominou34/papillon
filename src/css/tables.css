@@ -65,10 +65,6 @@ table.flat * {
   border-width: 0px;
 }
 
-table.flat thead {
-
-}
-
 /******** ALTERNATING ROWS ********/
 
 table.alt tbody > tr:nth-child(even) {background: #e1e1e1}

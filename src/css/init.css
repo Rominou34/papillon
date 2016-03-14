@@ -15,7 +15,6 @@ html {
 body {
   font-family: var(--font-default);
   background-color: var(--bg-color-body);
-  font-size: var(--font-size-default);
   line-height: var(--line-height);
   color: var(--font-color-text);
   width: 100%;
@@ -53,6 +52,7 @@ a {
 
 a:hover, a:visited:hover {
   color: var(--font-color-link-h);
+  border-color: var(--font-color-link-h);
 }
 
 a:visited {
@@ -276,27 +276,27 @@ h6 small {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 42px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 36px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 h6 {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /***** MAIN *****/
