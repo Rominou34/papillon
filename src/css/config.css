@@ -67,7 +67,7 @@
   /* ORANGE */
   --orange-subtle: #edeccc;
   --orange-light: #e0b263;
-  --orange-default: #e4a230;
+  --orange-default: #e0a32d;
   --orange-dark: #c38925;
 
   /*** OTHERS ***/
@@ -102,7 +102,7 @@
 
   --font-color-text: var(--black-default);
   --font-color-title: var(--black-lighter);
-  --font-color-title-second: var(--grey-dark);
+  --font-color-title-second: var(--grey-default);
   --font-color-footer: var(--white-dark);
 
   --font-color-link: var(--primary-color);

@@ -151,6 +151,9 @@ pre > code {
   text-align: left;
   border: 1px solid var(--grey-light);
   border-width: 1px 1px 1px 3px;
+  word-wrap: break-word;
+  max-width: 100%;
+  white-space: pre-wrap;
 }
 
 pre > code[data-lang] {
@@ -245,7 +248,7 @@ header {
 header > small {
   font-size: 25%;
   font-family: var(--font-title);
-  color: var(--grey-light);
+  color: var(--white-dark);
   display: block;
   padding-bottom: 2em;
 }
@@ -272,7 +275,7 @@ h5 small,
 h6 small {
   color: var(--font-color-title-second);
   padding-left: 0em;
-  font-size: 70%;
+  font-size: 60%;
 }
 
 h1 {

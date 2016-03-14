@@ -88,17 +88,17 @@
 .col-s11 { flex: 11 0; }
 .col-s12 { flex: 12 0; }
 
-.col-offset-1 { margin-left: calc(100% / 12); }
-.col-offset-2 { margin-left: calc(100% / 6); }
-.col-offset-3 { margin-left: calc(100% / 4); }
-.col-offset-4 { margin-left: calc(100% / 3); }
-.col-offset-5 { margin-left: calc(500% / 12); }
-.col-offset-6 { margin-left: calc(100% / 2); }
-.col-offset-7 { margin-left: calc(700% / 12); }
-.col-offset-8 { margin-left: calc(800% / 12); }
-.col-offset-9 { margin-left: calc(900% / 12); }
-.col-offset-10 { margin-left: calc(1000% / 12); }
-.col-offset-11 { margin-left: calc(1100% / 12); }
+.col-offset-1 { margin-left: calc(100% / 12) !important; }
+.col-offset-2 { margin-left: calc(100% / 6) !important; }
+.col-offset-3 { margin-left: calc(100% / 4) !important; }
+.col-offset-4 { margin-left: calc(100% / 3) !important; }
+.col-offset-5 { margin-left: calc(500% / 12) !important; }
+.col-offset-6 { margin-left: calc(100% / 2) !important; }
+.col-offset-7 { margin-left: calc(700% / 12) !important; }
+.col-offset-8 { margin-left: calc(800% / 12) !important; }
+.col-offset-9 { margin-left: calc(900% / 12) !important; }
+.col-offset-10 { margin-left: calc(1000% / 12) !important; }
+.col-offset-11 { margin-left: calc(1100% / 12) !important; }
 
 /*************** RESPONSIVE DESIGN ***************/
 
