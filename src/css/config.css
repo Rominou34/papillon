@@ -83,6 +83,8 @@
   --primary-color: var(--blue-default);
   --primary-color-dark: var(--blue-dark);
   --primary-color-light: var(--blue-light);
+  --primary-color-lighter: #b7c7d6;
+  --primary-color-subtle: var(--blue-subtle);
 
   /* HEADER */
   --color-header: var(--white-default);
@@ -104,8 +106,8 @@
   --font-color-title-second: var(--grey-default);
   --font-color-footer: var(--white-dark);
 
-  --font-color-link: var(--primary-color);
-  --font-color-link-h: var(--primary-color-light);
+  --font-color-link: var(--blue-default);
+  --font-color-link-h: var(--blue-light);
   --font-color-link-v: var(--color-purple);
   /********** SIZES **********/
 

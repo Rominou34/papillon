@@ -82,5 +82,5 @@
 
 /* Sets a border */
 .border {
-  border: var(--border-width) solid var(--primary-color);
+  border: var(--border-width) solid var(--primary-color-dark);
 }

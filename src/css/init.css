@@ -46,13 +46,11 @@ html, p, div, article, h1, h2, h3, h4, h5, h6, form {
 /***** LINKS *****/
 
 a {
-  border-bottom: 1px dashed var(--font-color-link);
   color: var(--font-color-link);
 }
 
 a:hover, a:visited:hover {
   color: var(--font-color-link-h);
-  border-color: var(--font-color-link-h);
 }
 
 a:visited {
