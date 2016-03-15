@@ -201,8 +201,8 @@ body > footer {
 
 /***** HEADER *****/
 
-header {
-  font-size: var(--font-size-header);
+body > header {
+  font-size: 96px;
   font-family: var(--font-header);
   color: var(--color-header);
   background-color: var(--bg-color-header);
@@ -210,7 +210,7 @@ header {
   text-align: center;
 }
 
-header > small {
+body > header > small {
   font-size: 25%;
   font-family: var(--font-title);
   color: var(--white-dark);
