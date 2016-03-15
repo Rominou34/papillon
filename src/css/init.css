@@ -200,6 +200,8 @@ body > footer {
 * I *
 ****/
 
+/***** IMG *****/
+
 img {
   font-family: 'Helvetica';
   font-weight: 300;
@@ -234,6 +236,11 @@ img:after {
   background-color: var(--white-dark);
   box-sizing: border-box;
 }
+
+
+/****
+* H *
+****/
 
 /***** HEADER *****/
 
@@ -303,6 +310,21 @@ h6 {
   font-size: 14px;
 }
 
+/****
+* K *
+****/
+
+/***** KEYBOARD *****/
+
+kbd {
+  background-color: #f6efe0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-width: 1px 1px 3px 1px;
+  border-style: solid;
+  border-color: #8b7b6e;
+  padding: 0px 2px;
+}
 /***** MAIN *****/
 
 main {
