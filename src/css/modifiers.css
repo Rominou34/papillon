@@ -73,6 +73,11 @@
   margin-bottom: 0px !important;
 }
 
+/********** ELEMENTS BEHAVIOUR **********/
+.disabled {
+  pointer-events: none;
+}
+
 /********** ELEMENTS ASPECT **********/
 
 /* Sets a border */

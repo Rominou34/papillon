@@ -3,7 +3,8 @@
 * Romain Arnaud - 2016
 */
 
-button {
+button,
+.button {
   padding: 0.4em;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -14,17 +15,28 @@ button {
   background-color: #fff;
   color: var(--black-default);
   border: 1px solid var(--grey-light);
+  display: inline-block;
 }
 
-button:not(:disabled):not(.loading):hover {
+button:hover,
+.button:hover,
+.button:visited:hover {
   cursor: pointer;
   box-shadow: 0px 0px 5px -1px #252525;
   transition: all 0.25s ease-out;
   -webkit-transition: all 0.25s ease-out;
   border-color: var(--grey-dark);
+  color: var(--black-default);
 }
 
-button:disabled {
+.button:visited {
+  color: inherit;
+}
+
+
+
+button:disabled,
+.button.disabled {
   box-shadow: 0px 0px 6px 0px #474747 inset;
   background-color: var(--grey-default);
   color: var(--grey-darker);
@@ -35,7 +47,8 @@ button:disabled:hover {
   cursor: not-allowed;
 }
 
-button:not(:disabled):not(.loading):active {
+button:not(:disabled):not(.loading):active,
+.button:not(.disabled):not(.loading):active {
   outline: 0;
   transition: all 0.1s;
   -webkit-transition: all 0.1s;
@@ -44,7 +57,8 @@ button:not(:disabled):not(.loading):active {
   box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.3) inset;
 }
 
-button:focus {
+button:focus,
+.button:focus {
   outline: 0;
   transition: all 0.1s;
   -webkit-transition: all 0.1s;
@@ -52,46 +66,66 @@ button:focus {
 
 /********** MODIFIER CLASSES **********/
 
-button.primary {
+button.primary,
+.button.primary {
   background-color: var(--primary-color);
   color: var(--white-light);
   border-color: var(--primary-color);
 }
 
-button.primary:not(:disabled):not(.loading):active {
+button.primary:not(:disabled):not(.loading):active,
+.button.primary:not(.disabled):not(.loading):active {
   background-color: var(--primary-color-dark);
   border-color: var(--primary-color);
 }
 
-button.primary:not(:disabled):not(.loading):hover {
+button.primary:not(:disabled):not(.loading):hover,
+.button.primary:not(.disabled):not(.loading):hover {
   border-color: var(--primary-color);
+  color: var(--white-light);
 }
 
-button.large {
+button.large,
+.button.large {
   padding: 0.6em;
   font-size: 20px;
 }
 
 
-button.loading {
-  padding: 0.5em 1.5em;
+button.loading,
+.button.loading {
+  padding: 0.7em 2em;
   content: '';
+  pointer-events: none;
 }
 
-button.large.loading {
+button.large.loading,
+.button.large.loading {
   padding: 0.8em 2.5em;
 }
 
-button.primary.loading:after,
-button.green.loading:after,
-button.blue.loading:after,
-button.red.loading:after,
-button.orange.loading:after,
-button.black.loading:after {
+button.loading:hover,
+.button.loading:hover {
+  cursor: wait;
+}
+
+button.primary.loading::after,
+button.green.loading::after,
+button.blue.loading::after,
+button.red.loading::after,
+button.orange.loading::after,
+button.black.loading::after,
+.button.primary.loading:after,
+.button.green.loading::after,
+.button.blue.loading::after,
+.button.red.loading::after,
+.button.orange.loading::after,
+.button.black.loading::after {
     border-color: transparent transparent white white !important;
 }
 
-button.loading:after {
+button.loading::after,
+.button.loading::after {
     animation: spin-right 500ms infinite linear;
     border: 2px solid #888;
     border-radius: 2000px;
@@ -99,12 +133,13 @@ button.loading:after {
     border-top-color: transparent;
     content: "";
     display: block;
-    height: calc(var(--font-size-default) * 1.2);
+    height: calc(var(--font-size-default) * 1);
     position: relative;
-    width: calc(var(--font-size-default) * 1.2);
+    width: calc(var(--font-size-default) * 1);
 }
 
-button.large.loading:after {
+button.large.loading::after,
+.button.large.loading::after {
   height: calc(var(--font-size-default) * 1.5);
   width: calc(var(--font-size-default) * 1.5);
 }
@@ -120,71 +155,95 @@ button.large.loading:after {
 
 /*************** COLORS ***************/
 
-button.green, button.blue, button.red, button.orange, button.black {
+button.green, button.blue, button.red, button.orange, button.black,
+.button.green, .button.blue, .button.red, .button.orange, .button.black {
+  color: var(--white-light);
+}
+
+.button.green:hover,
+.button.blue:hover,
+.button.red:hover,
+.button.orange:hover,
+.button.black:hover {
   color: var(--white-light);
 }
 
 /* GREEN */
-button.green {
+button.green,
+.button.green {
   background-color: var(--green-default);
   border-color: var(--green-default);
 }
-button.green:not(:disabled):not(.loading):active {
+button.green:not(:disabled):not(.loading):active,
+.button.green:not(:disabled):not(.loading):active {
   background-color: var(--green-dark);
   border-color: var(--green-default);
 }
-button.green:not(:disabled):not(.loading):hover {
+button.green:not(:disabled):not(.loading):hover,
+.button.green:not(:disabled):not(.loading):hover {
   border-color: var(--green-default);
 }
 
 /* BLUE */
-button.blue {
+button.blue,
+.button.blue {
   background-color: var(--blue-default);
   border-color: var(--blue-default);
 }
-button.blue:not(:disabled):not(.loading):active {
+button.blue:not(:disabled):not(.loading):active,
+.button.blue:not(:disabled):not(.loading):active {
   background-color: var(--blue-dark);
   border-color: var(--blue-default);
 }
-button.blue:not(:disabled):not(.loading):hover {
+button.blue:not(:disabled):not(.loading):hover,
+.button.blue:not(:disabled):not(.loading):hover {
   border-color: var(--blue-default);
 }
 
 /* RED */
-button.red {
+button.red,
+.button.red {
   background-color: var(--red-default);
   border-color: var(--red-default);
 }
-button.red:not(:disabled):not(.loading):active {
+button.red:not(:disabled):not(.loading):active,
+.button.red:not(:disabled):not(.loading):active {
   background-color: var(--red-dark);
   border-color: var(--red-default);
 }
-button.red:not(:disabled):not(.loading):hover {
+button.red:not(:disabled):not(.loading):hover,
+.button.red:not(:disabled):not(.loading):hover {
   border-color: var(--red-default);
 }
 
 /* ORANGE */
-button.orange {
+button.orange,
+.button.orange {
   background-color: var(--orange-default);
   border-color: var(--orange-default);
 }
-button.orange:not(:disabled):not(.loading):active {
+button.orange:not(:disabled):not(.loading):active,
+.button.orange:not(:disabled):not(.loading):active {
   background-color: var(--orange-dark);
   border-color: var(--orange-default);
 }
-button.orange:not(:disabled):not(.loading):hover {
+button.orange:not(:disabled):not(.loading):hover,
+.button.orange:not(:disabled):not(.loading):hover {
   border-color: var(--orange-default);
 }
 
 /* BLACK */
-button.black {
+button.black,
+.button.black {
   background-color: var(--black-light);
   border-color: var(--black-light);
 }
-button.black:not(:disabled):not(.loading):active {
+button.black:not(:disabled):not(.loading):active,
+.button.black:not(:disabled):not(.loading):active {
   background-color: var(--black-default);
   border-color: var(--black-light);
 }
-button.black:not(:disabled):not(.loading):hover {
+button.black:not(:disabled):not(.loading):hover,
+.button.black:not(:disabled):not(.loading):hover {
   border-color: var(--black-light);
 }
