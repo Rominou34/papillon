@@ -185,32 +185,34 @@
         <div class="container-lg">
           Soft CSS comes with a pack of redefined buttons, with a better and
           more modern design than the default ones, and a bit of choice for the
-          colors
+          colors. You can use it either by creating a button (
+          <code>&lt;button></code> ) or by using the class <code>.button</code>
+          on a link.
         </div>
         <div class="showcase">
           <div class="container-sm">
             <button>Default button</button>
-            <button class="green">.green button</button>
-            <button class="blue">.blue button</button>
-            <button class="red">.red button</button>
-            <button class="orange">.orange button</button>
-            <button class="black">.black button</button>
+            <a href="#" class="button green">Green link</a>
+            <button class="blue">Blue button</button>
+            <a href="#" class="button red">Red link</a>
+            <button class="orange">Orange button</button>
+            <button class="black">Black button</button>
           </div>
+          You can use the class <code>.large</code> to mark a bigger button
           <div class="container-lg">
             <button class="large">Default button</button>
-            <button class="green large">.green button</button>
-            <button class="blue large">.blue button</button>
-            <button class="red large">.red button</button>
-            <button class="orange large">.orange button</button>
-            <button class="black large">.black button</button>
+            <button class="green large">Large Green</button>
+            <a href="#" class="button blue large">Large Blue link</a>
+            <button class="red large">Large Red</button>
+            <button class="orange large">Orange</button>
+            <button class="black large">Black</button>
           </div>
+          And you can also use <code>.loading</code> and <code>.disabled</code>
           <div class="container-md">
             <button class="loading"></button>
             <button class="primary loading"></button>
-            <button class="primary large loading"></button>
-            <button class="red loading"></button>
-            <button class="orange large">.orange button</button>
-            <button class="black large">.black button</button>
+            <button class="red large loading"></button>
+            <button disabled>Disabled :s</button>
           </div>
         </div>
 
