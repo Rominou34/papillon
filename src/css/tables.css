@@ -64,7 +64,7 @@ table.flat * {
 
 /******** ALTERNATING ROWS ********/
 
-table.alt tbody > tr:nth-child(even) {background: #e5e5e5}
+table.alt tbody > tr:nth-child(even) {background: #ededed}
 table.alt tbody > tr:nth-child(odd) {background: #fff}
 
 /******** REACTIVE DESIGN ********/
