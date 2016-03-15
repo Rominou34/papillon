@@ -32,11 +32,11 @@
 /********** TITLE **********/
 
 /* Titles of a section with special style added */
-.section-title {
+.section-header {
   position: relative;
 }
 
-.section-title::before {
+.section-header::before {
   content: '';
   display: block;
   position: absolute;
