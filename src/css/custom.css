@@ -3,12 +3,12 @@
 * Romain Arnaud - 2016
 */
 
-soft-popup, soft-progress {
+.soft-popup, .soft-progress {
   box-sizing: border-box;
 }
 
 /*************** SOFT POPUPS ***************/
-soft-popup-mask {
+.soft-popupmask {
   width: 100vw;
   height: 100vh;
   z-index: 4;
@@ -17,7 +17,8 @@ soft-popup-mask {
   top: 0px;
   left: 0px;
 }
-soft-popup {
+
+.soft-popup {
   z-index: 5;
   position: fixed;
   width: 80%;
@@ -37,19 +38,19 @@ soft-popup {
   overflow: hidden;
 }
 
-soft-popup div {
+.soft-popup div {
   width: 100%;
   height: calc(100% - 5 * var(--font-size-default));
   display: table;
 }
 
-soft-popup p {
+.soft-popup p {
   display: table-cell;
   vertical-align: middle;
   line-height: normal;
 }
 
-soft-popup span:nth-child(1) {
+.soft-popup span:nth-child(1) {
   font-weight: bold;
   font-size: var(--font-size-big);
   line-height: 2;
@@ -61,35 +62,35 @@ soft-popup span:nth-child(1) {
   border-bottom: 0.25em solid var(--grey-dark);
 }
 
-soft-popup button {
+.soft-popup button {
   position: relative;
   padding: 0.5em 2em;
   bottom: 2em;
 }
 
-soft-popup.success span:nth-child(1) {
+.soft-popup.success span:nth-child(1) {
   background-color: var(--green-dark);
   border-color: var(--green-default);
 }
 
-soft-popup.info span:nth-child(1) {
+.soft-popup.info span:nth-child(1) {
   background-color: var(--blue-dark);
   border-color: var(--blue-default);
 }
 
-soft-popup.warning span:nth-child(1) {
+.soft-popup.warning span:nth-child(1) {
   background-color: var(--yellow-dark);
   border-color: var(--yellow-default);
 }
 
-soft-popup.alert span:nth-child(1) {
+.soft-popup.alert span:nth-child(1) {
   background-color: var(--red-dark);
   border-color: var(--red-default);
 }
 
 /*************** SOFT PROGRESS BARS ***************/
 
-soft-progress {
+.soft-progress {
   width: 100%;
   display: block;
   margin: 0px;
@@ -97,7 +98,7 @@ soft-progress {
   background-color: var(--white-dark);
 }
 
-soft-progress div {
+.soft-progress div {
   height: 100%;
   text-align: center;
   margin: 0px;

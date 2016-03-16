@@ -3,11 +3,6 @@
 * Romain Arnaud - 2016
 */
 
-var popup = document.registerElement('soft-popup');
-var popupmask = document.registerElement('soft-popup-mask');
-var progressbar = document.registerElement('soft-progress');
-
-
 /*************** SOFT POPUP ***************/
 
 /*
@@ -20,8 +15,11 @@ var progressbar = document.registerElement('soft-progress');
 */
 var softPopup = function(type, header, msg) {
   // Creating the element and the mask
-  var softpopupmask = new popupmask();
-  var softpopup = new popup();
+  var softpopupmask = document.createElement("div");
+  softpopupmask.className = "soft-popupmask";
+
+  var softpopup = document.createElement("div");
+  softpopup.className = "soft-popup ";
 
   // Getting the corresponding color
   var color = null;
@@ -46,7 +44,7 @@ var softPopup = function(type, header, msg) {
   }
 
   try {
-    softpopup.setAttribute("class", type);
+    softpopup.className += type;
   } catch(err) {
     console.log(err.message);
   }
@@ -74,7 +72,9 @@ var softPopup = function(type, header, msg) {
 var softProgressBar = function(minV, maxV, elem) {
   this.minV = minV;
   this.maxV = maxV;
-  var softprogress = new progressbar();
+  var softprogress = document.createElement("div");
+  softprogress.className = "soft-progress";
+
   softprogress.setAttribute("data-minv",this.minV);
   softprogress.setAttribute("data-maxv",this.maxV);
   softprogress.innerHTML = "<div></div>";
