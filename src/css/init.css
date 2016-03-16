@@ -60,7 +60,7 @@ a:visited {
 /***** ARTICLES *****/
 
 article {
-  display: inline-block;
+  display: block;
 }
 
 /***** ASIDE *****/
@@ -86,6 +86,7 @@ blockquote {
   width: auto;
   display: inline-block;
   margin: 0.8em;
+  border: 1px solid #ddd;
 }
 
 blockquote:not(.reverse) {

@@ -104,3 +104,71 @@
   margin: 0px;
   background-color: var(--blue-default);
 }
+
+/*************** SOFT TOOLTIPS ***************/
+
+.soft-tooltip {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  display: none;
+}
+
+.tooltip div {
+  padding: 0.6em;
+  color: #fff;
+  background-color: rgba(0,0,0,0.75);
+  position: relative;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  width: auto;
+  text-align: center;
+  top: 5px;
+  z-index: 2;
+  animation: plop 0.2s 0s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.tooltip div::before,
+.tooltip div::after {
+  width: 0px;
+  height: 0px;
+  content: '';
+  display: block;
+  animation: plop 0.2s 0s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.tooltip.top div::after {
+  border: 12px solid;
+  border-color: rgba(0,0,0,0.75) transparent transparent transparent;
+  position: absolute;
+  left: calc(50% - 12px);
+  bottom: -24px;
+}
+
+.tooltip.right div::after {
+  border: 12px solid;
+  border-color: transparent rgba(0,0,0,0.75) transparent transparent;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: -24px;
+}
+
+.tooltip.bottom div::before {
+  border: 12px solid;
+  border-color: transparent transparent rgba(0,0,0,0.75) transparent;
+  position: absolute;
+  left: calc(50% - 12px);
+  top: -24px;
+}
+
+.tooltip.left div::before {
+  border: 12px solid;
+  border-color: transparent transparent transparent rgba(0,0,0,0.75);
+  position: absolute;
+  top: calc(50% - 12px);
+  right: -24px;
+}

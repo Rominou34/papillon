@@ -5,6 +5,10 @@
   text-indent: 2em;
 }
 
+.first-letter-spacing * {
+  text-indent: 0px;
+}
+
 /* Makes the first letter of the paragraph bigger */
 .first-letter-big::first-letter {
   font-size: 200%;
