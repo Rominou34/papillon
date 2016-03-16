@@ -113,11 +113,24 @@
 
 .tooltip {
   position: absolute;
-  display: none;
+  display: block;
+  visibility: hidden;
+  border-width: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.plop {
+  animation: plop 0.2s 0s ease-in-out;
+  animation-fill-mode: both;
 }
 
 .tooltip div {
   padding: 0.6em;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 10px !important;
+  border: 0px !important;
   color: #fff;
   background-color: rgba(0,0,0,0.75);
   position: relative;
@@ -125,7 +138,6 @@
   -webkit-border-radius: 4px;
   width: auto;
   text-align: center;
-  top: 5px;
   z-index: 2;
   animation: plop 0.2s 0s ease-in-out;
   animation-fill-mode: both;

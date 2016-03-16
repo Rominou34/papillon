@@ -113,15 +113,32 @@ var addToolTipListeners = function() {
     item.addEventListener("mouseover", function() {
       var tips = item.querySelectorAll(".tooltip");
       tipItems = [].slice.call(tips);
+      var elH = item.offsetHeight;
+      var elW = item.offsetWidth;
+
       tipItems.forEach(function (tip) {
-        tip.style.display = "inline-block";
-        var h = "-" + (tip.offsetHeight+30) + "px";
-        var w = "-" + (tip.offsetWidth+30) + "px";
+        tip.classList.add("plop");
+        tip.style.visibility = "visible";
+        var h = tip.offsetHeight;
+        var w = tip.offsetWidth;
+
         //We offset the element
-        if(tip.classList.contains('top')) { tip.style.top = h; }
-        if(tip.classList.contains('right')) { tip.style.right = w; }
-        if(tip.classList.contains('bottom')) { tip.style.bottom = h; }
-        if(tip.classList.contains('left')) { tip.style.left = w; }
+        if(tip.classList.contains('top')) {
+          tip.style.top = "-" + (h+15) + "px";
+          tip.style.left = (elW/2 - w/2) + "px";
+        }
+        if(tip.classList.contains('right')) {
+          tip.style.right = "-" + (w+15) + "px";
+          tip.style.top = (elH/2 - h/2) + "px";
+        }
+        if(tip.classList.contains('bottom')) {
+          tip.style.bottom = "-" + (h+15) + "px";
+          tip.style.left = (elW/2 - w/2) + "px";
+        }
+        if(tip.classList.contains('left')) {
+          tip.style.left = "-" + (w+15) + "px";
+          tip.style.top = (elH/2 - h/2) + "px";
+        }
       });
     });
     //Event listener for mouse out
@@ -129,7 +146,8 @@ var addToolTipListeners = function() {
       var tips = item.querySelectorAll(".tooltip");
       tipItems = [].slice.call(tips);
       tipItems.forEach(function (tip) {
-        tip.style.display = "none";
+        tip.classList.remove("plop");
+        tip.style.visibility = "hidden";
       });
     });
   });
