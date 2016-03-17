@@ -11,12 +11,12 @@
   */
   /********** FONTS **********/
 
-  --font-default: Arial; /* basic text */
-  --font-second: Impact; /* basic text bis */
-  --font-third: "Times New Roman"; /* basic text thris ? */
-  --font-title: Verdana; /* h1, h2, h3, h4, h5, h6 */
-  --font-header: Ubuntu; /* Header */
-  --font-code: "Courier New"; /* code */
+  --font-default: Arial, "sans-serif"; /* basic text */
+  --font-second: Impact, "sans-serif"; /* basic text bis */
+  --font-third: "Times New Roman", "serif"; /* basic text thris ? */
+  --font-title: Verdana, "sans-serif"; /* h1, h2, h3, h4, h5, h6 */
+  --font-header: Ubuntu, "sans-serif"; /* Header */
+  --font-code: "Courier New", "monospace"; /* code */
 
   --font-size-default: 16px; /* Basic text */
   --font-size-big: calc(var(--font-size-default) * 1.5); /* Basic text */
@@ -109,6 +109,7 @@
   --font-color-link: var(--blue-default);
   --font-color-link-h: var(--blue-light);
   --font-color-link-v: var(--color-purple);
+
   /********** SIZES **********/
 
   --border-width: 1px;
@@ -117,6 +118,12 @@
   --main-width: 1200px;
   --aside-width: 250px;
   --nav-width: 100%;
+
+  /************* VARIABLES USED IN SPECIFIC PARTS *************/
+
+  /*** GRID LAYOUT ***/
+  --grid-margin: 8px;
+  --grid-margin-sm: 4px;
 
   /* Container threshold sizes */
   --container-sm: 750px;

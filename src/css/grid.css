@@ -10,11 +10,6 @@
 * !!!
 */
 
-:root {
-  --grid-margin: 10px;
-  --grid-margin-sm: 5px;
-}
-
 .soft-row,
 .soft-col {
   display: flex;
