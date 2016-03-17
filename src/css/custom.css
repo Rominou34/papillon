@@ -93,7 +93,9 @@
 .soft-progress {
   width: 100%;
   display: block;
-  margin: 0px;
+  margin: 0px !important;
+  padding: 0px !important;
+  border: none !important;
   height: 0.5em;
   background-color: var(--white-dark);
 }
@@ -101,7 +103,9 @@
 .soft-progress div {
   height: 100%;
   text-align: center;
-  margin: 0px;
+  border: inherit !important;
+  margin: 0px !important;
+  padding: 0px !important;
   background-color: var(--blue-default);
 }
 

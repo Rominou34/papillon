@@ -80,7 +80,7 @@ var softProgressBar = function(minV, maxV, elem, height) {
   this.maxV = maxV;
   var softprogress = document.createElement("div");
   softprogress.className = "soft-progress";
-  softprogress.style.height = height + "px";
+  softprogress.style.height = height;
 
   softprogress.setAttribute("data-minv",this.minV);
   softprogress.setAttribute("data-maxv",this.maxV);
