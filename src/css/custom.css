@@ -125,8 +125,10 @@
 }
 
 .plop {
-  animation: plop 0.2s 0s ease-in-out;
+  animation: plop 200ms 0s ease-in-out;
   animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 
 .tooltip div {
