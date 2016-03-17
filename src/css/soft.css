@@ -16,6 +16,8 @@ overridden ) */
 /* We import the base classes */
 @import url(base.css);
 
+@import url(fonticons.css);
+
 /* We import the files for the tables */
 @import url(tables.css);
 
