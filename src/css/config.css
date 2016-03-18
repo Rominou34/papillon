@@ -82,6 +82,7 @@
   /***** COLOR PALETTE *****/
   --primary-color: var(--blue-default);
   --primary-color-dark: var(--blue-dark);
+  --primary-color-darker: #0f2a58;
   --primary-color-light: var(--blue-light);
   --primary-color-lighter: #b7c7d6;
   --primary-color-subtle: var(--blue-subtle);

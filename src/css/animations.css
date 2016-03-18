@@ -11,6 +11,39 @@
 	--heartbeat-color-finish: #d75858;
 }
 
+.animation-plop {
+  animation: plop 200ms 0s ease-in-out;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.animation-heartbeat-color {
+	animation: heartbeat-color 0.75s 0s ease;
+	animation-iteration-count: infinite;
+}
+
+.animation-heartbeat-scale {
+	animation: heartbeat-scale 0.75s 0s ease;
+	animation-iteration-count: infinite;
+}
+
+.animation-heartbeat {
+	animation: heartbeat-color 0.75s 0s ease,  heartbeat-scale 0.75s 0s ease;
+	animation-iteration-count: infinite;
+}
+
+#heartbeat {
+	width: 100px;
+	height: 100px;
+	border-radius: 20%;
+	background-color: var(--color-pink);
+	border: 2px solid var(--red-default);
+	margin-left: 50px;
+}
+
+/***** ANIMATIONS *****/
+
 @keyframes plop {
 	0%{transform:scale(0.01,0.01);opacity:0;}
 	100%{transform:scale(1,1);opacity:1;}
@@ -19,6 +52,26 @@
 @-webkit-keyframes plop {
 	0%{transform:scale(0.01,0.01);opacity:0;}
 	100%{transform:scale(1.3,1.3);opacity:1;}
+}
+
+@keyframes slide-down {
+	0%{transform:scale(1,0);}
+	100%{transform:scale(1,1);}
+}
+
+@-webkit-keyframes slide-down {
+	0%{transform:scale(1,0);}
+	100%{transform:scale(1,1);}
+}
+
+@keyframes slide {
+	0%{height:0px;}
+	100%{height:200px;}
+}
+
+@-webkit-keyframes slide {
+	0%{height:0px;}
+	100%{height:200px;}
 }
 
 @keyframes heartbeat-scale {
@@ -72,15 +125,4 @@
 	60%{background-color:var(--heartbeat-color-peak);}
 	70%{background-color:var(--heartbeat-color-finish);}
 	100%{background-color:var(--heartbeat-color-start);}
-}
-
-#heartbeat {
-	width: 100px;
-	height: 100px;
-	border-radius: 20%;
-	background-color: var(--color-pink);
-	border: 2px solid var(--red-default);
-	margin-left: 50px;
-	animation: heartbeat-color 0.75s 0s ease, heartbeat-scale 0.75s 0s ease;
-  animation-iteration-count: infinite;
 }

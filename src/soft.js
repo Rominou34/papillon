@@ -117,7 +117,7 @@ var addToolTipListeners = function() {
       var elW = item.offsetWidth;
 
       tipItems.forEach(function (tip) {
-        tip.classList.add("plop");
+        tip.classList.add("animation-plop");
         tip.style.visibility = "visible";
         var h = tip.offsetHeight;
         var w = tip.offsetWidth;
@@ -146,7 +146,7 @@ var addToolTipListeners = function() {
       var tips = item.querySelectorAll(".tooltip");
       tipItems = [].slice.call(tips);
       tipItems.forEach(function (tip) {
-        tip.classList.remove("plop");
+        tip.classList.remove("animation-plop");
         tip.style.visibility = "hidden";
       });
     });

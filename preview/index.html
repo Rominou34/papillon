@@ -4,9 +4,8 @@
         <title>Soft CSS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='../src/css/config.css' rel='stylesheet' type='text/css'>
-        <link href='../src/min/soft.min.css' rel='stylesheet' type='text/css'>
-        <script src="../src/min/soft.min.js"></script>
+        <link href='../src/css/soft.css' rel='stylesheet' type='text/css'>
+        <script src="../src/soft.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
@@ -16,6 +15,18 @@
     <body>
       <header>Soft CSS</header>
       <main>
+        <nav class="top">
+          <div class="submenu">
+            Home
+            <div class="dropdown">
+              <a href="#">Bla</a>
+              <a href="#">Bli</a>
+              <a href="#">Blu</a>
+            </div>
+          </div>
+          <a href="#">Sweet</a>
+          <a href="#">Home</a>
+        </nav>
         <h1>
           H1 Title
           <small>Second</small>
@@ -60,7 +71,7 @@
             <div class="col-4">Horiz</div>
           </div>
         </div>
-        <div id="heartbeat">
+        <div id="heartbeat" class="animation-heartbeat">
         </div>
         <div id="prog" class="container-md text-center" style="height: 25px">
         </div>

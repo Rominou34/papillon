@@ -2,3 +2,63 @@
 * Soft CSS - The tweakable CSS framework
 * Romain Arnaud - 2016
 */
+
+nav {
+  display: flex;
+}
+
+nav a {
+  box-sizing: border-box;
+}
+
+/***** TOP NAVBAR *****/
+
+nav.top {
+  width: 100%;
+}
+
+nav.top > *,
+nav.top > a:visited {
+  flex: 1;
+  text-align: center;
+  color: var(--white-light);
+  padding: 0.5em 0px;
+  background-color: var(--primary-color-darker);
+  z-index: 3;
+}
+
+nav.top > *:hover,
+nav.top > a:visited:hover {
+  background-color: var(--primary-color-dark);
+  cursor: pointer;
+}
+
+nav.top .submenu {
+  position: relative;
+  -webkit-transition: background-color 0.1s;
+}
+
+nav.top .submenu .dropdown {
+  display: block;
+  position: absolute;
+  top: calc(var(--line-height) * var(--font-size-default) + 1em);
+  width: 100%;
+  max-height: 0px;
+  -webkit-transition: max-height 0.4s;
+  overflow: hidden;
+}
+
+nav.top .submenu:hover .dropdown {
+  max-height: 500px;
+}
+
+nav.top .submenu .dropdown * {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color-dark);
+  color: var(--white-light);
+}
+
+nav.top .submenu .dropdown *:hover {
+  background-color: var(--primary-color-darker);
+}
