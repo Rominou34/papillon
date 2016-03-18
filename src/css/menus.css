@@ -58,7 +58,7 @@ nav.top .submenu .dropdown {
 }
 
 nav.top .submenu.active .dropdown {
-  max-height: 128px;
+  max-height: 200px;
 }
 
 nav.top .submenu .dropdown * {
@@ -66,6 +66,7 @@ nav.top .submenu .dropdown * {
   width: 100%;
   background-color: var(--primary-color-dark);
   color: var(--white-light);
+  -webkit-transition: padding 0.4s;
 }
 
 nav.top .submenu .dropdown *:hover {
@@ -103,7 +104,6 @@ nav.top .submenu .dropdown *:hover {
 
   nav.top .submenu .dropdown > * {
     background-color: var(--primary-color-darker);
-    -webkit-transition: padding 0.4s;
   }
 
   nav.top .submenu .dropdown > *:hover {
