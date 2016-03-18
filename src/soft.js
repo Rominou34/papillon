@@ -5,8 +5,10 @@
 
 window.onload = function() {
   addToolTipListeners();
+  addNavDropdownListener()
 }
 
+/****************************** CUSTOM ELEMENTS *******************************/
 
 /*************** SOFT POPUP ***************/
 
@@ -149,6 +151,18 @@ var addToolTipListeners = function() {
         tip.classList.remove("animation-plop");
         tip.style.visibility = "hidden";
       });
+    });
+  });
+}
+
+/***************************** OTHER FUNCTIONS ********************************/
+
+var addNavDropdownListener = function() {
+  var dropMenus = document.querySelectorAll(".submenu");
+  dropItems = [].slice.call(dropMenus);
+  dropItems.forEach(function (item) {
+    item.addEventListener("click", function() {
+      item.classList.toggle("active");
     });
   });
 }
