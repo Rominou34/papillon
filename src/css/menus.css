@@ -40,7 +40,7 @@ nav.top .submenu.active {
 
 nav.top .submenu {
   position: relative;
-  -webkit-transition: background-color 0.1s;
+  -webkit-transition: background-color 0.1s, padding-bottom 0.4s;
 }
 
 nav.top .submenu.active *:not(.dropdown) {
@@ -58,7 +58,7 @@ nav.top .submenu .dropdown {
 }
 
 nav.top .submenu.active .dropdown {
-  max-height: 200px;
+  max-height: 128px;
 }
 
 nav.top .submenu .dropdown * {
@@ -92,6 +92,10 @@ nav.top .submenu .dropdown *:hover {
     margin-top: 0.5em;
   }
 
+  nav.top .submenu .dropdown > *:first-child {
+    -webkit-transition: margin-top 0.4s, padding 0.4s;
+  }
+
   nav.top .submenu .dropdown {
     position: relative;
     top: 0px;
@@ -99,6 +103,7 @@ nav.top .submenu .dropdown *:hover {
 
   nav.top .submenu .dropdown > * {
     background-color: var(--primary-color-darker);
+    -webkit-transition: padding 0.4s;
   }
 
   nav.top .submenu .dropdown > *:hover {
