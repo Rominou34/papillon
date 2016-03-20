@@ -5,9 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="src/css/config.css">
-        <link rel="stylesheet" type="text/css" href="src/min/soft.min.css">
-        <script src="src/min/soft.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="src/css/soft.css">
+        <script src="src/soft.js"></script>
 
     </head>
     <body>
@@ -146,7 +145,7 @@
           Also, you can offset your columns from the left by a number of tiles
         </div>
         <div class="showcase">
-          <div class="container-sm text-center">
+          <div class="container-md text-center">
             <div class="soft-col">
               <div class="soft-row">
                 <div class="col-4 col-offset-4">
@@ -155,7 +154,7 @@
                 </div>
               </div>
               <div class="col-3 col-offset-2">Offset of 2 tiles</div>
-              <div class="col-2 col-offset-3">Offset of 3 tiles<br/>( not in a
+              <div class="col-2 col-offset-1">Offset of 3 tiles<br/>( not in a
                 .soft-row so I stack, but the offset stays )</div>
             </div>
           </div>
@@ -260,6 +259,26 @@
         You don't trust me ? Enter the line given in the example in the console
         and watch what happens. You can also replace 'alert' by 'success',
         'info' or 'warning' for more options.
+
+        <h3>Tooltips</h3>
+        Soft CSS comes with simple to use tooltips
+          <div class="showcase">
+            <div class="col-4 col-offset-4 soft-tooltip" style="margin: 10px;">
+              <div class="tooltip top">
+                <div>Top !</div>
+              </div>
+              <div class="tooltip right">
+                <div>Right !</div>
+              </div>
+              <div class="tooltip bottom">
+                <div>Bottom !</div>
+              </div>
+              <div class="tooltip left">
+                <div>Left !</div>
+              </div>
+              Hover me !
+            </div>
+          </div>
         </div>
 
         <!-- OTHER !-->
@@ -306,7 +325,7 @@
           changes the scale of the element, the other the background color )
         </div>
         <div class="showcase">
-          <div id="heartbeat">
+          <div id="heartbeat" class="animation-heartbeat">
           </div>
         </div>
         <!--<soft-popup>
@@ -326,33 +345,23 @@
             <tbody>
               <tr>
                 <td>Forms</td>
-                <td>Tables</td>
+                <td>Navigation menus</td>
                 <td>Titles</td>
               </tr>
               <tr>
-                <td>Navigation menus</td>
+                <td>Better config file</td>
                 <td>Grid layout ( some bugs )</td>
                 <td>Buttons</td>
               </tr>
               <tr>
-                <td>Better config file</td>
-                <td></td>
-                <td>A cool front page ( yay )</td>
-              </tr>
-              <tr>
                 <td>Animations</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
                 <td>Custom elements</td>
-                <td></td>
-                <td></td>
+                <td>A cool front page ( yay )</td>
               </tr>
               <tr>
                 <td>Documentation</td>
                 <td></td>
-                <td></td>
+                <td>Tables</td>
               </tr>
             </tbody>
           </table>
