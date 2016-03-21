@@ -2,10 +2,17 @@
 * Soft CSS - The tweakable CSS framework
 * Romain Arnaud - 2016
 */
+var navBar, navBarY;
 
 window.onload = function() {
   addToolTipListeners();
-  addNavDropdownListener()
+  addNavDropdownListener();
+
+  navBar = document.querySelector("nav");
+  navBarY = navBar.offsetTop;
+  if(navBar.getAttribute("data-follow") != null) {
+    addNavScroll();
+  }
 }
 
 /****************************** CUSTOM ELEMENTS *******************************/
@@ -176,5 +183,17 @@ var addNavDropdownListener = function() {
       }
     }
 
+  });
+}
+
+var addNavScroll = function() {
+  window.addEventListener('scroll', function(e) {
+    var rect = navBar.getBoundingClientRect();
+    var scrollY = document.body.scrollTop;
+    if(scrollY > (navBarY)) {
+      navBar.classList.add('fixed');
+    } else {
+      navBar.classList.remove('fixed');
+    }
   });
 }
