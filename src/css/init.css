@@ -252,6 +252,30 @@ h6 small {
   font-size: 60%;
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  position: relative;
+  color: var(--font-color-title) !important;
+}
+
+h1:hover a::before,
+h2:hover a::before,
+h3:hover a::before,
+h4:hover a::before,
+h5:hover a::before,
+h6:hover a::before {
+  content: '#';
+  color: var(--primary-color-lighter);
+  position: absolute;
+  left: -1em;
+  line-height: 250%;
+  font-size: 80%;
+}
+
 h1 {
   font-size: 42px;
 }
@@ -353,4 +377,11 @@ main {
   max-width: var(--main-width);
   margin: 0px auto;
   background-color: var(--bg-color-main);
+}
+
+/********** PSEUDO SELECTORS **********/
+
+:target {
+  outline: 0;
+  animation: color-fadeout 1s 0s linear;
 }
