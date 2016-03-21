@@ -14,9 +14,25 @@
         Soft CSS
         <small>The tweakable, simple to use CSS framework</small>
       </header>
+      <nav class="top">
+        <div class="submenu" data-toggle="click">
+          Content
+          <div class="dropdown">
+            <a href="#section-titles">Titles</a>
+            <a href="#section-containers">Containers</a>
+            <a href="#section-buttons">Buttons</a>
+            <a href="#section-custom">Custom elements</a>
+            <a href="#section-modifiers">Modifiers</a>
+            <a href="#section-animations">Animations</a>
+            <a href="#section-progress">Progress</a>
+          </div>
+        </div>
+        <a href="https://github.com/Rominou34/soft-css">GitHub</a>
+        <a href="http://rominou34.github.io/">About me</a>
+      </nav>
       <main>
         <!-- TITLES !-->
-        <h1 class="section-header">Titles</h1>
+        <h1 class="section-header" id="section-titles">Titles</h1>
         <div class="showcase">
           <h1>
             H1 Title
@@ -45,7 +61,7 @@
         </div>
 
         <!-- CONTAINERS !-->
-        <h1 class="section-header">Containers</h1>
+        <h1 class="section-header" id="section-containers">Containers</h1>
         <div class="showcase">
           <div class="container-lg bg-subtle border text-center">
             This is a large container ( 1200 px )
@@ -180,7 +196,7 @@
 
 
         <!-- BUTTONS !-->
-        <h1 class="section-header">Buttons</h1>
+        <h1 class="section-header" id="section-buttons">Buttons</h1>
 
         <div class="container-lg">
           Soft CSS comes with a pack of redefined buttons, with a better and
@@ -217,7 +233,7 @@
         </div>
 
         <!-- CUSTOM ELEMENTS !-->
-        <h1 class="section-header">Custom Elements</h1>
+        <h1 class="section-header" id="section-custom">Custom Elements</h1>
         <h2><small>( Or the components that make Soft CSS unique )</small></h2>
 
         <div class="container-lg">
@@ -263,7 +279,7 @@
         <h3>Tooltips</h3>
         Soft CSS comes with simple to use tooltips
           <div class="showcase">
-            <div class="col-4 col-offset-4 soft-tooltip" style="margin: 10px;">
+            <div class="col-4 col-offset-4 soft-tooltip text-center" style="margin: 10px;">
               <div class="tooltip top">
                 <div>Top !</div>
               </div>
@@ -282,7 +298,7 @@
         </div>
 
         <!-- OTHER !-->
-        <h1 class="section-header">Handy classes</h1>
+        <h1 class="section-header" id="section-modifiers">Modifiers classes</h1>
         <div class="container-lg">
           Soft CSS will ship with a lot of handy classes you can use to quickly
           customize elements without a headache. Want an element to float right
@@ -318,7 +334,7 @@
           </article>
         </div>
 
-        <h1 class="section-header">Animations</h1>
+        <h1 class="section-header" id="section-animations">Animations</h1>
         <div class="container-lg">
           Soft CSS will also ship with a lot of beautiful CSS animations<br/>
           Here is a heartbeat one ( actually there are 2 animations: one just
@@ -332,7 +348,7 @@
           Custom element <code>soft-popup</code><br/>
           Click on it to hide it
         </soft-popup>!-->
-        <h1 class="section-header">Progress</h1>
+        <h1 class="section-header" id="section-progress">Progress</h1>
         <div class="container-md">
           <!--
             I use table because I haven't coded the vertical lists yet :s

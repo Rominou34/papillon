@@ -1,6 +1,4 @@
-# Soft Style
-
-**The project was just created this week, so it's still an empty shell, there's no point in installing it yet**
+# Soft CSS
 
 ## About
 

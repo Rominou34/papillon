@@ -161,8 +161,20 @@ var addNavDropdownListener = function() {
   var dropMenus = document.querySelectorAll(".submenu");
   dropItems = [].slice.call(dropMenus);
   dropItems.forEach(function (item) {
-    item.addEventListener("click", function() {
-      item.classList.toggle("active");
-    });
+    if(item.getAttribute("data-toggle") == 'click') {
+      item.addEventListener("click", function() {
+        item.classList.toggle("active");
+      });
+    } else {
+      if(item.getAttribute("data-toggle") == 'hover') {
+        item.addEventListener("mouseover", function() {
+          item.classList.add("active");
+        });
+        item.addEventListener("mouseout", function() {
+          item.classList.remove("active");
+        });
+      }
+    }
+
   });
 }
