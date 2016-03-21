@@ -63,6 +63,14 @@ article {
   display: block;
 }
 
+article::after {
+  content: ".";
+ visibility: hidden;
+ display: block;
+ height: 0;
+ clear: both;
+}
+
 /***** ASIDE *****/
 
 aside {
