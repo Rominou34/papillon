@@ -2,3 +2,140 @@
 * Soft CSS - The tweakable CSS framework
 * Romain Arnaud - 2016
 */
+
+nav {
+  display: flex;
+  box-sizing: border-box;
+}
+
+nav * {
+  box-sizing: border-box;
+}
+
+/********** TOP NAVBAR **********/
+
+nav.top {
+  width: 100%;
+}
+
+nav.top > *,
+nav.top > a:visited {
+  flex: 1;
+  text-align: center;
+  color: var(--white-light);
+  padding: 0.5em 0px;
+  background-color: var(--primary-color-darker);
+  z-index: 3;
+}
+
+nav.top > *:hover,
+nav.top > a:visited:hover {
+  background-color: var(--primary-color-dark);
+  cursor: pointer;
+}
+
+nav.top .submenu.active {
+  background-color: var(--primary-color-dark);
+}
+
+nav.top .submenu {
+  position: relative;
+  -webkit-transition: background-color 0.1s, padding-bottom 0.4s;
+}
+
+nav.top .submenu::before {
+  -webkit-transition: color 0.2s;
+  content: '▼';
+  display: block;
+  position: absolute;
+  left: 10%;
+  line-height: 200%;
+  font-size: 75%;
+  color: transparent;
+}
+nav.top .submenu:hover::before {
+  color: var(--white-light);
+}
+
+nav.top .submenu.active::before {
+  color: transparent;
+}
+
+nav.top .submenu.active *:not(.dropdown) {
+  padding: 0.5em 0px;
+}
+
+nav.top .submenu .dropdown {
+  display: block;
+  position: absolute;
+  top: calc(var(--line-height) * var(--font-size-default) + 1em);
+  width: 100%;
+  max-height: 0px;
+  -webkit-transition: max-height 0.4s;
+  overflow: hidden;
+}
+
+nav.top .submenu.active .dropdown {
+  max-height: 600px;
+}
+
+nav.top .submenu .dropdown * {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color-dark);
+  color: var(--white-light);
+  -webkit-transition: padding 0.4s;
+}
+
+nav.top .submenu .dropdown * {
+  border-left: 4px solid var(--primary-color);
+}
+
+nav.top .submenu .dropdown *:hover {
+  background-color: var(--primary-color-darker);
+}
+
+@media (max-width: 600px) {
+  nav.top {
+    display: block;
+  }
+
+  nav.top > * {
+    width: 100%;
+    display: block;
+    padding: 0.8em 0px;
+  }
+
+  nav.top > *:not(:last-child) {
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  nav.top .submenu.active {
+    padding-bottom: 0px;
+  }
+
+  nav.top .submenu.active .dropdown > *:first-child {
+    margin-top: 0.5em;
+  }
+
+  nav.top .submenu .dropdown > *:first-child {
+    -webkit-transition: margin-top 0.4s, padding 0.4s;
+  }
+
+  nav.top .submenu .dropdown {
+    position: relative;
+    top: 0px;
+  }
+
+  nav.top .submenu .dropdown > * {
+    background-color: var(--primary-color-dark);
+  }
+
+  nav.top .submenu .dropdown > *:hover {
+    background-color: var(--primary-color-darker);
+  }
+
+  nav.top .submenu .dropdown {
+    max-height: 0px;
+  }
+}

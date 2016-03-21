@@ -1,6 +1,4 @@
-# Soft Style
-
-**The project was just created this week, so it's still an empty shell, there's no point in installing it yet**
+# Soft CSS
 
 ## About
 
@@ -16,6 +14,21 @@ You don't need to clone the whole repository, just the `src` folder. The `soft.c
 <link rel="stylesheet" type="text/css" href="src/soft.css">
 <script src="src/soft.js"></script>
 ```
+
+## Install from the CDN
+
+When the framework will be released I'll buy a sweet domain name and put the fileso n a CDN so you will be able to easily import the files ( you will still be able to download the full unminified source code if you want to change things ). Here's how it will work:
+
+1. Download the file `config.css` and customize it for your needs, it will act **as your website's customization panel**
+
+2. Import the minified files from the CDN:
+
+  ```html
+  <link rel="stylesheet" type="text/css" href="http://cdn.lulz/soft.min.css">
+  <script src="http://cdn.lulz/soft.min.js"></script>
+  ```
+
+3. ( Optional ) If you want to use all the font icons classes from Font Awesome import Font Awesome ( either by downloading it on your server or by using MaxCDN's awesome CDN ) and import the file `fonticons.min.css` from the CDN or download it
 
 **To learn about the role of each `.css` file, read the corresponding doc in the `/doc/files` folder**
 

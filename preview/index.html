@@ -10,10 +10,23 @@
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
       <header>Soft CSS</header>
       <main>
+        <nav class="top">
+          <div class="submenu" data-toggle="hover">
+            Home
+            <div class="dropdown">
+              <a href="#">Bla</a>
+              <a href="#">Bli</a>
+              <a href="#">Blu</a>
+            </div>
+          </div>
+          <a href="#">Sweet</a>
+          <a href="#">Home</a>
+        </nav>
         <h1>
           H1 Title
           <small>Second</small>
@@ -58,7 +71,9 @@
             <div class="col-4">Horiz</div>
           </div>
         </div>
-        <div id="heartbeat">
+        <div id="heartbeat" class="animation-heartbeat">
+        </div>
+        <div id="prog" class="container-md text-center" style="height: 25px">
         </div>
         <div class="container-md text-center">
           <div class="soft-col">
@@ -79,21 +94,26 @@
         <div class="container-sm text-center">
           <div class="soft-col">
             <div class="soft-row">
-              <div class="col-4 col-offset-4">1</div>
+              <div class="col-4 col-offset-4 soft-tooltip">
+                <div class="tooltip top"><div>Tooltip !<br/>top</div></div>
+                <div class="tooltip right"><div>Tooltip !<br/>right</div></div>
+                <div class="tooltip bottom"><div>Tooltip !<br/>bottom</div></div>
+                <div class="tooltip left"><div>Tooltip !<br/>left</div></div>
+                1</div>
             </div>
             <div class="col-9"><button class="green fullWidth fullHeight">This is a button</button></div>
             <div class="col-3">5</div>
           </div>
         </div>
-        <div class="container-md text-center">
-          <div class="soft-row">
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
+        <div class="container-sm text-center">
+          <div class="soft-col">
+            <div class="col">Hi boys</div>
+            <div class="col">Hi girls *tips fedora*</div>
+            <div class="col">Hello I'm Rominou</div>
+            <div class="col">Higebbbbbbbbbbbbbbb</div>
+            <div class="col">Higrgregregergerg</div>
+            <div class="col">Hiiiiiiiiiiiiiiiiiiiiiiiii</div>
+            <div class="col">Hibbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
           </div>
         </div>
         <div class="container-md soft-col">
@@ -109,7 +129,10 @@
             <div>Hey guys</div>
           </div>
         </div>
-        <a href="#">This is a link</a>
+        <hr/>
+        <a href="#">This is a link</a><br/>
+        <a href="#" target="_blank">Target blank</a><br/>
+        <span>This is a span</span>
         <p>This is a paragraph with <code>some code</code></p>
         <p>This is another paragraph</p>
         <button>This is a button</button>
@@ -133,10 +156,12 @@
         <a class="button" href="#">Button</a>
         <a class="button red" href="#">Button</a>
         <a class="button primary" href="#">Button</a>
-        <a class="button large" href="#">Button</a>
+        <a class="button large" href="#">
+          Button
+        </a>
         <a class="button primary loading" href="#"></a>
         <a class="button disabled" href="#">Button</a>
-        <table class="text-center">
+        <table class="text-center reactive">
           <thead>
             <td>Classical</td>
             <td>Table</td>
@@ -166,7 +191,7 @@
           </tfoot>
         </table>
 
-        <table class="flat text-center">
+        <table class="flat reactive text-center">
           <thead>
             <td>Flat</td>
             <td>Table</td>
@@ -268,7 +293,9 @@
         </table>
         <div id="container"></div>
         <article class="first-letter-big first-letter-spacing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vestibulum lobortis massa a tristique ultricies. Nullam non ex erat.
+          Vestibulum lobortis massa a tristique ultricies. Nullam non ex erat.<br/>
+          To search something use <kbd>Ctrl</kbd>+<kbd>F</kbd>
+          <br/>
           <pre>
             <code data-lang="Python">
 Here is some sweet html code {
@@ -298,6 +325,7 @@ Test you bitch
               neque eleifend ipsum, vitae efficitur est est ac turpis. Quisque at
               hendrerit nisl.
         </article>
+
         <!--<soft-popup warning>
           <span>Important message</span>
           Blablabla<br/>

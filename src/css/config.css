@@ -5,19 +5,18 @@
 
 :root {
 
-
   /*
   * The names of the components using each of the variables are written
   * in comments after the variable declaration, just use Ctrl+F
   */
   /********** FONTS **********/
 
-  --font-default: Arial; /* basic text */
-  --font-second: Impact; /* basic text bis */
-  --font-third: "Times New Roman"; /* basic text thris ? */
-  --font-title: Verdana; /* h1, h2, h3, h4, h5, h6 */
-  --font-header: Ubuntu; /* Header */
-  --font-code: "Courier New"; /* code */
+  --font-default: Arial, "sans-serif"; /* basic text */
+  --font-second: Impact, "sans-serif"; /* basic text bis */
+  --font-third: "Times New Roman", "serif"; /* basic text thris ? */
+  --font-title: Verdana, "sans-serif"; /* h1, h2, h3, h4, h5, h6 */
+  --font-header: Ubuntu, "sans-serif"; /* Header */
+  --font-code: "Courier New", "monospace"; /* code */
 
   --font-size-default: 16px; /* Basic text */
   --font-size-big: calc(var(--font-size-default) * 1.5); /* Basic text */
@@ -83,7 +82,10 @@
   /***** COLOR PALETTE *****/
   --primary-color: var(--blue-default);
   --primary-color-dark: var(--blue-dark);
+  --primary-color-darker: #0f2a58;
   --primary-color-light: var(--blue-light);
+  --primary-color-lighter: #b7c7d6;
+  --primary-color-subtle: var(--blue-subtle);
 
   /* HEADER */
   --color-header: var(--white-default);
@@ -105,9 +107,10 @@
   --font-color-title-second: var(--grey-default);
   --font-color-footer: var(--white-dark);
 
-  --font-color-link: var(--primary-color);
-  --font-color-link-h: var(--primary-color-light);
+  --font-color-link: var(--blue-default);
+  --font-color-link-h: var(--blue-light);
   --font-color-link-v: var(--color-purple);
+
   /********** SIZES **********/
 
   --border-width: 1px;
@@ -116,6 +119,12 @@
   --main-width: 1200px;
   --aside-width: 250px;
   --nav-width: 100%;
+
+  /************* VARIABLES USED IN SPECIFIC PARTS *************/
+
+  /*** GRID LAYOUT ***/
+  --grid-margin: 8px;
+  --grid-margin-sm: 4px;
 
   /* Container threshold sizes */
   --container-sm: 750px;

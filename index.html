@@ -14,9 +14,25 @@
         Soft CSS
         <small>The tweakable, simple to use CSS framework</small>
       </header>
+      <nav class="top">
+        <div class="submenu" data-toggle="click">
+          Content
+          <div class="dropdown">
+            <a href="#section-titles">Titles</a>
+            <a href="#section-containers">Containers</a>
+            <a href="#section-buttons">Buttons</a>
+            <a href="#section-custom">Custom elements</a>
+            <a href="#section-modifiers">Modifiers</a>
+            <a href="#section-animations">Animations</a>
+            <a href="#section-progress">Progress</a>
+          </div>
+        </div>
+        <a href="https://github.com/Rominou34/soft-css">GitHub</a>
+        <a href="http://rominou34.github.io/">About me</a>
+      </nav>
       <main>
         <!-- TITLES !-->
-        <h1 class="section-title">Titles</h1>
+        <h1 class="section-header" id="section-titles">Titles</h1>
         <div class="showcase">
           <h1>
             H1 Title
@@ -45,7 +61,7 @@
         </div>
 
         <!-- CONTAINERS !-->
-        <h1 class="section-title">Containers</h1>
+        <h1 class="section-header" id="section-containers">Containers</h1>
         <div class="showcase">
           <div class="container-lg bg-subtle border text-center">
             This is a large container ( 1200 px )
@@ -59,7 +75,7 @@
         </div>
 
         <!-- GRID LAYOUT !-->
-        <h1 class="section-title">Grid Layout</h1>
+        <h1 class="section-header">Grid Layout</h1>
         <div class="container-lg">
           With Soft CSS, you can organize your components using a responsive
           grid layout. <del>A lot</del> Pretty much all other CSS frameworks
@@ -145,7 +161,7 @@
           Also, you can offset your columns from the left by a number of tiles
         </div>
         <div class="showcase">
-          <div class="container-sm text-center">
+          <div class="container-md text-center">
             <div class="soft-col">
               <div class="soft-row">
                 <div class="col-4 col-offset-4">
@@ -154,7 +170,7 @@
                 </div>
               </div>
               <div class="col-3 col-offset-2">Offset of 2 tiles</div>
-              <div class="col-2 col-offset-3">Offset of 3 tiles<br/>( not in a
+              <div class="col-2 col-offset-1">Offset of 3 tiles<br/>( not in a
                 .soft-row so I stack, but the offset stays )</div>
             </div>
           </div>
@@ -180,7 +196,7 @@
 
 
         <!-- BUTTONS !-->
-        <h1 class="section-title">Buttons</h1>
+        <h1 class="section-header" id="section-buttons">Buttons</h1>
 
         <div class="container-lg">
           Soft CSS comes with a pack of redefined buttons, with a better and
@@ -217,7 +233,7 @@
         </div>
 
         <!-- CUSTOM ELEMENTS !-->
-        <h1 class="section-title">Custom Elements</h1>
+        <h1 class="section-header" id="section-custom">Custom Elements</h1>
         <h2><small>( Or the components that make Soft CSS unique )</small></h2>
 
         <div class="container-lg">
@@ -259,10 +275,30 @@
         You don't trust me ? Enter the line given in the example in the console
         and watch what happens. You can also replace 'alert' by 'success',
         'info' or 'warning' for more options.
+
+        <h3>Tooltips</h3>
+        Soft CSS comes with simple to use tooltips
+          <div class="showcase">
+            <div class="col-4 col-offset-4 soft-tooltip text-center" style="margin: 10px;">
+              <div class="tooltip top">
+                <div>Top !</div>
+              </div>
+              <div class="tooltip right">
+                <div>Right !</div>
+              </div>
+              <div class="tooltip bottom">
+                <div>Bottom !</div>
+              </div>
+              <div class="tooltip left">
+                <div>Left !</div>
+              </div>
+              Hover me !
+            </div>
+          </div>
         </div>
 
         <!-- OTHER !-->
-        <h1 class="section-title">Handy classes</h1>
+        <h1 class="section-header" id="section-modifiers">Modifiers classes</h1>
         <div class="container-lg">
           Soft CSS will ship with a lot of handy classes you can use to quickly
           customize elements without a headache. Want an element to float right
@@ -298,21 +334,21 @@
           </article>
         </div>
 
-        <h1 class="section-title">Animations</h1>
+        <h1 class="section-header" id="section-animations">Animations</h1>
         <div class="container-lg">
           Soft CSS will also ship with a lot of beautiful CSS animations<br/>
           Here is a heartbeat one ( actually there are 2 animations: one just
           changes the scale of the element, the other the background color )
         </div>
         <div class="showcase">
-          <div id="heartbeat">
+          <div id="heartbeat" class="animation-heartbeat">
           </div>
         </div>
         <!--<soft-popup>
           Custom element <code>soft-popup</code><br/>
           Click on it to hide it
         </soft-popup>!-->
-        <h1 class="section-title">Progress</h1>
+        <h1 class="section-header" id="section-progress">Progress</h1>
         <div class="container-md">
           <!--
             I use table because I haven't coded the vertical lists yet :s
@@ -325,33 +361,23 @@
             <tbody>
               <tr>
                 <td>Forms</td>
-                <td>Tables</td>
+                <td>Navigation menus</td>
                 <td>Titles</td>
               </tr>
               <tr>
-                <td>Navigation menus</td>
+                <td>Better config file</td>
                 <td>Grid layout ( some bugs )</td>
                 <td>Buttons</td>
               </tr>
               <tr>
-                <td>Better config file</td>
-                <td></td>
-                <td>A cool front page ( yay )</td>
-              </tr>
-              <tr>
                 <td>Animations</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
                 <td>Custom elements</td>
-                <td></td>
-                <td></td>
+                <td>A cool front page ( yay )</td>
               </tr>
               <tr>
                 <td>Documentation</td>
                 <td></td>
-                <td></td>
+                <td>Tables</td>
               </tr>
             </tbody>
           </table>
