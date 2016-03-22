@@ -151,14 +151,14 @@ nav.top .submenu .dropdown *:hover {
 
 nav.side {
   position: fixed;
-  background-color: var(--primary-color-darker);
+  background-color: var(--primary-color-dark);
   height: 100%;
   top: 0px;
   z-index: 3;
   flex-direction: column;
-  width: 35px;
+  width: 50px;
   overflow: hidden;
-  -webkit-transition: width 0.4s;
+  -webkit-transition: width 0.25s;
 }
 
 nav.side:hover {
@@ -169,6 +169,7 @@ nav.side .links {
   display: flex;
   flex-direction: column;
   height: 80%;
+  max-height: 400px;
   margin: auto 0px;
   background-color: var(--primary-color-dark);
   justify-content: space-around;
@@ -179,20 +180,28 @@ nav.side .links > *:visited,
 nav.side .links > *:hover {
   color: var(--white-light);
   display: block;
-  width: 100%;
+  width: 40px;
   padding: 0em 0px;
-  width: 400px;
-  line-height: 35px !important;
-  height: 35px;
+  line-height: 40px;
+  overflow: hidden;
+  height: 40px;
+  margin: 0px 5px;
+  border-radius: 20px;
+  background-color: var(--primary-color-darker);
+  -webkit-transition: width 0.25s;
+}
+
+nav.side:hover .links > * {
+  width: 290px;
 }
 
 nav.side .links > * span {
   content: '';
-  width: 35px;
-  height: 35px;
-  background-color: var(--primary-color);
+  width: 40px;
+  height: 40px;
   display: inline-block;
   left: 0px;
   margin-right: 0.5em;
   text-align: center;
+  -webkit-transition: all 0.25s;
 }
