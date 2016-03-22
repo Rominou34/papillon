@@ -52,7 +52,6 @@
 
 [class*="container"] div:not(.soft-row):not(.soft-col) {
   padding: 0.5em;
-  border: 1px solid #888;
   margin: var(--grid-margin-sm);
 }
 

@@ -145,3 +145,54 @@ nav.top .submenu .dropdown *:hover {
     max-height: 0px;
   }
 }
+
+
+/********** SIDE NAVBAR **********/
+
+nav.side {
+  position: fixed;
+  background-color: var(--primary-color-darker);
+  height: 100%;
+  top: 0px;
+  z-index: 3;
+  flex-direction: column;
+  width: 35px;
+  overflow: hidden;
+  -webkit-transition: width 0.4s;
+}
+
+nav.side:hover {
+  width: 300px;
+}
+
+nav.side .links {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  margin: auto 0px;
+  background-color: var(--primary-color-dark);
+  justify-content: space-around;
+}
+
+nav.side .links > *,
+nav.side .links > *:visited,
+nav.side .links > *:hover {
+  color: var(--white-light);
+  display: block;
+  width: 100%;
+  padding: 0em 0px;
+  width: 400px;
+  line-height: 35px !important;
+  height: 35px;
+}
+
+nav.side .links > * span {
+  content: '';
+  width: 35px;
+  height: 35px;
+  background-color: var(--primary-color);
+  display: inline-block;
+  left: 0px;
+  margin-right: 0.5em;
+  text-align: center;
+}

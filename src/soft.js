@@ -8,7 +8,7 @@ window.onload = function() {
   addToolTipListeners();
   addNavDropdownListener();
 
-  navBar = document.querySelector("nav");
+  navBar = document.querySelector("nav.top");
   navBarY = navBar.offsetTop;
   if(navBar.getAttribute("data-follow") != null) {
     addNavScroll();

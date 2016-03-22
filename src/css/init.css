@@ -17,7 +17,7 @@ body {
   background-color: var(--bg-color-body);
   line-height: var(--line-height);
   color: var(--font-color-text);
-  width: 100%;
+  width: var(--body-width);
   min-height: 100%;
   max-width: var(--body-width);
   display: block;
@@ -76,6 +76,8 @@ article::after {
 aside {
   display: inline-block;
   width: 100%;
+  min-height: 400px;
+  vertical-align: top;
   max-width: var(--aside-width);
   margin: auto;
   background-color: var(--bg-color-aside);
