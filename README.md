@@ -1,5 +1,7 @@
 # Soft CSS
 
+[![Code Climate](https://codeclimate.com/github/Rominou34/soft-css/badges/gpa.svg)](https://codeclimate.com/github/Rominou34/soft-css)
+
 ## About
 
 Soft Style is a CSS Framework based on CSS variables, allowing you to develop your website using CSS classes from the frameworks, that you can easily customize. All variables used are located in the `config.css` stylesheet, so you can adjust them to your needs ( tweak the colors and so on ).
