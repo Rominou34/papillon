@@ -13,13 +13,13 @@ window.onload = function() {
     navBarY = navBar.offsetTop;
     if(navBar.getAttribute("data-follow") != null) {
       addNavScroll();
-      addNavBarBurger();
+      addNavBarToggle();
     }
   }
 
   navSide = document.querySelector("nav.side");
   if(navSide != null) {
-    addNavSideBurger();
+    addNavSideToggle();
   }
 }
 
@@ -207,19 +207,19 @@ var addNavScroll = function() {
   });
 }
 
-var addNavBarBurger = function() {
-  var navBurger = navBar.querySelector(".burger");
-  navBurger.addEventListener('click', function(e) {
+var addNavBarToggle = function() {
+  var navToggle = navBar.querySelector(".toggle");
+  navToggle.addEventListener('click', function(e) {
     var links = navBar.querySelector(".links");
     links.classList.toggle("show");
-    navBurger.classList.toggle("cross");
+    navToggle.classList.toggle("cross");
   })
 }
 
-var addNavSideBurger = function() {
-  var navBurger = navSide.querySelector(".burger");
-  navBurger.addEventListener('click', function(e) {
+var addNavSideToggle = function() {
+  var navToggle = navSide.querySelector(".toggle");
+  navToggle.addEventListener('click', function(e) {
     navSide.classList.toggle("active");
-    navBurger.classList.toggle("cross");
+    navToggle.classList.toggle("cross");
   })
 }

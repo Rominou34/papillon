@@ -35,11 +35,11 @@ nav.top .links.show {
   display: block;
 }
 
-nav .burger {
+nav .toggle {
   display: none;
 }
 
-nav .burger::after {
+nav .toggle::after {
   content: '\2630';
   color: #fff;
   font-size: 32px;
@@ -50,7 +50,7 @@ nav .burger::after {
   -webkit-transition: transform 0.25s;
 }
 
-nav .burger.cross::after {
+nav .toggle.cross::after {
   content: '\2716';
   transform: rotate(90deg);
 }
@@ -135,7 +135,6 @@ nav.top .submenu .dropdown *:hover {
 
 nav.side {
   position: fixed;
-  background-color: var(--primary-color-dark);
   height: 100%;
   top: 0px;
   z-index: 3;
@@ -152,11 +151,11 @@ nav.side:hover {
 nav.side .links {
   display: flex;
   flex-direction: column;
-  height: 80%;
-  max-height: 400px;
-  margin: auto 0px;
+  height: 100%;
   background-color: var(--primary-color-dark);
   justify-content: space-around;
+  overflow: hidden;
+  -webkit-transition: width 0.25s;
 }
 
 nav.side .links > *,
@@ -245,16 +244,21 @@ nav.side .links > * span {
     max-height: 0px;
   }
 
-  nav.top .burger {
+  nav.top .toggle {
     display: block;
     height: 50px;
     margin-left: calc(100% - 60px);
     background-color: var(--primary-color-dark);
   }
 
-  nav.side .burger {
+  nav.side .toggle {
     display: block;
     width: 50px;
+    background-color: var(--primary-color-dark);
+  }
+
+  nav.side .links {
+    width: 0px;
   }
 
   nav.side:hover {
@@ -269,11 +273,15 @@ nav.side .links > * span {
     width: 100%;
   }
 
+  nav.side.active .links {
+    width: 100%;
+  }
+
   nav.side.active .links > * {
     width: 90%;
   }
 
-  nav.side.active .burger {
+  nav.side.active .toggle {
     width: 50px;
   }
 }
