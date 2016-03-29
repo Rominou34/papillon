@@ -2,17 +2,24 @@
 * Soft CSS - The tweakable CSS framework
 * Romain Arnaud - 2016
 */
-var navBar, navBarY;
+var navBar, navBarY, navSide;
 
 window.onload = function() {
   addToolTipListeners();
   addNavDropdownListener();
 
   navBar = document.querySelector("nav.top");
-  navBarY = navBar.offsetTop;
-  if(navBar.getAttribute("data-follow") != null) {
-    addNavScroll();
-    addNavBurger();
+  if(navBar != null) {
+    navBarY = navBar.offsetTop;
+    if(navBar.getAttribute("data-follow") != null) {
+      addNavScroll();
+      addNavBarBurger();
+    }
+  }
+
+  navSide = document.querySelector("nav.side");
+  if(navSide != null) {
+    addNavSideBurger();
   }
 }
 
@@ -200,10 +207,19 @@ var addNavScroll = function() {
   });
 }
 
-var addNavBurger = function() {
+var addNavBarBurger = function() {
   var navBurger = navBar.querySelector(".burger");
   navBurger.addEventListener('click', function(e) {
     var links = navBar.querySelector(".links");
     links.classList.toggle("show");
+    navBurger.classList.toggle("cross");
+  })
+}
+
+var addNavSideBurger = function() {
+  var navBurger = navSide.querySelector(".burger");
+  navBurger.addEventListener('click', function(e) {
+    navSide.classList.toggle("active");
+    navBurger.classList.toggle("cross");
   })
 }
