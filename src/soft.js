@@ -12,6 +12,7 @@ window.onload = function() {
   navBarY = navBar.offsetTop;
   if(navBar.getAttribute("data-follow") != null) {
     addNavScroll();
+    addNavBurger();
   }
 }
 
@@ -192,8 +193,17 @@ var addNavScroll = function() {
     var scrollY = document.body.scrollTop;
     if(scrollY > (navBarY)) {
       navBar.classList.add('fixed');
+      var burger = navBar.querySelector(".burger");
     } else {
       navBar.classList.remove('fixed');
     }
   });
+}
+
+var addNavBurger = function() {
+  var navBurger = navBar.querySelector(".burger");
+  navBurger.addEventListener('click', function(e) {
+    var links = navBar.querySelector(".links");
+    links.classList.toggle("show");
+  })
 }

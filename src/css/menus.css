@@ -24,8 +24,23 @@ nav.top.fixed {
   z-index: 5;
 }
 
-nav.top > *,
-nav.top > a:visited {
+nav.top .links {
+  width: 100%;
+  display: flex;
+  -webkit-transition: max-height 0.25s;
+  overflow: hidden;
+}
+
+nav.top .links.show {
+  max-height: 400px;
+}
+
+nav.top .burger {
+  display: none;
+}
+
+nav.top .links > *,
+nav.top .links > a:visited {
   flex: 1;
   text-align: center;
   color: var(--white-light);
@@ -34,8 +49,8 @@ nav.top > a:visited {
   z-index: 3;
 }
 
-nav.top > *:hover,
-nav.top > a:visited:hover {
+nav.top .links > *:hover,
+nav.top .links > a:visited:hover {
   background-color: var(--primary-color-dark);
   cursor: pointer;
 }
@@ -104,15 +119,21 @@ nav.top .submenu .dropdown *:hover {
 @media (max-width: 600px) {
   nav.top {
     display: block;
+    background-color: var(--primary-color-darker);
   }
 
-  nav.top > * {
+  nav.top .links {
+    display: block;
+    max-height: 0px;
+  }
+
+  nav.top .links > * {
     width: 100%;
     display: block;
     padding: 0.8em 0px;
   }
 
-  nav.top > *:not(:last-child) {
+  nav.top .links > *:not(:last-child) {
     border-bottom: 2px solid var(--primary-color);
   }
 
@@ -143,6 +164,23 @@ nav.top .submenu .dropdown *:hover {
 
   nav.top .submenu .dropdown {
     max-height: 0px;
+  }
+
+  nav.top .burger {
+    display: block;
+    height: 50px;
+    margin-left: calc(100% - 60px);
+    background-color: var(--primary-color-dark);
+  }
+
+  nav.top .burger::after {
+    content: '\2630';
+    color: #fff;
+    font-size: 32px;
+    line-height: 50px;
+    text-align: center;
+    width: 60px;
+    display: block;
   }
 }
 
