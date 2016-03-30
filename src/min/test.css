@@ -1,0 +1,2018 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+/*
+  * The names of the components using each of the variables are written
+  * in comments after the variable declaration, just use Ctrl+F
+  */
+/********** FONTS **********/
+/* basic text */
+/* basic text bis */
+/* basic text thris ? */
+/* h1, h2, h3, h4, h5, h6 */
+/* Header */
+/* code */
+/* Basic text */
+/* Basic text */
+/* Basic text */
+/* Header */
+/********** COLORS **********/
+/* WHITE */
+/* GREY */
+/* BLACK */
+/* BLUE */
+/* GREEN */
+/* RED */
+/* ORANGE */
+/*** OTHERS ***/
+/********** ELEMENTS DEFAULT COLORS **********/
+/***** COLOR PALETTE *****/
+/* HEADER */
+/********** SIZES **********/
+/************* VARIABLES USED IN SPECIFIC PARTS *************/
+/*** GRID LAYOUT ***/
+/* Container threshold sizes */
+/* We reset all the rules so it looks the same for all browsers */
+/*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
+/* Latest tested: Android 6, Chrome 48, Edge 13, Firefox 44, Internet Explorer 11, iOS 9, Opera 35, Safari 9, Windows Phone 8.1 */
+/*
+ * Normalization
+ */
+abbr[title] {
+  text-decoration: underline;
+  /* Chrome 48+, Edge 12+, Internet Explorer 11-, Safari 9+ */
+  text-decoration: underline dotted;
+  /* Firefox 40+ */
+}
+audio:not([controls]) {
+  display: none;
+  /* Chrome 44-, iOS 8+, Safari 9+ */
+}
+b,
+strong {
+  font-weight: bolder;
+  /* Edge 12+, Safari 6.2+, and Chrome 18+ */
+}
+button {
+  -webkit-appearance: button;
+  /* iOS 8+ */
+  overflow: visible;
+  /* Internet Explorer 11- */
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  /* Firefox 4+ */
+  padding: 0;
+  /* Firefox 4+ */
+}
+button:-moz-focusring,
+input:-moz-focusring {
+  outline: 1px dotted ButtonText;
+  /* Firefox 4+ */
+}
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+details {
+  display: block;
+  /* Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */
+}
+html {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* Edge 12+, Internet Explorer 11- */
+  overflow-y: scroll;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* iOS 8+, Windows Phone 8.1+ */
+}
+hr {
+  overflow: visible;
+  /* Internet Explorer 11-, Edge 12+ */
+}
+input {
+  -webkit-border-radius: 0 /* iOS 8+ */;
+}
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* iOS 8+ */
+}
+input[type="number"] {
+  width: auto;
+  /* Firefox 36+ */
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Chrome 45+, Safari 9+ */
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Chrome 45+, Safari 9+ */
+}
+main {
+  display: block;
+  /* Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+ */
+}
+pre {
+  overflow: auto;
+  /* Internet Explorer 11- */
+}
+progress {
+  display: inline-block;
+  /* Internet Explorer 11-, Windows Phone 8.1+ */
+}
+summary {
+  display: block;
+  /* Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */
+}
+svg:not(:root) {
+  overflow: hidden;
+  /* Internet Explorer 11- */
+}
+template {
+  display: none;
+  /* Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+ */
+}
+textarea {
+  overflow: auto;
+  /* Edge 12+, Internet Explorer 11- */
+}
+[hidden] {
+  display: none;
+  /* Internet Explorer 10- */
+}
+/*
+ * Universal inheritance
+ */
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+* {
+  font-size: inherit;
+  line-height: inherit;
+}
+:before,
+:after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+/*
+ * Opinionated defaults
+ */
+/* specify the margin and padding of all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* specify the border style and width of all elements */
+*,
+:before,
+:after {
+  border-style: solid;
+  border-width: 0;
+}
+/* remove the tapping delay from clickable elements */
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+/* specify the standard appearance of selects */
+select {
+  -moz-appearance: none;
+  /* Firefox 40+ */
+  -webkit-appearance: none /* Chrome 45+ */;
+}
+select::-ms-expand {
+  display: none;
+  /* Edge 12+, Internet Explorer 11- */
+}
+select::-ms-value {
+  color: currentColor;
+  /* Edge 12+, Internet Explorer 11- */
+}
+/* use current current as the default fill of svg elements */
+svg {
+  fill: currentColor;
+}
+/* specify the progress cursor of updating elements */
+[aria-busy="true"] {
+  cursor: progress;
+}
+/* specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+/* specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+  cursor: default;
+}
+/* specify the style of visually hidden yet accessible elements */
+[hidden][aria-hidden="false"] {
+  clip: rect(0 0 0 0);
+  display: inherit;
+  position: absolute;
+}
+[hidden][aria-hidden="false"]:focus {
+  clip: auto;
+}
+/*
+ * Configurable defaults
+ */
+/* specify the background repeat of all elements */
+* {
+  background-repeat: no-repeat;
+}
+/* specify the root styles of the document */
+:root {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  color: #000000;
+  /*cursor: default;*/
+  font: 100%/1.5 sans-serif;
+}
+/* specify the text decoration of anchors */
+a {
+  text-decoration: none;
+}
+/* specify the alignment of media elements */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/* specify the coloring of form elements */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  color: inherit;
+}
+/* specify the minimum height of form elements */
+button,
+[type="button"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="reset"],
+[type="search"],
+[type="submit"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+  min-height: 1.5em;
+}
+/* specify the font family of code elements */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+}
+/* specify the list style of nav lists */
+nav ol,
+nav ul {
+  list-style: none;
+}
+/* specify the font size of small elements */
+small {
+  font-size: 75%;
+}
+/* specify the border styling of tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* specify the resizability of textareas */
+textarea {
+  resize: vertical;
+}
+/* specify the background color, font color, and drop shadow of text selections */
+::-moz-selection {
+  background-color: #1c5ddd;
+  /*#b3d4fc; /* required when declaring ::selection */
+  color: #ffffff;
+  text-shadow: none;
+}
+::selection {
+  background-color: #1c5ddd;
+  /* required when declaring ::selection */
+  color: #ffffff;
+  text-shadow: none;
+}
+/* Then we declare all the variables */
+/* Then we initialize the default values ( must be imported first so they can be
+overridden ) */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+/*************** CSS INITIALIZATION ***************/
+:root {
+  font-size: 16px;
+}
+html {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  font-family: Arial, "sans-serif";
+  background-color: #ecf0f1;
+  line-height: 1.5;
+  color: #0e0e0e;
+  width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0px auto;
+  padding: 0px;
+}
+html,
+p,
+div,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*************** ELEMENT DEFAULT RULES ***************/
+/****
+* A *
+****/
+/***** LINKS *****/
+a {
+  color: #2a70ff;
+}
+a:hover,
+a:visited:hover {
+  color: #51a6de;
+}
+a:visited {
+  color: #73289c;
+}
+/***** ARTICLES *****/
+article {
+  display: block;
+}
+article::after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+/***** ASIDE *****/
+aside {
+  display: inline-block;
+  width: 100%;
+  min-height: 400px;
+  vertical-align: top;
+  max-width: 200px;
+  margin: auto;
+  background-color: #f4d8d5;
+}
+/****
+* B *
+****/
+/***** BLOCKQUOTE *****/
+blockquote {
+  background: #f5f5f5;
+  padding: 1em;
+  line-height: 1.5;
+  width: auto;
+  display: inline-block;
+  margin: 0.8em;
+  border: 1px solid #ddd;
+}
+blockquote:not(.reverse) {
+  border-left: 4px solid #bbb;
+  text-align: left;
+  float: left;
+}
+blockquote.reverse {
+  border-right: 4px solid #bbb;
+  text-align: right;
+  float: right;
+}
+blockquote p {
+  display: inline;
+}
+blockquote footer {
+  font-size: calc(12.8px);
+  color: #9d9d9d;
+  margin-top: 0.5em;
+}
+blockquote cite {
+  font-style: italic;
+}
+blockquote:not(.reverse) footer::before {
+  content: '- ';
+}
+blockquote.reverse footer::after {
+  content: ' -';
+}
+/****
+* C *
+****/
+/***** CAPTION *****/
+caption {
+  width: 100%;
+  text-align: center;
+}
+/***** CODE *****/
+code {
+  background-color: #d9e7ec;
+  font-family: "Courier New", "monospace";
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  padding: 0em 0.2em;
+  border: 1px solid #baced9;
+}
+pre > code {
+  display: block;
+  margin: 1em;
+  padding: 0.5em;
+  text-align: left;
+  border-width: 1px 1px 1px 3px;
+  word-wrap: break-word;
+  max-width: 100%;
+  white-space: pre-wrap;
+}
+pre > code[data-lang] {
+  padding-top: 2em;
+}
+pre > code[data-lang]::before {
+  content: attr(data-lang);
+  display: inline-block;
+  background-color: #b7cad7;
+  position: relative;
+  top: -2em;
+  padding: 0em 0.6em;
+  border-radius: 0px 0px 0.5em 0px;
+  -webkit-border-radius: 0px 0px 0.5em 0px;
+  left: -0.5em;
+  width: auto;
+  float: left;
+}
+/****
+* D *
+****/
+/***** DIV *****/
+div {
+  display: block;
+}
+/****
+* F *
+****/
+body > footer {
+  width: 100%;
+  padding: 2em 1em;
+  background-color: #0e0e0e;
+  color: #d7d9da;
+  text-align: center;
+}
+/****
+* H *
+****/
+/***** HEADER *****/
+body > header {
+  font-size: 96px;
+  font-family: Ubuntu, "sans-serif";
+  color: #ecf0f1;
+  background-color: #2a70ff;
+  width: 100%;
+  text-align: center;
+}
+body > header > small {
+  font-size: 25%;
+  font-family: Verdana, "sans-serif";
+  color: #d7d9da;
+  display: block;
+  padding-bottom: 2em;
+}
+/***** H1, H1, H2, H3, H4, H5, H6 *****/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #262626;
+  font-family: Verdana, "sans-serif";
+  line-height: 2;
+  padding-left: 5%;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+  color: #9d9d9d;
+  padding-left: 0em;
+  font-size: 60%;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  position: relative;
+  color: #262626 !important;
+}
+h1:hover a::before,
+h2:hover a::before,
+h3:hover a::before,
+h4:hover a::before,
+h5:hover a::before,
+h6:hover a::before {
+  content: '#';
+  color: #b7c7d6;
+  position: absolute;
+  left: -1em;
+  line-height: 250%;
+  font-size: 80%;
+}
+h1 {
+  font-size: 42px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 14px;
+}
+/***** HR *****/
+hr {
+  width: 80%;
+  max-width: 600px;
+  display: block;
+  margin: 2em auto;
+  height: 3px;
+  background-color: #2a70ff;
+}
+/****
+* I *
+****/
+/***** IMG *****/
+img {
+  font-family: 'Helvetica';
+  font-weight: 300;
+  line-height: 2;
+  text-align: center;
+  height: auto;
+  display: block;
+  position: relative;
+  min-height: 4em;
+  box-sizing: border-box;
+  margin: 10px;
+}
+img:after {
+  content: "Problem loading \" " attr(alt) " \"";
+  font-size: 16px;
+  font-family: FontAwesome;
+  color: #9d9d9d;
+  display: block;
+  position: absolute;
+  border: 2px dashed #a8aeb3;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background-color: #d7d9da;
+  box-sizing: border-box;
+}
+/****
+* K *
+****/
+/***** KEYBOARD *****/
+kbd {
+  background-color: #f6efe0;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-width: 1px 1px 3px 1px;
+  border-style: solid;
+  border-color: #8b7b6e;
+  padding: 0px 2px;
+}
+/***** MAIN *****/
+main {
+  display: block;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0px auto;
+  background-color: #ecf0f1;
+}
+/********** PSEUDO SELECTORS **********/
+:target {
+  outline: 0;
+  animation: color-fadeout 1s 0s linear;
+}
+/* We import the base classes */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+/********** CONTAINERS **********/
+[class*="container"] {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  padding: 0.5em;
+}
+.container-sm {
+  max-width: 750px;
+}
+.container-md {
+  max-width: 960px;
+}
+.container-lg {
+  max-width: 1200px;
+}
+/*
+* The following classes are classes that are never used by default, but you can
+* use them to force the behaviour of an element ( for example if you want to
+* force an element to float on the right use "right" )
+*/
+/********** TITLE **********/
+/* Titles of a section with special style added */
+.section-header {
+  position: relative;
+}
+.section-header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 60%;
+  top: 20%;
+  left: 2%;
+  border-right: 6px solid #2a70ff;
+}
+/********** ELEMENTS ASPECT **********/
+/* Change the apsect of a container to showcase something inside */
+.showcase {
+  background-color: #fff;
+  border: #a8aeb3;
+  margin: 2em 1em;
+  padding: 1em;
+  box-shadow: 0px 0px 4px 0px #595959 inset;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+/***** GLOBAL RULES *****/
+a[target=_blank]::after {
+  font-family: FontAwesome;
+  content: "\f08e";
+  padding-left: 0.5em;
+}
+/* We import the files for the tables */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+table {
+  margin: 0.5em;
+}
+table td {
+  padding: 0.2em;
+}
+/******** CLASSIC DESIGN ********/
+thead,
+tfoot {
+  background-color: #c5c5c5;
+  font-weight: bold;
+}
+tbody {
+  background-color: #fff;
+}
+table {
+  border: 1px solid #858585;
+}
+table > :not(:last-child),
+tbody > *:not(:last-child) {
+  border-bottom: 1px solid #858585;
+}
+/******** MINIMALISTIC DESIGN ********/
+table.min thead,
+table.min tbody,
+table.min tfoot {
+  background-color: rgba(0, 0, 0, 0);
+}
+table.min,
+table.min * {
+  border-width: 0px;
+}
+table.min thead {
+  border-bottom: 2px solid #8e8e8e;
+}
+table.min > *:last-child {
+  border-bottom: 2px solid #c5c5c5;
+}
+table.min tfoot {
+  border-top: 1px solid #a4a4a4;
+}
+/******** FLAT DESIGN ********/
+table.flat,
+table.flat * {
+  border-width: 0px;
+}
+/******** ALTERNATING ROWS ********/
+table.alt tbody > tr:nth-child(even) {
+  background: #ededed;
+}
+table.alt tbody > tr:nth-child(odd) {
+  background: #fff;
+}
+/******** REACTIVE DESIGN ********/
+table.reactive :not(thead):not(tfoot) tr:hover {
+  background-color: #d3e2f4;
+}
+table.reactive :not(thead):not(tfoot) tr td:hover {
+  background-color: #b7c7d6;
+}
+/* We import the classes for the forms */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+/* We import the layout for grids and columns */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+/* Change the values here
+* !!!
+* IMPORTANT: You also need to change them in the RESPONSIVE DESIGN section
+* ( Media queries don't work with CSS variables )
+* !!!
+*/
+.soft-row,
+.soft-col {
+  display: flex;
+  box-sizing: border-box;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0px;
+  flex-wrap: wrap;
+}
+.soft-row,
+.soft-col,
+.soft-row *,
+.soft-col * {
+  box-sizing: border-box;
+  text-align: inherit;
+}
+.soft-row {
+  width: 100%;
+}
+.soft-row,
+.soft-col {
+  height: auto;
+  padding: 0px;
+}
+.soft-col *:first-child {
+  margin-top: 0px;
+}
+.soft-col *:last-child {
+  margin-bottom: 0px;
+}
+.soft-col *:not([class*="col"]):not(.soft-row),
+.soft-row *:not([class*="col"]) {
+  flex: 1;
+}
+[class*="container"] div:not(.soft-row):not(.soft-col) {
+  padding: 0.5em;
+  margin: 4px;
+}
+.col-1 {
+  width: calc(0.33333333%);
+}
+.col-2 {
+  width: calc(8.66666667%);
+}
+.col-3 {
+  width: calc(17%);
+}
+.col-4 {
+  width: calc(25.33333333%);
+}
+.col-5 {
+  width: calc(33.66666667%);
+}
+.col-6 {
+  width: calc(42%);
+}
+.col-7 {
+  width: calc(50.33333333%);
+}
+.col-8 {
+  width: calc(58.66666667%);
+}
+.col-9 {
+  width: calc(67%);
+}
+.col-10 {
+  width: calc(75.33333333%);
+}
+.col-11 {
+  width: calc(83.66666667%);
+}
+.col-12 {
+  width: 100%;
+}
+.col-s1 {
+  flex: 1 0;
+}
+.col-s2 {
+  flex: 2 0;
+}
+.col-s3 {
+  flex: 3 0;
+}
+.col-s4 {
+  flex: 4 0;
+}
+.col-s5 {
+  flex: 5 0;
+}
+.col-s6 {
+  flex: 6 0;
+}
+.col-s7 {
+  flex: 7 0;
+}
+.col-s8 {
+  flex: 8 0;
+}
+.col-s9 {
+  flex: 9 0;
+}
+.col-s10 {
+  flex: 10 0;
+}
+.col-s11 {
+  flex: 11 0;
+}
+.col-s12 {
+  flex: 12 0;
+}
+.col-offset-1 {
+  margin-left: calc(8.33333333%) !important;
+}
+.col-offset-2 {
+  margin-left: calc(16.66666667%) !important;
+}
+.col-offset-3 {
+  margin-left: calc(25%) !important;
+}
+.col-offset-4 {
+  margin-left: calc(33.33333333%) !important;
+}
+.col-offset-5 {
+  margin-left: calc(41.66666667%) !important;
+}
+.col-offset-6 {
+  margin-left: calc(50%) !important;
+}
+.col-offset-7 {
+  margin-left: calc(58.33333333%) !important;
+}
+.col-offset-8 {
+  margin-left: calc(66.66666667%) !important;
+}
+.col-offset-9 {
+  margin-left: calc(75%) !important;
+}
+.col-offset-10 {
+  margin-left: calc(83.33333333%) !important;
+}
+.col-offset-11 {
+  margin-left: calc(91.66666667%) !important;
+}
+/*************** RESPONSIVE DESIGN ***************/
+/* LARGE */
+/* Set the value according to the one you put at the beginning */
+@media screen and (max-width: 1200px) {
+  .container-lg .soft-col > *,
+  .container-lg.soft-col > * {
+    width: 100%;
+  }
+  .container-lg .soft-col > *:not(.soft-row),
+  .container-lg.soft-col > *:not(.soft-row) {
+    display: block;
+  }
+}
+/* MEDIUM */
+/* Set the value according to the one you put at the beginning */
+@media screen and (max-width: 960px) {
+  .container-md .soft-col > *,
+  .container-md.soft-col > * {
+    width: 100%;
+  }
+  .container-md .soft-col > *:not(.soft-row),
+  .container-md.soft-col > *:not(.soft-row) {
+    display: block;
+  }
+}
+/* SMALL */
+/* Set the value according to the one you put at the beginning */
+@media screen and (max-width: 750px) {
+  .container-sm .soft-col > *,
+  .container-sm.soft-col > * {
+    width: 100%;
+  }
+  .container-sm .soft-col > *:not(.soft-row),
+  .container-sm.soft-col > *:not(.soft-row) {
+    display: block;
+  }
+}
+/* We import the classes for the buttons */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+button,
+.button {
+  padding: 0.4em;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  margin: 0.5em;
+  font-family: Arial, "sans-serif";
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #0e0e0e;
+  border: 1px solid #a8aeb3;
+  display: inline-block;
+}
+button:hover,
+.button:hover,
+.button:visited:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px -1px #252525;
+  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  border-color: #606466;
+  color: #0e0e0e;
+}
+.button:visited {
+  color: inherit;
+}
+button:disabled,
+.button.disabled {
+  box-shadow: 0px 0px 6px 0px #474747 inset;
+  background-color: #9d9d9d;
+  color: #3c3e40;
+}
+button:disabled:hover {
+  background-color: #9d9d9d;
+  cursor: not-allowed;
+}
+button:not(:disabled):not(.loading):active,
+.button:not(.disabled):not(.loading):active {
+  outline: 0;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  /*box-shadow: 0px 0px 3px 0px #474747 inset;*/
+  border-color: #2a70ff;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.3) inset;
+}
+button:focus,
+.button:focus {
+  outline: 0;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+/********** MODIFIER CLASSES **********/
+button.primary,
+.button.primary {
+  background-color: #2a70ff;
+  color: #f2f8f9;
+  border-color: #2a70ff;
+}
+button.primary:not(:disabled):not(.loading):active,
+.button.primary:not(.disabled):not(.loading):active {
+  background-color: #194082;
+  border-color: #2a70ff;
+}
+button.primary:not(:disabled):not(.loading):hover,
+.button.primary:not(.disabled):not(.loading):hover {
+  border-color: #2a70ff;
+  color: #f2f8f9;
+}
+button.large,
+.button.large {
+  padding: 0.6em;
+  font-size: 20px;
+}
+button.loading,
+.button.loading {
+  padding: 0.7em 2em;
+  content: '';
+  pointer-events: none;
+}
+button.large.loading,
+.button.large.loading {
+  padding: 0.8em 2.5em;
+}
+button.loading:hover,
+.button.loading:hover {
+  cursor: wait;
+}
+button.primary.loading::after,
+button.green.loading::after,
+button.blue.loading::after,
+button.red.loading::after,
+button.orange.loading::after,
+button.black.loading::after,
+.button.primary.loading:after,
+.button.green.loading::after,
+.button.blue.loading::after,
+.button.red.loading::after,
+.button.orange.loading::after,
+.button.black.loading::after {
+  border-color: transparent transparent white white !important;
+}
+button.loading::after,
+.button.loading::after {
+  animation: spin-right 500ms infinite linear;
+  border: 2px solid #888;
+  border-radius: 2000px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: calc(16px);
+  position: relative;
+  width: calc(16px);
+}
+button.large.loading::after,
+.button.large.loading::after {
+  height: calc(24px);
+  width: calc(24px);
+}
+/*button.loading:after {
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    position: absolute !important;
+}*/
+/*************** COLORS ***************/
+button.green,
+button.blue,
+button.red,
+button.orange,
+button.black,
+.button.green,
+.button.blue,
+.button.red,
+.button.orange,
+.button.black {
+  color: #f2f8f9;
+}
+.button.green:hover,
+.button.blue:hover,
+.button.red:hover,
+.button.orange:hover,
+.button.black:hover {
+  color: #f2f8f9;
+}
+/* GREEN */
+button.green,
+.button.green {
+  background-color: #44b434;
+  border-color: #44b434;
+}
+button.green:not(:disabled):not(.loading):active,
+.button.green:not(:disabled):not(.loading):active {
+  background-color: #198233;
+  border-color: #44b434;
+}
+button.green:not(:disabled):not(.loading):hover,
+.button.green:not(:disabled):not(.loading):hover {
+  border-color: #44b434;
+}
+/* BLUE */
+button.blue,
+.button.blue {
+  background-color: #2a70ff;
+  border-color: #2a70ff;
+}
+button.blue:not(:disabled):not(.loading):active,
+.button.blue:not(:disabled):not(.loading):active {
+  background-color: #194082;
+  border-color: #2a70ff;
+}
+button.blue:not(:disabled):not(.loading):hover,
+.button.blue:not(:disabled):not(.loading):hover {
+  border-color: #2a70ff;
+}
+/* RED */
+button.red,
+.button.red {
+  background-color: #c61b19;
+  border-color: #c61b19;
+}
+button.red:not(:disabled):not(.loading):active,
+.button.red:not(:disabled):not(.loading):active {
+  background-color: #822117;
+  border-color: #c61b19;
+}
+button.red:not(:disabled):not(.loading):hover,
+.button.red:not(:disabled):not(.loading):hover {
+  border-color: #c61b19;
+}
+/* ORANGE */
+button.orange,
+.button.orange {
+  background-color: #e0a32d;
+  border-color: #e0a32d;
+}
+button.orange:not(:disabled):not(.loading):active,
+.button.orange:not(:disabled):not(.loading):active {
+  background-color: #c38925;
+  border-color: #e0a32d;
+}
+button.orange:not(:disabled):not(.loading):hover,
+.button.orange:not(:disabled):not(.loading):hover {
+  border-color: #e0a32d;
+}
+/* BLACK */
+button.black,
+.button.black {
+  background-color: #171717;
+  border-color: #171717;
+}
+button.black:not(:disabled):not(.loading):active,
+.button.black:not(:disabled):not(.loading):active {
+  background-color: #0e0e0e;
+  border-color: #171717;
+}
+button.black:not(:disabled):not(.loading):hover,
+.button.black:not(:disabled):not(.loading):hover {
+  border-color: #171717;
+}
+/* We import the classes for the menus */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+nav {
+  display: flex;
+  box-sizing: border-box;
+}
+nav * {
+  box-sizing: border-box;
+}
+/********** TOP NAVBAR **********/
+nav.top {
+  width: 100%;
+}
+nav.top.fixed {
+  position: fixed;
+  top: 0px;
+  z-index: 5;
+}
+nav.top .links {
+  width: 100%;
+  display: flex;
+  -webkit-transition: max-height 0.25s;
+}
+nav.top .links.show {
+  max-height: 400px;
+  display: block;
+}
+nav .toggle {
+  display: none;
+}
+nav .toggle:hover {
+  cursor: pointer;
+}
+nav .toggle::after {
+  content: '\2630';
+  color: #fff;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  -webkit-transition: transform 0.25s;
+}
+nav .toggle.cross::after {
+  content: '\2716';
+  transform: rotate(90deg);
+}
+nav.top .links > *,
+nav.top .links > a:visited {
+  flex: 1;
+  text-align: center;
+  color: #f2f8f9;
+  background-color: #0f2a58;
+  z-index: 3;
+}
+nav.top .links > *:not(.submenu),
+nav.top .links > .submenu span {
+  padding: 0.5em 0px;
+}
+nav.top .links > *:hover,
+nav.top .links > a:visited:hover {
+  background-color: #194082;
+  cursor: pointer;
+}
+nav.top .submenu.active {
+  background-color: #194082;
+}
+nav.top .submenu {
+  position: relative;
+  -webkit-transition: background-color 0.1s, padding-bottom 0.4s;
+}
+nav.top .submenu span {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+nav.top .submenu span::before {
+  -webkit-transition: color 0.2s;
+  content: '▼';
+  display: block;
+  position: absolute;
+  left: 10%;
+  color: #f2f8f9;
+}
+nav.top .submenu:hover::before {
+  color: #f2f8f9;
+}
+nav.top .submenu.active::before {
+  color: transparent;
+}
+nav.top .submenu.active *:not(.dropdown) {
+  padding: 0.5em 0px;
+}
+nav.top .submenu .dropdown {
+  display: block;
+  position: absolute;
+  top: calc(25px);
+  width: 100%;
+  max-height: 0px;
+  -webkit-transition: max-height 0.4s;
+  overflow: hidden;
+}
+nav.top .submenu.active .dropdown {
+  max-height: 600px;
+}
+nav.top .submenu .dropdown * {
+  display: block;
+  width: 100%;
+  background-color: #194082;
+  color: #f2f8f9;
+  -webkit-transition: padding 0.4s;
+}
+nav.top .submenu .dropdown * {
+  border-left: 4px solid #2a70ff;
+}
+nav.top .submenu .dropdown *:hover {
+  background-color: #0f2a58;
+}
+/********** SIDE NAVBAR **********/
+nav.side {
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  z-index: 3;
+  flex-direction: column;
+  width: 50px;
+  overflow: hidden;
+  -webkit-transition: width 0.25s;
+  background-color: #0f2a58;
+}
+nav.side .toggle {
+  display: block;
+  width: 50px;
+}
+nav.side.active {
+  width: 300px;
+}
+nav.side .links {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  margin-top: 10vh;
+  background-color: #194082;
+  justify-content: space-around;
+  overflow: hidden;
+  -webkit-transition: width 0.25s;
+}
+nav.side .links > *,
+nav.side .links > *:visited,
+nav.side .links > *:hover {
+  color: #f2f8f9;
+  display: block;
+  width: 40px;
+  padding: 0em 0px;
+  line-height: 40px;
+  overflow: hidden;
+  height: 40px;
+  margin: 0px 5px;
+  border-radius: 20px;
+  background-color: #0f2a58;
+  -webkit-transition: width 0.25s;
+}
+nav.side.active .links > * {
+  width: 90%;
+}
+nav.side .links > * span {
+  content: '';
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  left: 0px;
+  margin-right: 0.5em;
+  text-align: center;
+  -webkit-transition: all 0.25s;
+}
+/***************** MOBILE ******************/
+@media (max-width: 600px) {
+  nav.top {
+    display: block;
+    background-color: #0f2a58;
+  }
+  nav.top .links {
+    display: none;
+    max-height: 0px;
+  }
+  nav.top .links > * {
+    width: 100%;
+    display: block;
+  }
+  nav.top .links > *:not(.submenu),
+  nav.top .links > .submenu span,
+  nav.top .links > .submenu.active span {
+    padding: 0.8em 0px;
+  }
+  nav.top .links > *:not(:last-child) {
+    border-bottom: 2px solid #2a70ff;
+  }
+  /*nav.top .submenu.active {
+    padding-bottom: 0px;
+  }
+
+  /*nav.top .submenu .dropdown > *:first-child {
+    -webkit-transition: margin-top 0.4s, padding 0.4s;
+  }
+
+  nav.top .submenu.active .dropdown > *:first-child {
+    margin-top: 0.5em;
+  }*/
+  nav.top .submenu .dropdown {
+    position: relative;
+    top: 0px;
+  }
+  nav.top .submenu .dropdown > * {
+    background-color: #194082;
+    padding: 0.8em 0px;
+    border-top: 1px solid #0f2a58;
+  }
+  nav.top .submenu .dropdown > *:hover {
+    background-color: #0f2a58;
+  }
+  nav.top .submenu .dropdown {
+    max-height: 0px;
+  }
+  nav.top .toggle {
+    display: block;
+    height: 50px;
+    margin-left: calc(40%);
+    background-color: #194082;
+  }
+  nav.side {
+    width: 10px;
+    overflow: visible;
+  }
+  nav.side:not(.active) .toggle {
+    width: 50px;
+    background-color: #194082;
+    border: 1px solid #0f2a58;
+    border-radius: 4px;
+  }
+  nav.side.active {
+    width: 100%;
+  }
+  nav.side:not(.active) .links > * {
+    width: 100%;
+    margin: 0px;
+    border-radius: 0px;
+  }
+  nav.side.active .links {
+    width: 100%;
+  }
+  nav.side.active .links > * {
+    width: 90%;
+    margin: 0px auto;
+  }
+  nav.side.active .toggle {
+    width: 50px;
+  }
+}
+/* We import the custom elements */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+.soft-popup,
+.soft-progress,
+.soft-notif {
+  box-sizing: border-box;
+}
+/*************** SOFT POPUPS ***************/
+.soft-popupmask {
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.soft-popup {
+  z-index: 7;
+  position: fixed;
+  width: 80%;
+  max-width: 800px;
+  height: 50%;
+  max-height: 400px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  text-align: center;
+  background-color: #ecf0f1;
+  color: #0e0e0e;
+  box-shadow: 0px 4px 16px 0px #252525;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.soft-popup div {
+  width: 100%;
+  height: calc(20%);
+  display: table;
+}
+.soft-popup p {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: normal;
+}
+.soft-popup span:nth-child(1) {
+  font-weight: bold;
+  font-size: calc(24px);
+  line-height: 2;
+  width: 100%;
+  display: block;
+  color: #f2f8f9;
+  box-shadow: 0px -2px 16px 2px #121212;
+  background-color: #9d9d9d;
+  border-bottom: 0.25em solid #606466;
+}
+.soft-popup button {
+  position: relative;
+  padding: 0.5em 2em;
+  bottom: 2em;
+}
+.soft-popup.success span:nth-child(1) {
+  background-color: #198233;
+  border-color: #44b434;
+}
+.soft-popup.info span:nth-child(1) {
+  background-color: #194082;
+  border-color: #2a70ff;
+}
+.soft-popup.warning span:nth-child(1) {
+  background-color: #c38925;
+  border-color: #e0a32d;
+}
+.soft-popup.alert span:nth-child(1) {
+  background-color: #822117;
+  border-color: #c61b19;
+}
+/*************** SOFT PROGRESS BARS ***************/
+.soft-progress {
+  width: 100%;
+  display: block;
+  margin: 0px !important;
+  padding: 0px !important;
+  border: none !important;
+  height: 0.5em;
+  background-color: #d7d9da;
+}
+.soft-progress div {
+  height: 100%;
+  text-align: center;
+  border: inherit !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  background-color: #2a70ff;
+}
+/*************** SOFT TOOLTIPS ***************/
+.soft-tooltip {
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  border-width: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.tooltip div {
+  padding: 0.6em;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 10px !important;
+  border: 0px !important;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: relative;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  width: auto;
+  text-align: center;
+  z-index: 2;
+  animation: plop 0.2s 0s ease-in-out;
+  animation-fill-mode: both;
+}
+.tooltip div::before,
+.tooltip div::after {
+  width: 0px;
+  height: 0px;
+  content: '';
+  display: block;
+  animation: plop 0.2s 0s ease-in-out;
+  animation-fill-mode: both;
+}
+.tooltip.top div::after {
+  border: 12px solid;
+  border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+  position: absolute;
+  left: calc(38%);
+  bottom: -24px;
+}
+.tooltip.right div::after {
+  border: 12px solid;
+  border-color: transparent rgba(0, 0, 0, 0.75) transparent transparent;
+  position: absolute;
+  top: calc(38%);
+  left: -24px;
+}
+.tooltip.bottom div::before {
+  border: 12px solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
+  position: absolute;
+  left: calc(38%);
+  top: -24px;
+}
+.tooltip.left div::before {
+  border: 12px solid;
+  border-color: transparent transparent transparent rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: calc(38%);
+  right: -24px;
+}
+/************** SOFT NOTIFICATIONS ****************/
+.soft-notif {
+  display: block;
+  border: 1px solid #194082;
+  background-color: #b7c7d6;
+  box-shadow: 1px 1px 2px 0px #0f2a58;
+  color: #171717;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 2px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  max-width: 400px;
+  min-width: 120px;
+  z-index: 5;
+  line-height: 40px;
+  padding: 4px 16px !important;
+  animation: plop 0.2s 0s ease-in-out;
+}
+.soft-notif.info {
+  border-color: #194082;
+  background-color: #51a6de;
+  box-shadow: 1px 1px 2px 0px #194082;
+}
+.soft-notif.success {
+  border-color: #198233;
+  background-color: #50de44;
+  box-shadow: 1px 1px 2px 0px #198233;
+}
+.soft-notif.warning {
+  border-color: #c38925;
+  background-color: #e0b263;
+  box-shadow: 1px 1px 2px 0px #c38925;
+}
+.soft-notif.alert {
+  border-color: #822117;
+  background-color: #de6054;
+  box-shadow: 1px 1px 2px 0px #822117;
+}
+@media screen and (max-width: 600px) {
+  .soft-notif {
+    width: 90%;
+    max-width: 90%;
+    right: 5%;
+  }
+}
+/* We import the file adapting some things to mobile with media queries */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+/* Replace max-width by the width of your main+aside ( calculate --main-width +
+--aside-width ) if you want the aside to work properly on mobile ( media queries
+don't work with CSS variables ) */
+@media screen and (max-width: 1224px) {
+  aside {
+    display: block;
+    width: 100%;
+  }
+  main {
+    width: 100%;
+    display: block;
+  }
+  body > header {
+    font-size: 12vw;
+  }
+}
+/* We import all the modifiers classes */
+/********** TEXT **********/
+/* Makes the first letter of the paragraph shifted from the border */
+.first-letter-spacing {
+  text-indent: 2em;
+}
+.first-letter-spacing * {
+  text-indent: 0px;
+}
+/* Makes the first letter of the paragraph bigger */
+.first-letter-big::first-letter {
+  font-size: 200%;
+}
+.first-letter-huge::first-letter {
+  font-size: 400%;
+}
+/* Makes the text float on the left */
+.text-left {
+  text-align: left !important;
+}
+/* Makes the text justified */
+.text-justify {
+  text-align: justify !important;
+}
+/* Makes the text float on the right */
+.text-right {
+  text-align: right !important;
+}
+/* Center the text */
+.text-center {
+  text-align: center !important;
+}
+/********** ELEMENTS PLACING **********/
+/* Hides the element */
+.hidden,
+[hidden] {
+  display: none !important;
+}
+/* Makes the element float on the left */
+.left {
+  float: left !important;
+}
+/* Makes the element float on the right */
+.right {
+  float: right !important;
+}
+/* Makes the element takes the full width of its parent */
+.fullWidth {
+  width: 100% !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+/* Makes the element takes the full height of its parent */
+.fullHeight {
+  height: 100% !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+/* Makes the element take the full height of the screen */
+.fullScreenH {
+  height: 100vh !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+/********** ELEMENTS BEHAVIOUR **********/
+.disabled {
+  pointer-events: none;
+}
+/********** ELEMENTS ASPECT **********/
+/* Sets a border */
+.border {
+  border: 1px solid #194082;
+}
+/* We import the animations */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+/* CONFIGURE THE ANIMATIONS HERE */
+/*************** CLASSES ***************/
+/*** PLOP ***/
+.animation-plop {
+  animation: plop 200ms 0s ease-in-out;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+/*** HEARTBEAT COLOR ***/
+.animation-heartbeat-color {
+  animation: heartbeat-color 0.75s 0s ease;
+  animation-iteration-count: infinite;
+}
+/*** HEARTBEAT SCALE ***/
+.animation-heartbeat-scale {
+  animation: heartbeat-scale 0.75s 0s ease;
+  animation-iteration-count: infinite;
+}
+/*** HEARTBEAT ***/
+.animation-heartbeat {
+  animation: heartbeat-color 0.75s 0s ease, heartbeat-scale 0.75s 0s ease;
+  animation-iteration-count: infinite;
+}
+/*** FADEOUT ***/
+.animation-fadeout {
+  animation: fadeout 2s 0s ease;
+  animation-fill-mode: both;
+}
+#heartbeat {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+  background-color: #de557a;
+  border: 2px solid #c61b19;
+  margin-left: 50px;
+}
+/*************** ANIMATIONS ***************/
+/*** PLOP ***/
+@keyframes plop {
+  0% {
+    transform: scale(0.01, 0.01);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes plop {
+  0% {
+    transform: scale(0.01, 0.01);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.3, 1.3);
+    opacity: 1;
+  }
+}
+/*** SLIDE DOWN ***/
+/*********** DISCONTINUED ***********/
+@keyframes slide-down {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes slide-down {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/*** SLIDE ***/
+/************** DISCONTINUED *******/
+@keyframes slide {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 200px;
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 200px;
+  }
+}
+/*** HEARTBEAT SCALE ***/
+@keyframes heartbeat-scale {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1.02, 1.02);
+  }
+  60% {
+    transform: scale(1.2, 1.2);
+  }
+  70% {
+    transform: scale(1.15, 1.15);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes heartbeat-scale {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1.02, 1.02);
+  }
+  60% {
+    transform: scale(1.2, 1.2);
+  }
+  70% {
+    transform: scale(1.15, 1.15);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/*** HEARTBEAT COLOR ***/
+@keyframes heartbeat-color {
+  0% {
+    background-color: #c82a2a;
+  }
+  40% {
+    background-color: #c33737;
+  }
+  60% {
+    background-color: #d66969;
+  }
+  70% {
+    background-color: #d75858;
+  }
+  100% {
+    background-color: #c82a2a;
+  }
+}
+@-webkit-keyframes heartbeat-color {
+  0% {
+    background-color: #c82a2a;
+  }
+  40% {
+    background-color: #c33737;
+  }
+  60% {
+    background-color: #d66969;
+  }
+  70% {
+    background-color: #d75858;
+  }
+  100% {
+    background-color: #c82a2a;
+  }
+}
+/*** SPIN RIGHT ***/
+@keyframes spin-right {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin-right {
+  0% {
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*** COLOR FADE OUT ***/
+@keyframes color-fadeout {
+  0% {
+    background-color: #51a6de;
+  }
+  100% {
+    background-color: auto;
+  }
+}
+@-webkit-keyframes color-fadeout {
+  0% {
+    background-color: #51a6de;
+  }
+  100% {
+    background-color: auto;
+  }
+}
+/*** OPACITY FADE OUT ***/
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

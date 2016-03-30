@@ -31,8 +31,8 @@
   right: 0px;
   margin: auto;
   text-align: center;
-  background-color: var(--white-default);
-  color: var(--black-default);
+  background-color: @white-default;
+  color: @black-default;
   box-shadow: 0px 4px 16px 0px #252525;
   vertical-align: middle;
   overflow: hidden;
@@ -40,7 +40,7 @@
 
 .soft-popup div {
   width: 100%;
-  height: calc(100% - 5 * var(--font-size-default));
+  height: calc(100% - 5 * @font-size-default);
   display: table;
 }
 
@@ -52,14 +52,14 @@
 
 .soft-popup span:nth-child(1) {
   font-weight: bold;
-  font-size: var(--font-size-big);
+  font-size: @font-size-big;
   line-height: 2;
   width: 100%;
   display: block;
-  color: var(--white-light);
+  color: @white-light;
   box-shadow: 0px -2px 16px 2px #121212;
-  background-color: var(--grey-default);
-  border-bottom: 0.25em solid var(--grey-dark);
+  background-color: @grey-default;
+  border-bottom: 0.25em solid @grey-dark;
 }
 
 .soft-popup button {
@@ -69,23 +69,23 @@
 }
 
 .soft-popup.success span:nth-child(1) {
-  background-color: var(--green-dark);
-  border-color: var(--green-default);
+  background-color: @green-dark;
+  border-color: @green-default;
 }
 
 .soft-popup.info span:nth-child(1) {
-  background-color: var(--blue-dark);
-  border-color: var(--blue-default);
+  background-color: @blue-dark;
+  border-color: @blue-default;
 }
 
 .soft-popup.warning span:nth-child(1) {
-  background-color: var(--yellow-dark);
-  border-color: var(--yellow-default);
+  background-color: @orange-dark;
+  border-color: @orange-default;
 }
 
 .soft-popup.alert span:nth-child(1) {
-  background-color: var(--red-dark);
-  border-color: var(--red-default);
+  background-color: @red-dark;
+  border-color: @red-default;
 }
 
 /*************** SOFT PROGRESS BARS ***************/
@@ -97,7 +97,7 @@
   padding: 0px !important;
   border: none !important;
   height: 0.5em;
-  background-color: var(--white-dark);
+  background-color: @white-dark;
 }
 
 .soft-progress div {
@@ -106,7 +106,7 @@
   border: inherit !important;
   margin: 0px !important;
   padding: 0px !important;
-  background-color: var(--blue-default);
+  background-color: @blue-default;
 }
 
 /*************** SOFT TOOLTIPS ***************/
@@ -189,10 +189,10 @@
 
 .soft-notif {
   display: block;
-  border: 1px solid var(--primary-color-dark);
-  background-color: var(--primary-color-lighter);
-  box-shadow: 1px 1px 2px 0px var(--primary-color-darker);
-  color: var(--black-light);
+  border: 1px solid @primary-color-dark;
+  background-color: @primary-color-lighter;
+  box-shadow: 1px 1px 2px 0px @primary-color-darker;
+  color: @black-light;
   font-size: 18px;
   text-align: center;
   border-radius: 2px;
@@ -208,27 +208,27 @@
 }
 
 .soft-notif.info {
-  border-color: var(--blue-dark);
-  background-color: var(--blue-light);
-  box-shadow: 1px 1px 2px 0px var(--blue-dark);
+  border-color: @blue-dark;
+  background-color: @blue-light;
+  box-shadow: 1px 1px 2px 0px @blue-dark;
 }
 
 .soft-notif.success {
-  border-color: var(--green-dark);
-  background-color: var(--green-light);
-  box-shadow: 1px 1px 2px 0px var(--green-dark);
+  border-color: @green-dark;
+  background-color: @green-light;
+  box-shadow: 1px 1px 2px 0px @green-dark;
 }
 
 .soft-notif.warning {
-  border-color: var(--orange-dark);
-  background-color: var(--orange-light);
-  box-shadow: 1px 1px 2px 0px var(--orange-dark);
+  border-color: @orange-dark;
+  background-color: @orange-light;
+  box-shadow: 1px 1px 2px 0px @orange-dark;
 }
 
 .soft-notif.alert {
-  border-color: var(--red-dark);
-  background-color: var(--red-light);
-  box-shadow: 1px 1px 2px 0px var(--red-dark);
+  border-color: @red-dark;
+  background-color: @red-light;
+  box-shadow: 1px 1px 2px 0px @red-dark;
 }
 
 @media screen and (max-width: 600px) {

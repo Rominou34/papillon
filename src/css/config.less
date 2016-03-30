@@ -1,0 +1,129 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
+  /*
+  * The names of the components using each of the variables are written
+  * in comments after the variable declaration, just use Ctrl+F
+  */
+  /********** FONTS **********/
+
+  @font-default: Arial, "sans-serif"; /* basic text */
+  @font-second: Impact, "sans-serif"; /* basic text bis */
+  @font-third: "Times New Roman", "serif"; /* basic text thris ? */
+  @font-title: Verdana, "sans-serif"; /* h1, h2, h3, h4, h5, h6 */
+  @font-header: Ubuntu, "sans-serif"; /* Header */
+  @font-code: "Courier New", "monospace"; /* code */
+
+  @font-size-default: 16px; /* Basic text */
+  @font-size-big: calc(@font-size-default * 1.5); /* Basic text */
+  @font-size-small: calc(@font-size-default * 0.8); /* Basic text */
+  @font-size-header: 12vw; /* Header */
+
+  @line-height: 1.5;
+
+  /********** COLORS **********/
+
+  /* WHITE */
+  @white-default: #ecf0f1;
+  @white-light: #f2f8f9;
+  @white-dark: #d7d9da;
+
+  /* GREY */
+  @grey-default: #9d9d9d;
+  @grey-light: #a8aeb3;
+  @grey-dark: #606466;
+  @grey-darker: #3c3e40;
+
+  /* BLACK */
+  @black-default: #0e0e0e;
+  @black-lighter: #262626;
+  @black-light: #171717;
+
+  /* BLUE */
+
+  @blue-subtle: #d3e2f4;
+  @blue-light: #51a6de;
+  @blue-default: #2a70ff;
+  @blue-dark: #194082;
+
+  /* GREEN */
+  @green-subtle: #d1f4da;
+  @green-light: #50de44;
+  @green-default: #44b434;
+  @green-dark: #198233;
+
+  /* RED */
+  @red-subtle: #f4d8d5;
+  @red-light: #de6054;
+  @red-default: #c61b19;
+  @red-dark: #822117;
+
+  /* ORANGE */
+  @orange-subtle: #edeccc;
+  @orange-light: #e0b263;
+  @orange-default: #e0a32d;
+  @orange-dark: #c38925;
+
+  /*** OTHERS ***/
+  @color-brown: #79461c;
+  @color-gold: #d6aa27;
+  @color-yellow: #e8e62a;
+  @color-pink: #de557a;
+  @color-purple: #73289c;
+  @color-cyan: #36c7e0;
+
+  /********** ELEMENTS DEFAULT COLORS **********/
+
+  /***** COLOR PALETTE *****/
+  @primary-color: @blue-default;
+  @primary-color-dark: @blue-dark;
+  @primary-color-darker: #0f2a58;
+  @primary-color-light: @blue-light;
+  @primary-color-lighter: #b7c7d6;
+  @primary-color-subtle: @blue-subtle;
+
+  /* HEADER */
+  @color-header: @white-default;
+  @bg-color-header: @primary-color;
+
+
+
+  @bg-color-html: #fff;
+  @bg-color-body: @white-default;
+  @bg-color-main: @white-default;
+  @bg-color-aside: @red-subtle;
+  @bg-color-footer: @black-default;
+  @bg-color-nav: @blue-default;
+
+  @bg-color-code: #d9e7ec;
+
+  @font-color-text: @black-default;
+  @font-color-title: @black-lighter;
+  @font-color-title-second: @grey-default;
+  @font-color-footer: @white-dark;
+
+  @font-color-link: @blue-default;
+  @font-color-link-h: @blue-light;
+  @font-color-link-v: @color-purple;
+
+  /********** SIZES **********/
+
+  @border-width: 1px;
+
+  @body-width: 100%;
+  @main-width: 1024px;
+  @aside-width: 200px;
+  @nav-width: 100%;
+
+  /************* VARIABLES USED IN SPECIFIC PARTS *************/
+
+  /*** GRID LAYOUT ***/
+  @grid-margin: 8px;
+  @grid-margin-sm: 4px;
+
+  /* Container threshold sizes */
+  @container-sm: 750px;
+  @container-md: 960px;
+  @container-lg: 1200px;

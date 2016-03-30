@@ -63,8 +63,8 @@ nav.top .links > *,
 nav.top .links > a:visited {
   flex: 1;
   text-align: center;
-  color: var(--white-light);
-  background-color: var(--primary-color-darker);
+  color: @white-light;
+  background-color: @primary-color-darker;
   z-index: 3;
 }
 
@@ -75,12 +75,12 @@ nav.top .links > .submenu span {
 
 nav.top .links > *:hover,
 nav.top .links > a:visited:hover {
-  background-color: var(--primary-color-dark);
+  background-color: @primary-color-dark;
   cursor: pointer;
 }
 
 nav.top .submenu.active {
-  background-color: var(--primary-color-dark);
+  background-color: @primary-color-dark;
 }
 
 nav.top .submenu {
@@ -100,10 +100,10 @@ nav.top .submenu span::before {
   display: block;
   position: absolute;
   left: 10%;
-  color: var(--white-light);
+  color: @white-light;
 }
 nav.top .submenu:hover::before {
-  color: var(--white-light);
+  color: @white-light;
 }
 
 nav.top .submenu.active::before {
@@ -117,7 +117,7 @@ nav.top .submenu.active *:not(.dropdown) {
 nav.top .submenu .dropdown {
   display: block;
   position: absolute;
-  top: calc(var(--line-height) * var(--font-size-default) + 1em);
+  top: calc(@line-height * @font-size-default + 1em);
   width: 100%;
   max-height: 0px;
   -webkit-transition: max-height 0.4s;
@@ -131,17 +131,17 @@ nav.top .submenu.active .dropdown {
 nav.top .submenu .dropdown * {
   display: block;
   width: 100%;
-  background-color: var(--primary-color-dark);
-  color: var(--white-light);
+  background-color: @primary-color-dark;
+  color: @white-light;
   -webkit-transition: padding 0.4s;
 }
 
 nav.top .submenu .dropdown * {
-  border-left: 4px solid var(--primary-color);
+  border-left: 4px solid @primary-color;
 }
 
 nav.top .submenu .dropdown *:hover {
-  background-color: var(--primary-color-darker);
+  background-color: @primary-color-darker;
 }
 
 
@@ -156,7 +156,7 @@ nav.side {
   width: 50px;
   overflow: hidden;
   -webkit-transition: width 0.25s;
-  background-color: var(--primary-color-darker);
+  background-color: @primary-color-darker;
 }
 
 nav.side .toggle {
@@ -173,7 +173,7 @@ nav.side .links {
   flex-direction: column;
   height: 90%;
   margin-top: 10vh;
-  background-color: var(--primary-color-dark);
+  background-color: @primary-color-dark;
   justify-content: space-around;
   overflow: hidden;
   -webkit-transition: width 0.25s;
@@ -182,7 +182,7 @@ nav.side .links {
 nav.side .links > *,
 nav.side .links > *:visited,
 nav.side .links > *:hover {
-  color: var(--white-light);
+  color: @white-light;
   display: block;
   width: 40px;
   padding: 0em 0px;
@@ -191,7 +191,7 @@ nav.side .links > *:hover {
   height: 40px;
   margin: 0px 5px;
   border-radius: 20px;
-  background-color: var(--primary-color-darker);
+  background-color: @primary-color-darker;
   -webkit-transition: width 0.25s;
 }
 
@@ -216,7 +216,7 @@ nav.side .links > * span {
 @media (max-width: 600px) {
   nav.top {
     display: block;
-    background-color: var(--primary-color-darker);
+    background-color: @primary-color-darker;
   }
 
   nav.top .links {
@@ -236,7 +236,7 @@ nav.side .links > * span {
   }
 
   nav.top .links > *:not(:last-child) {
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid @primary-color;
   }
 
   /*nav.top .submenu.active {
@@ -257,13 +257,13 @@ nav.side .links > * span {
   }
 
   nav.top .submenu .dropdown > * {
-    background-color: var(--primary-color-dark);
+    background-color: @primary-color-dark;
     padding: 0.8em 0px;
-    border-top: 1px solid var(--primary-color-darker);
+    border-top: 1px solid @primary-color-darker;
   }
 
   nav.top .submenu .dropdown > *:hover {
-    background-color: var(--primary-color-darker);
+    background-color: @primary-color-darker;
   }
 
   nav.top .submenu .dropdown {
@@ -274,7 +274,7 @@ nav.side .links > * span {
     display: block;
     height: 50px;
     margin-left: calc(100% - 60px);
-    background-color: var(--primary-color-dark);
+    background-color: @primary-color-dark;
   }
 
   nav.side {
@@ -284,8 +284,8 @@ nav.side .links > * span {
 
   nav.side:not(.active) .toggle {
     width: 50px;
-    background-color: var(--primary-color-dark);
-    border: 1px solid var(--primary-color-darker);
+    background-color: @primary-color-dark;
+    border: 1px solid @primary-color-darker;
     border-radius: 4px;
   }
 

@@ -4,14 +4,12 @@
 */
 
 /* CONFIGURE THE ANIMATIONS HERE */
-:root {
-	--heartbeat-color-start: #c82a2a;
-	--heartbeat-color-begin: #c33737;
-	--heartbeat-color-peak: #d66969;
-	--heartbeat-color-finish: #d75858;
+	@heartbeat-color-start: #c82a2a;
+	@heartbeat-color-begin: #c33737;
+	@heartbeat-color-peak: #d66969;
+	@heartbeat-color-finish: #d75858;
 
-	--color-fadeout: var(--primary-color-light);
-}
+	@color-fadeout: @primary-color-light;
 
 /*************** CLASSES ***************/
 
@@ -51,8 +49,8 @@
 	width: 100px;
 	height: 100px;
 	border-radius: 20%;
-	background-color: var(--color-pink);
-	border: 2px solid var(--red-default);
+	background-color: @color-pink;
+	border: 2px solid @red-default;
 	margin-left: 50px;
 }
 
@@ -112,19 +110,19 @@
 
 /*** HEARTBEAT COLOR ***/
 @keyframes heartbeat-color {
-	0%{background-color:var(--heartbeat-color-start);}
-	40%{background-color:var(--heartbeat-color-begin);}
-	60%{background-color:var(--heartbeat-color-peak);}
-	70%{background-color:var(--heartbeat-color-finish);}
-	100%{background-color:var(--heartbeat-color-start);}
+	0%{background-color:@heartbeat-color-start;}
+	40%{background-color:@heartbeat-color-begin;}
+	60%{background-color:@heartbeat-color-peak;}
+	70%{background-color:@heartbeat-color-finish;}
+	100%{background-color:@heartbeat-color-start;}
 }
 
 @-webkit-keyframes heartbeat-color {
-	0%{background-color:var(--heartbeat-color-start);}
-	40%{background-color:var(--heartbeat-color-begin);}
-	60%{background-color:var(--heartbeat-color-peak);}
-	70%{background-color:var(--heartbeat-color-finish);}
-	100%{background-color:var(--heartbeat-color-start);}
+	0%{background-color:@heartbeat-color-start;}
+	40%{background-color:@heartbeat-color-begin;}
+	60%{background-color:@heartbeat-color-peak;}
+	70%{background-color:@heartbeat-color-finish;}
+	100%{background-color:@heartbeat-color-start;}
 }
 
 /*** SPIN RIGHT ***/
@@ -156,12 +154,12 @@
 
 /*** COLOR FADE OUT ***/
 @keyframes color-fadeout {
-	0%{background-color: var(--color-fadeout);}
+	0%{background-color: @color-fadeout;}
 	100%{background-color: auto;}
 }
 
 @-webkit-keyframes color-fadeout {
-	0%{background-color: var(--color-fadeout);}
+	0%{background-color: @color-fadeout;}
 	100%{background-color: auto;}
 }
 
