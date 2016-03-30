@@ -9,6 +9,7 @@ var notifs = [];
 window.onload = function() {
   addToolTipListeners();
   addNavDropdownListener();
+  addNavHidingLinks();
 
   navBar = document.querySelector("nav.top");
   if(navBar != null) {
@@ -201,7 +202,7 @@ var softNotif = function(type, msg, t) {
   notifs.push([id,pos]);
   document.body.appendChild(not);
   setTimeout(function() {
-    fadeOut(not, 5000, 1);
+    fadeOut(not, t/2, 1);
     //not.remove();
     var rank;
     for(var j in notifs) {
@@ -267,6 +268,23 @@ var addNavSideToggle = function() {
     navSide.classList.toggle("active");
     navToggle.classList.toggle("cross");
   })
+}
+
+addNavHidingLinks = function() {
+  var navLinks = document.querySelectorAll("nav a");
+  navL = [].slice.call(navLinks);
+  var navToggle = document.querySelectorAll("nav .toggle");
+  navT = [].slice.call(navToggle);
+  navL.forEach(function (link) {
+    link.addEventListener("click", function() {
+      document.querySelector("nav.side").classList.remove("active");
+      document.querySelector("nav .toggle").classList.remove("cross");
+      document.querySelector("nav.top .links").classList.remove("show");
+      navT.forEach(function (toggle) {
+        toggle.classList.remove("cross");
+      });
+    });
+  });
 }
 
 /*********** MISC ***********/

@@ -11,7 +11,7 @@
 .soft-popupmask {
   width: 100vw;
   height: 100vh;
-  z-index: 4;
+  z-index: 6;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0px;
@@ -19,7 +19,7 @@
 }
 
 .soft-popup {
-  z-index: 5;
+  z-index: 7;
   position: fixed;
   width: 80%;
   max-width: 800px;
