@@ -41,6 +41,12 @@
 	animation-iteration-count: infinite;
 }
 
+/*** FADEOUT ***/
+.animation-fadeout {
+	animation: fadeout 2s 0s ease;
+	animation-fill-mode: both;
+}
+
 #heartbeat {
 	width: 100px;
 	height: 100px;
@@ -157,4 +163,15 @@
 @-webkit-keyframes color-fadeout {
 	0%{background-color: var(--color-fadeout);}
 	100%{background-color: auto;}
+}
+
+/*** OPACITY FADE OUT ***/
+@keyframes fadeout {
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+@-webkit-keyframes fadeout {
+	0%{opacity: 1;}
+	100%{opacity: 0;}
 }

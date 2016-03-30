@@ -3,7 +3,7 @@
 * Romain Arnaud - 2016
 */
 
-.soft-popup, .soft-progress {
+.soft-popup, .soft-progress, .soft-notif {
   box-sizing: border-box;
 }
 
@@ -182,4 +182,59 @@
   position: absolute;
   top: calc(50% - 12px);
   right: -24px;
+}
+
+
+/************** SOFT NOTIFICATIONS ****************/
+
+.soft-notif {
+  display: block;
+  border: 1px solid var(--primary-color-dark);
+  background-color: var(--primary-color-lighter);
+  box-shadow: 1px 1px 2px 0px var(--primary-color-darker);
+  color: var(--black-light);
+  font-size: 18px;
+  text-align: center;
+  border-radius: 2px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  max-width: 400px;
+  min-width: 120px;
+  z-index: 5;
+  line-height: 40px;
+  padding: 4px 16px !important;
+  animation: plop 0.2s 0s ease-in-out;
+}
+
+.soft-notif.info {
+  border-color: var(--blue-dark);
+  background-color: var(--blue-light);
+  box-shadow: 1px 1px 2px 0px var(--blue-dark);
+}
+
+.soft-notif.success {
+  border-color: var(--green-dark);
+  background-color: var(--green-light);
+  box-shadow: 1px 1px 2px 0px var(--green-dark);
+}
+
+.soft-notif.warning {
+  border-color: var(--orange-dark);
+  background-color: var(--orange-light);
+  box-shadow: 1px 1px 2px 0px var(--orange-dark);
+}
+
+.soft-notif.alert {
+  border-color: var(--red-dark);
+  background-color: var(--red-light);
+  box-shadow: 1px 1px 2px 0px var(--red-dark);
+}
+
+@media screen and (max-width: 600px) {
+  .soft-notif {
+    width: 90%;
+    max-width: 90%;
+    right: 5%;
+  }
 }

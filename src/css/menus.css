@@ -60,9 +60,13 @@ nav.top .links > a:visited {
   flex: 1;
   text-align: center;
   color: var(--white-light);
-  padding: 0.5em 0px;
   background-color: var(--primary-color-darker);
   z-index: 3;
+}
+
+nav.top .links > *:not(.submenu),
+nav.top .links > .submenu span {
+  padding: 0.5em 0px;
 }
 
 nav.top .links > *:hover,
@@ -80,7 +84,13 @@ nav.top .submenu {
   -webkit-transition: background-color 0.1s, padding-bottom 0.4s;
 }
 
-nav.top .submenu::before {
+nav.top .submenu span {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+nav.top .submenu span::before {
   -webkit-transition: color 0.2s;
   content: '▼';
   display: block;
@@ -206,6 +216,11 @@ nav.side .links > * span {
   nav.top .links > * {
     width: 100%;
     display: block;
+  }
+
+  nav.top .links > *:not(.submenu),
+  nav.top .links > .submenu span,
+  nav.top .links > .submenu.active span {
     padding: 0.8em 0px;
   }
 
@@ -213,17 +228,17 @@ nav.side .links > * span {
     border-bottom: 2px solid var(--primary-color);
   }
 
-  nav.top .submenu.active {
+  /*nav.top .submenu.active {
     padding-bottom: 0px;
   }
 
-  nav.top .submenu .dropdown > *:first-child {
+  /*nav.top .submenu .dropdown > *:first-child {
     -webkit-transition: margin-top 0.4s, padding 0.4s;
   }
 
   nav.top .submenu.active .dropdown > *:first-child {
     margin-top: 0.5em;
-  }
+  }*/
 
   nav.top .submenu .dropdown {
     position: relative;

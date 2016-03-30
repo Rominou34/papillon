@@ -4,6 +4,8 @@
 */
 var navBar, navBarY, navSide;
 
+var notifs = [];
+
 window.onload = function() {
   addToolTipListeners();
   addNavDropdownListener();
@@ -21,6 +23,9 @@ window.onload = function() {
   if(navSide != null) {
     addNavSideToggle();
   }
+  /*setInterval(function() {
+    console.table(notifs);
+  }, 400);/**/
 }
 
 /****************************** CUSTOM ELEMENTS *******************************/
@@ -170,8 +175,48 @@ var addToolTipListeners = function() {
   });
 }
 
+/*************** SOFT NOTIFICATIONS ***************/
+
+var softNotif = function(type, msg, t) {
+  var not = document.createElement("div");
+  var id = randomId(8);
+  not.className = "soft-notif " + type;
+  not.innerHTML = msg;
+  var pos = 0;
+  for(var k in notifs) {
+    for(var i=0; i<notifs.length+1; i++) {
+      var b = false;
+      for(var k in notifs) {
+        if(notifs[k][1]==i) {
+          b=true;
+        }
+      }
+      if(b==false) {
+        pos=i;
+        break;
+      }
+    }
+  }
+  not.style.bottom = ((pos*56)+10) + "px";
+  notifs.push([id,pos]);
+  document.body.appendChild(not);
+  setTimeout(function() {
+    fadeOut(not, 5000, 1);
+    //not.remove();
+    var rank;
+    for(var j in notifs) {
+      if(notifs[j][0]==id) {
+        rank=j;
+        break;
+      }
+    }
+    notifs.splice(j,1);
+  }, t);
+}
+
 /***************************** OTHER FUNCTIONS ********************************/
 
+/************ NAVBAR ************/
 var addNavDropdownListener = function() {
   var dropMenus = document.querySelectorAll(".submenu");
   dropItems = [].slice.call(dropMenus);
@@ -222,4 +267,36 @@ var addNavSideToggle = function() {
     navSide.classList.toggle("active");
     navToggle.classList.toggle("cross");
   })
+}
+
+/*********** MISC ***********/
+
+/*
+* Generates a random id of length 's'
+* Example: randomId(5) = 's8f2R'
+*/
+function randomId(s)
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < s; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+/*
+* Fades out an element e on a duration d
+* If the second argument is "rm", the element will be removed from the DOM
+*/
+
+function fadeOut(e, d, rm) {
+  e.classList.add("animation-fadeout");
+  e.style.animationDuration = d+"ms";
+  if(rm==1) {
+    setTimeout(function() {
+      e.remove();
+    }, d);
+  }
 }
