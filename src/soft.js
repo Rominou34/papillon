@@ -12,7 +12,7 @@ window.onload = function() {
   addNavHidingLinks();
 
   navBar = document.querySelector("nav.top");
-  if(navBar != null) {
+  if(navBar !== null) {
     navBarY = navBar.offsetTop;
     if(navBar.getAttribute("data-follow") != null) {
       addNavScroll();
@@ -21,7 +21,7 @@ window.onload = function() {
   }
 
   navSide = document.querySelector("nav.side");
-  if(navSide != null) {
+  if(navSide !== null) {
     addNavSideToggle();
   }
   /*setInterval(function() {
@@ -63,7 +63,7 @@ var softPopup = function(type, header, msg) {
   }
 
   // Adding the text inside the element
-  if(color != null) {
+  if(color !== null) {
     softpopup.innerHTML = "<span>" + header + "</span>"+
     "<div><p>" + msg + "</p></div><button class=\""+color+"\">Hide</button>";
   } else {
@@ -187,12 +187,12 @@ var softNotif = function(type, msg, t) {
   for(var k in notifs) {
     for(var i=0; i<notifs.length+1; i++) {
       var b = false;
-      for(var k in notifs) {
-        if(notifs[k][1]==i) {
+      for(var j in notifs) {
+        if(notifs[j][1]===i) {
           b=true;
         }
       }
-      if(b==false) {
+      if(b===false) {
         pos=i;
         break;
       }
@@ -206,7 +206,7 @@ var softNotif = function(type, msg, t) {
     //not.remove();
     var rank;
     for(var j in notifs) {
-      if(notifs[j][0]==id) {
+      if(notifs[j][0]===id) {
         rank=j;
         break;
       }
@@ -222,12 +222,12 @@ var addNavDropdownListener = function() {
   var dropMenus = document.querySelectorAll(".submenu");
   dropItems = [].slice.call(dropMenus);
   dropItems.forEach(function (item) {
-    if(item.getAttribute("data-toggle") == 'click') {
+    if(item.getAttribute("data-toggle") === 'click') {
       item.addEventListener("click", function() {
         item.classList.toggle("active");
       });
     } else {
-      if(item.getAttribute("data-toggle") == 'hover') {
+      if(item.getAttribute("data-toggle") === 'hover') {
         item.addEventListener("mouseover", function() {
           item.classList.add("active");
         });
@@ -312,7 +312,7 @@ function randomId(s)
 function fadeOut(e, d, rm) {
   e.classList.add("animation-fadeout");
   e.style.animationDuration = d+"ms";
-  if(rm==1) {
+  if(rm===1) {
     setTimeout(function() {
       e.remove();
     }, d);
