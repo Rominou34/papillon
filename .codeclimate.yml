@@ -1,6 +1,9 @@
 engines:
   csslint:
     enabled: true
+    exclude_fingerprints:
+      - 67bce4c0a6c51006d726ee016bb66a57
+      - 70f99b2a316439cf93645fd451afc49c
   duplication:
     enabled: true
     config:

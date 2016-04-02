@@ -24,8 +24,10 @@ button:hover,
 .button:visited:hover {
   cursor: pointer;
   box-shadow: 0 0 5px -1px #252525;
-  transition: all 0.25s ease-out;
   -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
   border-color: @grey-dark;
   color: @black-default;
 }
@@ -51,8 +53,10 @@ button:disabled:hover {
 button:not(:disabled):not(.loading):active,
 .button:not(.disabled):not(.loading):active {
   outline: 0;
-  transition: all 0.1s;
   -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
   border-color: @primary-color;
   box-shadow: 0 2px 1px #666 inset;
   box-shadow: 0 2px 2px 1px rgba(0,0,0,0.3) inset;
@@ -61,8 +65,10 @@ button:not(:disabled):not(.loading):active,
 button:focus,
 .button:focus {
   outline: 0;
-  transition: all 0.1s;
   -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 /********** MODIFIER CLASSES **********/
