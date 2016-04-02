@@ -148,22 +148,19 @@ var addToolTipListeners = function() {
         //We offset the element
         if(tip.classList.contains('top')) {
           tip.style.top = "-" + (h+15) + "px";
+          tip.style.left = (elW/2 - w/2) + "px";
         }
         if(tip.classList.contains('right')) {
           tip.style.right = "-" + (w+15) + "px";
+          tip.style.top = (elH/2 - h/2) + "px";
         }
         if(tip.classList.contains('bottom')) {
           tip.style.bottom = "-" + (h+15) + "px";
+          tip.style.left = (elW/2 - w/2) + "px";
         }
         if(tip.classList.contains('left')) {
           tip.style.left = "-" + (w+15) + "px";
-        }
-        /* --- */
-        if(tip.classList.contains('left') || tip.classList.contains('right')) {
           tip.style.top = (elH/2 - h/2) + "px";
-        }
-        if(tip.classList.contains('top') || tip.classList.contains('bottom')) {
-          tip.style.left = (elW/2 - w/2) + "px";
         }
 
       });
