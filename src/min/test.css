@@ -479,8 +479,9 @@ caption {
 code {
   background-color: #d9e7ec;
   font-family: "Courier New", "monospace";
-  border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
   padding: 0 0.2em;
   border: 1px solid #baced9;
 }
@@ -504,8 +505,9 @@ pre > code[data-lang]::before {
   position: relative;
   top: -2em;
   padding: 0 0.6em;
-  border-radius: 0 0 0.5em 0;
   -webkit-border-radius: 0 0 0.5em 0;
+  -moz-border-radius: 0 0 0.5em 0;
+  border-radius: 0 0 0.5em 0;
   left: -0.5em;
   width: auto;
   float: left;
@@ -641,8 +643,9 @@ img:after {
   display: block;
   position: absolute;
   border: 2px dashed #a8aeb3;
-  border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
   z-index: 2;
   top: 0;
   left: 0;
@@ -657,8 +660,9 @@ img:after {
 /***** KEYBOARD *****/
 kbd {
   background-color: #f6efe0;
-  border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   border-width: 1px 1px 3px 1px;
   border-style: solid;
   border-color: #8b7b6e;
@@ -726,8 +730,9 @@ main {
   margin: 2em 1em;
   padding: 1em;
   box-shadow: 0 0 4px 0 #595959 inset;
-  border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 /***** GLOBAL RULES *****/
 a[target=_blank]::after {
@@ -848,44 +853,44 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 }
 .soft-col *:not([class*="col"]):not(.soft-row),
 .soft-row *:not([class*="col"]) {
-  flex: 1;
+  flex: 1 0;
 }
 [class*="container"] div:not(.soft-row):not(.soft-col) {
   padding: 0.5em;
   margin: 4px;
 }
 .col-1 {
-  width: calc(0.33333333%);
+  width: calc(100% / 12 - 8px);
 }
 .col-2 {
-  width: calc(8.66666667%);
+  width: calc(100% / 6 - 8px);
 }
 .col-3 {
-  width: calc(17%);
+  width: calc(100% / 4 - 8px);
 }
 .col-4 {
-  width: calc(25.33333333%);
+  width: calc(100% / 3 - 8px);
 }
 .col-5 {
-  width: calc(33.66666667%);
+  width: calc(500% / 12 - 8px);
 }
 .col-6 {
-  width: calc(42%);
+  width: calc(100% / 2 - 8px);
 }
 .col-7 {
-  width: calc(50.33333333%);
+  width: calc(700% / 12 - 8px);
 }
 .col-8 {
-  width: calc(58.66666667%);
+  width: calc(800% / 12 - 8px);
 }
 .col-9 {
-  width: calc(67%);
+  width: calc(900% / 12 - 8px);
 }
 .col-10 {
-  width: calc(75.33333333%);
+  width: calc(1000% / 12 - 8px);
 }
 .col-11 {
-  width: calc(83.66666667%);
+  width: calc(1100% / 12 - 8px);
 }
 .col-12 {
   width: 100%;
@@ -1004,8 +1009,9 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 button,
 .button {
   padding: 0.4em;
-  border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   margin: 0.5em;
   font-family: Arial, "sans-serif";
   font-size: 14px;
@@ -1107,6 +1113,8 @@ button.loading::after,
 .button.loading::after {
   animation: spin-right 500ms infinite linear;
   border: 2px solid #888;
+  -webkit-border-radius: 2000px;
+  -moz-border-radius: 2000px;
   border-radius: 2000px;
   border-right-color: transparent;
   border-top-color: transparent;
@@ -1331,7 +1339,7 @@ nav.top .submenu.active *:not(.dropdown) {
 nav.top .submenu .dropdown {
   display: block;
   position: absolute;
-  top: calc(@line-height * @font-size-default + 1em);
+  top: calc(1.5 * 16px + 1em);
   width: 100%;
   max-height: 0;
   -webkit-transition: max-height 0.4s;
@@ -1405,6 +1413,8 @@ nav.side .links > *:hover {
   overflow: hidden;
   height: 40px;
   margin: 0 5px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
   border-radius: 20px;
   background-color: #0f2a58;
   -webkit-transition: width 0.25s;
@@ -1495,6 +1505,8 @@ nav.side .links > * span {
     width: 50px;
     background-color: #194082;
     border: 1px solid #0f2a58;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     border-radius: 4px;
   }
   nav.side.active {
@@ -1503,6 +1515,8 @@ nav.side .links > * span {
   nav.side:not(.active) .links > * {
     width: 100%;
     margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0;
   }
   nav.side.active .links {
@@ -1638,8 +1652,9 @@ nav.side .links > * span {
   background-color: #222;
   background-color: rgba(0, 0, 0, 0.75);
   position: relative;
-  border-radius: 4px;
   -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   width: auto;
   text-align: center;
   z-index: 2;
@@ -1696,6 +1711,8 @@ nav.side .links > * span {
   color: #171717;
   font-size: 18px;
   text-align: center;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
   position: fixed;
   bottom: 10px;
@@ -1865,6 +1882,8 @@ don't work with CSS variables ) */
 #heartbeat {
   width: 100px;
   height: 100px;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
   border-radius: 20%;
   background-color: #de557a;
   border: 2px solid #c61b19;
