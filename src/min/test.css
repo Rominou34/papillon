@@ -764,7 +764,7 @@ table {
   border: 1px solid #858585;
 }
 table > :not(:last-child),
-tbody > *:not(:last-child) {
+tbody > :not(:last-child) {
   border-bottom: 1px solid #858585;
 }
 /******** MINIMALISTIC DESIGN ********/
@@ -780,7 +780,7 @@ table.min * {
 table.min thead {
   border-bottom: 2px solid #8e8e8e;
 }
-table.min > *:last-child {
+table.min > :last-child {
   border-bottom: 2px solid #c5c5c5;
 }
 table.min tfoot {
@@ -832,8 +832,8 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 }
 .soft-row,
 .soft-col,
-.soft-row *,
-.soft-col * {
+.soft-row div,
+.soft-col div {
   box-sizing: border-box;
   text-align: inherit;
 }
@@ -845,14 +845,14 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
   height: auto;
   padding: 0;
 }
-.soft-col *:first-child {
+.soft-col :first-child {
   margin-top: 0;
 }
-.soft-col *:last-child {
+.soft-col :last-child {
   margin-bottom: 0;
 }
-.soft-col *:not([class*="col"]):not(.soft-row),
-.soft-row *:not([class*="col"]) {
+.soft-col :not([class*="col"]):not(.soft-row),
+.soft-row :not([class*="col"]) {
   flex: 1 0;
 }
 [class*="container"] div:not(.soft-row):not(.soft-col) {
@@ -968,36 +968,36 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 /* LARGE */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 1200px) {
-  .container-lg .soft-col > *,
-  .container-lg.soft-col > * {
+  .container-lg .soft-col > div,
+  .container-lg.soft-col > div {
     width: 100%;
   }
-  .container-lg .soft-col > *:not(.soft-row),
-  .container-lg.soft-col > *:not(.soft-row) {
+  .container-lg .soft-col > :not(.soft-row),
+  .container-lg.soft-col > :not(.soft-row) {
     display: block;
   }
 }
 /* MEDIUM */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 960px) {
-  .container-md .soft-col > *,
-  .container-md.soft-col > * {
+  .container-md .soft-col > div,
+  .container-md.soft-col > div {
     width: 100%;
   }
-  .container-md .soft-col > *:not(.soft-row),
-  .container-md.soft-col > *:not(.soft-row) {
+  .container-md .soft-col > :not(.soft-row),
+  .container-md.soft-col > :not(.soft-row) {
     display: block;
   }
 }
 /* SMALL */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 750px) {
-  .container-sm .soft-col > *,
-  .container-sm.soft-col > * {
+  .container-sm .soft-col > div,
+  .container-sm.soft-col > div {
     width: 100%;
   }
-  .container-sm .soft-col > *:not(.soft-row),
-  .container-sm.soft-col > *:not(.soft-row) {
+  .container-sm .soft-col > :not(.soft-row),
+  .container-sm.soft-col > :not(.soft-row) {
     display: block;
   }
 }
@@ -1292,11 +1292,11 @@ nav.top .links > a:visited {
   background-color: #0f2a58;
   z-index: 3;
 }
-nav.top .links > *:not(.submenu),
+nav.top .links > :not(.submenu),
 nav.top .links > .submenu span {
   padding: 0.5em 0;
 }
-nav.top .links > *:hover,
+nav.top .links > :hover,
 nav.top .links > a:visited:hover {
   background-color: #194082;
   cursor: pointer;
@@ -1333,7 +1333,7 @@ nav.top .submenu:hover::before {
 nav.top .submenu.active::before {
   color: transparent;
 }
-nav.top .submenu.active *:not(.dropdown) {
+nav.top .submenu.active :not(.dropdown) {
   padding: 0.5em 0;
 }
 nav.top .submenu .dropdown {
@@ -1364,7 +1364,7 @@ nav.top .submenu .dropdown * {
 nav.top .submenu .dropdown * {
   border-left: 4px solid #2a70ff;
 }
-nav.top .submenu .dropdown *:hover {
+nav.top .submenu .dropdown :hover {
   background-color: #0f2a58;
 }
 /********** SIDE NAVBAR **********/
@@ -1403,8 +1403,8 @@ nav.side .links {
   transition: width 0.25s;
 }
 nav.side .links > *,
-nav.side .links > *:visited,
-nav.side .links > *:hover {
+nav.side .links > :visited,
+nav.side .links > :hover {
   color: #f2f8f9;
   display: block;
   width: 40px;
@@ -1457,12 +1457,12 @@ nav.side .links > * span {
     width: 100%;
     display: block;
   }
-  nav.top .links > *:not(.submenu),
+  nav.top .links > :not(.submenu),
   nav.top .links > .submenu span,
   nav.top .links > .submenu.active span {
     padding: 0.8em 0;
   }
-  nav.top .links > *:not(:last-child) {
+  nav.top .links > :not(:last-child) {
     border-bottom: 2px solid #2a70ff;
   }
   /*nav.top .submenu.active {
@@ -1485,7 +1485,7 @@ nav.side .links > * span {
     padding: 0.8em 0;
     border-top: 1px solid #0f2a58;
   }
-  nav.top .submenu .dropdown > *:hover {
+  nav.top .submenu .dropdown > :hover {
     background-color: #0f2a58;
   }
   nav.top .submenu .dropdown {

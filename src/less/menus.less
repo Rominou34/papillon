@@ -69,12 +69,12 @@ nav.top .links > a:visited {
   z-index: 3;
 }
 
-nav.top .links > *:not(.submenu),
+nav.top .links > :not(.submenu),
 nav.top .links > .submenu span {
   padding: 0.5em 0;
 }
 
-nav.top .links > *:hover,
+nav.top .links > :hover,
 nav.top .links > a:visited:hover {
   background-color: @primary-color-dark;
   cursor: pointer;
@@ -117,7 +117,7 @@ nav.top .submenu.active::before {
   color: transparent;
 }
 
-nav.top .submenu.active *:not(.dropdown) {
+nav.top .submenu.active :not(.dropdown) {
   padding: 0.5em 0;
 }
 
@@ -153,7 +153,7 @@ nav.top .submenu .dropdown * {
   border-left: 4px solid @primary-color;
 }
 
-nav.top .submenu .dropdown *:hover {
+nav.top .submenu .dropdown :hover {
   background-color: @primary-color-darker;
 }
 
@@ -199,8 +199,8 @@ nav.side .links {
 }
 
 nav.side .links > *,
-nav.side .links > *:visited,
-nav.side .links > *:hover {
+nav.side .links > :visited,
+nav.side .links > :hover {
   color: @white-light;
   display: block;
   width: 40px;
@@ -262,13 +262,13 @@ nav.side .links > * span {
     display: block;
   }
 
-  nav.top .links > *:not(.submenu),
+  nav.top .links > :not(.submenu),
   nav.top .links > .submenu span,
   nav.top .links > .submenu.active span {
     padding: 0.8em 0;
   }
 
-  nav.top .links > *:not(:last-child) {
+  nav.top .links > :not(:last-child) {
     border-bottom: 2px solid @primary-color;
   }
 
@@ -295,7 +295,7 @@ nav.side .links > * span {
     border-top: 1px solid @primary-color-darker;
   }
 
-  nav.top .submenu .dropdown > *:hover {
+  nav.top .submenu .dropdown > :hover {
     background-color: @primary-color-darker;
   }
 
