@@ -28,6 +28,9 @@ nav.top .links {
   width: 100%;
   display: flex;
   -webkit-transition: max-height 0.25s;
+  -moz-transition: max-height 0.25s;
+  -o-transition: max-height 0.25s;
+  transition: max-height 0.25s;
 }
 
 nav.top .links.show {
@@ -52,6 +55,9 @@ nav .toggle::after {
   width: 100%;
   display: block;
   -webkit-transition: transform 0.25s;
+  -moz-transition: transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
 }
 
 nav .toggle.cross::after {
@@ -86,6 +92,9 @@ nav.top .submenu.active {
 nav.top .submenu {
   position: relative;
   -webkit-transition: background-color 0.1s, padding-bottom 0.4s;
+  -moz-transition: background-color 0.1s, padding-bottom 0.4s;
+  -o-transition: background-color 0.1s, padding-bottom 0.4s;
+  transition: background-color 0.1s, padding-bottom 0.4s;
 }
 
 nav.top .submenu span {
@@ -96,6 +105,9 @@ nav.top .submenu span {
 
 nav.top .submenu span::before {
   -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
   content: '▼';
   display: block;
   position: absolute;
@@ -117,10 +129,13 @@ nav.top .submenu.active *:not(.dropdown) {
 nav.top .submenu .dropdown {
   display: block;
   position: absolute;
-  top: calc(@line-height * @font-size-default + 1em);
+  top: calc(~"@line-height * @font-size-default + 1em");
   width: 100%;
   max-height: 0px;
   -webkit-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
   overflow: hidden;
 }
 
@@ -134,6 +149,9 @@ nav.top .submenu .dropdown * {
   background-color: @primary-color-dark;
   color: @white-light;
   -webkit-transition: padding 0.4s;
+  -moz-transition: padding 0.4s;
+  -o-transition: padding 0.4s;
+  transition: padding 0.4s;
 }
 
 nav.top .submenu .dropdown * {
@@ -156,6 +174,9 @@ nav.side {
   width: 50px;
   overflow: hidden;
   -webkit-transition: width 0.25s;
+  -moz-transition: width 0.25s;
+  -o-transition: width 0.25s;
+  transition: width 0.25s;
   background-color: @primary-color-darker;
 }
 
@@ -177,6 +198,9 @@ nav.side .links {
   justify-content: space-around;
   overflow: hidden;
   -webkit-transition: width 0.25s;
+  -moz-transition: width 0.25s;
+  -o-transition: width 0.25s;
+  transition: width 0.25s;
 }
 
 nav.side .links > *,
@@ -193,6 +217,9 @@ nav.side .links > *:hover {
   border-radius: 20px;
   background-color: @primary-color-darker;
   -webkit-transition: width 0.25s;
+  -moz-transition: width 0.25s;
+  -o-transition: width 0.25s;
+  transition: width 0.25s;
 }
 
 nav.side.active .links > * {
@@ -208,6 +235,9 @@ nav.side .links > * span {
   margin-right: 0.5em;
   text-align: center;
   -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 

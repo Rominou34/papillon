@@ -1245,6 +1245,9 @@ nav.top .links {
   width: 100%;
   display: flex;
   -webkit-transition: max-height 0.25s;
+  -moz-transition: max-height 0.25s;
+  -o-transition: max-height 0.25s;
+  transition: max-height 0.25s;
 }
 nav.top .links.show {
   max-height: 400px;
@@ -1265,6 +1268,9 @@ nav .toggle::after {
   width: 100%;
   display: block;
   -webkit-transition: transform 0.25s;
+  -moz-transition: transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
 }
 nav .toggle.cross::after {
   content: '\2716';
@@ -1293,6 +1299,9 @@ nav.top .submenu.active {
 nav.top .submenu {
   position: relative;
   -webkit-transition: background-color 0.1s, padding-bottom 0.4s;
+  -moz-transition: background-color 0.1s, padding-bottom 0.4s;
+  -o-transition: background-color 0.1s, padding-bottom 0.4s;
+  transition: background-color 0.1s, padding-bottom 0.4s;
 }
 nav.top .submenu span {
   height: 100%;
@@ -1301,6 +1310,9 @@ nav.top .submenu span {
 }
 nav.top .submenu span::before {
   -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
   content: '▼';
   display: block;
   position: absolute;
@@ -1319,10 +1331,13 @@ nav.top .submenu.active *:not(.dropdown) {
 nav.top .submenu .dropdown {
   display: block;
   position: absolute;
-  top: calc(25px);
+  top: calc(@line-height * @font-size-default + 1em);
   width: 100%;
   max-height: 0px;
   -webkit-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
   overflow: hidden;
 }
 nav.top .submenu.active .dropdown {
@@ -1334,6 +1349,9 @@ nav.top .submenu .dropdown * {
   background-color: #194082;
   color: #f2f8f9;
   -webkit-transition: padding 0.4s;
+  -moz-transition: padding 0.4s;
+  -o-transition: padding 0.4s;
+  transition: padding 0.4s;
 }
 nav.top .submenu .dropdown * {
   border-left: 4px solid #2a70ff;
@@ -1351,6 +1369,9 @@ nav.side {
   width: 50px;
   overflow: hidden;
   -webkit-transition: width 0.25s;
+  -moz-transition: width 0.25s;
+  -o-transition: width 0.25s;
+  transition: width 0.25s;
   background-color: #0f2a58;
 }
 nav.side .toggle {
@@ -1369,6 +1390,9 @@ nav.side .links {
   justify-content: space-around;
   overflow: hidden;
   -webkit-transition: width 0.25s;
+  -moz-transition: width 0.25s;
+  -o-transition: width 0.25s;
+  transition: width 0.25s;
 }
 nav.side .links > *,
 nav.side .links > *:visited,
@@ -1384,6 +1408,9 @@ nav.side .links > *:hover {
   border-radius: 20px;
   background-color: #0f2a58;
   -webkit-transition: width 0.25s;
+  -moz-transition: width 0.25s;
+  -o-transition: width 0.25s;
+  transition: width 0.25s;
 }
 nav.side.active .links > * {
   width: 90%;
@@ -1397,6 +1424,9 @@ nav.side .links > * span {
   margin-right: 0.5em;
   text-align: center;
   -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 /***************** MOBILE ******************/
 @media (max-width: 600px) {
