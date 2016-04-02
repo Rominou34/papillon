@@ -6,8 +6,9 @@
 button,
 .button {
   padding: 0.4em;
-  border-radius: 3px;
   -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   margin: 0.5em;
   font-family: @font-default;
   font-size: 14px;
@@ -128,6 +129,8 @@ button.loading::after,
 .button.loading::after {
     animation: spin-right 500ms infinite linear;
     border: 2px solid #888;
+    -webkit-border-radius: 2000px;
+    -moz-border-radius: 2000px;
     border-radius: 2000px;
     border-right-color: transparent;
     border-top-color: transparent;
