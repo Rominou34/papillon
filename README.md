@@ -1,10 +1,11 @@
 # Soft CSS
 
 [![Code Climate](https://codeclimate.com/github/Rominou34/soft-css/badges/gpa.svg)](https://codeclimate.com/github/Rominou34/soft-css)
+[![Issue Count](https://codeclimate.com/github/Rominou34/soft-css/badges/issue_count.svg)](https://codeclimate.com/github/Rominou34/soft-css)
 
 ## About
 
-Soft Style is a CSS Framework allowing you to easily customize your website with modern design. You can either import the CSS directly from the CDN ( still not there ) if you're okay with the default settings, or clone the repo and tweak the settings as you wish.
+Soft CSS is a CSS Framework allowing you to easily customize your website with modern design. You can either import the CSS directly from the CDN ( still not there ) if you're okay with the default settings, or clone the repo and tweak the settings as you wish.
 
 The framework works with [LESS](http://lesscss.org/) and every basic settings from the color palette to the body size can be found in the `config.less` file so you can quickly change the aspect of your site without having to crawl around thousands of lines of code
 

@@ -11,6 +11,7 @@ engines:
       - php
     exclude_fingerprints:
       - 5cb2b62b2a70fe3f526c583c460b9b5f
+      - 33b665c621db58e720adf1303ba65e11
   eslint:
     enabled: true
   fixme:
