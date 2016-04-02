@@ -40,7 +40,7 @@ table.min tfoot {
 
 table.min,
 table.min * {
-  border-width: 0px;
+  border-width: 0;
 }
 
 table.min thead {
@@ -59,7 +59,7 @@ table.min tfoot {
 
 table.flat,
 table.flat * {
-  border-width: 0px;
+  border-width: 0;
 }
 
 /******** ALTERNATING ROWS ********/
@@ -70,9 +70,9 @@ table.alt tbody > tr:nth-child(odd) {background: #fff}
 /******** REACTIVE DESIGN ********/
 
 table.reactive :not(thead):not(tfoot) tr:hover {
-  background-color: var(--primary-color-subtle);
+  background-color: @primary-color-subtle;
 }
 
 table.reactive :not(thead):not(tfoot) tr td:hover {
-  background-color: var(--primary-color-lighter);
+  background-color: @primary-color-lighter;
 }

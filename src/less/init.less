@@ -5,29 +5,33 @@
 
 /*************** CSS INITIALIZATION ***************/
 
+:root {
+  font-size: @font-size-default;
+}
+
 html {
   width: 100%;
   min-height: 100%;
-  background-color: var(--bg-color-html);
+  background-color: @bg-color-html;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-family: var(--font-default);
-  background-color: var(--bg-color-body);
-  line-height: var(--line-height);
-  color: var(--font-color-text);
-  width: 100%;
+  font-family: @font-default;
+  background-color: @bg-color-body;
+  line-height: @line-height;
+  color: @font-color-text;
+  width: @body-width;
   min-height: 100%;
-  max-width: var(--body-width);
+  max-width: @body-width;
   display: block;
-  margin: 0px auto;
-  padding: 0px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 html, p, div, article, h1, h2, h3, h4, h5, h6, form {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -46,15 +50,15 @@ html, p, div, article, h1, h2, h3, h4, h5, h6, form {
 /***** LINKS *****/
 
 a {
-  color: var(--font-color-link);
+  color: @font-color-link;
 }
 
 a:hover, a:visited:hover {
-  color: var(--font-color-link-h);
+  color: @font-color-link-h;
 }
 
 a:visited {
-  color: var(--font-color-link-v);
+  color: @font-color-link-v;
 }
 
 /***** ARTICLES *****/
@@ -76,9 +80,11 @@ article::after {
 aside {
   display: inline-block;
   width: 100%;
-  max-width: var(--aside-width);
+  min-height: 400px;
+  vertical-align: top;
+  max-width: @aside-width;
   margin: auto;
-  background-color: var(--bg-color-aside);
+  background-color: @bg-color-aside;
 }
 
 /****
@@ -114,8 +120,8 @@ blockquote p {
 }
 
 blockquote footer {
-  font-size: var(--font-size-small);
-  color: var(--grey-default);
+  font-size: @font-size-small;
+  color: @grey-default;
   margin-top: 0.5em;
 }
 
@@ -144,11 +150,12 @@ caption {
 /***** CODE *****/
 
 code {
-  background-color: var(--bg-color-code);
-  font-family: var(--font-code);
-  border-radius: 0.2em;
+  background-color: @bg-color-code;
+  font-family: @font-code;
   -webkit-border-radius: 0.2em;
-  padding: 0em 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  padding: 0 0.2em;
   border: 1px solid #baced9;
 }
 
@@ -173,9 +180,10 @@ pre > code[data-lang]::before {
   background-color: #b7cad7;
   position: relative;
   top: -2em;
-  padding: 0em 0.6em;
-  border-radius: 0px 0px 0.5em 0px;
-  -webkit-border-radius: 0px 0px 0.5em 0px;
+  padding: 0 0.6em;
+  -webkit-border-radius: 0 0 0.5em 0;
+  -moz-border-radius: 0 0 0.5em 0;
+  border-radius: 0 0 0.5em 0;
   left: -0.5em;
   width: auto;
   float: left;
@@ -198,8 +206,8 @@ div {
 body > footer {
   width: 100%;
   padding: 2em 1em;
-  background-color: var(--bg-color-footer);
-  color: var(--font-color-footer);
+  background-color: @bg-color-footer;
+  color: @font-color-footer;
   text-align: center;
 }
 
@@ -212,17 +220,17 @@ body > footer {
 
 body > header {
   font-size: 96px;
-  font-family: var(--font-header);
-  color: var(--color-header);
-  background-color: var(--bg-color-header);
+  font-family: @font-header;
+  color: @color-header;
+  background-color: @bg-color-header;
   width: 100%;
   text-align: center;
 }
 
 body > header > small {
   font-size: 25%;
-  font-family: var(--font-title);
-  color: var(--white-dark);
+  font-family: @font-title;
+  color: @white-dark;
   display: block;
   padding-bottom: 2em;
 }
@@ -235,8 +243,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--font-color-title);
-  font-family: var(--font-title);
+  color: @font-color-title;
+  font-family: @font-title;
   line-height: 2;
   padding-left: 5%;
 }
@@ -247,9 +255,33 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-  color: var(--font-color-title-second);
-  padding-left: 0em;
+  color: @font-color-title-second;
+  padding-left: 0;
   font-size: 60%;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  position: relative;
+  color: @font-color-title !important;
+}
+
+h1:hover a::before,
+h2:hover a::before,
+h3:hover a::before,
+h4:hover a::before,
+h5:hover a::before,
+h6:hover a::before {
+  content: '#';
+  color: @primary-color-lighter;
+  position: absolute;
+  left: -1em;
+  line-height: 250%;
+  font-size: 80%;
 }
 
 h1 {
@@ -284,7 +316,7 @@ hr {
   display: block;
   margin: 2em auto;
   height: 3px;
-  background-color: var(--primary-color);
+  background-color: @primary-color;
 }
 
 
@@ -313,19 +345,20 @@ img:after {
 
   font-size: 16px;
   font-family: FontAwesome;
-  color: var(--grey-default);
+  color: @grey-default;
 
   display: block;
   position: absolute;
-  border: 2px dashed var(--grey-light);
-  border-radius: 0.2em;
+  border: 2px dashed @grey-light;
   -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
   z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
   height: 4em;
-  background-color: var(--white-dark);
+  background-color: @white-dark;
   box-sizing: border-box;
 }
 
@@ -338,19 +371,27 @@ img:after {
 
 kbd {
   background-color: #f6efe0;
-  border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   border-width: 1px 1px 3px 1px;
   border-style: solid;
   border-color: #8b7b6e;
-  padding: 0px 2px;
+  padding: 0 2px;
 }
 /***** MAIN *****/
 
 main {
   display: block;
   width: 100%;
-  max-width: var(--main-width);
-  margin: 0px auto;
-  background-color: var(--bg-color-main);
+  max-width: @main-width;
+  margin: 0 auto;
+  background-color: @bg-color-main;
+}
+
+/********** PSEUDO SELECTORS **********/
+
+:target {
+  outline: 0;
+  animation: color-fadeout 1s 0s linear;
 }

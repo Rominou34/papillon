@@ -2,10 +2,31 @@
 * Soft CSS - The tweakable CSS framework
 * Romain Arnaud - 2016
 */
+var navBar, navBarY, navSide;
+
+var notifs = [];
 
 window.onload = function() {
   addToolTipListeners();
-  addNavDropdownListener()
+  addNavDropdownListener();
+  addNavHidingLinks();
+
+  navBar = document.querySelector("nav.top");
+  if(navBar != null) {
+    navBarY = navBar.offsetTop;
+    if(navBar.getAttribute("data-follow") != null) {
+      addNavScroll();
+      addNavBarToggle();
+    }
+  }
+
+  navSide = document.querySelector("nav.side");
+  if(navSide != null) {
+    addNavSideToggle();
+  }
+  /*setInterval(function() {
+    console.table(notifs);
+  }, 400);/**/
 }
 
 /****************************** CUSTOM ELEMENTS *******************************/
@@ -155,8 +176,48 @@ var addToolTipListeners = function() {
   });
 }
 
+/*************** SOFT NOTIFICATIONS ***************/
+
+var softNotif = function(type, msg, t) {
+  var not = document.createElement("div");
+  var id = randomId(8);
+  not.className = "soft-notif " + type;
+  not.innerHTML = msg;
+  var pos = 0;
+  for(var k in notifs) {
+    for(var i=0; i<notifs.length+1; i++) {
+      var b = false;
+      for(var k in notifs) {
+        if(notifs[k][1]==i) {
+          b=true;
+        }
+      }
+      if(b==false) {
+        pos=i;
+        break;
+      }
+    }
+  }
+  not.style.bottom = ((pos*56)+10) + "px";
+  notifs.push([id,pos]);
+  document.body.appendChild(not);
+  setTimeout(function() {
+    fadeOut(not, t/2, 1);
+    //not.remove();
+    var rank;
+    for(var j in notifs) {
+      if(notifs[j][0]==id) {
+        rank=j;
+        break;
+      }
+    }
+    notifs.splice(j,1);
+  }, t);
+}
+
 /***************************** OTHER FUNCTIONS ********************************/
 
+/************ NAVBAR ************/
 var addNavDropdownListener = function() {
   var dropMenus = document.querySelectorAll(".submenu");
   dropItems = [].slice.call(dropMenus);
@@ -177,4 +238,83 @@ var addNavDropdownListener = function() {
     }
 
   });
+}
+
+var addNavScroll = function() {
+  window.addEventListener('scroll', function(e) {
+    var rect = navBar.getBoundingClientRect();
+    var scrollY = document.body.scrollTop;
+    if(scrollY > (navBarY)) {
+      navBar.classList.add('fixed');
+      var burger = navBar.querySelector(".burger");
+    } else {
+      navBar.classList.remove('fixed');
+    }
+  });
+}
+
+var addNavBarToggle = function() {
+  var navToggle = navBar.querySelector(".toggle");
+  navToggle.addEventListener('click', function(e) {
+    var links = navBar.querySelector(".links");
+    links.classList.toggle("show");
+    navToggle.classList.toggle("cross");
+  })
+}
+
+var addNavSideToggle = function() {
+  var navToggle = navSide.querySelector(".toggle");
+  navToggle.addEventListener('click', function(e) {
+    navSide.classList.toggle("active");
+    navToggle.classList.toggle("cross");
+  })
+}
+
+addNavHidingLinks = function() {
+  var navLinks = document.querySelectorAll("nav a");
+  navL = [].slice.call(navLinks);
+  var navToggle = document.querySelectorAll("nav .toggle");
+  navT = [].slice.call(navToggle);
+  navL.forEach(function (link) {
+    link.addEventListener("click", function() {
+      document.querySelector("nav.side").classList.remove("active");
+      document.querySelector("nav .toggle").classList.remove("cross");
+      document.querySelector("nav.top .links").classList.remove("show");
+      navT.forEach(function (toggle) {
+        toggle.classList.remove("cross");
+      });
+    });
+  });
+}
+
+/*********** MISC ***********/
+
+/*
+* Generates a random id of length 's'
+* Example: randomId(5) = 's8f2R'
+*/
+function randomId(s)
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < s; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+
+/*
+* Fades out an element e on a duration d
+* If the second argument is "rm", the element will be removed from the DOM
+*/
+
+function fadeOut(e, d, rm) {
+  e.classList.add("animation-fadeout");
+  e.style.animationDuration = d+"ms";
+  if(rm==1) {
+    setTimeout(function() {
+      e.remove();
+    }, d);
+  }
 }

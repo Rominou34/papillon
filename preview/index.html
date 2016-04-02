@@ -4,7 +4,8 @@
         <title>Soft CSS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='../src/css/soft.css' rel='stylesheet' type='text/css'>
+        <link href='../src/min/test.css' rel='stylesheet' type='text/css'>
+        <!--<link href='../src/min/soft.min.css' rel='stylesheet' type='text/css'>!-->
         <script src="../src/soft.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
@@ -14,10 +15,13 @@
     </head>
     <body>
       <header>Soft CSS</header>
-      <main>
-        <nav class="top">
-          <div class="submenu" data-toggle="hover">
+      <nav class="top" data-follow>
+        <div class="toggle"></div>
+        <div class="links">
+          <div class="submenu" data-toggle="click">
+            <span>
             Home
+            </span>
             <div class="dropdown">
               <a href="#">Bla</a>
               <a href="#">Bli</a>
@@ -26,9 +30,24 @@
           </div>
           <a href="#">Sweet</a>
           <a href="#">Home</a>
-        </nav>
+        </div>
+      </nav>
+      <!--
+      <nav class="side">
+        <div class="toggle"></div>
+        <div class="links">
+          <a href="#"><span> T </span>Salut</a>
+          <a href="#"><span> U </span>PD</a>
+          <a href="#"><span> V </span>Pleb</a>
+          <a href="#"><span> J </span>John Cena !! </a>
+          <a href="#"><span> B </span>Bulldong</a>
+        </div>
+      </nav>!-->
+      <div class="container-lg soft-col" id="content">
+        <div class="col-9">
         <h1>
-          H1 Title
+          <a href="#h1-test" id="h1-test">
+          H1 Title</a>
           <small>Second</small>
         </h1>
         <h2>
@@ -51,9 +70,10 @@
           H6 Title
           <small>Second</small>
         </h6>
+        <!--<div class="soft-notif">You got a message</div>!-->
         <h1 class="section-title">Section title</h1>
         <img src="img.png" alt="Image de test" style="width: 200px"></img>
-        <div class="container-lg force-hor text-center">
+        <!--<div class="container-md force-hor text-center">
           <div class="soft-row">
             <div class="soft-col col-4">
               <div class="col-3">Stack</div>
@@ -128,7 +148,7 @@
             <div>Hello there</div>
             <div>Hey guys</div>
           </div>
-        </div>
+        </div>!-->
         <hr/>
         <a href="#">This is a link</a><br/>
         <a href="#" target="_blank">Target blank</a><br/>
@@ -331,7 +351,11 @@ Test you bitch
           Blablabla<br/>
           Some useless text
         </soft-popup>!-->
-      </main>
+      </div>
+      <div class="col-3">
+        Test
+      </div>
+    </div>
       <!--<aside>
         This is the aside
       </aside>!-->
