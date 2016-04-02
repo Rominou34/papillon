@@ -124,7 +124,7 @@ nav.top .submenu.active *:not(.dropdown) {
 nav.top .submenu .dropdown {
   display: block;
   position: absolute;
-  top: calc(~"@line-height * @font-size-default + 1em");
+  top: ~"calc(@{line-height} * @{font-size-default} + 1em)";
   width: 100%;
   max-height: 0;
   -webkit-transition: max-height 0.4s;
