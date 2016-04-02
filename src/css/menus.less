@@ -20,7 +20,7 @@ nav.top {
 
 nav.top.fixed {
   position: fixed;
-  top: 0px;
+  top: 0;
   z-index: 5;
 }
 
@@ -76,7 +76,7 @@ nav.top .links > a:visited {
 
 nav.top .links > *:not(.submenu),
 nav.top .links > .submenu span {
-  padding: 0.5em 0px;
+  padding: 0.5em 0;
 }
 
 nav.top .links > *:hover,
@@ -123,7 +123,7 @@ nav.top .submenu.active::before {
 }
 
 nav.top .submenu.active *:not(.dropdown) {
-  padding: 0.5em 0px;
+  padding: 0.5em 0;
 }
 
 nav.top .submenu .dropdown {
@@ -131,7 +131,7 @@ nav.top .submenu .dropdown {
   position: absolute;
   top: calc(~"@line-height * @font-size-default + 1em");
   width: 100%;
-  max-height: 0px;
+  max-height: 0;
   -webkit-transition: max-height 0.4s;
   -moz-transition: max-height 0.4s;
   -o-transition: max-height 0.4s;
@@ -168,7 +168,7 @@ nav.top .submenu .dropdown *:hover {
 nav.side {
   position: fixed;
   height: 100%;
-  top: 0px;
+  top: 0;
   z-index: 3;
   flex-direction: column;
   width: 50px;
@@ -209,11 +209,11 @@ nav.side .links > *:hover {
   color: @white-light;
   display: block;
   width: 40px;
-  padding: 0em 0px;
+  padding: 0em 0;
   line-height: 40px;
   overflow: hidden;
   height: 40px;
-  margin: 0px 5px;
+  margin: 0 5px;
   border-radius: 20px;
   background-color: @primary-color-darker;
   -webkit-transition: width 0.25s;
@@ -231,7 +231,7 @@ nav.side .links > * span {
   width: 40px;
   height: 40px;
   display: inline-block;
-  left: 0px;
+  left: 0;
   margin-right: 0.5em;
   text-align: center;
   -webkit-transition: all 0.25s;
@@ -251,7 +251,7 @@ nav.side .links > * span {
 
   nav.top .links {
     display: none;
-    max-height: 0px;
+    max-height: 0;
   }
 
   nav.top .links > * {
@@ -262,7 +262,7 @@ nav.side .links > * span {
   nav.top .links > *:not(.submenu),
   nav.top .links > .submenu span,
   nav.top .links > .submenu.active span {
-    padding: 0.8em 0px;
+    padding: 0.8em 0;
   }
 
   nav.top .links > *:not(:last-child) {
@@ -283,12 +283,12 @@ nav.side .links > * span {
 
   nav.top .submenu .dropdown {
     position: relative;
-    top: 0px;
+    top: 0;
   }
 
   nav.top .submenu .dropdown > * {
     background-color: @primary-color-dark;
-    padding: 0.8em 0px;
+    padding: 0.8em 0;
     border-top: 1px solid @primary-color-darker;
   }
 
@@ -297,7 +297,7 @@ nav.side .links > * span {
   }
 
   nav.top .submenu .dropdown {
-    max-height: 0px;
+    max-height: 0;
   }
 
   nav.top .toggle {
@@ -325,8 +325,8 @@ nav.side .links > * span {
 
   nav.side:not(.active) .links > *{
     width: 100%;
-    margin: 0px;
-    border-radius: 0px;
+    margin: 0;
+    border-radius: 0;
   }
 
   nav.side.active .links {
@@ -335,7 +335,7 @@ nav.side .links > * span {
 
   nav.side.active .links > * {
     width: 90%;
-    margin: 0px auto;
+    margin: 0 auto;
   }
 
   nav.side.active .toggle {
