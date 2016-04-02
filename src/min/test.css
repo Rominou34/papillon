@@ -481,7 +481,7 @@ code {
   font-family: "Courier New", "monospace";
   border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
-  padding: 0em 0.2em;
+  padding: 0 0.2em;
   border: 1px solid #baced9;
 }
 pre > code {
@@ -503,7 +503,7 @@ pre > code[data-lang]::before {
   background-color: #b7cad7;
   position: relative;
   top: -2em;
-  padding: 0em 0.6em;
+  padding: 0 0.6em;
   border-radius: 0 0 0.5em 0;
   -webkit-border-radius: 0 0 0.5em 0;
   left: -0.5em;
@@ -565,7 +565,7 @@ h4 small,
 h5 small,
 h6 small {
   color: #9d9d9d;
-  padding-left: 0em;
+  padding-left: 0;
   font-size: 60%;
 }
 h1 a,
@@ -1253,10 +1253,6 @@ nav.top .links {
   -o-transition: max-height 0.25s;
   transition: max-height 0.25s;
 }
-nav.top .links.show {
-  max-height: 400px;
-  display: block;
-}
 nav .toggle {
   display: none;
 }
@@ -1404,7 +1400,7 @@ nav.side .links > *:hover {
   color: #f2f8f9;
   display: block;
   width: 40px;
-  padding: 0em 0;
+  padding: 0 0;
   line-height: 40px;
   overflow: hidden;
   height: 40px;
@@ -1439,8 +1435,13 @@ nav.side .links > * span {
     background-color: #0f2a58;
   }
   nav.top .links {
-    display: none;
     max-height: 0;
+    overflow: hidden;
+    display: block;
+  }
+  nav.top .links.show {
+    max-height: 400px;
+    display: block;
   }
   nav.top .links > * {
     width: 100%;
