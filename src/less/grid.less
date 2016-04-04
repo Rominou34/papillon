@@ -88,10 +88,10 @@
 
 /* LARGE */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: @container-lg) {
+@media screen and (max-width: (@container-lg - @grid-margin)) {
   .container-lg .soft-col > div,
   .container-lg.soft-col > div {
-    width: 100%;
+    width: (100% - @grid-margin - 1em);
   }
 
   .container-lg .soft-col > :not(.soft-row),
@@ -102,10 +102,10 @@
 
 /* MEDIUM */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: @container-md) {
+@media screen and (max-width: (@container-md - @grid-margin)) {
   .container-md .soft-col > div,
   .container-md.soft-col > div {
-    width: 100%;
+    width: (100%);
   }
 
   .container-md .soft-col > :not(.soft-row),
@@ -116,10 +116,10 @@
 
 /* SMALL */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: @container-sm) {
+@media screen and (max-width: (@container-sm - @grid-margin)) {
   .container-sm .soft-col > div,
   .container-sm.soft-col > div {
-    width: 100%;
+    width: (100% - @grid-margin - 1em);
   }
 
   .container-sm .soft-col > :not(.soft-row),

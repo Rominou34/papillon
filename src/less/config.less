@@ -3,15 +3,11 @@
 * Romain Arnaud - 2016
 */
 
-  /*
-  * The names of the components using each of the variables are written
-  * in comments after the variable declaration, just use Ctrl+F
-  */
   /********** FONTS **********/
 
   @font-default: Arial, "sans-serif"; /* basic text */
-  @font-sans-serif: Impact, "sans-serif"; /* basic text bis */
-  @font-serif: "Times New Roman", "serif"; /* basic text thris ? */
+  @font-sans-serif: Impact, "sans-serif"; /* basic text sans serif */
+  @font-serif: "Times New Roman", "serif"; /* basic text serif ? */
   @font-title: Verdana, "sans-serif"; /* h1, h2, h3, h4, h5, h6 */
   @font-header: Ubuntu, "sans-serif"; /* Header */
   @font-code: "Courier New", "monospace"; /* code */
@@ -23,7 +19,15 @@
 
   @line-height: 1.5;
 
-  /********** COLORS **********/
+  /********** COLOR PALETTE **********/
+
+  /*
+  * HOW TO USE
+  * - Define the default color each time ( @blue-default, @red-default, etc. )
+  * - The shades will be automatically calculated using lighten() and darken()
+  * - At the end, choose the colors of elements using the color palette
+  *   so you have an uniform color scheme
+  */
 
   /* WHITE */
   @white-default: #ecf0f1; /* BASE */
@@ -44,7 +48,7 @@
 
   /* BLUE */
   @blue-default: #2065cc;
-  @blue-subtle: lighten(@blue-default, 32%);
+  @blue-subtle: lighten(@blue-default, 40%);
   @blue-lighter: lighten(@blue-default, 25%);
   @blue-light: lighten(@blue-default, 15%);
   @blue-dark: darken(@blue-default, 15%);
@@ -52,15 +56,15 @@
 
   /* GREEN */
   @green-default: #32a241;
-  @green-subtle: lighten(@green-default, 32%);
+  @green-subtle: lighten(@green-default, 40%);
   @green-lighter: lighten(@green-default, 25%);
   @green-light: lighten(@green-default, 15%);
   @green-dark: darken(@green-default, 15%);
   @green-darker: darken(@green-default, 25%);
 
   /* RED */
-  @red-default: #bd2723;
-  @red-subtle: lighten(@red-default, 32%);
+  @red-default: #b6322e;
+  @red-subtle: lighten(@red-default, 40%);
   @red-lighter: lighten(@red-default, 25%);
   @red-light: lighten(@red-default, 15%);
   @red-dark: darken(@red-default, 15%);
@@ -68,7 +72,7 @@
 
   /* ORANGE */
   @orange-default: #eb8316;
-  @orange-subtle: lighten(@orange-default, 32%);
+  @orange-subtle: lighten(@orange-default, 40%);
   @orange-lighter: lighten(@orange-default, 25%);
   @orange-light: lighten(@orange-default, 15%);
   @orange-dark: darken(@orange-default, 15%);
@@ -86,11 +90,14 @@
 
   /***** COLOR PALETTE *****/
   @primary-color: @blue-default;
+  @primary-color-subtle: @blue-subtle;
+  @primary-color-lighter: @blue-lighter;
+  @primary-color-light: @blue-light;
   @primary-color-dark: @blue-dark;
   @primary-color-darker: @blue-darker;
-  @primary-color-light: @blue-light;
-  @primary-color-lighter: @blue-lighter;
-  @primary-color-subtle: @blue-subtle;
+
+
+
 
   /* HEADER */
   @color-header: @white-default;
@@ -127,7 +134,7 @@
 
   /*** GRID LAYOUT ***/
   @grid-margin: 8px;
-  @grid-margin-sm: 4px;
+  @grid-margin-sm: (@grid-margin / 2);
 
   /* Container threshold sizes */
   @container-sm: 750px;

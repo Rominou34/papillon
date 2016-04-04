@@ -6,14 +6,10 @@
 * Soft CSS - The tweakable CSS framework
 * Romain Arnaud - 2016
 */
-/*
-  * The names of the components using each of the variables are written
-  * in comments after the variable declaration, just use Ctrl+F
-  */
 /********** FONTS **********/
 /* basic text */
-/* basic text bis */
-/* basic text thris ? */
+/* basic text sans serif */
+/* basic text serif ? */
 /* h1, h2, h3, h4, h5, h6 */
 /* Header */
 /* code */
@@ -21,7 +17,14 @@
 /* Basic text */
 /* Basic text */
 /* Header */
-/********** COLORS **********/
+/********** COLOR PALETTE **********/
+/*
+  * HOW TO USE
+  * - Define the default color each time ( @blue-default, @red-default, etc. )
+  * - The shades will be automatically calculated using lighten() and darken()
+  * - At the end, choose the colors of elements using the color palette
+  *   so you have an uniform color scheme
+  */
 /* WHITE */
 /* BASE */
 /* GREY */
@@ -92,6 +95,7 @@ html {
   /* Edge 12+, Internet Explorer 11- */
   overflow-y: scroll;
   /* All browsers without overlaying scrollbars */
+  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   /* iOS 8+, Windows Phone 8.1+ */
 }
@@ -419,7 +423,7 @@ aside {
   vertical-align: top;
   max-width: 200px;
   margin: auto;
-  background-color: #ec9a97;
+  background-color: #efc2c1;
 }
 /****
 * B *
@@ -690,13 +694,13 @@ main {
   padding: 0.5em;
 }
 .container-sm {
-  max-width: 750px;
+  max-width: 742px;
 }
 .container-md {
-  max-width: 960px;
+  max-width: 952px;
 }
 .container-lg {
-  max-width: 1200px;
+  max-width: 1192px;
 }
 /*
 * The following classes are classes that are never used by default, but you can
@@ -798,7 +802,7 @@ table.alt tbody > tr:nth-child(odd) {
 }
 /******** REACTIVE DESIGN ********/
 table.reactive :not(thead):not(tfoot) tr:hover {
-  background-color: #9fc0f0;
+  background-color: #c2d7f6;
 }
 table.reactive :not(thead):not(tfoot) tr td:hover {
   background-color: #80abeb;
@@ -932,10 +936,10 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 /*************** RESPONSIVE DESIGN ***************/
 /* LARGE */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1192px) {
   .container-lg .soft-col > div,
   .container-lg.soft-col > div {
-    width: 100%;
+    width: 91%;
   }
   .container-lg .soft-col > :not(.soft-row),
   .container-lg.soft-col > :not(.soft-row) {
@@ -944,7 +948,7 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 }
 /* MEDIUM */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 952px) {
   .container-md .soft-col > div,
   .container-md.soft-col > div {
     width: 100%;
@@ -956,10 +960,10 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 }
 /* SMALL */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 742px) {
   .container-sm .soft-col > div,
   .container-sm.soft-col > div {
-    width: 100%;
+    width: 91%;
   }
   .container-sm .soft-col > :not(.soft-row),
   .container-sm.soft-col > :not(.soft-row) {
@@ -1161,17 +1165,17 @@ button.blue:not(:disabled):not(.loading):hover,
 /* RED */
 button.red,
 .button.red {
-  background-color: #bd2723;
-  border-color: #bd2723;
+  background-color: #b6322e;
+  border-color: #b6322e;
 }
 button.red:not(:disabled):not(.loading):active,
 .button.red:not(:disabled):not(.loading):active {
-  background-color: #7c1a17;
-  border-color: #bd2723;
+  background-color: #79211f;
+  border-color: #b6322e;
 }
 button.red:not(:disabled):not(.loading):hover,
 .button.red:not(:disabled):not(.loading):hover {
-  border-color: #bd2723;
+  border-color: #b6322e;
 }
 /* ORANGE */
 button.orange,
@@ -1597,8 +1601,8 @@ nav.side .links > div span {
   border-color: #eb8316;
 }
 .soft-popup.alert span:nth-child(1) {
-  background-color: #7c1a17;
-  border-color: #bd2723;
+  background-color: #79211f;
+  border-color: #b6322e;
 }
 /*************** SOFT PROGRESS BARS ***************/
 .soft-progress {
@@ -1714,23 +1718,23 @@ nav.side .links > div span {
 }
 .soft-notif.info {
   border-color: #16448a;
-  background-color: #548ee4;
+  background-color: #80abeb;
   box-shadow: 1px 1px 2px 0 #16448a;
 }
 .soft-notif.success {
   border-color: #20682a;
-  background-color: #56cb65;
+  background-color: #7dd789;
   box-shadow: 1px 1px 2px 0 #20682a;
 }
 .soft-notif.warning {
   border-color: #a65c0e;
-  background-color: #f1a85c;
+  background-color: #f5c18b;
   box-shadow: 1px 1px 2px 0 #a65c0e;
 }
 .soft-notif.alert {
-  border-color: #7c1a17;
-  background-color: #de524e;
-  box-shadow: 1px 1px 2px 0 #7c1a17;
+  border-color: #79211f;
+  background-color: #e08684;
+  box-shadow: 1px 1px 2px 0 #79211f;
 }
 @media screen and (max-width: 600px) {
   .soft-notif {
@@ -1760,7 +1764,25 @@ don't work with CSS variables ) */
     font-size: 12vw;
   }
 }
-/* We import all the modifiers classes */
+@media screen and (max-width: 1200px) {
+  .container-lg {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width: 960px) {
+  .container-md {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width: 750px) {
+  .container-sm {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+/* We import all the helpers classes */
 /********** TEXT **********/
 /* Makes the first letter of the paragraph shifted from the border */
 .first-letter-spacing {
@@ -1829,6 +1851,10 @@ don't work with CSS variables ) */
   pointer-events: none;
 }
 /********** ELEMENTS ASPECT **********/
+/* Sets a subtle background color */
+.bg-subtle {
+  background-color: #c2d7f6 !important;
+}
 /* Sets a border */
 .border {
   border: 1px solid #16448a;
@@ -1874,7 +1900,7 @@ don't work with CSS variables ) */
   -moz-border-radius: 20%;
   border-radius: 20%;
   background-color: #de557a;
-  border: 2px solid #bd2723;
+  border: 2px solid #b6322e;
   margin-left: 50px;
 }
 /*************** ANIMATIONS ***************/
