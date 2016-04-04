@@ -1,5 +1,6 @@
 # Soft CSS
 
+![License](https://img.shields.io/github/license/rominou34/soft-css.svg)
 [![Code Climate](https://codeclimate.com/github/Rominou34/soft-css/badges/gpa.svg)](https://codeclimate.com/github/Rominou34/soft-css)
 [![Issue Count](https://codeclimate.com/github/Rominou34/soft-css/badges/issue_count.svg)](https://codeclimate.com/github/Rominou34/soft-css)
 
