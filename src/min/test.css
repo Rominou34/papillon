@@ -504,7 +504,6 @@ pre > code[data-lang]::before {
   border-radius: 0 0 0.5em 0;
   left: -0.5em;
   width: auto;
-  float: left;
 }
 /****
 * D *
@@ -1845,26 +1844,35 @@ don't work with CSS variables ) */
   animation: plop 200ms 0s ease-in-out;
   animation-fill-mode: both;
   -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 /*** HEARTBEAT COLOR ***/
 .animation-heartbeat-color {
   animation: heartbeat-color 0.75s 0s ease;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 /*** HEARTBEAT SCALE ***/
 .animation-heartbeat-scale {
   animation: heartbeat-scale 0.75s 0s ease;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 /*** HEARTBEAT ***/
 .animation-heartbeat {
   animation: heartbeat-color 0.75s 0s ease, heartbeat-scale 0.75s 0s ease;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 /*** FADEOUT ***/
 .animation-fadeout {
   animation: fadeout 2s 0s ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 #heartbeat {
@@ -1938,35 +1946,55 @@ don't work with CSS variables ) */
 /*** HEARTBEAT SCALE ***/
 @keyframes heartbeat-scale {
   0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
   }
   40% {
+    -webkit-transform: scale(1.02, 1.02);
+    -ms-transform: scale(1.02, 1.02);
     transform: scale(1.02, 1.02);
   }
   60% {
+    -webkit-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
   }
   70% {
+    -webkit-transform: scale(1.15, 1.15);
+    -ms-transform: scale(1.15, 1.15);
     transform: scale(1.15, 1.15);
   }
   100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
   }
 }
 @-webkit-keyframes heartbeat-scale {
   0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
   }
   40% {
+    -webkit-transform: scale(1.02, 1.02);
+    -ms-transform: scale(1.02, 1.02);
     transform: scale(1.02, 1.02);
   }
   60% {
+    -webkit-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
   }
   70% {
+    -webkit-transform: scale(1.15, 1.15);
+    -ms-transform: scale(1.15, 1.15);
     transform: scale(1.15, 1.15);
   }
   100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
   }
 }
@@ -2008,25 +2036,25 @@ don't work with CSS variables ) */
 /*** SPIN RIGHT ***/
 @keyframes spin-right {
   0% {
-    -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 @-webkit-keyframes spin-right {
   0% {
-    -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
