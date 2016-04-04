@@ -4,11 +4,14 @@
 */
 
 nav {
+  display: -webkit-flex;
   display: flex;
   box-sizing: border-box;
 }
 
-nav * {
+nav div,
+nav a,
+nav span {
   box-sizing: border-box;
 }
 
@@ -26,6 +29,7 @@ nav.top.fixed {
 
 nav.top .links {
   width: 100%;
+  display: -webkit-flex;
   display: flex;
   -webkit-transition: max-height 0.25s;
   -moz-transition: max-height 0.25s;
@@ -60,8 +64,10 @@ nav .toggle.cross::after {
   transform: rotate(90deg);
 }
 
-nav.top .links > *,
+nav.top .links > a,
+nav.top .links > div,
 nav.top .links > a:visited {
+  -webkit-flex: 1;
   flex: 1;
   text-align: center;
   color: @white-light;
@@ -138,7 +144,8 @@ nav.top .submenu.active .dropdown {
   max-height: 600px;
 }
 
-nav.top .submenu .dropdown * {
+nav.top .submenu .dropdown a,
+nav.top .submenu .dropdown div {
   display: block;
   width: 100%;
   background-color: @primary-color-dark;
@@ -165,6 +172,7 @@ nav.side {
   height: 100%;
   top: 0;
   z-index: 3;
+  -webkit-flex-direction: column;
   flex-direction: column;
   width: 50px;
   overflow: hidden;
@@ -185,7 +193,9 @@ nav.side.active {
 }
 
 nav.side .links {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
   height: 90%;
   margin-top: 10vh;
@@ -198,7 +208,8 @@ nav.side .links {
   transition: width 0.25s;
 }
 
-nav.side .links > *,
+nav.side .links > a,
+nav.side .links > div,
 nav.side .links > :visited,
 nav.side .links > :hover {
   color: @white-light;
@@ -219,11 +230,13 @@ nav.side .links > :hover {
   transition: width 0.25s;
 }
 
-nav.side.active .links > * {
+nav.side.active .links > a,
+nav.side.active .links > div {
   width: 90%;
 }
 
-nav.side .links > * span {
+nav.side .links > a span,
+nav.side .links > div span {
   content: '';
   width: 40px;
   height: 40px;
@@ -257,7 +270,8 @@ nav.side .links > * span {
     display: block;
   }
 
-  nav.top .links > * {
+  nav.top .links > a,
+  nav.top .links > div {
     width: 100%;
     display: block;
   }
@@ -289,7 +303,8 @@ nav.side .links > * span {
     top: 0;
   }
 
-  nav.top .submenu .dropdown > * {
+  nav.top .submenu .dropdown > a,
+  nav.top .submenu .dropdown > div {
     background-color: @primary-color-dark;
     padding: 0.8em 0;
     border-top: 1px solid @primary-color-darker;
@@ -328,7 +343,8 @@ nav.side .links > * span {
     width: 100%;
   }
 
-  nav.side:not(.active) .links > *{
+  nav.side:not(.active) .links > a,
+  nav.side:not(.active) .links > div {
     width: 100%;
     margin: 0;
     -webkit-border-radius: 0;
@@ -340,7 +356,8 @@ nav.side .links > * span {
     width: 100%;
   }
 
-  nav.side.active .links > * {
+  nav.side.active .links > a,
+  nav.side.active .links > div {
     width: 90%;
     margin: 0 auto;
   }

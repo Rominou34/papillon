@@ -12,11 +12,13 @@
 
 .soft-row,
 .soft-col {
+  display: -webkit-flex;
   display: flex;
   box-sizing: border-box;
   align-items: stretch;
   justify-content: space-between;;
   padding: 0;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -47,6 +49,7 @@
 
 .soft-col :not([class*="col"]):not(.soft-row),
 .soft-row :not([class*="col"]) {
+  -webkit-flex: 1 0;
   flex: 1 0;
 }
 
@@ -68,19 +71,6 @@
 .col-10 { width: ~"calc(1000% / 12 - @{grid-margin})"; }
 .col-11 { width: ~"calc(1100% / 12 - @{grid-margin})"; }
 .col-12 { width: 100%; }
-
-.col-s1 { flex: 1 0; }
-.col-s2 { flex: 2 0; }
-.col-s3 { flex: 3 0; }
-.col-s4 { flex: 4 0; }
-.col-s5 { flex: 5 0; }
-.col-s6 { flex: 6 0; }
-.col-s7 { flex: 7 0; }
-.col-s8 { flex: 8 0; }
-.col-s9 { flex: 9 0; }
-.col-s10 { flex: 10 0; }
-.col-s11 { flex: 11 0; }
-.col-s12 { flex: 12 0; }
 
 .col-offset-1 { margin-left: calc(100% / 12) !important; }
 .col-offset-2 { margin-left: calc(100% / 6) !important; }

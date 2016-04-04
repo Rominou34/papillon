@@ -13,10 +13,10 @@ window.onload = function() {
 
   navBar = document.querySelector("nav.top");
   if(navBar !== null) {
+    addNavBarToggle();
     navBarY = navBar.offsetTop;
     if(navBar.getAttribute("data-follow") !== null) {
       addNavScroll();
-      addNavBarToggle();
     }
   }
 
