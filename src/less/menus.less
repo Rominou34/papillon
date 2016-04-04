@@ -318,11 +318,22 @@ nav.side .links > div span {
     max-height: 0;
   }
 
+  nav.top {
+    padding-left: 0;
+  }
+
   nav.top .toggle {
+    width: 80px;
     display: block;
     height: 50px;
-    margin-left: calc(100% - 60px);
+    margin-right: ~"calc(100% - 80px)";
     background-color: @primary-color-dark;
+  }
+
+  nav.top .toggle.right {
+    margin-right: 0;
+    margin-left: ~"calc(100% - 80px)";
+    display: block;
   }
 
   nav.side {

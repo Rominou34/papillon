@@ -687,7 +687,10 @@ main {
 * Romain Arnaud - 2016
 */
 /********** CONTAINERS **********/
-[class*="container"] {
+.container,
+.container-sm,
+.container-md,
+.container-lg {
   display: block;
   width: 100%;
   margin: 1em auto;
@@ -776,7 +779,11 @@ table.min tfoot {
   background-color: rgba(0, 0, 0, 0);
 }
 table.min,
-table.min * {
+table.min thead,
+table.min tbody,
+table.min td,
+table.min tr,
+table.min tfoot {
   border-width: 0;
 }
 table.min thead {
@@ -1481,11 +1488,20 @@ nav.side .links > div span {
   nav.top .submenu .dropdown {
     max-height: 0;
   }
+  nav.top {
+    padding-left: 0;
+  }
   nav.top .toggle {
+    width: 80px;
     display: block;
     height: 50px;
-    margin-left: calc(40%);
+    margin-right: calc(100% - 80px);
     background-color: #16448a;
+  }
+  nav.top .toggle.right {
+    margin-right: 0;
+    margin-left: calc(100% - 80px);
+    display: block;
   }
   nav.side {
     width: 10px;
@@ -1617,7 +1633,7 @@ nav.side .links > div span {
 .soft-progress div {
   height: 100%;
   text-align: center;
-  border: inherit !important;
+  border: inherit inherit inherit !important;
   margin: 0 !important;
   padding: 0 !important;
   background-color: #2065cc;
@@ -1788,7 +1804,7 @@ don't work with CSS variables ) */
 .first-letter-spacing {
   text-indent: 2em;
 }
-.first-letter-spacing * {
+.first-letter-spacing :not(.first-letter-spacing) {
   text-indent: 0;
 }
 /* Makes the first letter of the paragraph bigger */
