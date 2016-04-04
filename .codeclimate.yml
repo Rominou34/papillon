@@ -6,8 +6,6 @@ engines:
       - 70f99b2a316439cf93645fd451afc49c
   duplication:
     enabled: true
-    exclude_fingerprints:
-      - 1d0aa3e736babb6f1ebe3ae38f3895f2
     config:
       languages:
       - ruby
@@ -17,6 +15,7 @@ engines:
     exclude_fingerprints:
       - 5cb2b62b2a70fe3f526c583c460b9b5f
       - 33b665c621db58e720adf1303ba65e11
+      - 1d0aa3e736babb6f1ebe3ae38f3895f2
   eslint:
     enabled: true
     exclude_fingerprints:
