@@ -6,6 +6,8 @@ engines:
       - 70f99b2a316439cf93645fd451afc49c
   duplication:
     enabled: true
+    exclude_fingerprints:
+      - 1d0aa3e736babb6f1ebe3ae38f3895f2
     config:
       languages:
       - ruby
@@ -19,7 +21,6 @@ engines:
     enabled: true
     exclude_fingerprints:
       - 67890bc536e5f42c526a057d9594af74
-      - 1d0aa3e736babb6f1ebe3ae38f3895f2
   fixme:
     enabled: true
 ratings:
