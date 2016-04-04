@@ -23,6 +23,7 @@
 /* Header */
 /********** COLORS **********/
 /* WHITE */
+/* BASE */
 /* GREY */
 /* BLACK */
 /* BLUE */
@@ -342,7 +343,6 @@ textarea {
   color: #ffffff;
   text-shadow: none;
 }
-/* Then we declare all the variables */
 /* Then we initialize the default values ( must be imported first so they can be
 overridden ) */
 /*
@@ -391,11 +391,11 @@ form {
 ****/
 /***** LINKS *****/
 a {
-  color: #2a70ff;
+  color: #2065cc;
 }
 a:hover,
 a:visited:hover {
-  color: #51a6de;
+  color: #548ee4;
 }
 a:visited {
   color: #73289c;
@@ -419,7 +419,7 @@ aside {
   vertical-align: top;
   max-width: 200px;
   margin: auto;
-  background-color: #f4d8d5;
+  background-color: #ec9a97;
 }
 /****
 * B *
@@ -519,7 +519,7 @@ body > footer {
   width: 100%;
   padding: 2em 1em;
   background-color: #0e0e0e;
-  color: #d7d9da;
+  color: #cfd9db;
   text-align: center;
 }
 /****
@@ -530,14 +530,14 @@ body > header {
   font-size: 96px;
   font-family: Ubuntu, "sans-serif";
   color: #ecf0f1;
-  background-color: #2a70ff;
+  background-color: #2065cc;
   width: 100%;
   text-align: center;
 }
 body > header > small {
   font-size: 25%;
   font-family: Verdana, "sans-serif";
-  color: #d7d9da;
+  color: #cfd9db;
   display: block;
   padding-bottom: 2em;
 }
@@ -551,7 +551,7 @@ h6 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #262626;
+  color: #282828;
   font-family: Verdana, "sans-serif";
   line-height: 2;
   padding-left: 5%;
@@ -573,7 +573,7 @@ h4 a,
 h5 a,
 h6 a {
   position: relative;
-  color: #262626 !important;
+  color: #282828 !important;
 }
 h1:hover a::before,
 h2:hover a::before,
@@ -582,7 +582,7 @@ h4:hover a::before,
 h5:hover a::before,
 h6:hover a::before {
   content: '#';
-  color: #b7c7d6;
+  color: #80abeb;
   position: absolute;
   left: -1em;
   line-height: 250%;
@@ -613,7 +613,7 @@ hr {
   display: block;
   margin: 2em auto;
   height: 3px;
-  background-color: #2a70ff;
+  background-color: #2065cc;
 }
 /****
 * I *
@@ -638,7 +638,7 @@ img:after {
   color: #9d9d9d;
   display: block;
   position: absolute;
-  border: 2px dashed #a8aeb3;
+  border: 2px dashed #b7b7b7;
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
@@ -647,7 +647,7 @@ img:after {
   left: 0;
   width: 100%;
   height: 4em;
-  background-color: #d7d9da;
+  background-color: #cfd9db;
   box-sizing: border-box;
 }
 /****
@@ -716,13 +716,13 @@ main {
   height: 60%;
   top: 20%;
   left: 2%;
-  border-right: 6px solid #2a70ff;
+  border-right: 6px solid #2065cc;
 }
 /********** ELEMENTS ASPECT **********/
 /* Change the apsect of a container to showcase something inside */
 .showcase {
   background-color: #fff;
-  border: #a8aeb3;
+  border: #b7b7b7;
   margin: 2em 1em;
   padding: 1em;
   box-shadow: 0 0 4px 0 #595959 inset;
@@ -730,6 +730,7 @@ main {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+/* We import the fonticons-related classes */
 /***** GLOBAL RULES *****/
 a[target=_blank]::after {
   font-family: FontAwesome;
@@ -797,10 +798,10 @@ table.alt tbody > tr:nth-child(odd) {
 }
 /******** REACTIVE DESIGN ********/
 table.reactive :not(thead):not(tfoot) tr:hover {
-  background-color: #d3e2f4;
+  background-color: #9fc0f0;
 }
 table.reactive :not(thead):not(tfoot) tr td:hover {
-  background-color: #b7c7d6;
+  background-color: #80abeb;
 }
 /* We import the classes for the forms */
 /*
@@ -982,7 +983,7 @@ button,
   box-sizing: border-box;
   background-color: #fff;
   color: #0e0e0e;
-  border: 1px solid #a8aeb3;
+  border: 1px solid #b7b7b7;
   display: inline-block;
 }
 button:hover,
@@ -994,7 +995,7 @@ button:hover,
   -moz-transition: all 0.25s ease-out;
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
-  border-color: #606466;
+  border-color: #848484;
   color: #0e0e0e;
 }
 .button:visited {
@@ -1004,7 +1005,7 @@ button:disabled,
 .button.disabled {
   box-shadow: 0 0 6px 0 #474747 inset;
   background-color: #9d9d9d;
-  color: #3c3e40;
+  color: #6a6a6a;
 }
 button:disabled:hover {
   background-color: #9d9d9d;
@@ -1017,7 +1018,7 @@ button:not(:disabled):not(.loading):active,
   -moz-transition: all 0.1s;
   -o-transition: all 0.1s;
   transition: all 0.1s;
-  border-color: #2a70ff;
+  border-color: #2065cc;
   box-shadow: 0 2px 1px #666 inset;
   box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.3) inset;
 }
@@ -1032,19 +1033,19 @@ button:focus,
 /********** MODIFIER CLASSES **********/
 button.primary,
 .button.primary {
-  background-color: #2a70ff;
-  color: #f2f8f9;
-  border-color: #2a70ff;
+  background-color: #2065cc;
+  color: #ffffff;
+  border-color: #2065cc;
 }
 button.primary:not(:disabled):not(.loading):active,
 .button.primary:not(.disabled):not(.loading):active {
-  background-color: #194082;
-  border-color: #2a70ff;
+  background-color: #16448a;
+  border-color: #2065cc;
 }
 button.primary:not(:disabled):not(.loading):hover,
 .button.primary:not(.disabled):not(.loading):hover {
-  border-color: #2a70ff;
-  color: #f2f8f9;
+  border-color: #2065cc;
+  color: #ffffff;
 }
 button.large,
 .button.large {
@@ -1090,9 +1091,9 @@ button.loading::after,
   border-top-color: transparent;
   content: "";
   display: block;
-  height: calc(16px);
+  height: 16px;
   position: relative;
-  width: calc(16px);
+  width: 16px;
 }
 button.large.loading::after,
 .button.large.loading::after {
@@ -1118,89 +1119,89 @@ button.black,
 .button.red,
 .button.orange,
 .button.black {
-  color: #f2f8f9;
+  color: #ffffff;
 }
 .button.green:hover,
 .button.blue:hover,
 .button.red:hover,
 .button.orange:hover,
 .button.black:hover {
-  color: #f2f8f9;
+  color: #ffffff;
 }
 /* GREEN */
 button.green,
 .button.green {
-  background-color: #44b434;
-  border-color: #44b434;
+  background-color: #32a241;
+  border-color: #32a241;
 }
 button.green:not(:disabled):not(.loading):active,
 .button.green:not(:disabled):not(.loading):active {
-  background-color: #198233;
-  border-color: #44b434;
+  background-color: #20682a;
+  border-color: #32a241;
 }
 button.green:not(:disabled):not(.loading):hover,
 .button.green:not(:disabled):not(.loading):hover {
-  border-color: #44b434;
+  border-color: #32a241;
 }
 /* BLUE */
 button.blue,
 .button.blue {
-  background-color: #2a70ff;
-  border-color: #2a70ff;
+  background-color: #2065cc;
+  border-color: #2065cc;
 }
 button.blue:not(:disabled):not(.loading):active,
 .button.blue:not(:disabled):not(.loading):active {
-  background-color: #194082;
-  border-color: #2a70ff;
+  background-color: #16448a;
+  border-color: #2065cc;
 }
 button.blue:not(:disabled):not(.loading):hover,
 .button.blue:not(:disabled):not(.loading):hover {
-  border-color: #2a70ff;
+  border-color: #2065cc;
 }
 /* RED */
 button.red,
 .button.red {
-  background-color: #c61b19;
-  border-color: #c61b19;
+  background-color: #bd2723;
+  border-color: #bd2723;
 }
 button.red:not(:disabled):not(.loading):active,
 .button.red:not(:disabled):not(.loading):active {
-  background-color: #822117;
-  border-color: #c61b19;
+  background-color: #7c1a17;
+  border-color: #bd2723;
 }
 button.red:not(:disabled):not(.loading):hover,
 .button.red:not(:disabled):not(.loading):hover {
-  border-color: #c61b19;
+  border-color: #bd2723;
 }
 /* ORANGE */
 button.orange,
 .button.orange {
-  background-color: #e0a32d;
-  border-color: #e0a32d;
+  background-color: #eb8316;
+  border-color: #eb8316;
 }
 button.orange:not(:disabled):not(.loading):active,
 .button.orange:not(:disabled):not(.loading):active {
-  background-color: #c38925;
-  border-color: #e0a32d;
+  background-color: #a65c0e;
+  border-color: #eb8316;
 }
 button.orange:not(:disabled):not(.loading):hover,
 .button.orange:not(:disabled):not(.loading):hover {
-  border-color: #e0a32d;
+  border-color: #eb8316;
 }
 /* BLACK */
 button.black,
 .button.black {
-  background-color: #171717;
-  border-color: #171717;
+  background-color: #1b1b1b;
+  border-color: #1b1b1b;
 }
 button.black:not(:disabled):not(.loading):active,
 .button.black:not(:disabled):not(.loading):active {
   background-color: #0e0e0e;
-  border-color: #171717;
+  border-color: #1b1b1b;
 }
 button.black:not(:disabled):not(.loading):hover,
 .button.black:not(:disabled):not(.loading):hover {
-  border-color: #171717;
+  border-color: #1b1b1b;
 }
 /* We import the classes for the menus */
 /*
@@ -1264,8 +1265,8 @@ nav.top .links > a:visited {
   -webkit-flex: 1;
   flex: 1;
   text-align: center;
-  color: #f2f8f9;
-  background-color: #0f2a58;
+  color: #ffffff;
+  background-color: #0f2e5e;
   z-index: 3;
 }
 nav.top .links > :not(.submenu),
@@ -1274,11 +1275,11 @@ nav.top .links > .submenu span {
 }
 nav.top .links > :hover,
 nav.top .links > a:visited:hover {
-  background-color: #194082;
+  background-color: #16448a;
   cursor: pointer;
 }
 nav.top .submenu.active {
-  background-color: #194082;
+  background-color: #16448a;
 }
 nav.top .submenu {
   position: relative;
@@ -1301,10 +1302,10 @@ nav.top .submenu span::before {
   display: block;
   position: absolute;
   left: 10%;
-  color: #f2f8f9;
+  color: #ffffff;
 }
 nav.top .submenu:hover::before {
-  color: #f2f8f9;
+  color: #ffffff;
 }
 nav.top .submenu.active::before {
   color: transparent;
@@ -1318,31 +1319,31 @@ nav.top .submenu .dropdown {
   top: calc(1.5 * 16px + 1em);
   width: 100%;
   max-height: 0;
-  -webkit-transition: max-height 0.4s;
-  -moz-transition: max-height 0.4s;
-  -o-transition: max-height 0.4s;
-  transition: max-height 0.4s;
+  -webkit-transition: max-height 0.4s ease;
+  -moz-transition: max-height 0.4s ease;
+  -o-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
   overflow: hidden;
 }
 nav.top .submenu.active .dropdown {
-  max-height: 600px;
+  max-height: 800px;
 }
 nav.top .submenu .dropdown a,
 nav.top .submenu .dropdown div {
   display: block;
   width: 100%;
-  background-color: #194082;
-  color: #f2f8f9;
+  background-color: #16448a;
+  color: #ffffff;
   -webkit-transition: padding 0.4s;
   -moz-transition: padding 0.4s;
   -o-transition: padding 0.4s;
   transition: padding 0.4s;
 }
 nav.top .submenu .dropdown * {
-  border-left: 4px solid #2a70ff;
+  border-left: 4px solid #2065cc;
 }
 nav.top .submenu .dropdown :hover {
-  background-color: #0f2a58;
+  background-color: #0f2e5e;
 }
 /********** SIDE NAVBAR **********/
 nav.side {
@@ -1358,7 +1359,7 @@ nav.side {
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
-  background-color: #0f2a58;
+  background-color: #0f2e5e;
 }
 nav.side .toggle {
   display: block;
@@ -1374,7 +1375,7 @@ nav.side .links {
   flex-direction: column;
   height: 90%;
   margin-top: 10vh;
-  background-color: #194082;
+  background-color: #16448a;
   justify-content: space-around;
   overflow: hidden;
   -webkit-transition: width 0.25s;
@@ -1386,7 +1387,7 @@ nav.side .links > a,
 nav.side .links > div,
 nav.side .links > :visited,
 nav.side .links > :hover {
-  color: #f2f8f9;
+  color: #ffffff;
   display: block;
   width: 40px;
   padding: 0 0;
@@ -1397,7 +1398,7 @@ nav.side .links > :hover {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
-  background-color: #0f2a58;
+  background-color: #0f2e5e;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
@@ -1425,7 +1426,7 @@ nav.side .links > div span {
 @media (max-width: 600px) {
   nav.top {
     display: block;
-    background-color: #0f2a58;
+    background-color: #0f2e5e;
   }
   nav.top .links {
     max-height: 0;
@@ -1447,7 +1448,7 @@ nav.side .links > div span {
     padding: 0.8em 0;
   }
   nav.top .links > :not(:last-child) {
-    border-bottom: 2px solid #2a70ff;
+    border-bottom: 2px solid #2065cc;
   }
   /*nav.top .submenu.active {
     padding-bottom: 0px;
@@ -1466,12 +1467,12 @@ nav.side .links > div span {
   }
   nav.top .submenu .dropdown > a,
   nav.top .submenu .dropdown > div {
-    background-color: #194082;
+    background-color: #16448a;
     padding: 0.8em 0;
-    border-top: 1px solid #0f2a58;
+    border-top: 1px solid #0f2e5e;
   }
   nav.top .submenu .dropdown > :hover {
-    background-color: #0f2a58;
+    background-color: #0f2e5e;
   }
   nav.top .submenu .dropdown {
     max-height: 0;
@@ -1480,7 +1481,7 @@ nav.side .links > div span {
     display: block;
     height: 50px;
     margin-left: calc(40%);
-    background-color: #194082;
+    background-color: #16448a;
   }
   nav.side {
     width: 10px;
@@ -1488,8 +1489,8 @@ nav.side .links > div span {
   }
   nav.side:not(.active) .toggle {
     width: 50px;
-    background-color: #194082;
-    border: 1px solid #0f2a58;
+    background-color: #16448a;
+    border: 1px solid #0f2e5e;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -1573,10 +1574,10 @@ nav.side .links > div span {
   line-height: 2;
   width: 100%;
   display: block;
-  color: #f2f8f9;
+  color: #ffffff;
   box-shadow: 0 -2px 16px 2px #121212;
   background-color: #9d9d9d;
-  border-bottom: 0.25em solid #606466;
+  border-bottom: 0.25em solid #848484;
 }
 .soft-popup button {
   position: relative;
@@ -1584,20 +1585,20 @@ nav.side .links > div span {
   bottom: 2em;
 }
 .soft-popup.success span:nth-child(1) {
-  background-color: #198233;
-  border-color: #44b434;
+  background-color: #20682a;
+  border-color: #32a241;
 }
 .soft-popup.info span:nth-child(1) {
-  background-color: #194082;
-  border-color: #2a70ff;
+  background-color: #16448a;
+  border-color: #2065cc;
 }
 .soft-popup.warning span:nth-child(1) {
-  background-color: #c38925;
-  border-color: #e0a32d;
+  background-color: #a65c0e;
+  border-color: #eb8316;
 }
 .soft-popup.alert span:nth-child(1) {
-  background-color: #822117;
-  border-color: #c61b19;
+  background-color: #7c1a17;
+  border-color: #bd2723;
 }
 /*************** SOFT PROGRESS BARS ***************/
 .soft-progress {
@@ -1607,7 +1608,7 @@ nav.side .links > div span {
   padding: 0 !important;
   border: none !important;
   height: 0.5em;
-  background-color: #d7d9da;
+  background-color: #cfd9db;
 }
 .soft-progress div {
   height: 100%;
@@ -1615,7 +1616,7 @@ nav.side .links > div span {
   border: inherit !important;
   margin: 0 !important;
   padding: 0 !important;
-  background-color: #2a70ff;
+  background-color: #2065cc;
 }
 /*************** SOFT TOOLTIPS ***************/
 .soft-tooltip {
@@ -1692,10 +1693,10 @@ nav.side .links > div span {
 /************** SOFT NOTIFICATIONS ****************/
 .soft-notif {
   display: block;
-  border: 1px solid #194082;
-  background-color: #b7c7d6;
-  box-shadow: 1px 1px 2px 0 #0f2a58;
-  color: #171717;
+  border: 1px solid #16448a;
+  background-color: #80abeb;
+  box-shadow: 1px 1px 2px 0 #0f2e5e;
+  color: #1b1b1b;
   font-size: 18px;
   text-align: center;
   -webkit-border-radius: 2px;
@@ -1712,24 +1713,24 @@ nav.side .links > div span {
   animation: plop 0.2s 0s ease-in-out;
 }
 .soft-notif.info {
-  border-color: #194082;
-  background-color: #51a6de;
-  box-shadow: 1px 1px 2px 0 #194082;
+  border-color: #16448a;
+  background-color: #548ee4;
+  box-shadow: 1px 1px 2px 0 #16448a;
 }
 .soft-notif.success {
-  border-color: #198233;
-  background-color: #50de44;
-  box-shadow: 1px 1px 2px 0 #198233;
+  border-color: #20682a;
+  background-color: #56cb65;
+  box-shadow: 1px 1px 2px 0 #20682a;
 }
 .soft-notif.warning {
-  border-color: #c38925;
-  background-color: #e0b263;
-  box-shadow: 1px 1px 2px 0 #c38925;
+  border-color: #a65c0e;
+  background-color: #f1a85c;
+  box-shadow: 1px 1px 2px 0 #a65c0e;
 }
 .soft-notif.alert {
-  border-color: #822117;
-  background-color: #de6054;
-  box-shadow: 1px 1px 2px 0 #822117;
+  border-color: #7c1a17;
+  background-color: #de524e;
+  box-shadow: 1px 1px 2px 0 #7c1a17;
 }
 @media screen and (max-width: 600px) {
   .soft-notif {
@@ -1830,7 +1831,7 @@ don't work with CSS variables ) */
 /********** ELEMENTS ASPECT **********/
 /* Sets a border */
 .border {
-  border: 1px solid #194082;
+  border: 1px solid #16448a;
 }
 /* We import the animations */
 /*
@@ -1844,35 +1845,26 @@ don't work with CSS variables ) */
   animation: plop 200ms 0s ease-in-out;
   animation-fill-mode: both;
   -webkit-animation-iteration-count: 1;
-  -moz-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
 /*** HEARTBEAT COLOR ***/
 .animation-heartbeat-color {
   animation: heartbeat-color 0.75s 0s ease;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 /*** HEARTBEAT SCALE ***/
 .animation-heartbeat-scale {
   animation: heartbeat-scale 0.75s 0s ease;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 /*** HEARTBEAT ***/
 .animation-heartbeat {
   animation: heartbeat-color 0.75s 0s ease, heartbeat-scale 0.75s 0s ease;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 /*** FADEOUT ***/
 .animation-fadeout {
   animation: fadeout 2s 0s ease;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 #heartbeat {
@@ -1882,27 +1874,35 @@ don't work with CSS variables ) */
   -moz-border-radius: 20%;
   border-radius: 20%;
   background-color: #de557a;
-  border: 2px solid #c61b19;
+  border: 2px solid #bd2723;
   margin-left: 50px;
 }
 /*************** ANIMATIONS ***************/
 /*** PLOP ***/
 @keyframes plop {
   0% {
+    -webkit-transform: scale(0.01, 0.01);
+    -ms-transform: scale(0.01, 0.01);
     transform: scale(0.01, 0.01);
     opacity: 0;
   }
   100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
     opacity: 1;
   }
 }
 @-webkit-keyframes plop {
   0% {
+    -webkit-transform: scale(0.01, 0.01);
+    -ms-transform: scale(0.01, 0.01);
     transform: scale(0.01, 0.01);
     opacity: 0;
   }
   100% {
+    -webkit-transform: scale(1.3, 1.3);
+    -ms-transform: scale(1.3, 1.3);
     transform: scale(1.3, 1.3);
     opacity: 1;
   }
@@ -1911,17 +1911,25 @@ don't work with CSS variables ) */
 /*********** DISCONTINUED ***********/
 @keyframes slide-down {
   0% {
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
     transform: scale(1, 0);
   }
   100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
   }
 }
 @-webkit-keyframes slide-down {
   0% {
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
     transform: scale(1, 0);
   }
   100% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
   }
 }
@@ -2061,7 +2069,7 @@ don't work with CSS variables ) */
 /*** COLOR FADE OUT ***/
 @keyframes color-fadeout {
   0% {
-    background-color: #51a6de;
+    background-color: #548ee4;
   }
   100% {
     background-color: inherit;
@@ -2069,7 +2077,7 @@ don't work with CSS variables ) */
 }
 @-webkit-keyframes color-fadeout {
   0% {
-    background-color: #51a6de;
+    background-color: #548ee4;
   }
   100% {
     background-color: inherit;

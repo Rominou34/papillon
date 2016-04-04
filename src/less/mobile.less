@@ -6,7 +6,7 @@
 /* Replace max-width by the width of your main+aside ( calculate --main-width +
 --aside-width ) if you want the aside to work properly on mobile ( media queries
 don't work with CSS variables ) */
-@media screen and (max-width: 1224px) {
+@media screen and (max-width: (@main-width + @aside-width)) {
   aside {
     display: block;
     width: 100%;

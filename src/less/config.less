@@ -26,45 +26,53 @@
   /********** COLORS **********/
 
   /* WHITE */
-  @white-default: #ecf0f1;
-  @white-light: #f2f8f9;
-  @white-dark: #d7d9da;
+  @white-default: #ecf0f1; /* BASE */
+  @white-light: lighten(@white-default, 10%);
+  @white-dark: darken(@white-default, 10%);
 
   /* GREY */
   @grey-default: #9d9d9d;
-  @grey-light: #a8aeb3;
-  @grey-dark: #606466;
-  @grey-darker: #3c3e40;
+  @grey-lighter: lighten(@grey-default, 20%);
+  @grey-light: lighten(@grey-default, 10%);
+  @grey-dark: darken(@grey-default, 10%);
+  @grey-darker: darken(@grey-default, 20%);
 
   /* BLACK */
   @black-default: #0e0e0e;
-  @black-lighter: #262626;
-  @black-light: #171717;
+  @black-lighter: lighten(@black-default, 10%);
+  @black-light: lighten(@black-default, 5%);
 
   /* BLUE */
-
-  @blue-subtle: #d3e2f4;
-  @blue-light: #51a6de;
-  @blue-default: #2a70ff;
-  @blue-dark: #194082;
+  @blue-default: #2065cc;
+  @blue-subtle: lighten(@blue-default, 32%);
+  @blue-lighter: lighten(@blue-default, 25%);
+  @blue-light: lighten(@blue-default, 15%);
+  @blue-dark: darken(@blue-default, 15%);
+  @blue-darker: darken(@blue-default, 25%);
 
   /* GREEN */
-  @green-subtle: #d1f4da;
-  @green-light: #50de44;
-  @green-default: #44b434;
-  @green-dark: #198233;
+  @green-default: #32a241;
+  @green-subtle: lighten(@green-default, 32%);
+  @green-lighter: lighten(@green-default, 25%);
+  @green-light: lighten(@green-default, 15%);
+  @green-dark: darken(@green-default, 15%);
+  @green-darker: darken(@green-default, 25%);
 
   /* RED */
-  @red-subtle: #f4d8d5;
-  @red-light: #de6054;
-  @red-default: #c61b19;
-  @red-dark: #822117;
+  @red-default: #bd2723;
+  @red-subtle: lighten(@red-default, 32%);
+  @red-lighter: lighten(@red-default, 25%);
+  @red-light: lighten(@red-default, 15%);
+  @red-dark: darken(@red-default, 15%);
+  @red-darker: darken(@red-default, 25%);
 
   /* ORANGE */
-  @orange-subtle: #edeccc;
-  @orange-light: #e0b263;
-  @orange-default: #e0a32d;
-  @orange-dark: #c38925;
+  @orange-default: #eb8316;
+  @orange-subtle: lighten(@orange-default, 32%);
+  @orange-lighter: lighten(@orange-default, 25%);
+  @orange-light: lighten(@orange-default, 15%);
+  @orange-dark: darken(@orange-default, 15%);
+  @orange-darker: darken(@orange-default, 25%);
 
   /*** OTHERS ***/
   @color-brown: #79461c;
@@ -79,9 +87,9 @@
   /***** COLOR PALETTE *****/
   @primary-color: @blue-default;
   @primary-color-dark: @blue-dark;
-  @primary-color-darker: #0f2a58;
+  @primary-color-darker: @blue-darker;
   @primary-color-light: @blue-light;
-  @primary-color-lighter: #b7c7d6;
+  @primary-color-lighter: @blue-lighter;
   @primary-color-subtle: @blue-subtle;
 
   /* HEADER */
@@ -109,8 +117,6 @@
   @font-color-link-v: @color-purple;
 
   /********** SIZES **********/
-
-  @border-width: 1px;
 
   @body-width: 100%;
   @main-width: 1024px;
