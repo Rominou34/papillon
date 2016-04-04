@@ -17,6 +17,9 @@ engines:
       - 33b665c621db58e720adf1303ba65e11
   eslint:
     enabled: true
+    exclude_fingerprints:
+      - 67890bc536e5f42c526a057d9594af74
+      - 1d0aa3e736babb6f1ebe3ae38f3895f2
   fixme:
     enabled: true
 ratings:

@@ -72,7 +72,7 @@ var softPopup = function(type, header, msg) {
   }
 
   try {
-    softpopup.className += type;
+    softpopup.classList.add(type);
   } catch(err) {
     console.log(err.message);
   }
@@ -186,16 +186,18 @@ var softNotif = function(type, msg, t) {
   not.innerHTML = msg;
   var pos = 0;
   for(var k in notifs) {
-    for(var i=0; i<notifs.length+1; i++) {
-      var b = false;
-      for(var j in notifs) {
-        if(notifs[j][1]===i) {
-          b=true;
+    if (notifs.hasOwnProperty(k)) {
+      for(var i=0; i<notifs.length+1; i++) {
+        var b = false;
+        for(var j in notifs) {
+          if(notifs[j][1]===i) {
+            b=true;
+          }
         }
-      }
-      if(b===false) {
-        pos=i;
-        break;
+        if(b===false) {
+          pos=i;
+          break;
+        }
       }
     }
   }
