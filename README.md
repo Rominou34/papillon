@@ -1,29 +1,49 @@
-# Soft Style
+# Soft CSS
 
-**The project was just created this week, so it's still an empty shell, there's no point in installing it yet**
+![License](https://img.shields.io/github/license/rominou34/soft-css.svg)
+[![Code Climate](https://codeclimate.com/github/Rominou34/soft-css/badges/gpa.svg)](https://codeclimate.com/github/Rominou34/soft-css)
+[![Issue Count](https://codeclimate.com/github/Rominou34/soft-css/badges/issue_count.svg)](https://codeclimate.com/github/Rominou34/soft-css)
 
 ## About
 
-Soft Style is a CSS Framework based on CSS variables, allowing you to develop your website using CSS classes from the frameworks, that you can easily customize. All variables used are located in the `config.css` stylesheet, so you can adjust them to your needs ( tweak the colors and so on ).
+Soft CSS is a CSS Framework allowing you to easily customize your website with modern design. You can either import the CSS directly from the CDN ( still not there ) if you're okay with the default settings, or clone the repo and tweak the settings as you wish.
 
-**CSS variables currently aren't supported by a lot of browsers, so that's why this framework has no point. It will become useful when CSS variables will be supported ( I hope I'll have finished in time )**
+The framework works with [LESS](http://lesscss.org/) and every basic settings from the color palette to the body size can be found in the `config.less` file so you can quickly change the aspect of your site without having to crawl around thousands of lines of code
 
 ## Installation
 
-You don't need to clone the whole repository, just the `src` folder. The `soft.css` stylesheet automatically imports all the other css files so there is no need to link them all in your HTML. Just copy the files inside your css / stylesheets folder, and do a basic script and stylesheet link:
+#### I'm okay with the default values and want to set it asap
 
-```html
-<link rel="stylesheet" type="text/css" href="src/soft.css">
-<script src="src/soft.js"></script>
-```
+**Using the CDN ( not there yet )**
 
-**To learn about the role of each `.css` file, read the corresponding doc in the `/doc/files` folder**
+When the framework will be released I'll buy a sweet domain name and put the files on a CDN so you will be able to easily import the files ( you will still be able to download the full unminified source code if you want to change things ). Here's how it will work:
+
+1. Download the file `config.css` and customize it for your needs, it will act **as your website's customization panel**
+
+2. Import the minified files from the CDN:
+
+  ```html
+  <link rel="stylesheet" type="text/css" href="http://cdn.lulz/soft.min.css">
+  <script src="http://cdn.lulz/soft.min.js"></script>
+  ```
+
+3. ( Optional ) If you want to use all the font icons classes from Font Awesome import Font Awesome ( either by downloading it on your server or by using MaxCDN's awesome CDN ) and import the file `fonticons.min.css` from the CDN or download it
+
+#### I want to change some things
+
+**If you have LESS**
+
+`git clone` the repo and change the things you want in the files located in the `src/less` folder.
+
+When you're done, compile it using `lessc` and you're good to go
+
+**If you don't have LESS**
+
+After each big update, I'll compile each file separately into the `src/css` so you'll have `menus.css`, `tables.css`, `grid.css` etc.
 
 ## Documentation
 
-You can find the documentation for the framework in the `doc/` folder. The `global.md` file acts as a global documentation explaining how to use the framework, while the files in the `files` folder each explain the role of the corresponding files in the `src` folder.
-
-You will want to read `global.md` to learn how to use the framework and all its functions, and learn the doc for the files only if you want to customize the files and to adapt the framework to your needs ( which is the point of it )
+The documentation will come, just wait a little bit...
 
 ## About
 

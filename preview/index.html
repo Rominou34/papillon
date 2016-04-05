@@ -4,18 +4,50 @@
         <title>Soft CSS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='../src/css/soft.css' rel='stylesheet' type='text/css'>
+        <link href='../src/min/test.css' rel='stylesheet' type='text/css'>
+        <!--<link href='../src/min/soft.min.css' rel='stylesheet' type='text/css'>!-->
         <script src="../src/soft.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
       <header>Soft CSS</header>
-      <main>
+      <nav class="top" data-follow>
+        <div class="toggle right"></div>
+        <div class="links">
+          <div class="submenu" data-toggle="click">
+            <span>
+            Home
+            </span>
+            <div class="dropdown">
+              <a href="#">Bla</a>
+              <a href="#">Bli</a>
+              <a href="#">Blu</a>
+            </div>
+          </div>
+          <a href="#">Sweet</a>
+          <a href="#">Home</a>
+        </div>
+      </nav>
+      <!--
+      <nav class="side">
+        <div class="toggle"></div>
+        <div class="links">
+          <a href="#"><span> T </span>Salut</a>
+          <a href="#"><span> U </span>PD</a>
+          <a href="#"><span> V </span>Pleb</a>
+          <a href="#"><span> J </span>John Cena !! </a>
+          <a href="#"><span> B </span>Bulldong</a>
+        </div>
+      </nav>!-->
+      <div class="container-lg soft-col" id="content">
+        <div class="col-9">
         <h1>
-          H1 Title
+          <a href="#h1-test" id="h1-test">
+          H1 Title</a>
           <small>Second</small>
         </h1>
         <h2>
@@ -38,69 +70,77 @@
           H6 Title
           <small>Second</small>
         </h6>
+        <!--<div class="soft-notif">You got a message</div>!-->
         <h1 class="section-title">Section title</h1>
         <img src="img.png" alt="Image de test" style="width: 200px"></img>
-        <div class="container-lg force-hor text-center">
+        <div class="container-md force-hor text-center">
           <div class="soft-row">
             <div class="soft-col col-4">
-              <div class="col-3">Stack</div>
-              <div class="col-6">Stack</div>
-              <div class="col-3">Stack<br/>Stack</div>
+              <div class="col-3 border bg-subtle">Stack</div>
+              <div class="col-6 border bg-subtle">Stack</div>
+              <div class="col-3 border bg-subtle">Stack<br/>Stack</div>
             </div>
-            <div class="col-2">Horiz</div>
-            <div class="col-2">Horiz</div>
-            <div class="col-2">Horiz</div>
-            <div class="col-2">Horiz</div>
+            <div class="col-2 border bg-subtle">Horiz</div>
+            <div class="col-2 border bg-subtle">Horiz</div>
+            <div class="col-2 border bg-subtle">Horiz</div>
+            <div class="col-2 border bg-subtle">Horiz</div>
           </div>
           <div class="soft-row">
-            <div class="col-4">Horiz</div>
-            <div class="col-4">Horiz</div>
-            <div class="col-4">Horiz</div>
+            <div class="col-4 border bg-subtle">Horiz</div>
+            <div class="col-4 border bg-subtle">Horiz</div>
+            <div class="col-4 border bg-subtle">Horiz</div>
           </div>
         </div>
-        <div id="heartbeat">
+        <div id="heartbeat" class="animation-heartbeat">
+        </div>
+        <div id="prog" class="container-md text-center" style="height: 25px">
         </div>
         <div class="container-md text-center">
           <div class="soft-col">
             <div class="soft-row col-4">
-              <div class="col-8">1</div>
-              <div class="col-4">Test<br/>Test</div>
+              <div class="col-8 border">1</div>
+              <div class="col-4 border">Test<br/>Test</div>
             </div>
             <div class="soft-row col-4">
-              <div class="col-7">1</div>
-              <div class="col-5">Test<br/>Test</div>
+              <div class="col-7 border">1</div>
+              <div class="col-5 border">Test<br/>Test</div>
             </div>
             <div class="soft-row col-4">
-              <div class="col-6">1</div>
-              <div class="col-6">Test<br/>Test</div>
+              <div class="col-6 border">1</div>
+              <div class="col-6 border">Test<br/>Test</div>
             </div>
           </div>
         </div>
         <div class="container-sm text-center">
           <div class="soft-col">
             <div class="soft-row">
-              <div class="col-4 col-offset-4">1</div>
+              <div class="col-4 col-offset-4 soft-tooltip">
+                <div class="tooltip top"><div>Tooltip !<br/>top</div></div>
+                <div class="tooltip right"><div>Tooltip !<br/>right</div></div>
+                <div class="tooltip bottom"><div>Tooltip !<br/>bottom</div></div>
+                <div class="tooltip left"><div>Tooltip !<br/>left</div></div>
+                1</div>
             </div>
-            <div class="col-9"><button class="green fullWidth fullHeight">This is a button</button></div>
-            <div class="col-3">5</div>
+            <div class="col-9 border"><button class="green fullWidth fullHeight">This is a button</button></div>
+            <div class="col-3 border">5</div>
           </div>
         </div>
-        <div class="container-md text-center">
-          <div class="soft-row">
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
-            <div class="col-4">Hi</div>
+        <div class="container-sm text-center">
+          <div class="soft-col">
+            <div class="col border">Hi boys</div>
+            <div class="col border">Hi girls *tips fedora*</div>
+            <div class="col border">Hello I'm Rominou</div>
+            <div class="col border">Higebbbbbbbbbbbbbbb</div>
+            <div class="col border">Higrgregregergerg</div>
+            <div class="col border">Hiiiiiiiiiiiiiiiiiiiiiiiii</div>
+            <div class="col border">Hibbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
           </div>
         </div>
         <div class="container-md soft-col">
           <div class="soft-row col-12">
             <div class="soft-col col-6">
-              <div class="col-6">Test</div>
-              <div class="col-6">Test</div>
+              <div class="col-6 border">Test</div>
+              <div class="col-6 border">Test</div>
             </div>
             <div>Hi</div>
           </div>
@@ -109,17 +149,59 @@
             <div>Hey guys</div>
           </div>
         </div>
-        <a href="#">This is a link</a>
+        <hr/>
+
+        <div class="showcase">
+          <div class="col-4 col-offset-4 soft-tooltip text-center" style="margin: 10px;">
+            <div class="tooltip top">
+              <div>Top !!!!!!!!!!!!</div>
+            </div>
+            <div class="tooltip right">
+              <div>Right !!!!!!!!!!!!!!!!!</div>
+            </div>
+            <div class="tooltip bottom">
+              <div>Bottom !!!!!!!!!!!!!!!!!!!!</div>
+            </div>
+            <div class="tooltip left">
+              <div>Left !!!!!!!!!!!!!!!!!!!!!!!</div>
+            </div>
+            Hover me !
+          </div>
+        </div>
+        <a id="test-fade" href="#test-fade">Test</a>
+
+        <a href="#">This is a link</a><br/>
+        <a href="#" target="_blank">Target blank</a><br/>
+        <span>This is a span</span>
         <p>This is a paragraph with <code>some code</code></p>
         <p>This is another paragraph</p>
         <button>This is a button</button>
-        <button class="green">This is a button</button>
-        <button class="blue">This is a button</button>
-        <button class="red">This is a button</button>
-        <button class="orange">This is a button</button>
-        <button class="black">This is a button</button>
-        <button disabled>This is a disabled button</button>
-        <table class="text-center">
+        <button class="green">Button</button>
+        <button class="blue">Button</button>
+        <button class="red">Button</button>
+        <button class="orange">Button</button>
+        <button class="black">Button</button>
+        <button disabled>Disabled button</button>
+
+        <button class="green large">Button</button>
+        <button class="blue large">Button</button>
+        <button class="red large">Button</button>
+        <button class="orange large">Button</button>
+        <button class="black large">Button</button>
+
+        <button class="primary loading"></button>
+        <button class="primary loading large"></button>
+        <button class="red loading"></button>
+        <h3>Liens</h3>
+        <a class="button" href="#">Button</a>
+        <a class="button red" href="#">Button</a>
+        <a class="button primary" href="#">Button</a>
+        <a class="button large" href="#">
+          Button
+        </a>
+        <a class="button primary loading" href="#"></a>
+        <a class="button disabled" href="#">Button</a>
+        <table class="text-center reactive">
           <thead>
             <td>Classical</td>
             <td>Table</td>
@@ -149,7 +231,7 @@
           </tfoot>
         </table>
 
-        <table class="flat text-center">
+        <table class="flat reactive text-center">
           <thead>
             <td>Flat</td>
             <td>Table</td>
@@ -251,13 +333,21 @@
         </table>
         <div id="container"></div>
         <article class="first-letter-big first-letter-spacing">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Vestibulum lobortis massa a tristique ultricies. Nullam non ex erat.
+          Vestibulum lobortis massa a tristique ultricies. Nullam non ex erat.<br/>
+          To search something use <kbd>Ctrl</kbd>+<kbd>F</kbd>
+          <br/>
           <pre>
             <code data-lang="Python">
 Here is some sweet html code {
   Actually this isn't HTML kappa
   Kappa pride boys
 }
+            </code>
+          </pre>
+
+          <pre>
+            <code data-lang="HTML">
+Test you bitch
             </code>
           </pre>
           Sed eu nisl a velit efficitur tristique. Duis bibendum mattis metus,
@@ -275,12 +365,17 @@ Here is some sweet html code {
               neque eleifend ipsum, vitae efficitur est est ac turpis. Quisque at
               hendrerit nisl.
         </article>
+
         <!--<soft-popup warning>
           <span>Important message</span>
           Blablabla<br/>
           Some useless text
         </soft-popup>!-->
-      </main>
+      </div>
+      <div class="col-3">
+        Test
+      </div>
+    </div>
       <!--<aside>
         This is the aside
       </aside>!-->

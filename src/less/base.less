@@ -1,0 +1,65 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
+/********** CONTAINERS **********/
+.container,
+.container-sm,
+.container-md,
+.container-lg {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  padding: 0.5em;
+}
+
+.container-sm {
+  max-width: (@container-sm - @grid-margin);
+}
+
+.container-md {
+  max-width: (@container-md - @grid-margin);
+}
+
+.container-lg {
+  max-width: (@container-lg - @grid-margin);
+}
+
+/*
+* The following classes are classes that are never used by default, but you can
+* use them to force the behaviour of an element ( for example if you want to
+* force an element to float on the right use "right" )
+*/
+
+/********** TITLE **********/
+
+/* Titles of a section with special style added */
+.section-header {
+  position: relative;
+}
+
+.section-header::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 60%;
+  top: 20%;
+  left: 2%;
+  border-right: 6px solid @blue-default;
+}
+
+/********** ELEMENTS ASPECT **********/
+
+/* Change the apsect of a container to showcase something inside */
+.showcase {
+  background-color: #fff;
+  border: @grey-light;
+  margin: 2em 1em;
+  padding: 1em;
+  box-shadow: 0 0 4px 0 #595959 inset;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}

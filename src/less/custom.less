@@ -1,0 +1,249 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
+.soft-popup, .soft-progress, .soft-notif {
+  box-sizing: border-box;
+}
+
+/*************** SOFT POPUPS ***************/
+.soft-popupmask {
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+  background-color: #444;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.soft-popup {
+  z-index: 7;
+  position: fixed;
+  width: 80%;
+  max-width: 800px;
+  height: 50%;
+  max-height: 400px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  background-color: @white-default;
+  color: @black-default;
+  box-shadow: 0 4px 16px 0 #252525;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.soft-popup div {
+  width: 100%;
+  height: calc(100% - 5 * @font-size-default);
+  display: table;
+}
+
+.soft-popup p {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.soft-popup span:nth-child(1) {
+  font-weight: bold;
+  font-size: @font-size-big;
+  line-height: 2;
+  width: 100%;
+  display: block;
+  color: @white-light;
+  box-shadow: 0 -2px 16px 2px #121212;
+  background-color: @grey-default;
+  border-bottom: 0.25em solid @grey-dark;
+}
+
+.soft-popup button {
+  position: relative;
+  padding: 0.5em 2em;
+  bottom: 2em;
+}
+
+.soft-popup.success span:nth-child(1) {
+  background-color: @green-dark;
+  border-color: @green-default;
+}
+
+.soft-popup.info span:nth-child(1) {
+  background-color: @blue-dark;
+  border-color: @blue-default;
+}
+
+.soft-popup.warning span:nth-child(1) {
+  background-color: @orange-dark;
+  border-color: @orange-default;
+}
+
+.soft-popup.alert span:nth-child(1) {
+  background-color: @red-dark;
+  border-color: @red-default;
+}
+
+/*************** SOFT PROGRESS BARS ***************/
+
+.soft-progress {
+  width: 100%;
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  height: 0.5em;
+  background-color: @white-dark;
+}
+
+.soft-progress div {
+  height: 100%;
+  text-align: center;
+  border: inherit inherit inherit !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: @primary-color;
+}
+
+/*************** SOFT TOOLTIPS ***************/
+
+.soft-tooltip {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  border-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.tooltip div {
+  padding: 0.6em;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 10px !important;
+  border: 0 !important;
+  color: #fff;
+  background-color: #222;
+  background-color: rgba(0,0,0,0.75);
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  width: auto;
+  text-align: center;
+  z-index: 2;
+  animation: plop 0.2s 0s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.tooltip div::before,
+.tooltip div::after {
+  width: 0;
+  height: 0;
+  content: '';
+  display: block;
+  animation: plop 0.2s 0s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.tooltip.top div::after {
+  border: 12px solid;
+  border-color: #222 transparent transparent transparent;
+  border-color: rgba(0,0,0,0.75) transparent transparent transparent;
+  position: absolute;
+  left: ~"calc(50% - 12px)";
+  bottom: -24px;
+}
+
+.tooltip.right div::after {
+  border: 12px solid;
+  border-color: transparent #222 transparent transparent;
+  border-color: transparent rgba(0,0,0,0.75) transparent transparent;
+  position: absolute;
+  top: ~"calc(50% - 12px)";
+  left: -24px;
+}
+
+.tooltip.bottom div::before {
+  border: 12px solid;
+  border-color: transparent transparent #222 transparent;
+  border-color: transparent transparent rgba(0,0,0,0.75) transparent;
+  position: absolute;
+  left: ~"calc(50% - 12px)";
+  top: -24px;
+}
+
+.tooltip.left div::before {
+  border: 12px solid;
+  border-color: transparent transparent transparent #222;
+  border-color: transparent transparent transparent rgba(0,0,0,0.75);
+  position: absolute;
+  top: ~"calc(50% - 12px)";
+  right: -24px;
+}
+
+
+/************** SOFT NOTIFICATIONS ****************/
+
+.soft-notif {
+  display: block;
+  border: 1px solid @primary-color-dark;
+  background-color: @primary-color-lighter;
+  box-shadow: 1px 1px 2px 0 @primary-color-darker;
+  color: @black-light;
+  font-size: 18px;
+  text-align: center;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  max-width: 400px;
+  min-width: 120px;
+  z-index: 5;
+  line-height: 40px;
+  padding: 4px 16px !important;
+  animation: plop 0.2s 0s ease-in-out;
+}
+
+.soft-notif.info {
+  border-color: @blue-dark;
+  background-color: @blue-lighter;
+  box-shadow: 1px 1px 2px 0 @blue-dark;
+}
+
+.soft-notif.success {
+  border-color: @green-dark;
+  background-color: @green-lighter;
+  box-shadow: 1px 1px 2px 0 @green-dark;
+}
+
+.soft-notif.warning {
+  border-color: @orange-dark;
+  background-color: @orange-lighter;
+  box-shadow: 1px 1px 2px 0 @orange-dark;
+}
+
+.soft-notif.alert {
+  border-color: @red-dark;
+  background-color: @red-lighter;
+  box-shadow: 1px 1px 2px 0 @red-dark;
+}
+
+@media screen and (max-width: 600px) {
+  .soft-notif {
+    width: 90%;
+    max-width: 90%;
+    right: 5%;
+  }
+}

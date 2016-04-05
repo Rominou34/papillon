@@ -12,25 +12,22 @@ table td {
 }
 
 /******** CLASSIC DESIGN ********/
-thead {
-  background-color: #b8b8b8;
+thead, tfoot {
+  background-color: #c5c5c5;
+  font-weight: bold;
 }
 
 tbody {
   background-color: #fff;
 }
 
-tfoot {
-  background-color: #b8b8b8;
-}
-
 table {
-  border: 1px solid #6d6d6d;
+  border: 1px solid #858585;
 }
 
-table >:not(:last-child),
-tbody > *:not(:last-child) {
-  border-bottom: 1px solid #6d6d6d;
+table > :not(:last-child),
+tbody > :not(:last-child) {
+  border-bottom: 1px solid #858585;
 }
 
 /******** MINIMALISTIC DESIGN ********/
@@ -38,19 +35,24 @@ tbody > *:not(:last-child) {
 table.min thead,
 table.min tbody,
 table.min tfoot {
+  background-color: #777;
   background-color: rgba(0,0,0,0);
 }
 
 table.min,
-table.min * {
-  border-width: 0px;
+table.min thead,
+table.min tbody,
+table.min td,
+table.min tr,
+table.min tfoot {
+  border-width: 0;
 }
 
 table.min thead {
   border-bottom: 2px solid #8e8e8e;
 }
 
-table.min > *:last-child {
+table.min > :last-child {
   border-bottom: 2px solid #c5c5c5;
 }
 
@@ -62,14 +64,20 @@ table.min tfoot {
 
 table.flat,
 table.flat * {
-  border-width: 0px;
-}
-
-table.flat thead {
-
+  border-width: 0;
 }
 
 /******** ALTERNATING ROWS ********/
 
-table.alt tbody > tr:nth-child(even) {background: #e1e1e1}
+table.alt tbody > tr:nth-child(even) {background: #ededed}
 table.alt tbody > tr:nth-child(odd) {background: #fff}
+
+/******** REACTIVE DESIGN ********/
+
+table.reactive :not(thead):not(tfoot) tr:hover {
+  background-color: @primary-color-subtle;
+}
+
+table.reactive :not(thead):not(tfoot) tr td:hover {
+  background-color: @primary-color-lighter;
+}

@@ -3,344 +3,131 @@
     <head>
         <title>Soft CSS</title>
         <meta charset="UTF-8">
+        <meta name="Content-Language" content="en">
+        <meta name="Description" content="Soft CSS, a powerful yet easy to use front-end framework for faster and easier web development.">
+        <meta name="Keywords" content="css framework, css, framework, css3, html5, javascript, soft css, Romain Arnaud">
+        <meta name="Subject" content="Soft CSS Framework">
+        <meta name="Author" content="Romain Arnaud">
+        <meta name="Publisher" content="Romain Arnaud">
+        <meta name="Identifier-Url" content="http://romainarnaud.fr">
+        <meta name="Geography" content="Montpellier, France, 34000">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="src/css/soft.css">
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="src/min/soft.min.css">
         <script src="src/soft.js"></script>
-
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     </head>
     <body>
       <header>
         Soft CSS
-        <small>The tweakable, simple to use CSS framework</small>
+        <small>The beautiful, easy to use CSS framework</small>
       </header>
+      <nav class="top">
+        <div class="toggle"></div>
+        <div class="links">
+          <div class="submenu" data-toggle="click">
+            <span>Content</span>
+            <div class="dropdown">
+              <a href="#section-titles">Titles</a>
+              <a href="#section-containers">Containers</a>
+              <a href="#section-buttons">Buttons</a>
+              <a href="#section-custom">Custom elements</a>
+              <a href="#section-modifiers">Modifiers</a>
+              <a href="#section-animations">Animations</a>
+              <a href="#section-progress">Progress</a>
+            </div>
+          </div>
+          <a href="https://github.com/Rominou34/soft-css">GitHub</a>
+          <a href="http://rominou34.github.io/">About me</a>
+        </div>
+      </nav>
       <main>
-        <!-- TITLES !-->
-        <h1 class="section-title">Titles</h1>
-        <div class="showcase">
-          <h1>
-            H1 Title
-            <small>Secondary text</small>
-          </h1>
-          <h2>
-            H2 Title
-            <small>Secondary text</small>
-          </h2>
-          <h3>
-            H3 Title
-            <small>Secondary text</small>
-          </h3>
-          <h4>
-            H4 Title
-            <small>Secondary text</small>
-          </h4>
-          <h5>
-            H5 Title
-            <small>Secondary text</small>
-          </h5>
-          <h6>
-            H6 Title
-            <small>Secondary text</small>
-          </h6>
+        <div class="container">
+          <h1 class="text-center">Beautiful CSS. Easily. Quickly.</h1>
         </div>
-
-        <!-- CONTAINERS !-->
-        <h1 class="section-title">Containers</h1>
-        <div class="showcase">
-          <div class="container-lg bg-subtle border text-center">
-            This is a large container ( 1200 px )
+        <hr/>
+        <div class="container-lg stack-lg soft-col">
+          <div class="container stack-sm soft-col col-6">
+            <div class="col-6">
+              <h4 class="text-center">Easy</h4><br/>
+              <p class="text-center">
+                Soft CSS comes with a clear syntax, easy to understand so you
+                actually spend your time coding
+              </p>
+            </div>
+            <div class="col-6">
+              <h4 class="text-center">Powerful</h4><br/>
+              <p class="text-center">
+                Even though it's easy to use, Soft CSS ships with a lot of
+                features allowing you to create beautiful websites as you can
+                see in the <a href="./demo">demo</a>.
+              </p>
+            </div>
           </div>
-          <div class="container-md bg-subtle border text-center">
-            This is a medium container ( 960 px )
-          </div>
-          <div class="container-sm bg-subtle border text-center">
-            This is a small container ( 750 px )
-          </div>
-        </div>
-
-        <!-- GRID LAYOUT !-->
-        <h1 class="section-title">Grid Layout</h1>
-        <div class="container-lg">
-          With Soft CSS, you can organize your components using a responsive
-          grid layout. <del>A lot</del> Pretty much all other CSS frameworks
-          can do that, but Soft CSS is different because it's easy to use,
-          and you have full control over it.
-        </div>
-        <div class="container-lg">
-          The layout is based on a 12-tiles grid, in which you put columns which
-          take a certain number of tiles. For example you can put 4 columns of
-          3 tiles each. If your viewport's width is coming under the threshold,
-          the columns will stack on top of each other, becoming rows.
-        </div>
-        <div class="showcase">
-          <div class="container-lg text-center">
-            <div class="soft-col">
-              <div class="col-3">Column</div>
-              <div class="col-3">Column</div>
-              <div class="col-3">Column</div>
-              <div class="col-3">Column</div>
+          <div class="container stack-sm soft-col col-6">
+            <div class="col-6">
+              <h4 class="text-center">Responsive</h4><br/>
+              <p class="text-center">
+                In 2016, it's purely unthinkable to develop computers-only
+                websites. Every feature of Soft CSS is designed to look great
+                on every screen size
+              </p>
+            </div>
+            <div class="col-6">
+              <h4 class="text-center">Complete</h4><br/>
+              <p class="text-center">
+                Soft CSS is built using the CSS preprocessor
+                <a href="http://lesscss.org/">LESS</a>. Quickly get started by
+                downloading the compiled CSS or build it yourself by downloading
+                and compiling the original source code
+              </p>
             </div>
           </div>
         </div>
-
-        <div class="container-lg">
-          If you don't want them to stack like that, put them in a
-          <code>.soft-row</code> instead of a <code>.soft-col</code>
-        </div>
-        <div class="showcase">
-          <div class="container-lg text-center">
-            <div class="soft-row">
-              <div class="col-3">Column</div>
-              <div class="col-3">Column</div>
-              <div class="col-3">Column</div>
-              <div class="col-3">Column</div>
-            </div>
+        <hr/>
+        <div class="container stack-lg col-12 soft-col text-center">
+          <div class="col-4">
+            <h4>Want to see it at work ?</h4>
+            <a href="./demo" class="button primary large fullWidth text-center">
+              Take a look at the demos
+            </a>
+            <p>
+              <br/>
+              Happily, I provided some demo pages so you can see the extent of
+              its power
+            </p>
           </div>
-        </div>
-
-        <div class="container-lg">
-          The nice thing is that you can use one inside of the other, so you
-          can stack responsive rows inside of a column, like in the example
-          below
-        </div>
-        <div class="showcase">
-          <div class="container-lg force-hor text-center">
-            <div class="soft-row">
-              <div class="soft-col col-4">
-                <div class="col-3">This column ...</div>
-                <div class="col-6">... and this one ...</div>
-                <div class="col-3">... and this one will stack</div>
-              </div>
-              <div class="col-2">This column ...</div>
-              <div class="col-3">... and this one ...</div>
-              <div class="col-3">... and this one will not</div>
-            </div>
+          <div class="col-4">
+            <h4>Want to try it out ?</h4>
+            <a href="https://github.com/Rominou34/soft-css" class="button primary large fullWidth text-center">
+              Check out the GitHub
+            </a>
+            <p>
+              <br/>
+              Everything regarding the download, informations or even the
+              ability to contribute can be found on the GitHub of the project
+            </p>
           </div>
-        </div>
-
-        <div class="container-lg">
-          And in reverse mode, you can stack rows which each contain multiple
-          columns
-        </div>
-        <div class="showcase">
-          <div class="container-md text-center">
-            <div class="soft-col">
-              <div class="soft-row col-4">
-                <div class="col-8">We will always</div>
-                <div class="col-4">stay together &lt;3 </div>
-              </div>
-              <div class="soft-row col-4">
-                <div class="col-7">Don't go below me plz</div>
-                <div class="col-5">k dude chill</div>
-              </div>
-              <div class="soft-row col-4">
-                <div class="col-6">I don't know what text</div>
-                <div class="col-6">I will put here</div>
-              </div>
-            </div>
+          <div class="col-4">
+            <h4>Want to check out the doc ?</h4>
+            <a href="./doc" class="button primary large fullWidth text-center">
+              Go to the documentation
+            </a>
+            <p>
+              <br/>
+              The documentation isn't there yet, I will start working on it soon.
+            </p>
           </div>
-        </div>
-
-        <div class="container-lg">
-          Also, you can offset your columns from the left by a number of tiles
-        </div>
-        <div class="showcase">
-          <div class="container-sm text-center">
-            <div class="soft-col">
-              <div class="soft-row">
-                <div class="col-4 col-offset-4">
-                  Offset of 4 tiles
-                  <br/>( btw I'm in a .soft-row so I won't stack )
-                </div>
-              </div>
-              <div class="col-3 col-offset-2">Offset of 2 tiles</div>
-              <div class="col-2 col-offset-3">Offset of 3 tiles<br/>( not in a
-                .soft-row so I stack, but the offset stays )</div>
-            </div>
+          <div class="col-12">
+            <i><b>Note:</b> The framework is still in development so
+            star the repo if you want to be aware of the latest features</i>
           </div>
-        </div>
-
-        <div class="container-lg">
-          And finally, if you put tiles that are too big together, they will
-          wrap on a new line
-        </div>
-        <div class="showcase">
-          <div class="container-md text-center">
-            <div class="soft-col">
-              <div class="col-4">4</div>
-              <div class="col-4">4</div>
-              <div class="col-4">4</div>
-              <div class="col-4">4</div>
-              <div class="col-4">4</div>
-              <div class="col-4">4</div>
-              <div class="col-4">4</div>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- BUTTONS !-->
-        <h1 class="section-title">Buttons</h1>
-
-        <div class="container-lg">
-          Soft CSS comes with a pack of redefined buttons, with a better and
-          more modern design than the default ones, and a bit of choice for the
-          colors
-        </div>
-        <div class="showcase">
-          <button>Default button</button>
-          <button class="green">.green button</button>
-          <button class="blue">.blue button</button>
-          <button class="red">.red button</button>
-          <button class="orange">.orange button</button>
-          <button class="black">.black button</button>
-        </div>
-
-        <!-- CUSTOM ELEMENTS !-->
-        <h1 class="section-title">Custom Elements</h1>
-        <h2><small>( Or the components that make Soft CSS unique )</small></h2>
-
-        <div class="container-lg">
-          So while developping Soft CSS, I realized that the number of classes
-          started to grow really fast, and that at one point everybody using
-          the framework would be lost while reading the doc.<br/>
-          Then I learned about the ability to create custom HTML elements<br/>
-          So, when you're using Soft CSS and you want to create a popup alert
-          masking the whole screen, you don't need to do some ugly code like
-          this:<br/>
-          <pre><code data-lang="HTML">
-      &lt;div class="popup alert">
-        &lt;h2 class="popup-header">ALERT&lt;/h2>
-        &lt;p>Alert message&lt;/p>
-      &lt;/div>
-</code></pre>
-        <br/>
-        Instead, you use the custom element <code>soft-popup</code> like this:
-        <pre><code data-lang="HTML">
-      &lt;soft-popup class="alert">
-        &lt;span>ALERT&lt;/span>
-        &lt;p>Alert message&lt;/p>
-      &lt;/soft-popup>
-</code></pre>
-        <br/>
-        Don't see the difference ?<br/>
-        <b>That's because it is only the top of the iceberg.</b><br/>
-        When you want to create your popup dynamically, you have to create a
-        Javascript function creating a div, then set it the "popup" class,
-        then another thing and you end up with a big ass ugly function.<br/>
-        <b>But Soft CSS takes care of all that</b><br/>
-        In the "soft.js" file you will find all the constructors for the
-        custom elements, so if you want to create an alert popup you can do
-        it in <b>literally one line:</b><br/>
-        <pre><code data-lang="Javascript">
-      softPopup('alert', 'Alert header', 'Alert message');
-</code></pre>
-        <br/>
-        You don't trust me ? Enter the line given in the example in the console
-        and watch what happens. You can also replace 'alert' by 'success',
-        'info' or 'warning' for more options.
-        </div>
-
-        <!-- OTHER !-->
-        <h1 class="section-title">Handy classes</h1>
-        <div class="container-lg">
-          Soft CSS will ship with a lot of handy classes you can use to quickly
-          customize elements without a headache. Want an element to float right
-          without having to do some inline CSS or create a new class ? Just
-          use <code>.right</code><br/>
-          Here you can see 2 classes changing the first letter of a paragraph,
-          and the redefined blockquote
-        </div>
-        <div class="showcase">
-          <article text-justify class="first-letter-big first-letter-spacing">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Vestibulum lobortis massa a tristique ultricies. Nullam non ex erat. Sed
-             eu nisl a velit efficitur tristique. Duis bibendum mattis metus,
-             dignissim mattis eros eleifend vel. Maecenas faucibus, sem in gravida
-             varius, nisi quam dictum velit, eget fermentum sapien est eget risus.
-             <blockquote>
-               This is a truly verified quote inserted right into the text
-             </blockquote>
-             Nulla est nunc, scelerisque ut lorem lacinia, ultrices mattis arcu.
-             Cras felis urna, iaculis at elementum sit amet, accumsan molestie enim.
-              Suspendisse potenti. Suspendisse potenti. Integer pretium massa augue.
-               Vivamus hendrerit eu nisl a tempor.
-               <blockquote class="reverse">
-                 A reverse quote with the source
-                 <footer>Romain Arnaud in
-                   <cite>40 ans toujours puceau</cite>
-                 </footer>
-               </blockquote>
-               Curabitur rhoncus diam ornare
-               tempus lacinia. Nullam consectetur, arcu vel tincidunt laoreet, massa
-                neque eleifend ipsum, vitae efficitur est est ac turpis. Quisque at
-                hendrerit nisl.
-          </article>
-        </div>
-
-        <h1 class="section-title">Animations</h1>
-        <div class="container-lg">
-          Soft CSS will also ship with a lot of beautiful CSS animations<br/>
-          Here is a heartbeat one ( actually there are 2 animations: one just
-          changes the scale of the element, the other the background color )
-        </div>
-        <div class="showcase">
-          <div id="heartbeat">
-          </div>
-        </div>
-        <!--<soft-popup>
-          Custom element <code>soft-popup</code><br/>
-          Click on it to hide it
-        </soft-popup>!-->
-        <h1 class="section-title">Progress</h1>
-        <div class="container-md">
-          <!--
-            I use table because I haven't coded the vertical lists yet :s
-          !-->
-          <table class="fullWidth flat alt text-center">
-            <thead>
-              <td>To Do</td>
-              <td>Doing</td>
-              <td>Done</td>
-            <tbody>
-              <tr>
-                <td>Forms</td>
-                <td>Tables</td>
-                <td>Titles</td>
-              </tr>
-              <tr>
-                <td>Navigation menus</td>
-                <td>Grid layout ( some bugs )</td>
-                <td>Buttons</td>
-              </tr>
-              <tr>
-                <td>Better config file</td>
-                <td></td>
-                <td>A cool front page ( yay )</td>
-              </tr>
-              <tr>
-                <td>Animations</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Custom elements</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Documentation</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </main>
       <footer>
         Soft CSS 2016<br/>
         Romain Arnaud
       </footer>
-      <script src="src/soft.js"></script>
     </body>
 </html>
