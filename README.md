@@ -39,13 +39,11 @@ When you're done, compile it using `lessc` and you're good to go
 
 **If you don't have LESS**
 
-After each big update, I'll compile each file separately so you'll have `menus.css`, `tables.css`, `grid.css` etc.
+After each big update, I'll compile each file separately into the `src/css` so you'll have `menus.css`, `tables.css`, `grid.css` etc.
 
 ## Documentation
 
-You can find the documentation for the framework in the `doc/` folder. The `global.md` file acts as a global documentation explaining how to use the framework, while the files in the `files` folder each explain the role of the corresponding files in the `src` folder.
-
-You will want to read `global.md` to learn how to use the framework and all its functions, and learn the doc for the files only if you want to customize the files and to adapt the framework to your needs ( which is the point of it )
+The documentation will come, just wait a little bit...
 
 ## About
 
