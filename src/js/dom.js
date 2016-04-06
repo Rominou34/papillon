@@ -1,10 +1,4 @@
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
 var navBar, navBarY, navSide;
-
-var notifs = [];
 
 window.onload = function() {
   addToolTipListeners();
@@ -24,101 +18,7 @@ window.onload = function() {
   if(navSide !== null) {
     addNavSideToggle();
   }
-  /*setInterval(function() {
-    console.table(notifs);
-  }, 400);/**/
 }
-
-/****************************** CUSTOM ELEMENTS *******************************/
-
-/*************** SOFT POPUP ***************/
-
-/*
-* This function is the constructor to display <soft-popup> notifications
-* param is an array that looks like this:
-* params:
-* type = alert type ( defaults are success, info, warning and alert ),
-* header = Header message ( the message displayed in bold at the top ),
-* msg = Message ( the message displayed )
-*/
-var softPopup = function(type, header, msg) {
-  // Creating the element and the mask
-  var softpopupmask = document.createElement("div");
-  softpopupmask.className = "soft-popupmask";
-
-  var softpopup = document.createElement("div");
-  softpopup.className = "soft-popup ";
-
-  // Getting the corresponding color
-  var color = null;
-  switch(type) {
-    case "success":
-      color = "green"; break;
-    case "info":
-      color = "blue"; break;
-    case "warning":
-      color = "yellow"; break;
-    case "alert":
-      color = "red"; break;
-  }
-
-  // Adding the text inside the element
-  if(color !== null) {
-    softpopup.innerHTML = "<span>" + header + "</span>"+
-    "<div><p>" + msg + "</p></div><button class=\""+color+"\">Hide</button>";
-  } else {
-    softpopup.innerHTML = "<span>" + header + "</span>"+
-    "<div><p>" + msg + "</p></div><button>Hide</button>";
-  }
-
-  try {
-    softpopup.classList.add(type);
-  } catch(err) {
-    console.log(err.message);
-  }
-  // To hide the element on click
-  var button = softpopup.querySelector("button");
-  button.addEventListener("click", function() {
-    this.parentElement.parentElement.remove();
-    this.parentElement.remove();
-  });
-  document.body.appendChild(softpopupmask);
-  softpopupmask.appendChild(softpopup);
-}
-
-
-/*************** SOFT PROGRESS BARS ***************/
-
-/*
-* Function used to create progress bars
-* params:
-* minV = minimum value
-* maxV = maximum value
-* prog = current progress
-* type = boolean ( if 0, we display "currentValue/maxValue", if 1, we display
-* "x %" )
-*/
-var softProgressBar = function(minV, maxV, elem, height) {
-  this.minV = minV;
-  this.maxV = maxV;
-  var softprogress = document.createElement("div");
-  softprogress.className = "soft-progress";
-  softprogress.style.height = height;
-
-  softprogress.setAttribute("data-minv",this.minV);
-  softprogress.setAttribute("data-maxv",this.maxV);
-  softprogress.innerHTML = "<div></div>";
-  softprogress.querySelector("div").style.width = 0 + "%";
-  this.element = softprogress;
-  elem.appendChild(softprogress);
-}
-
-softProgressBar.prototype.setProgress = function(prog) {
-  var percent = Math.round(((prog-this.minV) / (this.maxV-this.minV))*100);
-  if(percent > 100) { percent = 100; }
-  this.element.querySelector("div").style.width = percent + "%";
-}
-
 
 /*************** SOFT TOOLTIPS ***************/
 
@@ -175,47 +75,6 @@ var addToolTipListeners = function() {
       });
     });
   });
-}
-
-/*************** SOFT NOTIFICATIONS ***************/
-
-var softNotif = function(type, msg, t) {
-  var not = document.createElement("div");
-  var id = randomId(8);
-  not.className = "soft-notif " + type;
-  not.innerHTML = msg;
-  var pos = 0;
-  for(var k in notifs) {
-    if (notifs.hasOwnProperty(k)) {
-      for(var i=0; i<notifs.length+1; i++) {
-        var b = false;
-        for(var j in notifs) {
-          if(notifs[j][1]===i) {
-            b=true;
-          }
-        }
-        if(b===false) {
-          pos=i;
-          break;
-        }
-      }
-    }
-  }
-  not.style.bottom = ((pos*56)+10) + "px";
-  notifs.push([id,pos]);
-  document.body.appendChild(not);
-  setTimeout(function() {
-    fadeOut(not, t/2, 1);
-    //not.remove();
-    var rank;
-    for(var j in notifs) {
-      if(notifs[j][0]===id) {
-        rank=j;
-        break;
-      }
-    }
-    notifs.splice(j,1);
-  }, t);
 }
 
 /***************************** OTHER FUNCTIONS ********************************/
@@ -288,23 +147,6 @@ addNavHidingLinks = function() {
       });
     });
   });
-}
-
-/*********** MISC ***********/
-
-/*
-* Generates a random id of length 's'
-* Example: randomId(5) = 's8f2R'
-*/
-function randomId(s)
-{
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    for( var i=0; i < s; i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-    return text;
 }
 
 /*
