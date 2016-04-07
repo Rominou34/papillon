@@ -27,6 +27,10 @@ body {
   display: block;
   margin: 0 auto;
   padding: 0;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 html, p, div, article, form {
@@ -271,26 +275,26 @@ h6 a {
   color: @font-color-title !important;
 }
 
-h1 a::before,
-h2 a::before,
-h3 a::before,
-h4 a::before,
-h5 a::before,
-h6 a::before {
+h1 a::after,
+h2 a::after,
+h3 a::after,
+h4 a::after,
+h5 a::after,
+h6 a::after {
   content: '#';
   color: @primary-color-lighter;
   position: absolute;
-  left: -0.75em;
+  right: -0.75em;
   line-height: 250%;
   font-size: 80%;
 }
 
-h1 a:hover::before,
-h2 a:hover::before,
-h3 a:hover::before,
-h4 a:hover::before,
-h5 a:hover::before,
-h6 a:hover::before {
+h1 a:hover::after,
+h2 a:hover::after,
+h3 a:hover::after,
+h4 a:hover::after,
+h5 a:hover::after,
+h6 a:hover::after {
   color: @primary-color;
 }
 

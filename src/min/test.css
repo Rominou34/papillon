@@ -374,6 +374,10 @@ body {
   display: block;
   margin: 0 auto;
   padding: 0;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 html,
 p,
@@ -578,25 +582,25 @@ h6 a {
   position: relative;
   color: #282828 !important;
 }
-h1 a::before,
-h2 a::before,
-h3 a::before,
-h4 a::before,
-h5 a::before,
-h6 a::before {
+h1 a::after,
+h2 a::after,
+h3 a::after,
+h4 a::after,
+h5 a::after,
+h6 a::after {
   content: '#';
   color: #98baec;
   position: absolute;
-  left: -0.75em;
+  right: -0.75em;
   line-height: 250%;
   font-size: 80%;
 }
-h1 a:hover::before,
-h2 a:hover::before,
-h3 a:hover::before,
-h4 a:hover::before,
-h5 a:hover::before,
-h6 a:hover::before {
+h1 a:hover::after,
+h2 a:hover::after,
+h3 a:hover::after,
+h4 a:hover::after,
+h5 a:hover::after,
+h6 a:hover::after {
   color: #2c72d9;
 }
 h1 {
@@ -1283,7 +1287,11 @@ nav a,
 nav span {
   box-sizing: border-box;
 }
-/********** TOP NAVBAR **********/
+/*
+********************************************************************************
+* TOP NAVBAR
+********************************************************************************
+*/
 nav.top {
   width: 100%;
 }
@@ -1410,7 +1418,18 @@ nav.top .submenu .dropdown * {
 nav.top .submenu .dropdown :hover {
   background-color: #143a71;
 }
-/********** SIDE NAVBAR **********/
+/*
+********************************************************************************
+* SIDE MENU
+********************************************************************************
+*/
+/*
+* SIDE MENU BODY
+*/
+body.navside {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
 nav.side {
   position: fixed;
   left: 0;
@@ -1419,26 +1438,60 @@ nav.side {
   z-index: 3;
   -webkit-flex-direction: column;
   flex-direction: column;
-  width: 250px;
+  width: 240px;
   overflow: hidden;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
-  background-color: #143a71;
+  background-color: #1c509c;
+}
+nav.side div,
+nav.side a,
+nav.side span,
+nav.side input {
+  z-index: 3;
+}
+/*
+* SIDE MENU HEADER
+*/
+nav.side .header {
+  width: 100%;
+  background-color: #1c509c;
+  height: 150px;
+}
+nav.side .header span {
+  font-size: 32px;
+  line-height: 48px;
+  padding: 12px 0;
+  color: #ecf0f1;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+nav.side .header input {
+  background-color: #ecf0f1;
+  border: 1px solid #282828;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
+  width: 86%;
+  margin: 0 7%;
 }
 nav.side .toggle {
   display: none;
   width: 40px;
 }
+/*
+* SIDE MENU LINKS
+*/
 nav.side .links {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  height: 90%;
-  margin-top: 10vh;
-  background-color: #1c509c;
+  height: calc(100vh - 150px);
+  background-color: #1b1b1b;
   justify-content: space-around;
   overflow: hidden;
   -webkit-transition: width 0.25s;
@@ -1448,28 +1501,21 @@ nav.side .links {
 }
 nav.side .links > a,
 nav.side .links > div,
-nav.side .links > :visited,
-nav.side .links > :hover {
+nav.side .links > :visited {
   color: #ffffff;
   display: block;
   width: 100%;
   padding: 0 0;
-  line-height: 32px;
+  line-height: 48px;
+  text-align: center;
   overflow: hidden;
-  height: 32px;
-  margin: 0 4px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
-  background-color: #143a71;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
 }
-nav.side.active .links > a,
-nav.side.active .links > div {
-  width: 90%;
+nav.side .links > :hover {
+  background-color: #282828;
 }
 nav.side .links > a span,
 nav.side .links > div span {
@@ -1485,7 +1531,28 @@ nav.side .links > div span {
   -o-transition: all 0.25s;
   transition: all 0.25s;
 }
-/***************** MOBILE ******************/
+/*
+********************************************************************************
+* TABLETS / NARROW DISPLAYS
+********************************************************************************
+*/
+@media (max-width: 1000px) {
+  nav.side {
+    width: 150px;
+  }
+  nav.side .header span {
+    font-size: 24px;
+  }
+  body.navside {
+    width: calc(100% -  150px );
+    margin-left: 150px;
+  }
+}
+/*
+********************************************************************************
+* MOBILE DEVICES / VERY NARROW DISPLAYS
+********************************************************************************
+*/
 @media (max-width: 600px) {
   nav.top {
     display: block;
@@ -1514,17 +1581,6 @@ nav.side .links > div span {
   nav.top .links > :not(:last-child) {
     border-bottom: 2px solid #2c72d9;
   }
-  /*nav.top .submenu.active {
-    padding-bottom: 0px;
-  }
-
-  /*nav.top .submenu .dropdown > *:first-child {
-    -webkit-transition: margin-top 0.4s, padding 0.4s;
-  }
-
-  nav.top .submenu.active .dropdown > *:first-child {
-    margin-top: 0.5em;
-  }*/
   nav.top .submenu .dropdown {
     position: relative;
     top: 0;
@@ -1556,17 +1612,28 @@ nav.side .links > div span {
     margin-left: calc(100% - 80px);
     display: block;
   }
+  /*************************** SIDE MENU MOBILE *******************************/
+  body.navside {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
   nav.side {
-    width: 10px;
+    width: 0px;
     overflow: visible;
+  }
+  nav.side .header span {
+    font-size: 32px;
+  }
+  nav.side .header,
+  nav.side .links {
+    overflow: hidden;
   }
   nav.side:not(.active) .toggle {
     width: 50px;
     background-color: #1c509c;
-    border: 1px solid #143a71;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    -webkit-border-radius: 0 0 4px 0;
+    -moz-border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px 0;
   }
   nav.side.active {
     width: 100%;
@@ -1584,8 +1651,10 @@ nav.side .links > div span {
   }
   nav.side.active .links > a,
   nav.side.active .links > div {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
+    font-size: 20px;
+    border-bottom: 2px solid #ecf0f1;
   }
   nav.side .toggle {
     display: block;
@@ -1857,6 +1926,11 @@ don't work with CSS variables ) */
 @media screen and (max-width: 800px) {
   body > header {
     font-size: 10vw;
+  }
+}
+@media screen and (max-width: 1040px) {
+  body.navside > header {
+    font-size: 8vw;
   }
 }
 /* We import all the helpers classes */
