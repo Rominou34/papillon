@@ -16,10 +16,6 @@ don't work with CSS variables ) */
     width: 100%;
     display: block;
   }
-
-  body > header {
-    font-size: @font-size-header;
-  }
 }
 
 @media screen and (max-width: @container-lg) {
@@ -46,5 +42,11 @@ don't work with CSS variables ) */
     padding-right: 0 !important;
     margin-left: 0 !important;
     margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body > header {
+    font-size: 10vw;
   }
 }

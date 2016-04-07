@@ -169,12 +169,13 @@ nav.top .submenu .dropdown :hover {
 
 nav.side {
   position: fixed;
+  left: 0;
   height: 100%;
   top: 0;
   z-index: 3;
   -webkit-flex-direction: column;
   flex-direction: column;
-  width: 50px;
+  width: 250px;
   overflow: hidden;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
@@ -184,12 +185,8 @@ nav.side {
 }
 
 nav.side .toggle {
-  display: block;
-  width: 50px;
-}
-
-nav.side.active {
-  width: 300px;
+  display: none;
+  width: 40px;
 }
 
 nav.side .links {
@@ -214,15 +211,15 @@ nav.side .links > :visited,
 nav.side .links > :hover {
   color: @white-light;
   display: block;
-  width: 40px;
+  width: 100%;
   padding: 0 0;
-  line-height: 40px;
+  line-height: 32px;
   overflow: hidden;
-  height: 40px;
-  margin: 0 5px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  height: 32px;
+  margin: 0 4px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
   background-color: @primary-color-darker;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
@@ -238,8 +235,8 @@ nav.side.active .links > div {
 nav.side .links > a span,
 nav.side .links > div span {
   content: '';
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   display: inline-block;
   left: 0;
   margin-right: 0.5em;
@@ -274,6 +271,7 @@ nav.side .links > div span {
   nav.top .links > div {
     width: 100%;
     display: block;
+    font-size: 16px;
   }
 
   nav.top .links > :not(.submenu),
@@ -371,6 +369,10 @@ nav.side .links > div span {
   nav.side.active .links > div {
     width: 90%;
     margin: 0 auto;
+  }
+
+  nav.side .toggle {
+    display: block;
   }
 
   nav.side.active .toggle {

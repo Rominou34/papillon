@@ -558,7 +558,6 @@ h6 {
   color: #282828;
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 2;
-  padding-left: 5%;
 }
 h1 small,
 h2 small,
@@ -579,18 +578,26 @@ h6 a {
   position: relative;
   color: #282828 !important;
 }
-h1:hover a::before,
-h2:hover a::before,
-h3:hover a::before,
-h4:hover a::before,
-h5:hover a::before,
-h6:hover a::before {
+h1 a::before,
+h2 a::before,
+h3 a::before,
+h4 a::before,
+h5 a::before,
+h6 a::before {
   content: '#';
   color: #98baec;
   position: absolute;
-  left: -1em;
+  left: -0.75em;
   line-height: 250%;
   font-size: 80%;
+}
+h1 a:hover::before,
+h2 a:hover::before,
+h3 a:hover::before,
+h4 a:hover::before,
+h5 a:hover::before,
+h6 a:hover::before {
+  color: #2c72d9;
 }
 h1 {
   font-size: 42px;
@@ -722,7 +729,7 @@ main {
   width: 0;
   height: 60%;
   top: 20%;
-  left: 2%;
+  left: -0.5em;
   border-right: 6px solid #2c72d9;
 }
 /********** ELEMENTS ASPECT **********/
@@ -1406,12 +1413,13 @@ nav.top .submenu .dropdown :hover {
 /********** SIDE NAVBAR **********/
 nav.side {
   position: fixed;
+  left: 0;
   height: 100%;
   top: 0;
   z-index: 3;
   -webkit-flex-direction: column;
   flex-direction: column;
-  width: 50px;
+  width: 250px;
   overflow: hidden;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
@@ -1420,11 +1428,8 @@ nav.side {
   background-color: #143a71;
 }
 nav.side .toggle {
-  display: block;
-  width: 50px;
-}
-nav.side.active {
-  width: 300px;
+  display: none;
+  width: 40px;
 }
 nav.side .links {
   display: -webkit-flex;
@@ -1447,15 +1452,15 @@ nav.side .links > :visited,
 nav.side .links > :hover {
   color: #ffffff;
   display: block;
-  width: 40px;
+  width: 100%;
   padding: 0 0;
-  line-height: 40px;
+  line-height: 32px;
   overflow: hidden;
-  height: 40px;
-  margin: 0 5px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  height: 32px;
+  margin: 0 4px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
   background-color: #143a71;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
@@ -1469,8 +1474,8 @@ nav.side.active .links > div {
 nav.side .links > a span,
 nav.side .links > div span {
   content: '';
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   display: inline-block;
   left: 0;
   margin-right: 0.5em;
@@ -1499,6 +1504,7 @@ nav.side .links > div span {
   nav.top .links > div {
     width: 100%;
     display: block;
+    font-size: 16px;
   }
   nav.top .links > :not(.submenu),
   nav.top .links > .submenu span,
@@ -1580,6 +1586,9 @@ nav.side .links > div span {
   nav.side.active .links > div {
     width: 90%;
     margin: 0 auto;
+  }
+  nav.side .toggle {
+    display: block;
   }
   nav.side.active .toggle {
     width: 50px;
@@ -1823,9 +1832,6 @@ don't work with CSS variables ) */
     width: 100%;
     display: block;
   }
-  body > header {
-    font-size: 96px;
-  }
 }
 @media screen and (max-width: 1200px) {
   .container-lg {
@@ -1846,6 +1852,11 @@ don't work with CSS variables ) */
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-left: 0 !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  body > header {
+    font-size: 10vw;
   }
 }
 /* We import all the helpers classes */
