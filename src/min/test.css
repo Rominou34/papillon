@@ -2026,9 +2026,8 @@ don't work with CSS variables ) */
 }
 /* Clears the float: right so elements after aren't affected */
 article.right::after,
-div.right::after {
+div:not(.toggle).right::after {
   content: "";
-  visibility: hidden;
   display: block;
   height: 0;
   clear: both;

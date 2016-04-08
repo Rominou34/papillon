@@ -86,11 +86,17 @@ var addNavDropdownListener = function() {
   dropItems.forEach(function (item) {
     if(item.getAttribute("data-toggle") === 'click') {
       item.addEventListener("click", function() {
-        item.classList.toggle("active");
+        if(item.classList.contains("active")) {
+          disableNavDropdown();
+        } else {
+          disableNavDropdown();
+          item.classList.toggle("active");
+        }
       });
     } else {
       if(item.getAttribute("data-toggle") === 'hover') {
         item.addEventListener("mouseover", function() {
+          disableNavDropdown();
           item.classList.add("active");
         });
         item.addEventListener("mouseout", function() {
@@ -99,6 +105,14 @@ var addNavDropdownListener = function() {
       }
     }
 
+  });
+}
+
+var disableNavDropdown = function() {
+  var dropMenus = document.querySelectorAll(".submenu");
+  dropItems = [].slice.call(dropMenus);
+  dropItems.forEach(function (item) {
+    item.classList.remove("active");
   });
 }
 
