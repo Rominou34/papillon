@@ -3,14 +3,18 @@
 * Romain Arnaud - 2016
 */
 
-  /********** FONTS **********/
+  /*
+  ******************************************************************************
+  * FONTS
+  ******************************************************************************
+  */
 
   @font-default: Arial, "sans-serif"; /* basic text */
   @font-sans-serif: Impact, "sans-serif"; /* basic text sans serif */
   @font-serif: "Times New Roman", "serif"; /* basic text serif ? */
   @font-title: 'Source Sans Pro', sans-serif; /* h1, h2, h3, h4, h5, h6 */
   @font-header: Ubuntu, "sans-serif"; /* Header */
-  @font-code: "Courier New", "monospace"; /* code */
+  @font-code: "Source Code Pro", "Courier New", "monospace"; /* code */
 
   @font-size-default: 16px; /* Basic text */
   @font-size-big: calc(@font-size-default * 1.5); /* Basic text */
@@ -19,7 +23,11 @@
 
   @line-height: 1.5;
 
-  /********** COLOR PALETTE **********/
+  /*
+  ******************************************************************************
+  * COLOR PALETTE
+  ******************************************************************************
+  */
 
   /*
   * HOW TO USE
@@ -110,11 +118,8 @@
   @bg-color-main: @white-default;
   @bg-color-aside: @red-subtle;
   @bg-color-footer: @black-default;
-  @bg-color-nav: @blue-default;
 
-  @navside-header-color: @primary-color-dark;
-
-  @bg-color-code: #d9e7ec;
+  @bg-color-code: @blue-subtle;
 
   @font-color-text: @black-default;
   @font-color-title: @black-lighter;
@@ -130,12 +135,27 @@
   @body-width: 100%;
   @main-width: 1024px;
   @aside-width: 200px;
+
+  /*
+  ******************************************************************************
+  * LAYOUT CONTROL
+  ******************************************************************************
+  */
+
+  /*
+  ***** NAVIGATION *****
+  */
+  @bg-color-nav: @blue-default;
+  @navside-header-color: @primary-color-dark;
+  @navside-footer-color: @black-default;
+
   @navside-width: 240px;
   @navside-header-height: 150px;
+  @navside-footer-height: 50px;
 
-  /************* VARIABLES USED IN SPECIFIC PARTS *************/
-
-  /*** GRID LAYOUT ***/
+  /*
+  ***** GRID LAYOUT *****
+  */
   @grid-margin: 20px;
   @grid-margin-sm: (@grid-margin / 2);
 

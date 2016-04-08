@@ -71,14 +71,6 @@ article {
   display: block;
 }
 
-article::after {
-  content: ".";
- visibility: hidden;
- display: block;
- height: 0;
- clear: both;
-}
-
 /***** ASIDE *****/
 
 aside {
@@ -160,12 +152,14 @@ code {
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   padding: 0 0.2em;
-  border: 1px solid #baced9;
+  border: 1px solid @primary-color-lighter;
+  color: @primary-color-darker;
 }
 
 pre > code {
   display: block;
-  margin: 1em;
+  margin: 0.4em 1em;
+  font-size: 80%;
   padding: 0.5em;
   text-align: left;
   border-width: 1px 1px 1px 3px;
@@ -273,6 +267,7 @@ h5 a,
 h6 a {
   position: relative;
   color: @font-color-title !important;
+  display: inline-block;
 }
 
 h1 a::after,
@@ -393,6 +388,17 @@ kbd {
   border-color: #8b7b6e;
   padding: 0 2px;
 }
+
+/****
+* L *
+****/
+
+/***** LIST *****/
+li {
+  padding-left: 1em;
+  margin: 1em 0;
+}
+
 /***** MAIN *****/
 
 main {

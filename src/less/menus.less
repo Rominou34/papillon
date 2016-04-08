@@ -249,7 +249,7 @@ nav.side .links {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  height: ~"calc(100vh - @{navside-header-height})";
+  height: ~"calc(100vh - @{navside-header-height} - @{navside-footer-height})";
   background-color: @black-light;
   justify-content: space-around;
   overflow: hidden;
@@ -262,11 +262,11 @@ nav.side .links {
 nav.side .links > a,
 nav.side .links > div,
 nav.side .links > :visited {
-  color: @white-light;
+  color: @white-default;
+  padding: 0 1em;
   display: block;
   width: 100%;
-  padding: 0 0;
-  line-height: 48px;
+  line-height: 2.5;
   text-align: center;
   overflow: hidden;
   -webkit-transition: width 0.25s;
@@ -295,6 +295,21 @@ nav.side .links > div span {
 }
 
 /*
+* SIDE MENU FOOTER
+*/
+
+nav.side .footer {
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  height: @navside-footer-height;
+  background-color: @navside-footer-color;
+  font-size: 18px;
+  text-align: center;
+  color: @white-default;
+}
+
+/*
 ********************************************************************************
 * TABLETS / NARROW DISPLAYS
 ********************************************************************************
@@ -307,6 +322,10 @@ nav.side .links > div span {
 
   nav.side .header span {
     font-size: 24px;
+  }
+
+  nav.side .links {
+    font-size: 90%;
   }
 
   body.navside {
@@ -441,7 +460,7 @@ nav.side .links > div span {
   nav.side.active .links > div {
     width: 70%;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 18px;
     border-bottom: 2px solid @white-default;
   }
 
@@ -451,5 +470,15 @@ nav.side .links > div span {
 
   nav.side.active .toggle {
     width: 50px;
+  }
+
+  nav.side:not(.active) .footer {
+    padding: 8px 0;
+    width: 0;
+  }
+
+  nav.side.active .footer {
+    width: 100%;
+    padding: 8px;
   }
 }

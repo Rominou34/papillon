@@ -14,6 +14,7 @@
       <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
       <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   </head>
   <body class="navside">
     <header>Documentation</header>
@@ -21,22 +22,115 @@
       <div class="toggle"></div>
       <div class="header">
         <span>Soft CSS</span>
-          <input type="text" name="test">
+        <input type="text" name="test">
       </div>
       <div class="links">
         <a href="#">Menus</a>
-        <a href="#">Grid</a>
+        <a href="#">Grid Layout</a>
+        <a href="#">Custom elements</a>
+        <a href="#">Helper classes</a>
         <a href="#">Tables</a>
+      </div>
+      <div class="footer">
+        <span>Like me</span>
       </div>
     </nav>
     <main>
       <h1 class="text-center">Navigation menus</h1>
-      <section>
+      <!--
+      ***** GLOBAL *****
+      !-->
+      <div class="container">
+        <h2>
+          <a id="global" href="#global">Global</a>
+        </h2>
+        <p>
+          Soft CSS comes with 2 types of intuitive menus:
+          <ul>
+            <li>
+              - <a href="#top-navbar">Top navigation bar</a>
+            </li>
+            <li>
+              - <a href="#">Side navigation menu</a>
+            </li>
+          </ul>
+          Both were developped while thinking about responsive design,
+          so they change aspect to fit to all screen sizes.
+        </p>
+        <p>
+          <h4>Classes</h4>
+          <ul>
+            <li>
+              <b>- <code>nav.top</code>:</b> By putting the class "top" on the
+              <code>nav</code>, you define the menu as a top navbar
+            </li>
+            <li>
+              <b>- <code>div.header</code> and <code>div.footer</code>:</b>
+              These are used to define the header and footer of a side navigation
+              menu ( it does nothing when used on a top navigation bar )
+            </li>
+            <li>
+              <b>- <code>div.toggle</code>:</b>
+              Put a <code>div</code> with the class "toggle" at the beginning of
+              your <code>nav</code> structure. It will act as the toggle button
+              to display the menu on narrow displays, but it won't appear on wide displays
+            </li>
+            <li>
+              <b>- <code>div.links:</code></b> This will be the container for your links,
+              so put them here
+            </li>
+            <li>
+              <b>- <code>div.submenu</code>:</b> Instead of putting a link, you can put
+              a dropdown submenu containing multiple links by using a
+              <code>div</code> with the class "submenu"<br/>
+              You need to put an attribute named <code>data-toggle</code>
+              ( either "click" or "hover" ) to define which type of event will
+              trigger the dropdown
+            </li>
+            <li>
+              <b>- <code>div.submenu span</code>:</b> If you want to give a name to your
+                submenu, put it in a <code>span</code>, and then put the
+                <code>div.dropdown</code> after it
+            <li>
+              <b>- <code>div.dropdown</code>:</b> When using a submenu, this div will act
+              as the dropdown containing the link
+            </li>
+          </ul>
+        </p>
+      </div>
+      <!--
+      ***** TOP NAVBAR *****
+      !-->
+      <div class="container">
         <h2>
           <a id="top-navbar" href="#top-navbar">Top Navbar</a>
         </h2>
-        This is some shit
-      </section>
+        <p>
+          <h4>Structure</h4>
+          Here is the basic HTML structure for a top navbar:
+          <pre>
+            <code data-lang="HTML">
+&lt;nav class="top" data-follow&gt;
+  &lt;div class="toggle right"&gt;&lt;/div&gt;
+  &lt;div class="links"&gt;
+    &lt;div class="submenu" data-toggle="click"&gt;
+      &lt;span&gt;
+        Submenu title
+      &lt;/span&gt;
+      &lt;div class="dropdown"&gt;
+        &lt;a href="target1">Submenu link 1&lt;/a&gt;
+        &lt;a href="target2">Submenu link 2&lt;/a&gt;
+        &lt;a href="target1">Submenu link 3&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href="target4"&gt;Normal link&lt;/a&gt;
+    &lt;a href="target5"&gt;Normal link&lt;/a&gt;
+  &lt;/div&gt;
+&gt;/nav&gt;
+            </code>
+          </pre>
+        </p>
+      </div>
     </main>
   </body>
 </html>

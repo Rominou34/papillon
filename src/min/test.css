@@ -6,7 +6,11 @@
 * Soft CSS - The tweakable CSS framework
 * Romain Arnaud - 2016
 */
-/********** FONTS **********/
+/*
+  ******************************************************************************
+  * FONTS
+  ******************************************************************************
+  */
 /* basic text */
 /* basic text sans serif */
 /* basic text serif ? */
@@ -17,7 +21,11 @@
 /* Basic text */
 /* Basic text */
 /* Header */
-/********** COLOR PALETTE **********/
+/*
+  ******************************************************************************
+  * COLOR PALETTE
+  ******************************************************************************
+  */
 /*
   * HOW TO USE
   * - Define the default color each time ( @blue-default, @red-default, etc. )
@@ -38,8 +46,17 @@
 /***** COLOR PALETTE *****/
 /* HEADER */
 /********** SIZES **********/
-/************* VARIABLES USED IN SPECIFIC PARTS *************/
-/*** GRID LAYOUT ***/
+/*
+  ******************************************************************************
+  * LAYOUT CONTROL
+  ******************************************************************************
+  */
+/*
+  ***** NAVIGATION *****
+  */
+/*
+  ***** GRID LAYOUT *****
+  */
 /* Container threshold sizes */
 /* We reset all the rules so it looks the same for all browsers */
 /*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
@@ -412,13 +429,6 @@ a:visited {
 article {
   display: block;
 }
-article::after {
-  content: ".";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
 /***** ASIDE *****/
 aside {
   display: inline-block;
@@ -479,17 +489,19 @@ caption {
 }
 /***** CODE *****/
 code {
-  background-color: #d9e7ec;
-  font-family: "Courier New", "monospace";
+  background-color: #d9e6f8;
+  font-family: "Source Code Pro", "Courier New", "monospace";
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   padding: 0 0.2em;
-  border: 1px solid #baced9;
+  border: 1px solid #98baec;
+  color: #143a71;
 }
 pre > code {
   display: block;
-  margin: 1em;
+  margin: 0.4em 1em;
+  font-size: 80%;
   padding: 0.5em;
   text-align: left;
   border-width: 1px 1px 1px 3px;
@@ -581,6 +593,7 @@ h5 a,
 h6 a {
   position: relative;
   color: #282828 !important;
+  display: inline-block;
 }
 h1 a::after,
 h2 a::after,
@@ -678,6 +691,14 @@ kbd {
   border-style: solid;
   border-color: #8b7b6e;
   padding: 0 2px;
+}
+/****
+* L *
+****/
+/***** LIST *****/
+li {
+  padding-left: 1em;
+  margin: 1em 0;
 }
 /***** MAIN *****/
 main {
@@ -1490,7 +1511,7 @@ nav.side .links {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 150px - 50px);
   background-color: #1b1b1b;
   justify-content: space-around;
   overflow: hidden;
@@ -1502,11 +1523,11 @@ nav.side .links {
 nav.side .links > a,
 nav.side .links > div,
 nav.side .links > :visited {
-  color: #ffffff;
+  color: #ecf0f1;
+  padding: 0 1em;
   display: block;
   width: 100%;
-  padding: 0 0;
-  line-height: 48px;
+  line-height: 2.5;
   text-align: center;
   overflow: hidden;
   -webkit-transition: width 0.25s;
@@ -1532,6 +1553,19 @@ nav.side .links > div span {
   transition: all 0.25s;
 }
 /*
+* SIDE MENU FOOTER
+*/
+nav.side .footer {
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  height: 50px;
+  background-color: #0e0e0e;
+  font-size: 18px;
+  text-align: center;
+  color: #ecf0f1;
+}
+/*
 ********************************************************************************
 * TABLETS / NARROW DISPLAYS
 ********************************************************************************
@@ -1542,6 +1576,9 @@ nav.side .links > div span {
   }
   nav.side .header span {
     font-size: 24px;
+  }
+  nav.side .links {
+    font-size: 90%;
   }
   body.navside {
     width: calc(100% -  150px );
@@ -1653,7 +1690,7 @@ nav.side .links > div span {
   nav.side.active .links > div {
     width: 70%;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 18px;
     border-bottom: 2px solid #ecf0f1;
   }
   nav.side .toggle {
@@ -1661,6 +1698,14 @@ nav.side .links > div span {
   }
   nav.side.active .toggle {
     width: 50px;
+  }
+  nav.side:not(.active) .footer {
+    padding: 8px 0;
+    width: 0;
+  }
+  nav.side.active .footer {
+    width: 100%;
+    padding: 8px;
   }
 }
 /* We import the custom elements */
@@ -1978,6 +2023,15 @@ don't work with CSS variables ) */
 /* Makes the element float on the right */
 .right {
   float: right !important;
+}
+/* Clears the float: right so elements after aren't affected */
+article.right::after,
+div.right::after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
 /* Center the element ( suppposing it has a width and it's display: block ) */
 .center {
