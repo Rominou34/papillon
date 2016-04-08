@@ -515,9 +515,10 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: #b7cad7;
+  background-color: #98baec;
   position: relative;
-  top: -2em;
+  top: -1.33em;
+  font-size: 150%;
   padding: 0 0.6em;
   -webkit-border-radius: 0 0 0.5em 0;
   -moz-border-radius: 0 0 0.5em 0;
@@ -1507,13 +1508,9 @@ nav.side .toggle {
 * SIDE MENU LINKS
 */
 nav.side .links {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
+  display: block;
   height: calc(100vh - 150px - 50px);
   background-color: #1b1b1b;
-  justify-content: space-around;
   overflow: hidden;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
@@ -1522,13 +1519,15 @@ nav.side .links {
 }
 nav.side .links > a,
 nav.side .links > div,
-nav.side .links > :visited {
-  color: #ecf0f1;
-  padding: 0 1em;
+nav.side .links > :visited,
+nav.side .links .submenu .dropdown > a,
+nav.side .links .submenu .dropdown > :visited {
+  color: #d0d0d0;
+  padding: 0 0.6em;
   display: block;
   width: 100%;
-  line-height: 2.5;
-  text-align: center;
+  line-height: 3;
+  text-align: left;
   overflow: hidden;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
@@ -1538,19 +1537,53 @@ nav.side .links > :visited {
 nav.side .links > :hover {
   background-color: #282828;
 }
-nav.side .links > a span,
-nav.side .links > div span {
-  content: '';
-  width: 32px;
-  height: 32px;
+/*
+* SIDE MENU DROPDOWN
+*/
+nav.side .links .submenu {
+  padding: 0;
+}
+nav.side .links .submenu:hover {
+  cursor: pointer;
+}
+nav.side .links .submenu .dropdown {
+  max-height: 0;
+  width: 100%;
+  -webkit-transition: max-height 0.4s ease, border-color 0.4s ease;
+  -moz-transition: max-height 0.4s ease, border-color 0.4s ease;
+  -o-transition: max-height 0.4s ease, border-color 0.4s ease;
+  transition: max-height 0.4s ease, border-color 0.4s ease;
+  border-bottom: 2px solid #1b1b1b;
+}
+nav.side .links .submenu.active .dropdown {
+  max-height: 800px;
+  border-bottom: 2px solid #9d9d9d;
+}
+nav.side .links .submenu > span {
+  padding: 0 0.6em;
+}
+nav.side .links .submenu > span::before {
+  content: '+';
+  border: 1px solid #ecf0f1;
+  line-height: 1;
+  width: 16px;
   display: inline-block;
-  left: 0;
-  margin-right: 0.5em;
   text-align: center;
-  -webkit-transition: all 0.25s;
-  -moz-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+nav.side .links .submenu.active > span::before {
+  content: '-';
+  background-color: #ecf0f1;
+  color: #0e0e0e;
+}
+nav.side .links .submenu .dropdown > a {
+  width: 100%;
+  display: block;
+  padding-left: 1em;
+}
+nav.side .links .submenu .dropdown > :hover {
+  background-color: #1b1b1b;
 }
 /*
 * SIDE MENU FOOTER
@@ -1698,6 +1731,10 @@ nav.side .footer {
   }
   nav.side.active .toggle {
     width: 50px;
+  }
+  nav.side .links .submenu .dropdown,
+  nav.side .links .submenu.active .dropdown {
+    border-bottom: 0 solid #000;
   }
   nav.side:not(.active) .footer {
     padding: 8px 0;

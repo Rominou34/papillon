@@ -84,7 +84,16 @@ var addNavDropdownListener = function() {
   var dropMenus = document.querySelectorAll(".submenu");
   dropItems = [].slice.call(dropMenus);
   dropItems.forEach(function (item) {
-    if(item.getAttribute("data-toggle") === 'click') {
+
+    if(item.getAttribute("data-toggle") === 'hover') {
+      item.addEventListener("mouseover", function() {
+        disableNavDropdown();
+        item.classList.add("active");
+      });
+      item.addEventListener("mouseout", function() {
+        item.classList.remove("active");
+      });
+    } else {
       item.addEventListener("click", function() {
         if(item.classList.contains("active")) {
           disableNavDropdown();
@@ -93,18 +102,7 @@ var addNavDropdownListener = function() {
           item.classList.toggle("active");
         }
       });
-    } else {
-      if(item.getAttribute("data-toggle") === 'hover') {
-        item.addEventListener("mouseover", function() {
-          disableNavDropdown();
-          item.classList.add("active");
-        });
-        item.addEventListener("mouseout", function() {
-          item.classList.remove("active");
-        });
-      }
     }
-
   });
 }
 

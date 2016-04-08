@@ -25,11 +25,23 @@
         <input type="text" name="test">
       </div>
       <div class="links">
-        <a href="#">Menus</a>
-        <a href="#">Grid Layout</a>
-        <a href="#">Custom elements</a>
-        <a href="#">Helper classes</a>
-        <a href="#">Tables</a>
+        <a href="#">Test</a>
+        <div class="submenu">
+          <span>CSS</span>
+          <div class="dropdown">
+            <a href="#">Menus</a>
+            <a href="#">Grid Layout</a>
+            <a href="#">Custom elements</a>
+            <a href="#">Helper classes</a>
+            <a href="#">Tables</a>
+          </div>
+        </div>
+        <a href="#">Hello world!</a>
+        <div class="submenu" data-toggle="click">
+          <span>Javascript</span>
+          <a href="#">Test</a>
+          <a href="#">Test</a>
+        </div>
       </div>
       <div class="footer">
         <span>Like me</span>
@@ -85,7 +97,7 @@
               <code>div</code> with the class "submenu"<br/>
               You need to put an attribute named <code>data-toggle</code>
               ( either "click" or "hover" ) to define which type of event will
-              trigger the dropdown
+              trigger the dropdown<br/>
             </li>
             <li>
               <b>- <code>div.submenu span</code>:</b> If you want to give a name to your
@@ -94,6 +106,25 @@
             <li>
               <b>- <code>div.dropdown</code>:</b> When using a submenu, this div will act
               as the dropdown containing the link
+            </li>
+          </ul>
+        </p>
+        <p>
+          <h4>Attributes</h4>
+          <ul>
+            <li>
+              <b>- <code>data-follow</code>:</b>
+              If you put this attribute on
+              your <code>nav.top</code> element, it will be fixed at the top of
+              the screen when you will scroll past it
+            </li>
+            <li>
+              <b>- <code>data-toggle</code>:</b>
+              You can put this attribute with a value ( either "click" or
+              "hover" ) on your <code>div.submenu</code> if you have one to tell
+              which type of event you want to act as a toggle to display the
+              dropdown menu.<br/>
+              By default, the toggle will be set to "click"
             </li>
           </ul>
         </p>
@@ -126,7 +157,7 @@
     &lt;a href="target4"&gt;Normal link&lt;/a&gt;
     &lt;a href="target5"&gt;Normal link&lt;/a&gt;
   &lt;/div&gt;
-&gt;/nav&gt;
+&lt;/nav&gt;
             </code>
           </pre>
         </p>
