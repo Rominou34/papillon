@@ -406,6 +406,76 @@ nav.side .footer {
 
 /*
 ********************************************************************************
+* ASIDE MENU
+********************************************************************************
+*/
+
+nav.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+nav.aside .category {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+nav.aside a,
+nav.aside .category a,
+nav.aside .submenu :first-child,
+nav.aside .submenu .dropdown a {
+  width: 100%;
+  display: block;
+  color: @primary-color-dark;
+}
+
+nav.aside a:hover,
+nav.aside .category a:hover,
+nav.aside .submenu :first-child:hover,
+nav.aside .submenu .dropdown a:hover {
+  color: @primary-color-light;
+}
+
+nav.aside a,
+nav.aside .submenu :first-child {
+  padding: 0.2em 0.4em;
+}
+
+nav.aside .category a,
+nav.aside .submenu .dropdown a {
+  padding: 0.2em 1em;
+  font-size: 90%;
+}
+
+nav.aside .submenu,
+nav.aside .submenu .dropdown {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+nav.aside .submenu :first-child:hover {
+  cursor: pointer;
+}
+
+nav.aside .submenu .dropdown {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s ease;
+  -moz-transition: max-height 0.4s ease;
+  -o-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
+}
+
+nav.aside .submenu.active .dropdown {
+  max-height: 800px;
+}
+
+/*
+********************************************************************************
 * TABLETS / NARROW DISPLAYS
 ********************************************************************************
 */
@@ -432,6 +502,7 @@ nav.side .footer {
     margin-left: round(@navside-width/1.6);
   }
 }
+
 /*
 ********************************************************************************
 * MOBILE DEVICES / VERY NARROW DISPLAYS
