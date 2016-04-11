@@ -36,11 +36,9 @@ button:hover,
   color: inherit;
 }
 
-
-
 button:disabled,
 .button.disabled {
-  box-shadow: 0 0 6px 0 #474747 inset;
+  box-shadow: 0 0 6px 0 @black-lighter inset;
   background-color: @grey-default;
   color: @grey-darker;
 }
@@ -71,26 +69,12 @@ button:focus,
   transition: all 0.1s;
 }
 
+button:not(:disabled):focus,
+.button:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px @grey-default;
+}
+
 /********** MODIFIER CLASSES **********/
-
-button.primary,
-.button.primary {
-  background-color: @primary-color;
-  color: @white-light;
-  border-color: @primary-color;
-}
-
-button.primary:not(:disabled):not(.loading):active,
-.button.primary:not(.disabled):not(.loading):active {
-  background-color: @primary-color-dark;
-  border-color: @primary-color;
-}
-
-button.primary:not(:disabled):not(.loading):hover,
-.button.primary:not(.disabled):not(.loading):hover {
-  border-color: @primary-color;
-  color: @white-light;
-}
 
 button.large,
 .button.large {
@@ -164,8 +148,8 @@ button.large.loading::after,
 
 /*************** COLORS ***************/
 
-button.green, button.blue, button.red, button.orange, button.black,
-.button.green, .button.blue, .button.red, .button.orange, .button.black {
+button.green, button.blue, button.red, button.orange, button.black, button.primary,
+.button.green, .button.blue, .button.red, .button.orange, .button.black, .button.primary {
   color: @white-light;
 }
 
@@ -173,11 +157,46 @@ button.green, button.blue, button.red, button.orange, button.black,
 .button.blue:hover,
 .button.red:hover,
 .button.orange:hover,
-.button.black:hover {
+.button.black:hover,
+.button.primary:hover {
   color: @white-light;
 }
 
-/* GREEN */
+/*
+* PRIMARY
+*/
+button.primary,
+.button.primary {
+  background-color: @primary-color;
+  border-color: @primary-color;
+}
+
+button.primary:not(:disabled):not(.loading):active,
+.button.primary:not(.disabled):not(.loading):active {
+  background-color: @primary-color-dark;
+  border-color: @primary-color;
+}
+
+button.primary:not(:disabled):not(.loading):hover,
+.button.primary:not(.disabled):not(.loading):hover {
+  border-color: @primary-color;
+}
+
+button.primary:disabled,
+.button.primary.disabled {
+  box-shadow: 0 0 6px 0 @primary-color-darker inset;
+  background-color: @primary-color-dark;
+  color: @grey-lighter;
+}
+
+button.primary:not(:disabled):focus,
+.button.primary:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px @primary-color;
+}
+
+/*
+* GREEN
+*/
 button.green,
 .button.green {
   background-color: @green-default;
@@ -191,6 +210,18 @@ button.green:not(:disabled):not(.loading):active,
 button.green:not(:disabled):not(.loading):hover,
 .button.green:not(:disabled):not(.loading):hover {
   border-color: @green-default;
+}
+
+button.green:not(:disabled):focus,
+.button.green:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px @green-default;
+}
+
+button.green:disabled,
+.button.green.disabled {
+  box-shadow: 0 0 6px 0 @green-darker inset;
+  background-color: @green-dark;
+  color: @grey-lighter;
 }
 
 /* BLUE */
@@ -209,6 +240,18 @@ button.blue:not(:disabled):not(.loading):hover,
   border-color: @blue-default;
 }
 
+button.blue:not(:disabled):focus,
+.button.blue:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px @blue-default;
+}
+
+button.blue:disabled,
+.button.blue.disabled {
+  box-shadow: 0 0 6px 0 @blue-darker inset;
+  background-color: @blue-dark;
+  color: @grey-lighter;
+}
+
 /* RED */
 button.red,
 .button.red {
@@ -223,6 +266,18 @@ button.red:not(:disabled):not(.loading):active,
 button.red:not(:disabled):not(.loading):hover,
 .button.red:not(:disabled):not(.loading):hover {
   border-color: @red-default;
+}
+
+button.red:not(:disabled):focus,
+.button.red:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px @red-default;
+}
+
+button.red:disabled,
+.button.red.disabled {
+  box-shadow: 0 0 6px 0 @red-darker inset;
+  background-color: @red-dark;
+  color: @grey-lighter;
 }
 
 /* ORANGE */
@@ -241,6 +296,18 @@ button.orange:not(:disabled):not(.loading):hover,
   border-color: @orange-default;
 }
 
+button.orange:not(:disabled):focus,
+.button.orange:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px @orange-default;
+}
+
+button.orange:disabled,
+.button.orange.disabled {
+  box-shadow: 0 0 6px 0 @orange-darker inset;
+  background-color: @orange-dark;
+  color: @grey-lighter;
+}
+
 /* BLACK */
 button.black,
 .button.black {
@@ -255,4 +322,16 @@ button.black:not(:disabled):not(.loading):active,
 button.black:not(:disabled):not(.loading):hover,
 .button.black:not(:disabled):not(.loading):hover {
   border-color: @black-light;
+}
+
+button.black:not(:disabled):focus,
+.button.black:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px @black-default;
+}
+
+button.black:disabled,
+.button.black.disabled {
+  box-shadow: 0 0 6px 0 @black-default inset;
+  background-color: @black-lighter;
+  color: @grey-lighter;
 }

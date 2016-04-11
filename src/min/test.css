@@ -596,25 +596,25 @@ h6 a {
   color: #282828 !important;
   display: inline-block;
 }
-h1 a::after,
-h2 a::after,
-h3 a::after,
-h4 a::after,
-h5 a::after,
-h6 a::after {
+h1 a::before,
+h2 a::before,
+h3 a::before,
+h4 a::before,
+h5 a::before,
+h6 a::before {
   content: '#';
   color: #98baec;
   position: absolute;
-  right: -0.75em;
+  left: -0.75em;
   line-height: 250%;
   font-size: 80%;
 }
-h1 a:hover::after,
-h2 a:hover::after,
-h3 a:hover::after,
-h4 a:hover::after,
-h5 a:hover::after,
-h6 a:hover::after {
+h1 a:hover::before,
+h2 a:hover::before,
+h3 a:hover::before,
+h4 a:hover::before,
+h5 a:hover::before,
+h6 a:hover::before {
   color: #2c72d9;
 }
 h1 {
@@ -1094,7 +1094,7 @@ button:hover,
 }
 button:disabled,
 .button.disabled {
-  box-shadow: 0 0 6px 0 #474747 inset;
+  box-shadow: 0 0 6px 0 #282828 inset;
   background-color: #9d9d9d;
   color: #6a6a6a;
 }
@@ -1121,23 +1121,11 @@ button:focus,
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
+button:not(:disabled):focus,
+.button:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px #9d9d9d;
+}
 /********** MODIFIER CLASSES **********/
-button.primary,
-.button.primary {
-  background-color: #2c72d9;
-  color: #ffffff;
-  border-color: #2c72d9;
-}
-button.primary:not(:disabled):not(.loading):active,
-.button.primary:not(.disabled):not(.loading):active {
-  background-color: #1c509c;
-  border-color: #2c72d9;
-}
-button.primary:not(:disabled):not(.loading):hover,
-.button.primary:not(.disabled):not(.loading):hover {
-  border-color: #2c72d9;
-  color: #ffffff;
-}
 button.large,
 .button.large {
   padding: 0.6em;
@@ -1205,21 +1193,53 @@ button.blue,
 button.red,
 button.orange,
 button.black,
+button.primary,
 .button.green,
 .button.blue,
 .button.red,
 .button.orange,
-.button.black {
+.button.black,
+.button.primary {
   color: #ffffff;
 }
 .button.green:hover,
 .button.blue:hover,
 .button.red:hover,
 .button.orange:hover,
-.button.black:hover {
+.button.black:hover,
+.button.primary:hover {
   color: #ffffff;
 }
-/* GREEN */
+/*
+* PRIMARY
+*/
+button.primary,
+.button.primary {
+  background-color: #2c72d9;
+  border-color: #2c72d9;
+}
+button.primary:not(:disabled):not(.loading):active,
+.button.primary:not(.disabled):not(.loading):active {
+  background-color: #1c509c;
+  border-color: #2c72d9;
+}
+button.primary:not(:disabled):not(.loading):hover,
+.button.primary:not(.disabled):not(.loading):hover {
+  border-color: #2c72d9;
+}
+button.primary:disabled,
+.button.primary.disabled {
+  box-shadow: 0 0 6px 0 #143a71 inset;
+  background-color: #1c509c;
+  color: #d0d0d0;
+}
+button.primary:not(:disabled):focus,
+.button.primary:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px #2c72d9;
+}
+/*
+* GREEN
+*/
 button.green,
 .button.green {
   background-color: #32a241;
@@ -1233,6 +1253,16 @@ button.green:not(:disabled):not(.loading):active,
 button.green:not(:disabled):not(.loading):hover,
 .button.green:not(:disabled):not(.loading):hover {
   border-color: #32a241;
+}
+button.green:not(:disabled):focus,
+.button.green:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px #32a241;
+}
+button.green:disabled,
+.button.green.disabled {
+  box-shadow: 0 0 6px 0 #14411a inset;
+  background-color: #20682a;
+  color: #d0d0d0;
 }
 /* BLUE */
 button.blue,
@@ -1249,6 +1279,16 @@ button.blue:not(:disabled):not(.loading):hover,
 .button.blue:not(:disabled):not(.loading):hover {
   border-color: #2c72d9;
 }
+button.blue:not(:disabled):focus,
+.button.blue:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px #2c72d9;
+}
+button.blue:disabled,
+.button.blue.disabled {
+  box-shadow: 0 0 6px 0 #143a71 inset;
+  background-color: #1c509c;
+  color: #d0d0d0;
+}
 /* RED */
 button.red,
 .button.red {
@@ -1263,6 +1303,16 @@ button.red:not(:disabled):not(.loading):active,
 button.red:not(:disabled):not(.loading):hover,
 .button.red:not(:disabled):not(.loading):hover {
   border-color: #b6322e;
+}
+button.red:not(:disabled):focus,
+.button.red:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px #b6322e;
+}
+button.red:disabled,
+.button.red.disabled {
+  box-shadow: 0 0 6px 0 #501614 inset;
+  background-color: #79211f;
+  color: #d0d0d0;
 }
 /* ORANGE */
 button.orange,
@@ -1279,6 +1329,16 @@ button.orange:not(:disabled):not(.loading):hover,
 .button.orange:not(:disabled):not(.loading):hover {
   border-color: #eb8316;
 }
+button.orange:not(:disabled):focus,
+.button.orange:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px #eb8316;
+}
+button.orange:disabled,
+.button.orange.disabled {
+  box-shadow: 0 0 6px 0 #77420a inset;
+  background-color: #a65c0e;
+  color: #d0d0d0;
+}
 /* BLACK */
 button.black,
 .button.black {
@@ -1293,6 +1353,16 @@ button.black:not(:disabled):not(.loading):active,
 button.black:not(:disabled):not(.loading):hover,
 .button.black:not(:disabled):not(.loading):hover {
   border-color: #1b1b1b;
+}
+button.black:not(:disabled):focus,
+.button.black:not(.disabled):focus {
+  box-shadow: 0 0 4px 1px #0e0e0e;
+}
+button.black:disabled,
+.button.black.disabled {
+  box-shadow: 0 0 6px 0 #0e0e0e inset;
+  background-color: #282828;
+  color: #d0d0d0;
 }
 /* We import the classes for the menus */
 /*
@@ -1652,15 +1722,7 @@ nav.aside {
   flex-direction: column;
   align-items: stretch;
 }
-nav.aside .category {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  margin: 0 !important;
-  padding: 0 !important;
-}
 nav.aside a,
-nav.aside .category a,
 nav.aside .submenu :first-child,
 nav.aside .submenu .dropdown a {
   width: 100%;
@@ -1672,7 +1734,6 @@ nav.aside .submenu .dropdown a {
   box-sizing: border-box;
 }
 nav.aside a:hover,
-nav.aside .category a:hover,
 nav.aside .submenu :first-child:hover,
 nav.aside .submenu .dropdown a:hover {
   color: #6d9de5;
@@ -1682,7 +1743,6 @@ nav.aside .submenu :first-child {
   padding: 0 0.2em;
   margin: 0.4em 0;
 }
-nav.aside .category a,
 nav.aside .submenu .dropdown a {
   width: calc(100% - 1em);
   margin: 0.3em 0;
@@ -1710,10 +1770,16 @@ nav.aside .submenu.active .dropdown {
   max-height: 800px;
 }
 nav.aside a.current,
-nav.aside .category a.current,
 nav.aside .submenu :first-child.current,
 nav.aside .submenu .dropdown a.current {
   border-color: #2c72d9;
+}
+nav.aside .category {
+  font-size: 120%;
+  color: #282828;
+  font-style: bold;
+  margin: 0.4em 0;
+  border-bottom: 1px dashed #848484;
 }
 /*
 ********************************************************************************
@@ -2237,6 +2303,16 @@ div:not(.toggle).right::after {
 /* Sets a border */
 .border {
   border: 1px solid #1c509c;
+}
+/********** SMALL CORRECTIONS ********/
+.padding-sm {
+  padding: 0.5em !important;
+}
+.padding-md {
+  padding: 1em !important;
+}
+.padding-lg {
+  padding: 2em !important;
 }
 /* We import the animations */
 /*
