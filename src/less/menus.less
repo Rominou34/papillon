@@ -300,7 +300,9 @@ nav.side .links .submenu .dropdown > :visited {
 }
 
 nav.side .links > :not(.category):hover,
-nav.side .links .category > :not(span):hover {
+nav.side .links .category > :not(span):hover,
+nav.side .links .submenu.active :first-child,
+nav.side .links .submenu.active .dropdown {
   background-color: @black-lighter;
 }
 
@@ -334,6 +336,9 @@ nav.side .links .submenu.active .dropdown {
 
 nav.side .links .submenu > span {
   padding: 0 0.6em;
+  display: block;
+  line-height: 3;
+  width: 100%;
 }
 
 nav.side .links .submenu > span::before {

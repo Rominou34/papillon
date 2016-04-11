@@ -490,7 +490,7 @@ caption {
 /***** CODE *****/
 code {
   background-color: #d9e6f8;
-  font-family: "Courier New", "monospace";
+  font-family: "Source Code Pro", "Courier New", "monospace";
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
@@ -698,8 +698,8 @@ kbd {
 ****/
 /***** LIST *****/
 li {
-  padding-left: 1em;
-  margin: 1em 0;
+  margin-left: 1em;
+  padding: 0.5em 0;
 }
 /***** MAIN *****/
 main {
@@ -1640,7 +1640,9 @@ nav.side .links .submenu .dropdown > :visited {
   transition: width 0.25s, font-size 0.25s;
 }
 nav.side .links > :not(.category):hover,
-nav.side .links .category > :not(span):hover {
+nav.side .links .category > :not(span):hover,
+nav.side .links .submenu.active :first-child,
+nav.side .links .submenu.active .dropdown {
   background-color: #282828;
 }
 /*
@@ -1668,6 +1670,9 @@ nav.side .links .submenu.active .dropdown {
 }
 nav.side .links .submenu > span {
   padding: 0 0.6em;
+  display: block;
+  line-height: 3;
+  width: 100%;
 }
 nav.side .links .submenu > span::before {
   content: '+';
@@ -2321,13 +2326,19 @@ div:not(.toggle).right::after {
 }
 /********** SMALL CORRECTIONS ********/
 .padding-sm {
-  padding: 0.5em !important;
+  padding: 0.5em;
 }
 .padding-md {
-  padding: 1em !important;
+  padding: 1em;
 }
 .padding-lg {
-  padding: 2em !important;
+  padding: 2em;
+}
+/*******************************************************************************
+*** ELEMENTS SPECIFIC
+*******************************************************************************/
+ul.no-style li {
+  list-style: none;
 }
 /* We import the animations */
 /*
