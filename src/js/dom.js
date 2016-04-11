@@ -1,5 +1,5 @@
 var navBar, navBarY, navSide;
-
+var d = -1;
 window.onload = function() {
   addToolTipListeners();
   addNavDropdownListener();
@@ -18,6 +18,19 @@ window.onload = function() {
   if(navSide !== null) {
     addNavSideToggle();
   }
+
+  /*********************** EXPERIMENTAL *****************************/
+  window.addEventListener("scroll", function() {
+    var date = new Date();
+    if(d==-1 || date.getTime() - d >= 400) {
+      console.log("Scroll !");
+      console.log(date.getTime());
+      d = date.getTime();
+    } else {
+      d = date.getTime();
+    }
+  });
+  /******************************************************************/
 }
 
 /*************** SOFT TOOLTIPS ***************/

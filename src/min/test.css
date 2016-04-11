@@ -490,7 +490,7 @@ caption {
 /***** CODE *****/
 code {
   background-color: #d9e6f8;
-  font-family: "Source Code Pro", "Courier New", "monospace";
+  font-family: "Courier New", "monospace";
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
@@ -1343,8 +1343,9 @@ nav .toggle::after {
   font-size: 32px;
   line-height: 50px;
   text-align: center;
-  width: 100%;
+  width: 50px;
   display: block;
+  margin-left: calc(50% - 25px);
   -webkit-transition: transform 0.25s;
   -moz-transition: transform 0.25s;
   -o-transition: transform 0.25s;
@@ -1665,6 +1666,10 @@ nav.aside .submenu .dropdown a {
   width: 100%;
   display: block;
   color: #1c509c;
+  border-left: 2px solid #ecf0f1;
+  border-color: transparent;
+  line-height: 1.2;
+  box-sizing: border-box;
 }
 nav.aside a:hover,
 nav.aside .category a:hover,
@@ -1674,11 +1679,15 @@ nav.aside .submenu .dropdown a:hover {
 }
 nav.aside a,
 nav.aside .submenu :first-child {
-  padding: 0.2em 0.4em;
+  padding: 0 0.2em;
+  margin: 0.4em 0;
 }
 nav.aside .category a,
 nav.aside .submenu .dropdown a {
-  padding: 0.2em 1em;
+  width: calc(100% - 1em);
+  margin: 0.3em 0;
+  margin-left: 1em;
+  padding: 0 0.4em;
   font-size: 90%;
 }
 nav.aside .submenu,
@@ -1699,6 +1708,12 @@ nav.aside .submenu .dropdown {
 }
 nav.aside .submenu.active .dropdown {
   max-height: 800px;
+}
+nav.aside a.current,
+nav.aside .category a.current,
+nav.aside .submenu :first-child.current,
+nav.aside .submenu .dropdown a.current {
+  border-color: #2c72d9;
 }
 /*
 ********************************************************************************
