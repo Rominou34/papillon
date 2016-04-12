@@ -30,27 +30,10 @@ var soft = {
     var softpopup = document.createElement("div");
     softpopup.className = "soft-popup ";
 
-    // Getting the corresponding color
-    var color = null;
-    switch(type) {
-      case "success":
-        color = "green"; break;
-      case "info":
-        color = "blue"; break;
-      case "warning":
-        color = "yellow"; break;
-      case "alert":
-        color = "red"; break;
-    }
 
     // Adding the text inside the element
-    if(color !== null) {
-      softpopup.innerHTML = "<span>" + header + "</span>"+
-      "<div><p>" + msg + "</p></div><button class=\""+color+"\">Hide</button>";
-    } else {
-      softpopup.innerHTML = "<span>" + header + "</span>"+
-      "<div><p>" + msg + "</p></div><button>Hide</button>";
-    }
+    softpopup.innerHTML = "<span>" + header + "</span>"+
+    "<div><p>" + msg + "</p></div><button class=\""+type+"\">Hide</button>";
 
     try {
       softpopup.classList.add(type);
