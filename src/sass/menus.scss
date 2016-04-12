@@ -52,7 +52,7 @@ nav .toggle::after {
   text-align: center;
   width: 50px;
   display: block;
-  margin-left: ~"calc(50% - 25px)";
+  margin-left: calc(50% - 25px);
   -webkit-transition: transform 0.25s;
   -moz-transition: transform 0.25s;
   -o-transition: transform 0.25s;
@@ -70,8 +70,8 @@ nav.top .links > a:visited {
   -webkit-flex: 1;
   flex: 1;
   text-align: center;
-  color: @white-light;
-  background-color: @primary-color-darker;
+  color: $white-light;
+  background-color: $primary-color-darker;
   z-index: 3;
 }
 
@@ -82,7 +82,7 @@ nav.top .links > .submenu span {
 
 nav.top .links > :hover,
 nav.top .links > a:visited:hover {
-  background-color: @primary-color-dark;
+  background-color: $primary-color-dark;
   cursor: pointer;
 }
 
@@ -91,7 +91,7 @@ nav.top .links > a:visited:hover {
 */
 
 nav.top .submenu.active {
-  background-color: @primary-color-dark;
+  background-color: $primary-color-dark;
 }
 
 nav.top .submenu {
@@ -113,14 +113,14 @@ nav.top .submenu span::before {
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
   transition: color 0.2s;
-  content: '▼';
+  content: '\25BC';
   display: block;
   position: absolute;
   left: 10%;
-  color: @white-light;
+  color: $white-light;
 }
 nav.top .submenu:hover::before {
-  color: @white-light;
+  color: $white-light;
 }
 
 nav.top .submenu.active::before {
@@ -138,7 +138,7 @@ nav.top .submenu.active :not(.dropdown) {
 nav.top .submenu .dropdown {
   display: block;
   position: absolute;
-  top: ~"calc(@{line-height} * @{font-size-default} + 1em)";
+  top: calc(#{$line-height} * #{$font-size-default} + 1em);
   width: 100%;
   max-height: 0;
   -webkit-transition: max-height 0.4s ease;
@@ -157,8 +157,8 @@ nav.top .submenu .dropdown div,
 nav.top .submenu .dropdown span {
   display: block;
   width: 100%;
-  background-color: @primary-color-dark;
-  color: @white-light;
+  background-color: $primary-color-dark;
+  color: $white-light;
   -webkit-transition: padding 0.4s;
   -moz-transition: padding 0.4s;
   -o-transition: padding 0.4s;
@@ -166,7 +166,7 @@ nav.top .submenu .dropdown span {
 }
 
 nav.top .submenu .dropdown :not(.category):hover {
-  background-color: @primary-color-darker;
+  background-color: $primary-color-darker;
 }
 
 /*
@@ -176,7 +176,7 @@ nav.top .submenu .dropdown :not(.category):hover {
 nav.top .submenu .dropdown .category {
   padding: 0.4em 1em;
   text-align: left;
-  color: @grey-default;
+  color: $grey-default;
 }
 
 nav.top .submenu .dropdown .category:hover {
@@ -200,8 +200,8 @@ nav.top .submenu .dropdown .category::before {
 * SIDE MENU BODY
 */
 body.navside {
-  margin-left: @navside-width;
-  width: ~"calc(100% - @{navside-width})";
+  margin-left: $navside-width;
+  width: calc(100% - #{$navside-width});
 }
 
 nav.side {
@@ -212,13 +212,13 @@ nav.side {
   z-index: 3;
   -webkit-flex-direction: column;
   flex-direction: column;
-  width: @navside-width;
+  width: $navside-width;
   overflow: hidden;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
-  background-color: @navside-header-color;
+  background-color: $navside-header-color;
 }
 
 nav.side div,
@@ -233,21 +233,21 @@ nav.side input {
 */
 nav.side .header {
   width: 100%;
-  background-color: @navside-header-color;
-  height: @navside-header-height;
-  color: @white-default;
+  background-color: $navside-header-color;
+  height: $navside-header-height;
+  color: $white-default;
   width: 100%;
   text-align: center;
   padding: 0.4em;
 }
 
 nav.side .header * {
-  color: @white-default;
+  color: $white-default;
 }
 
 nav.side .header input {
-  background-color: @white-default;
-  border: 1px solid @black-lighter;
+  background-color: $white-default;
+  border: 1px solid $black-lighter;
   font-size: 16px;
   line-height: 20px;
   border-radius: 10px;
@@ -265,8 +265,8 @@ nav.side .toggle {
 */
 nav.side .links {
   display: block;
-  height: ~"calc(100vh - @{navside-header-height} - @{navside-footer-height})";
-  background-color: @black-light;
+  height: calc(100vh - #{$navside-header-height} - #{$navside-footer-height});
+  background-color: $black-light;
   overflow: hidden;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
@@ -281,7 +281,7 @@ nav.side .links .category > a,
 nav.side .links .category > :visited,
 nav.side .links .submenu .dropdown > a,
 nav.side .links .submenu .dropdown > :visited {
-  color: @grey-lighter;
+  color: $grey-lighter;
   padding: 0 0.6em;
   display: block;
   width: 100%;
@@ -298,7 +298,7 @@ nav.side .links > :not(.category):hover,
 nav.side .links .category > :not(span):hover,
 nav.side .links .submenu.active :first-child,
 nav.side .links .submenu.active .dropdown {
-  background-color: @black-lighter;
+  background-color: $black-lighter;
 }
 
 /*
@@ -326,7 +326,7 @@ nav.side .links .submenu .dropdown {
 
 nav.side .links .submenu.active .dropdown {
   max-height: 800px;
-  border-bottom: 2px solid @grey-default;
+  border-bottom: 2px solid $grey-default;
 }
 
 nav.side .links .submenu > span {
@@ -338,7 +338,7 @@ nav.side .links .submenu > span {
 
 nav.side .links .submenu > span::before {
   content: '+';
-  border: 1px solid @white-default;
+  border: 1px solid $white-default;
   line-height: 1;
   width: 16px;
   display: inline-block;
@@ -349,8 +349,8 @@ nav.side .links .submenu > span::before {
 
 nav.side .links .submenu.active > span::before {
   content: '-';
-  background-color: @white-default;
-  color: @black-default;
+  background-color: $white-default;
+  color: $black-default;
 }
 
 nav.side .links .submenu .dropdown > a {
@@ -360,7 +360,7 @@ nav.side .links .submenu .dropdown > a {
 }
 
 nav.side .links .submenu .dropdown > :hover {
-  background-color: @black-light;
+  background-color: $black-light;
 }
 
 /*
@@ -373,20 +373,20 @@ nav.side .links .category {
 }
 
 nav.side .links .category > span {
-  color: @grey-dark;
+  color: $grey-dark;
   font-size: 90%;
   padding: 0.4em 0.6em;
 }
 
 nav.side .links .category > a {
-  font-size: @font-size-default;
-  border-left: 2px solid @primary-color;
+  font-size: $font-size-default;
+  border-left: 2px solid $primary-color;
   padding-left: 1.2em;
 }
 
 nav.side .links .category > div {
-  font-size: @font-size-default;
-  border-left: 2px solid @primary-color;
+  font-size: $font-size-default;
+  border-left: 2px solid $primary-color;
 }
 
 /*
@@ -397,11 +397,11 @@ nav.side .footer {
   width: 100%;
   margin: 0;
   padding: 8px;
-  height: @navside-footer-height;
-  background-color: @navside-footer-color;
+  height: $navside-footer-height;
+  background-color: $navside-footer-color;
   font-size: 18px;
   text-align: center;
-  color: @white-default;
+  color: $white-default;
   overflow: hidden;
 }
 
@@ -424,8 +424,8 @@ nav.aside .submenu :first-child,
 nav.aside .submenu .dropdown a {
   width: 100%;
   display: block;
-  color: @primary-color-dark;
-  border-left: 2px solid @bg-color-body;
+  color: $primary-color-dark;
+  border-left: 2px solid $bg-color-body;
   border-color: transparent;
   line-height: 1.2;
   box-sizing: border-box;
@@ -434,7 +434,7 @@ nav.aside .submenu .dropdown a {
 nav.aside a:hover,
 nav.aside .submenu :first-child:hover,
 nav.aside .submenu .dropdown a:hover {
-  color: @primary-color-light;
+  color: $primary-color-light;
 }
 
 nav.aside a,
@@ -444,7 +444,7 @@ nav.aside .submenu :first-child {
 }
 
 nav.aside .submenu .dropdown a {
-  width: ~"calc(100% - 1em)";
+  width: calc(100% - 1em);
   margin: 0.3em 0;
   margin-left: 1em;
   padding: 0 0.4em;
@@ -477,15 +477,15 @@ nav.aside .submenu.active .dropdown {
 nav.aside a.current,
 nav.aside .submenu :first-child.current,
 nav.aside .submenu .dropdown a.current {
-  border-color: @primary-color;
+  border-color: $primary-color;
 }
 
 nav.aside .category {
   font-size: 120%;
-  color: @black-lighter;
+  color: $black-lighter;
   font-style: bold;
   margin: 0.4em 0;
-  border-bottom: 1px dashed @grey-dark;
+  border-bottom: 1px dashed $grey-dark;
 }
 
 /*
@@ -496,7 +496,7 @@ nav.aside .category {
 
 @media (max-width: 1000px) {
   nav.side {
-    width: round(@navside-width/1.6);
+    width: round($navside-width / 1.6);
   }
 
   nav.side .header,
@@ -504,7 +504,7 @@ nav.aside .category {
   nav.side .links .submenu .dropdown > a,
   nav.side .links .category > div,
   nav.side .links .category > a {
-    font-size: @font-size-small;
+    font-size: $font-size-small;
   }
 
   nav.side .links .category > span {
@@ -512,8 +512,9 @@ nav.aside .category {
   }
 
   body.navside {
-    width: ~"calc(100% - "round(@navside-width/1.6)~")";
-    margin-left: round(@navside-width/1.6);
+    $navside-width-sm: round($navside-width / 1.6);
+    width: calc(100% - #{$navside-width-sm});
+    margin-left: $navside-width-sm;
   }
 }
 
@@ -526,7 +527,7 @@ nav.aside .category {
 @media (max-width: 600px) {
   nav.top {
     display: block;
-    background-color: @primary-color-darker;
+    background-color: $primary-color-darker;
   }
 
   nav.top .links {
@@ -554,7 +555,7 @@ nav.aside .category {
   }
 
   nav.top .links > :not(:last-child) {
-    border-bottom: 2px solid @primary-color;
+    border-bottom: 2px solid $primary-color;
   }
 
   nav.top .submenu .dropdown {
@@ -564,13 +565,13 @@ nav.aside .category {
 
   nav.top .submenu .dropdown > a,
   nav.top .submenu .dropdown > div {
-    background-color: @primary-color-dark;
+    background-color: $primary-color-dark;
     padding: 0.8em 0;
-    border-top: 1px solid @primary-color-darker;
+    border-top: 1px solid $primary-color-darker;
   }
 
   nav.top .submenu .dropdown > :hover {
-    background-color: @primary-color-darker;
+    background-color: $primary-color-darker;
   }
 
   nav.top .submenu .dropdown {
@@ -585,13 +586,13 @@ nav.aside .category {
     width: 80px;
     display: block;
     height: 50px;
-    margin-right: ~"calc(100% - 80px)";
-    background-color: @primary-color-dark;
+    margin-right: calc(100% - 80px);
+    background-color: $primary-color-dark;
   }
 
   nav.top .toggle.right {
     margin-right: 0;
-    margin-left: ~"calc(100% - 80px)";
+    margin-left: calc(100% - 80px);
     display: block;
   }
 
@@ -611,7 +612,7 @@ nav.aside .category {
   }
 
   nav.side .header {
-    font-size: @font-size-default;
+    font-size: $font-size-default;
   }
 
   nav.side .header,
@@ -621,7 +622,7 @@ nav.aside .category {
 
   nav.side:not(.active) .toggle {
     width: 50px;
-    background-color: @navside-header-color;
+    background-color: $navside-header-color;
     -webkit-border-radius: 0 0 4px 0;
     -moz-border-radius: 0 0 4px 0;
     border-radius: 0 0 4px 0;
@@ -669,7 +670,7 @@ nav.aside .category {
   }
 
   nav.side .links .category > span {
-    border-bottom: 2px solid @primary-color;
+    border-bottom: 2px solid $primary-color;
   }
 
   nav.side .links .category > a,

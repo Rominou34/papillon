@@ -101,12 +101,12 @@ div:not(.toggle).right::after {
 
 /* Sets a subtle background color */
 .bg-subtle {
-  background-color: @primary-color-subtle !important;
+  background-color: $primary-color-subtle !important;
 }
 
 /* Sets a border */
 .border {
-  border: 1px solid @primary-color-dark;
+  border: 1px solid $primary-color-dark;
 }
 
 /********** SMALL CORRECTIONS ********/

@@ -1,24 +1,24 @@
 /*************** CSS INITIALIZATION ***************/
 
 :root {
-  font-size: @font-size-default;
+  font-size: $font-size-default;
 }
 
 html {
   width: 100%;
   min-height: 100%;
-  background-color: @bg-color-html;
+  background-color: $bg-color-html;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  font-family: @font-default;
-  background-color: @bg-color-body;
-  line-height: @line-height;
-  color: @font-color-text;
-  width: @body-width;
+  font-family: $font-default;
+  background-color: $bg-color-body;
+  line-height: $line-height;
+  color: $font-color-text;
+  width: $body-width;
   min-height: 100%;
-  max-width: @body-width;
+  max-width: $body-width;
   display: block;
   margin: 0 auto;
   padding: 0;
@@ -49,15 +49,15 @@ html, p, div, article, form {
 /***** LINKS *****/
 
 a {
-  color: @font-color-link;
+  color: $font-color-link;
 }
 
 a:hover, a:visited:hover {
-  color: @font-color-link-h;
+  color: $font-color-link-h;
 }
 
 a:visited {
-  color: @font-color-link-v;
+  color: $font-color-link-v;
 }
 
 /***** ARTICLES *****/
@@ -73,9 +73,9 @@ aside {
   width: 100%;
   min-height: 400px;
   vertical-align: top;
-  max-width: @aside-width;
+  max-width: $aside-width;
   margin: auto;
-  background-color: @bg-color-aside;
+  background-color: $bg-color-aside;
 }
 
 /****
@@ -111,8 +111,8 @@ blockquote p {
 }
 
 blockquote footer {
-  font-size: @font-size-small;
-  color: @grey-default;
+  font-size: $font-size-small;
+  color: $grey-default;
   margin-top: 0.5em;
 }
 
@@ -141,14 +141,14 @@ caption {
 /***** CODE *****/
 
 code {
-  background-color: @bg-color-code;
-  font-family: @font-code;
+  background-color: $bg-color-code;
+  font-family: $font-code;
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   padding: 0 0.2em;
-  border: 1px solid @primary-color-lighter;
-  color: @primary-color-darker;
+  border: 1px solid $primary-color-lighter;
+  color: $primary-color-darker;
 }
 
 pre > code {
@@ -170,7 +170,7 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: @primary-color-lighter;
+  background-color: $primary-color-lighter;
   position: relative;
   top: -1.33em;
   font-size: 150%;
@@ -199,8 +199,8 @@ div {
 body > footer {
   width: 100%;
   padding: 2em 1em;
-  background-color: @bg-color-footer;
-  color: @font-color-footer;
+  background-color: $bg-color-footer;
+  color: $font-color-footer;
   text-align: center;
 }
 
@@ -212,18 +212,18 @@ body > footer {
 /***** HEADER *****/
 
 body > header {
-  font-size: @font-size-header;
-  font-family: @font-header;
-  color: @color-header;
-  background-color: @bg-color-header;
+  font-size: $font-size-header;
+  font-family: $font-header;
+  color: $color-header;
+  background-color: $bg-color-header;
   width: 100%;
   text-align: center;
 }
 
 body > header > small {
   font-size: 25%;
-  font-family: @font-title;
-  color: @white-dark;
+  font-family: $font-title;
+  color: $white-dark;
   display: block;
   padding-bottom: 2em;
 }
@@ -239,8 +239,8 @@ h6 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: @font-color-title;
-  font-family: @font-title;
+  color: $font-color-title;
+  font-family: $font-title;
   line-height: 2;
 }
 
@@ -250,7 +250,7 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-  color: @font-color-title-second;
+  color: $font-color-title-second;
   padding-left: 0;
   font-size: 60%;
 }
@@ -262,7 +262,7 @@ h4 a,
 h5 a,
 h6 a {
   position: relative;
-  color: @font-color-title !important;
+  color: $font-color-title !important;
   display: inline-block;
 }
 
@@ -273,7 +273,7 @@ h4 a::before,
 h5 a::before,
 h6 a::before {
   content: '#';
-  color: @primary-color-lighter;
+  color: $primary-color-lighter;
   position: absolute;
   left: -0.75em;
   line-height: 250%;
@@ -286,7 +286,7 @@ h3 a:hover::before,
 h4 a:hover::before,
 h5 a:hover::before,
 h6 a:hover::before {
-  color: @primary-color;
+  color: $primary-color;
 }
 
 h1 {
@@ -321,7 +321,7 @@ hr {
   display: block;
   margin: 2em auto;
   height: 3px;
-  background-color: @primary-color;
+  background-color: $primary-color;
 }
 
 
@@ -350,11 +350,11 @@ img:after {
 
   font-size: 16px;
   font-family: FontAwesome;
-  color: @grey-default;
+  color: $grey-default;
 
   display: block;
   position: absolute;
-  border: 2px dashed @grey-light;
+  border: 2px dashed $grey-light;
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
@@ -363,7 +363,7 @@ img:after {
   left: 0;
   width: 100%;
   height: 4em;
-  background-color: @white-dark;
+  background-color: $white-dark;
   box-sizing: border-box;
 }
 
@@ -400,9 +400,9 @@ li {
 main {
   display: block;
   width: 100%;
-  max-width: @main-width;
+  max-width: $main-width;
   margin: 0 auto;
-  background-color: @bg-color-main;
+  background-color: $bg-color-main;
 }
 
 /********** PSEUDO SELECTORS **********/

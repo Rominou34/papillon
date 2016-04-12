@@ -7,10 +7,10 @@
 * Romain Arnaud - 2016
 */
 /*
-  ******************************************************************************
-  * FONTS
-  ******************************************************************************
-  */
+******************************************************************************
+* FONTS
+******************************************************************************
+*/
 /* basic text */
 /* basic text sans serif */
 /* basic text serif ? */
@@ -22,17 +22,17 @@
 /* Basic text */
 /* Header */
 /*
-  ******************************************************************************
-  * COLOR PALETTE
-  ******************************************************************************
-  */
+******************************************************************************
+* COLOR PALETTE
+******************************************************************************
+*/
 /*
-  * HOW TO USE
-  * - Define the default color each time ( @blue-default, @red-default, etc. )
-  * - The shades will be automatically calculated using lighten() and darken()
-  * - At the end, choose the colors of elements using the color palette
-  *   so you have an uniform color scheme
-  */
+* HOW TO USE
+* - Define the default color each time ( $blue-default, $red-default, etc. )
+* - The shades will be automatically calculated using lighten() and darken()
+* - At the end, choose the colors of elements using the color palette
+*   so you have an uniform color scheme
+*/
 /* WHITE */
 /* BASE */
 /* GREY */
@@ -47,16 +47,16 @@
 /* HEADER */
 /********** SIZES **********/
 /*
-  ******************************************************************************
-  * LAYOUT CONTROL
-  ******************************************************************************
-  */
+******************************************************************************
+* LAYOUT CONTROL
+******************************************************************************
+*/
 /*
-  ***** NAVIGATION *****
-  */
+***** NAVIGATION *****
+*/
 /*
-  ***** GRID LAYOUT *****
-  */
+***** GRID LAYOUT *****
+*/
 /* Container threshold sizes */
 /* We reset all the rules so it looks the same for all browsers */
 /*! sanitize.css v3.3.0 | CC0 1.0 Public Domain | github.com/10up/sanitize.css */
@@ -68,45 +68,43 @@ abbr[title] {
   text-decoration: underline;
   /* Chrome 48+, Edge 12+, Internet Explorer 11-, Safari 9+ */
   text-decoration: underline dotted;
-  /* Firefox 40+ */
-}
+  /* Firefox 40+ */ }
+
 audio:not([controls]) {
   display: none;
-  /* Chrome 44-, iOS 8+, Safari 9+ */
-}
+  /* Chrome 44-, iOS 8+, Safari 9+ */ }
+
 b,
 strong {
   font-weight: bolder;
-  /* Edge 12+, Safari 6.2+, and Chrome 18+ */
-}
+  /* Edge 12+, Safari 6.2+, and Chrome 18+ */ }
+
 button {
   -moz-appearance: button;
   -webkit-appearance: button;
   /* iOS 8+ */
   overflow: visible;
-  /* Internet Explorer 11- */
-}
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+  /* Internet Explorer 11- */ }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   /* Firefox 4+ */
   padding: 0;
-  /* Firefox 4+ */
-}
-button:-moz-focusring,
-input:-moz-focusring {
+  /* Firefox 4+ */ }
+
+button:-moz-focusring, input:-moz-focusring {
   outline: 1px dotted ButtonText;
-  /* Firefox 4+ */
-}
+  /* Firefox 4+ */ }
+
 button,
 select {
   text-transform: none;
-  /* Firefox 40+, Internet Explorer 11- */
-}
+  /* Firefox 40+, Internet Explorer 11- */ }
+
 details {
   display: block;
-  /* Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */
-}
+  /* Edge 12+, Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */ }
+
 html {
   -ms-overflow-style: -ms-autohiding-scrollbar;
   /* Edge 12+, Internet Explorer 11- */
@@ -114,109 +112,109 @@ html {
   /* All browsers without overlaying scrollbars */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  /* iOS 8+, Windows Phone 8.1+ */
-}
+  /* iOS 8+, Windows Phone 8.1+ */ }
+
 hr {
   overflow: visible;
-  /* Internet Explorer 11-, Edge 12+ */
-}
+  /* Internet Explorer 11-, Edge 12+ */ }
+
 input {
-  -webkit-border-radius: 0 /* iOS 8+ */;
-}
+  -webkit-border-radius: 0; }
+
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -moz-appearance: button;
   -webkit-appearance: button;
-  /* iOS 8+ */
-}
+  /* iOS 8+ */ }
+
 input[type="number"] {
   width: auto;
-  /* Firefox 36+ */
-}
+  /* Firefox 36+ */ }
+
 input[type="search"] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
-  /* Chrome 45+, Safari 9+ */
-}
+  /* Chrome 45+, Safari 9+ */ }
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -moz-appearance: none;
   -webkit-appearance: none;
-  /* Chrome 45+, Safari 9+ */
-}
+  /* Chrome 45+, Safari 9+ */ }
+
 main {
   display: block;
-  /* Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+ */
-}
+  /* Android 4.3-, Internet Explorer 11-, Windows Phone 8.1+ */ }
+
 pre {
   overflow: auto;
-  /* Internet Explorer 11- */
-}
+  /* Internet Explorer 11- */ }
+
 progress {
   display: inline-block;
-  /* Internet Explorer 11-, Windows Phone 8.1+ */
-}
+  /* Internet Explorer 11-, Windows Phone 8.1+ */ }
+
 summary {
   display: block;
-  /* Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */
-}
+  /* Firefox 40+, Internet Explorer 11-, Windows Phone 8.1+ */ }
+
 svg:not(:root) {
   overflow: hidden;
-  /* Internet Explorer 11- */
-}
+  /* Internet Explorer 11- */ }
+
 template {
   display: none;
-  /* Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+ */
-}
+  /* Android 4.3-, Internet Explorer 11-, iOS 7-, Safari 7-, Windows Phone 8.1+ */ }
+
 textarea {
   overflow: auto;
-  /* Edge 12+, Internet Explorer 11- */
-}
+  /* Edge 12+, Internet Explorer 11- */ }
+
 [hidden] {
   display: none;
-  /* Internet Explorer 10- */
-}
+  /* Internet Explorer 10- */ }
+
 /*
  * Universal inheritance
  */
 *,
 :before,
 :after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
+
 * {
   font-size: inherit;
-  line-height: inherit;
-}
+  line-height: inherit; }
+
 :before,
 :after {
   text-decoration: inherit;
-  vertical-align: inherit;
-}
+  vertical-align: inherit; }
+
 button,
 input,
 select,
 textarea {
   font-family: inherit;
   font-style: inherit;
-  font-weight: inherit;
-}
+  font-weight: inherit; }
+
 /*
  * Opinionated defaults
  */
 /* specify the margin and padding of all elements */
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
+
 /* specify the border style and width of all elements */
 *,
 :before,
 :after {
   border-style: solid;
-  border-width: 0;
-}
+  border-width: 0; }
+
 /* remove the tapping delay from clickable elements */
 a,
 area,
@@ -227,66 +225,66 @@ select,
 textarea,
 [tabindex] {
   -ms-touch-action: manipulation;
-  touch-action: manipulation;
-}
+  touch-action: manipulation; }
+
 /* specify the standard appearance of selects */
 select {
   -moz-appearance: none;
   /* Firefox 40+ */
-  -webkit-appearance: none /* Chrome 45+ */;
-}
+  -webkit-appearance: none; }
+
 select::-ms-expand {
   display: none;
-  /* Edge 12+, Internet Explorer 11- */
-}
+  /* Edge 12+, Internet Explorer 11- */ }
+
 select::-ms-value {
   color: currentColor;
-  /* Edge 12+, Internet Explorer 11- */
-}
+  /* Edge 12+, Internet Explorer 11- */ }
+
 /* use current current as the default fill of svg elements */
 svg {
-  fill: currentColor;
-}
+  fill: currentColor; }
+
 /* specify the progress cursor of updating elements */
 [aria-busy="true"] {
-  cursor: progress;
-}
+  cursor: progress; }
+
 /* specify the pointer cursor of trigger elements */
 [aria-controls] {
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 /* specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
 [aria-disabled] {
-  cursor: default;
-}
+  cursor: default; }
+
 /* specify the style of visually hidden yet accessible elements */
 [hidden][aria-hidden="false"] {
   clip: rect(0 0 0 0);
   display: inherit;
-  position: absolute;
-}
+  position: absolute; }
+
 [hidden][aria-hidden="false"]:focus {
-  clip: auto;
-}
+  clip: auto; }
+
 /*
  * Configurable defaults
  */
 /* specify the background repeat of all elements */
 * {
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
+
 /* specify the root styles of the document */
 :root {
   background-color: #ffffff;
   box-sizing: border-box;
   color: #000000;
   /*cursor: default;*/
-  font: 100%/1.5 sans-serif;
-}
+  font: 100%/1.5 sans-serif; }
+
 /* specify the text decoration of anchors */
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
+
 /* specify the alignment of media elements */
 audio,
 canvas,
@@ -294,16 +292,16 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: middle;
-}
+  vertical-align: middle; }
+
 /* specify the coloring of form elements */
 button,
 input,
 select,
 textarea {
   background-color: transparent;
-  color: inherit;
-}
+  color: inherit; }
+
 /* specify the minimum height of form elements */
 button,
 [type="button"],
@@ -324,62 +322,58 @@ button,
 [type="week"],
 select,
 textarea {
-  min-height: 1.5em;
-}
+  min-height: 1.5em; }
+
 /* specify the font family of code elements */
 code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
-}
+  font-family: monospace, monospace; }
+
 /* specify the list style of nav lists */
 nav ol,
 nav ul {
-  list-style: none;
-}
+  list-style: none; }
+
 /* specify the font size of small elements */
 small {
-  font-size: 75%;
-}
+  font-size: 75%; }
+
 /* specify the border styling of tables */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
+
 /* specify the resizability of textareas */
 textarea {
-  resize: vertical;
-}
+  resize: vertical; }
+
 /* specify the background color, font color, and drop shadow of text selections */
 ::-moz-selection {
   background-color: #1c5ddd;
   /*#b3d4fc; /* required when declaring ::selection */
   color: #ffffff;
-  text-shadow: none;
-}
+  text-shadow: none; }
+
 ::selection {
   background-color: #1c5ddd;
   /* required when declaring ::selection */
   color: #ffffff;
-  text-shadow: none;
-}
+  text-shadow: none; }
+
 /* Then we initialize the default values ( must be imported first so they can be
 overridden ) */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
 /*************** CSS INITIALIZATION ***************/
 :root {
-  font-size: 16px;
-}
+  font-size: 16px; }
+
 html {
   width: 100%;
   min-height: 100%;
   background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
+
 body {
   font-family: Arial, "sans-serif";
   background-color: #ecf0f1;
@@ -394,41 +388,36 @@ body {
   -webkit-transition: all 0.25s;
   -moz-transition: all 0.25s;
   -o-transition: all 0.25s;
-  transition: all 0.25s;
-}
-html,
-p,
-div,
-article,
-form {
+  transition: all 0.25s; }
+
+html, p, div, article, form {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 /*************** ELEMENT DEFAULT RULES ***************/
 /****
 * A *
 ****/
 /***** LINKS *****/
 a {
-  color: #296dd1;
-}
-a:hover,
-a:visited:hover {
-  color: #6698e1;
-}
+  color: #296dd1; }
+
+a:hover, a:visited:hover {
+  color: #6698e1; }
+
 a:visited {
-  color: #73289c;
-}
+  color: #73289c; }
+
 /***** ARTICLES *****/
 article {
-  display: block;
-}
+  display: block; }
+
 /***** ASIDE *****/
 aside {
   display: inline-block;
@@ -437,8 +426,8 @@ aside {
   vertical-align: top;
   max-width: 200px;
   margin: auto;
-  background-color: #f5d0cf;
-}
+  background-color: #f5d0cf; }
+
 /****
 * B *
 ****/
@@ -450,54 +439,54 @@ blockquote {
   width: auto;
   display: inline-block;
   margin: 0.8em;
-  border: 1px solid #ddd;
-}
+  border: 1px solid #ddd; }
+
 blockquote:not(.reverse) {
   border-left: 4px solid #bbb;
   text-align: left;
-  float: left;
-}
+  float: left; }
+
 blockquote.reverse {
   border-right: 4px solid #bbb;
   text-align: right;
-  float: right;
-}
+  float: right; }
+
 blockquote p {
-  display: inline;
-}
+  display: inline; }
+
 blockquote footer {
-  font-size: calc(12.8px);
+  font-size: calc(16px * 0.8);
   color: #9d9d9d;
-  margin-top: 0.5em;
-}
+  margin-top: 0.5em; }
+
 blockquote cite {
-  font-style: italic;
-}
+  font-style: italic; }
+
 blockquote:not(.reverse) footer::before {
-  content: '- ';
-}
+  content: '- '; }
+
 blockquote.reverse footer::after {
-  content: ' -';
-}
+  content: ' -'; }
+
 /****
 * C *
 ****/
 /***** CAPTION *****/
 caption {
   width: 100%;
-  text-align: center;
-}
+  text-align: center; }
+
 /***** CODE *****/
 code {
-  background-color: #d0dff6;
+  background-color: #f2f6fd;
   font-family: "Source Code Pro", "Courier New", "monospace";
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   padding: 0 0.2em;
   border: 1px solid #90b4e9;
-  color: #143566;
-}
+  color: #143566; }
+
 pre > code {
   display: block;
   margin: 0.4em 1em;
@@ -507,11 +496,11 @@ pre > code {
   border-width: 1px 1px 1px 3px;
   word-wrap: break-word;
   max-width: 100%;
-  white-space: pre-wrap;
-}
+  white-space: pre-wrap; }
+
 pre > code[data-lang] {
-  padding-top: 2em;
-}
+  padding-top: 2em; }
+
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
@@ -524,15 +513,15 @@ pre > code[data-lang]::before {
   -moz-border-radius: 0 0 0.5em 0;
   border-radius: 0 0 0.5em 0;
   left: -0.5em;
-  width: auto;
-}
+  width: auto; }
+
 /****
 * D *
 ****/
 /***** DIV *****/
 div {
-  display: block;
-}
+  display: block; }
+
 /****
 * F *
 ****/
@@ -541,8 +530,8 @@ body > footer {
   padding: 2em 1em;
   background-color: #0e0e0e;
   color: #cfd9db;
-  text-align: center;
-}
+  text-align: center; }
+
 /****
 * H *
 ****/
@@ -553,15 +542,15 @@ body > header {
   color: #ecf0f1;
   background-color: #296dd1;
   width: 100%;
-  text-align: center;
-}
+  text-align: center; }
+
 body > header > small {
   font-size: 25%;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #cfd9db;
   display: block;
-  padding-bottom: 2em;
-}
+  padding-bottom: 2em; }
+
 /***** H1, H1, H2, H3, H4, H5, H6 *****/
 h1,
 h2,
@@ -573,9 +562,9 @@ h6 {
   padding: 0;
   box-sizing: border-box;
   color: #282828;
-  font-family: 'Source Sans Pro', sans-serif;
-  line-height: 2;
-}
+  font-family: "Source Sans Pro", sans-serif;
+  line-height: 2; }
+
 h1 small,
 h2 small,
 h3 small,
@@ -584,8 +573,8 @@ h5 small,
 h6 small {
   color: #9d9d9d;
   padding-left: 0;
-  font-size: 60%;
-}
+  font-size: 60%; }
+
 h1 a,
 h2 a,
 h3 a,
@@ -594,8 +583,8 @@ h5 a,
 h6 a {
   position: relative;
   color: #282828 !important;
-  display: inline-block;
-}
+  display: inline-block; }
+
 h1 a::before,
 h2 a::before,
 h3 a::before,
@@ -607,34 +596,34 @@ h6 a::before {
   position: absolute;
   left: -0.75em;
   line-height: 250%;
-  font-size: 80%;
-}
+  font-size: 80%; }
+
 h1 a:hover::before,
 h2 a:hover::before,
 h3 a:hover::before,
 h4 a:hover::before,
 h5 a:hover::before,
 h6 a:hover::before {
-  color: #296dd1;
-}
+  color: #296dd1; }
+
 h1 {
-  font-size: 42px;
-}
+  font-size: 42px; }
+
 h2 {
-  font-size: 36px;
-}
+  font-size: 36px; }
+
 h3 {
-  font-size: 30px;
-}
+  font-size: 30px; }
+
 h4 {
-  font-size: 24px;
-}
+  font-size: 24px; }
+
 h5 {
-  font-size: 18px;
-}
+  font-size: 18px; }
+
 h6 {
-  font-size: 14px;
-}
+  font-size: 14px; }
+
 /***** HR *****/
 hr {
   width: 80%;
@@ -642,8 +631,8 @@ hr {
   display: block;
   margin: 2em auto;
   height: 3px;
-  background-color: #296dd1;
-}
+  background-color: #296dd1; }
+
 /****
 * I *
 ****/
@@ -658,10 +647,10 @@ img {
   position: relative;
   min-height: 4em;
   box-sizing: border-box;
-  margin: 10px;
-}
+  margin: 10px; }
+
 img:after {
-  content: "Problem loading \" " attr(alt) " \"";
+  content: 'Problem loading " ' attr(alt) ' "';
   font-size: 16px;
   font-family: FontAwesome;
   color: #9d9d9d;
@@ -677,8 +666,8 @@ img:after {
   width: 100%;
   height: 4em;
   background-color: #cfd9db;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 /****
 * K *
 ****/
@@ -691,34 +680,30 @@ kbd {
   border-width: 1px 1px 3px 1px;
   border-style: solid;
   border-color: #8b7b6e;
-  padding: 0 2px;
-}
+  padding: 0 2px; }
+
 /****
 * L *
 ****/
 /***** LIST *****/
 li {
   margin-left: 1em;
-  padding: 0.5em 0;
-}
+  padding: 0.5em 0; }
+
 /***** MAIN *****/
 main {
   display: block;
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  background-color: #ecf0f1;
-}
+  background-color: #ecf0f1; }
+
 /********** PSEUDO SELECTORS **********/
 :target {
   outline: 0;
-  animation: color-fadeout 1s 0s linear;
-}
+  animation: color-fadeout 1s 0s linear; }
+
 /* We import the base classes */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
 /********** CONTAINERS **********/
 .container,
 .container-sm,
@@ -727,17 +712,17 @@ main {
   display: block;
   width: 100%;
   margin: 1em auto;
-  padding: 0.5em;
-}
+  padding: 0.5em; }
+
 .container-sm {
-  max-width: 730px;
-}
+  max-width: 730px; }
+
 .container-md {
-  max-width: 940px;
-}
+  max-width: 940px; }
+
 .container-lg {
-  max-width: 1180px;
-}
+  max-width: 1180px; }
+
 /*
 * The following classes are classes that are never used by default, but you can
 * use them to force the behaviour of an element ( for example if you want to
@@ -746,8 +731,8 @@ main {
 /********** TITLE **********/
 /* Titles of a section with special style added */
 .section-header {
-  position: relative;
-}
+  position: relative; }
+
 .section-header::before {
   content: '';
   display: block;
@@ -756,8 +741,8 @@ main {
   height: 60%;
   top: 20%;
   left: -0.5em;
-  border-right: 6px solid #296dd1;
-}
+  border-right: 6px solid #296dd1; }
+
 /********** ELEMENTS ASPECT **********/
 /* Change the apsect of a container to showcase something inside */
 .showcase {
@@ -768,101 +753,86 @@ main {
   box-shadow: 0 0 4px 0 #595959 inset;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
-}
+  border-radius: 4px; }
+
 /* We import the fonticons-related classes */
 /***** GLOBAL RULES *****/
 a[target=_blank]::after {
   font-family: FontAwesome;
   content: "\f08e";
-  padding-left: 0.5em;
-}
+  padding-left: 0.5em; }
+
 /* We import the files for the tables */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
 table {
-  margin: 0.5em;
-}
+  margin: 0.5em; }
+
 table td {
-  padding: 0.2em;
-}
+  padding: 0.2em; }
+
 /******** CLASSIC DESIGN ********/
-thead,
-tfoot {
+thead, tfoot {
   background-color: #c5c5c5;
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 tbody {
-  background-color: #fff;
-}
+  background-color: #fff; }
+
 table {
-  border: 1px solid #858585;
-}
+  border: 1px solid #858585; }
+
 table > :not(:last-child),
 tbody > :not(:last-child) {
-  border-bottom: 1px solid #858585;
-}
+  border-bottom: 1px solid #858585; }
+
 /******** MINIMALISTIC DESIGN ********/
 table.min thead,
 table.min tbody,
 table.min tfoot {
   background-color: #777;
-  background-color: rgba(0, 0, 0, 0);
-}
+  background-color: transparent; }
+
 table.min,
 table.min thead,
 table.min tbody,
 table.min td,
 table.min tr,
 table.min tfoot {
-  border-width: 0;
-}
+  border-width: 0; }
+
 table.min thead {
-  border-bottom: 2px solid #8e8e8e;
-}
+  border-bottom: 2px solid #8e8e8e; }
+
 table.min > :last-child {
-  border-bottom: 2px solid #c5c5c5;
-}
+  border-bottom: 2px solid #c5c5c5; }
+
 table.min tfoot {
-  border-top: 1px solid #a4a4a4;
-}
+  border-top: 1px solid #a4a4a4; }
+
 /******** FLAT DESIGN ********/
 table.flat,
 table.flat * {
-  border-width: 0;
-}
+  border-width: 0; }
+
 /******** ALTERNATING ROWS ********/
 table.alt tbody > tr:nth-child(even) {
-  background: #ededed;
-}
+  background: #ededed; }
+
 table.alt tbody > tr:nth-child(odd) {
-  background: #fff;
-}
+  background: #fff; }
+
 /******** REACTIVE DESIGN ********/
 table.reactive :not(thead):not(tfoot) tr:hover {
-  background-color: #d0dff6;
-}
+  background-color: #d0dff6; }
+
 table.reactive :not(thead):not(tfoot) tr td:hover {
-  background-color: #90b4e9;
-}
+  background-color: #90b4e9; }
+
 /* We import the classes for the forms */
 /*
 * Soft CSS - The tweakable CSS framework
 * Romain Arnaud - 2016
 */
 /* We import the layout for grids and columns */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
-/* Change the values here
-* !!!
-* IMPORTANT: You also need to change them in the RESPONSIVE DESIGN section
-* ( Media queries don't work with CSS variables )
-* !!!
-*/
 .soft-row,
 .soft-col {
   display: -webkit-flex;
@@ -872,23 +842,22 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
   justify-content: space-between;
   padding: 0;
   -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
+  flex-wrap: wrap; }
+
 .soft-row,
 .soft-col,
 .soft-row div,
 .soft-col div {
   box-sizing: border-box;
-  text-align: inherit;
-}
+  text-align: inherit; }
+
 .soft-row {
-  width: 100%;
-}
-.soft-row,
-.soft-col {
+  width: 100%; }
+
+.soft-row, .soft-col {
   height: auto;
-  padding: 0;
-}
+  padding: 0; }
+
 /*
 .soft-col :first-child {
   margin-top: 0;
@@ -900,81 +869,81 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 .soft-col :not([class*="col"]):not(.soft-row),
 .soft-row :not([class*="col"]) {
   -webkit-flex: 1 0;
-  flex: 1 0;
-}
+  flex: 1 0; }
+
 [class*="container"] div:not(.soft-row):not(.soft-col) {
   padding: 0.5em;
-  margin: 10px;
-}
+  margin: 10px; }
+
 .col-1 {
-  width: calc(100% / 12 - 20px);
-}
+  width: calc(100% / 12 - 20px); }
+
 .col-2 {
-  width: calc(100% / 6 - 20px);
-}
+  width: calc(100% / 6 - 20px); }
+
 .col-3 {
-  width: calc(100% / 4 - 20px);
-}
+  width: calc(100% / 4 - 20px); }
+
 .col-4 {
-  width: calc(100% / 3 - 20px);
-}
+  width: calc(100% / 3 - 20px); }
+
 .col-5 {
-  width: calc(500% / 12 - 20px);
-}
+  width: calc(500% / 12 - 20px); }
+
 .col-6 {
-  width: calc(100% / 2 - 20px);
-}
+  width: calc(100% / 2 - 20px); }
+
 .col-7 {
-  width: calc(700% / 12 - 20px);
-}
+  width: calc(700% / 12 - 20px); }
+
 .col-8 {
-  width: calc(800% / 12 - 20px);
-}
+  width: calc(800% / 12 - 20px); }
+
 .col-9 {
-  width: calc(900% / 12 - 20px);
-}
+  width: calc(900% / 12 - 20px); }
+
 .col-10 {
-  width: calc(1000% / 12 - 20px);
-}
+  width: calc(1000% / 12 - 20px); }
+
 .col-11 {
-  width: calc(1100% / 12 - 20px);
-}
+  width: calc(1100% / 12 - 20px); }
+
 .col-12 {
-  width: 100%;
-}
+  width: 100%; }
+
 .col-offset-1 {
-  margin-left: calc(8.33333333%);
-}
+  margin-left: calc(100% / 12); }
+
 .col-offset-2 {
-  margin-left: calc(16.66666667%);
-}
+  margin-left: calc(100% / 6); }
+
 .col-offset-3 {
-  margin-left: calc(25%);
-}
+  margin-left: calc(100% / 4); }
+
 .col-offset-4 {
-  margin-left: calc(33.33333333%);
-}
+  margin-left: calc(100% / 3); }
+
 .col-offset-5 {
-  margin-left: calc(41.66666667%);
-}
+  margin-left: calc(500% / 12); }
+
 .col-offset-6 {
-  margin-left: calc(50%);
-}
+  margin-left: calc(100% / 2); }
+
 .col-offset-7 {
-  margin-left: calc(58.33333333%);
-}
+  margin-left: calc(700% / 12); }
+
 .col-offset-8 {
-  margin-left: calc(66.66666667%);
-}
+  margin-left: calc(800% / 12); }
+
 .col-offset-9 {
-  margin-left: calc(75%);
-}
+  margin-left: calc(900% / 12); }
+
 .col-offset-10 {
-  margin-left: calc(83.33333333%);
-}
+  margin-left: calc(1000% / 12); }
+
 .col-offset-11 {
-  margin-left: calc(91.66666667%);
-}
+  margin-left: calc(1100% / 12); }
+
 .space-1,
 .space-2,
 .space-3,
@@ -988,80 +957,70 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 .space-11 {
   padding: 0 !important;
   margin: 0 !important;
-  border: none !important;
-}
+  border: none !important; }
+
 .space-1 {
-  width: calc(100% / 12 - 20px);
-}
+  width: calc(100% / 12 - 20px); }
+
 .space-2 {
-  width: calc(100% / 6 - 20px);
-}
+  width: calc(100% / 6 - 20px); }
+
 .space-3 {
-  width: calc(100% / 4 - 20px);
-}
+  width: calc(100% / 4 - 20px); }
+
 .space-4 {
-  width: calc(100% / 3 - 20px);
-}
+  width: calc(100% / 3 - 20px); }
+
 .space-5 {
-  width: calc(500% / 12 - 20px);
-}
+  width: calc(500% / 12 - 20px); }
+
 .space-6 {
-  width: calc(100% / 2 - 20px);
-}
+  width: calc(100% / 2 - 20px); }
+
 .space-7 {
-  width: calc(700% / 12 - 20px);
-}
+  width: calc(700% / 12 - 20px); }
+
 .space-8 {
-  width: calc(800% / 12 - 20px);
-}
+  width: calc(800% / 12 - 20px); }
+
 .space-9 {
-  width: calc(900% / 12 - 20px);
-}
+  width: calc(900% / 12 - 20px); }
+
 .space-10 {
-  width: calc(1000% / 12 - 20px);
-}
+  width: calc(1000% / 12 - 20px); }
+
 .space-11 {
-  width: calc(1100% / 12 - 20px);
-}
+  width: calc(1100% / 12 - 20px); }
+
 /*************** RESPONSIVE DESIGN ***************/
 /* LARGE */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px (-20px)) {
   .stack-lg.soft-col > div,
   .stack-lg .soft-col:not(.stack-md):not(.stack-sm) > div {
-    width: calc(100% - 1em);
-  }
+    width: calc(100% - 1em); }
+
   .stack-lg.soft-col > :not(.soft-row):not(.soft-col) {
-    display: block;
-  }
-}
+    display: block; } }
 /* MEDIUM */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 960px (-20px)) {
   .stack-md.soft-col > div,
   .stack-md .soft-col:not(.stack-sm) > div {
-    width: calc(100% - 1em);
-  }
+    width: calc(100% - 1em); }
+
   .stack-md.soft-col > :not(.soft-row):not(.soft-col) {
-    display: block;
-  }
-}
+    display: block; } }
 /* SMALL */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 750px (-20px)) {
   .stack-sm.soft-col > div,
   .stack-sm .soft-col > div {
-    width: calc(100% - 1em);
-  }
+    width: calc(100% - 1em); }
+
   .stack-sm.soft-col > :not(.soft-row):not(.soft-col) {
-    display: block;
-  }
-}
+    display: block; } }
 /* We import the classes for the buttons */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
 button,
 .button {
   padding: 0.4em;
@@ -1075,8 +1034,8 @@ button,
   background-color: #fff;
   color: #282828;
   border: 2px solid #9d9d9d;
-  display: inline-block;
-}
+  display: inline-block; }
+
 button:hover,
 .button:hover,
 .button:visited:hover {
@@ -1086,32 +1045,32 @@ button:hover,
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
   border-color: #282828;
-  color: #0e0e0e;
-}
+  color: #0e0e0e; }
+
 .button:visited {
-  color: inherit;
-}
+  color: inherit; }
+
 button:disabled,
 .button.disabled {
   background-color: #b7b7b7;
-  color: #282828;
-}
+  color: #282828; }
+
 button:disabled:hover {
   background-color: #b7b7b7;
-  cursor: not-allowed;
-}
+  cursor: not-allowed; }
+
 button:focus,
 .button:focus {
   outline: 0;
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
   -o-transition: all 0.1s;
-  transition: all 0.1s;
-}
+  transition: all 0.1s; }
+
 button:not(:disabled):focus,
 .button:not(.disabled):focus {
-  border-color: #296dd1;
-}
+  border-color: #296dd1; }
+
 button:not(:disabled):not(.loading):active,
 .button:not(.disabled):not(.loading):active {
   outline: 0;
@@ -1119,28 +1078,28 @@ button:not(:disabled):not(.loading):active,
   -moz-transition: all 0.1s;
   -o-transition: all 0.1s;
   transition: all 0.1s;
-  box-shadow: 0 0 2px 1px #9d9d9d inset;
-}
+  box-shadow: 0 0 2px 1px #9d9d9d inset; }
+
 /********** MODIFIER CLASSES **********/
 button.large,
 .button.large {
   padding: 0.6em;
-  font-size: 20px;
-}
+  font-size: 20px; }
+
 button.loading,
 .button.loading {
   padding: 0.7em 2em;
   content: '';
-  pointer-events: none;
-}
+  pointer-events: none; }
+
 button.large.loading,
 .button.large.loading {
-  padding: 0.8em 2.5em;
-}
+  padding: 0.8em 2.5em; }
+
 button.loading:hover,
 .button.loading:hover {
-  cursor: wait;
-}
+  cursor: wait; }
+
 button.primary.loading::after,
 button.success.loading::after,
 button.info.loading::after,
@@ -1153,8 +1112,8 @@ button.black.loading::after,
 .button.danger.loading::after,
 .button.warning.loading::after,
 .button.black.loading::after {
-  border-color: transparent transparent white white !important;
-}
+  border-color: transparent transparent white white !important; }
+
 button.loading::after,
 .button.loading::after {
   animation: spin-right 500ms infinite linear;
@@ -1168,13 +1127,13 @@ button.loading::after,
   display: block;
   height: 16px;
   position: relative;
-  width: 16px;
-}
+  width: 16px; }
+
 button.large.loading::after,
 .button.large.loading::after {
-  height: calc(24px);
-  width: calc(24px);
-}
+  height: calc(16px * 1.5);
+  width: calc(16px * 1.5); }
+
 /*button.loading:after {
     left: 50%;
     margin-left: -8px;
@@ -1184,204 +1143,190 @@ button.large.loading::after,
     position: absolute !important;
 }*/
 /*************** COLORS ***************/
-button.success,
-button.info,
-button.danger,
-button.warning,
-button.black,
-button.primary,
-.button.success,
-.button.info,
-.button.danger,
-.button.warning,
-.button.black,
-.button.primary {
-  color: #ffffff;
-}
+button.success, button.info, button.danger, button.warning, button.black, button.primary,
+.button.success, .button.info, .button.danger, .button.warning, .button.black, .button.primary {
+  color: white; }
+
 .button.success:hover,
 .button.info:hover,
 .button.danger:hover,
 .button.warning:hover,
 .button.black:hover,
 .button.primary:hover {
-  color: #ffffff;
-}
+  color: white; }
+
 /*
 * PRIMARY
 */
 button.primary,
 .button.primary {
   background-color: #296dd1;
-  border-color: transparent;
-}
+  border-color: transparent; }
+
 button.primary:not(:disabled):not(.loading):hover,
 .button.primary:not(.disabled):not(.loading):hover {
-  background-color: #1c4c91;
-}
+  background-color: #1c4c91; }
+
 button.primary:not(:disabled):hover:focus,
 button.primary:not(:disabled):focus,
 .button.primary:not(.disabled):focus {
-  border-color: #143566;
-}
+  border-color: #143566; }
+
 button.primary:not(:disabled):not(.loading):active,
 .button.primary:not(.disabled):not(.loading):active {
   background-color: #143566;
-  box-shadow: 0 0 0 0 #000;
-}
+  box-shadow: 0 0 0 0 #000; }
+
 button.primary:disabled,
 .button.primary.disabled {
-  background-color: #6698e1;
-}
+  background-color: #6698e1; }
+
 /*
 * GREEN
 */
 button.success,
 .button.success {
   background-color: #36b147;
-  border-color: transparent;
-}
+  border-color: transparent; }
+
 button.success:not(:disabled):not(.loading):hover,
 .button.success:not(:disabled):not(.loading):hover {
-  background-color: #24762f;
-}
+  background-color: #24762f; }
+
 button.success:not(:disabled):hover:focus,
 button.success:not(:disabled):focus,
 .button.success:not(.disabled):focus {
-  border-color: #184f20;
-}
+  border-color: #184f20; }
+
 button.success:not(:disabled):not(.loading):active,
 .button.success:not(:disabled):not(.loading):active {
   background-color: #184f20;
-  box-shadow: 0 0 0 0 #000;
-}
+  box-shadow: 0 0 0 0 #000; }
+
 button.success:disabled,
 .button.success.disabled {
-  background-color: #64d073;
-}
+  background-color: #64d073; }
+
 /* BLUE */
 button.info,
 .button.info {
   background-color: #296dd1;
-  border-color: transparent;
-}
+  border-color: transparent; }
+
 button.info:not(:disabled):not(.loading):hover,
 .button.info:not(:disabled):not(.loading):hover {
-  background-color: #1c4c91;
-}
+  background-color: #1c4c91; }
+
 button.info:not(:disabled):hover:focus,
 button.info:not(:disabled):focus,
 .button.info:not(.disabled):focus {
-  border-color: #143566;
-}
+  border-color: #143566; }
+
 button.info:not(:disabled):not(.loading):active,
 .button.info:not(:disabled):not(.loading):active {
   background-color: #143566;
-  box-shadow: 0 0 0 0 #000;
-}
+  box-shadow: 0 0 0 0 #000; }
+
 button.info:disabled,
 .button.info.disabled {
-  background-color: #6698e1;
-}
+  background-color: #6698e1; }
+
 /* RED */
 button.danger,
 .button.danger {
   background-color: #cd2f2b;
-  border-color: transparent;
-}
+  border-color: transparent; }
+
 button.danger:not(:disabled):not(.loading):hover,
 .button.danger:not(:disabled):not(.loading):hover {
-  background-color: #8e211e;
-}
+  background-color: #8e211e; }
+
 button.danger:not(:disabled):hover:focus,
 button.danger:not(:disabled):focus,
 .button.danger:not(.disabled):focus {
-  border-color: #641715;
-}
+  border-color: #641715; }
+
 button.danger:not(:disabled):not(.loading):active,
 .button.danger:not(:disabled):not(.loading):active {
   background-color: #641715;
-  box-shadow: 0 0 0 0 #000;
-}
+  box-shadow: 0 0 0 0 #000; }
+
 button.danger:disabled,
 .button.danger.disabled {
-  background-color: #df6966;
-}
+  background-color: #df6966; }
+
 /* ORANGE */
 button.warning,
 .button.warning {
   background-color: #e7912c;
-  border-color: transparent;
-}
+  border-color: transparent; }
+
 button.warning:not(:disabled):not(.loading):hover,
 .button.warning:not(.disabled):not(.loading):hover {
-  background-color: #b26a14;
-}
+  background-color: #b26a14; }
+
 button.warning:not(:disabled):hover:focus,
 button.warning:not(:disabled):focus,
 .button.warning:not(.disabled):focus {
-  border-color: #844e0f;
-}
+  border-color: #844e0f; }
+
 button.warning:not(:disabled):not(.loading):active,
 .button.warning:not(:disabled):not(.loading):active {
   background-color: #844e0f;
-  box-shadow: 0 0 0 0 #000;
-}
+  box-shadow: 0 0 0 0 #000; }
+
 button.warning:disabled,
 .button.warning.disabled {
-  background-color: #efb571;
-}
+  background-color: #efb571; }
+
 /* BLACK */
 button.black,
 .button.black {
   background-color: #282828;
-  border-color: transparent;
-}
+  border-color: transparent; }
+
 button.black:not(:disabled):not(.loading):hover,
 .button.black:not(:disabled):not(.loading):hover {
-  background-color: #1b1b1b;
-}
+  background-color: #1b1b1b; }
+
 button.black:not(:disabled):hover:focus,
 button.black:not(:disabled):focus,
 .button.black:not(.disabled):focus {
-  border-color: #020202;
-}
+  border-color: #020202; }
+
 button.black:not(:disabled):not(.loading):active,
 .button.black:not(:disabled):not(.loading):active {
   background-color: #0e0e0e;
-  box-shadow: 0 0 0 0 #000;
-}
+  box-shadow: 0 0 0 0 #000; }
+
 button.black:disabled,
 .button.black.disabled {
-  background-color: #414141;
-}
+  background-color: #414141; }
+
 /* We import the classes for the menus */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
 nav {
   display: -webkit-flex;
   display: flex;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 nav div,
 nav a,
 nav span {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 /*
 ********************************************************************************
 * TOP NAVBAR
 ********************************************************************************
 */
 nav.top {
-  width: 100%;
-}
+  width: 100%; }
+
 nav.top.fixed {
   position: fixed;
   top: 0;
-  z-index: 5;
-}
+  z-index: 5; }
+
 nav.top .links {
   width: 100%;
   display: -webkit-flex;
@@ -1389,14 +1334,14 @@ nav.top .links {
   -webkit-transition: max-height 0.25s;
   -moz-transition: max-height 0.25s;
   -o-transition: max-height 0.25s;
-  transition: max-height 0.25s;
-}
+  transition: max-height 0.25s; }
+
 nav .toggle {
-  display: none;
-}
+  display: none; }
+
 nav .toggle:hover {
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 nav .toggle::after {
   content: '\2630';
   color: #fff;
@@ -1409,69 +1354,69 @@ nav .toggle::after {
   -webkit-transition: transform 0.25s;
   -moz-transition: transform 0.25s;
   -o-transition: transform 0.25s;
-  transition: transform 0.25s;
-}
+  transition: transform 0.25s; }
+
 nav .toggle.cross::after {
   content: '\2716';
-  transform: rotate(90deg);
-}
+  transform: rotate(90deg); }
+
 nav.top .links > a,
 nav.top .links > div,
 nav.top .links > a:visited {
   -webkit-flex: 1;
   flex: 1;
   text-align: center;
-  color: #ffffff;
+  color: white;
   background-color: #143566;
-  z-index: 3;
-}
+  z-index: 3; }
+
 nav.top .links > :not(.submenu),
 nav.top .links > .submenu span {
-  padding: 0.5em 0;
-}
+  padding: 0.5em 0; }
+
 nav.top .links > :hover,
 nav.top .links > a:visited:hover {
   background-color: #1c4c91;
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 /*
 * TOP NAVBAR SUBMENU
 */
 nav.top .submenu.active {
-  background-color: #1c4c91;
-}
+  background-color: #1c4c91; }
+
 nav.top .submenu {
   position: relative;
   -webkit-transition: background-color 0.1s, padding-bottom 0.4s;
   -moz-transition: background-color 0.1s, padding-bottom 0.4s;
   -o-transition: background-color 0.1s, padding-bottom 0.4s;
-  transition: background-color 0.1s, padding-bottom 0.4s;
-}
+  transition: background-color 0.1s, padding-bottom 0.4s; }
+
 nav.top .submenu span {
   height: 100%;
   width: 100%;
-  display: block;
-}
+  display: block; }
+
 nav.top .submenu span::before {
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -o-transition: color 0.2s;
   transition: color 0.2s;
-  content: '▼';
+  content: '\25BC';
   display: block;
   position: absolute;
   left: 10%;
-  color: #ffffff;
-}
+  color: white; }
+
 nav.top .submenu:hover::before {
-  color: #ffffff;
-}
+  color: white; }
+
 nav.top .submenu.active::before {
-  color: transparent;
-}
+  color: transparent; }
+
 nav.top .submenu.active :not(.dropdown) {
-  padding: 0.5em 0;
-}
+  padding: 0.5em 0; }
+
 /*
 * TOP NAVBAR SUBMENU DROPDOWN
 */
@@ -1485,42 +1430,42 @@ nav.top .submenu .dropdown {
   -moz-transition: max-height 0.4s ease;
   -o-transition: max-height 0.4s ease;
   transition: max-height 0.4s ease;
-  overflow: hidden;
-}
+  overflow: hidden; }
+
 nav.top .submenu.active .dropdown {
-  max-height: 800px;
-}
+  max-height: 800px; }
+
 nav.top .submenu .dropdown a,
 nav.top .submenu .dropdown div,
 nav.top .submenu .dropdown span {
   display: block;
   width: 100%;
   background-color: #1c4c91;
-  color: #ffffff;
+  color: white;
   -webkit-transition: padding 0.4s;
   -moz-transition: padding 0.4s;
   -o-transition: padding 0.4s;
-  transition: padding 0.4s;
-}
+  transition: padding 0.4s; }
+
 nav.top .submenu .dropdown :not(.category):hover {
-  background-color: #143566;
-}
+  background-color: #143566; }
+
 /*
 * TOP NAVBAR SUBMENU CATEGORY
 */
 nav.top .submenu .dropdown .category {
   padding: 0.4em 1em;
   text-align: left;
-  color: #9d9d9d;
-}
+  color: #9d9d9d; }
+
 nav.top .submenu .dropdown .category:hover {
-  cursor: default;
-}
+  cursor: default; }
+
 nav.top .submenu .dropdown .category::before {
   content: '';
   width: 0;
-  height: 0;
-}
+  height: 0; }
+
 /*
 ********************************************************************************
 * SIDE MENU
@@ -1531,8 +1476,8 @@ nav.top .submenu .dropdown .category::before {
 */
 body.navside {
   margin-left: 240px;
-  width: calc(100% - 240px);
-}
+  width: calc(100% - 240px); }
+
 nav.side {
   position: fixed;
   left: 0;
@@ -1547,28 +1492,29 @@ nav.side {
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
-  background-color: #1c4c91;
-}
+  background-color: #1c4c91; }
+
 nav.side div,
 nav.side a,
 nav.side span,
 nav.side input {
-  z-index: 3;
-}
+  z-index: 3; }
+
 /*
 * SIDE MENU HEADER
 */
 nav.side .header {
+  width: 100%;
   background-color: #1c4c91;
   height: 150px;
   color: #ecf0f1;
   width: 100%;
   text-align: center;
-  padding: 0.4em;
-}
+  padding: 0.4em; }
+
 nav.side .header * {
-  color: #ecf0f1;
-}
+  color: #ecf0f1; }
+
 nav.side .header input {
   background-color: #ecf0f1;
   border: 1px solid #282828;
@@ -1576,12 +1522,12 @@ nav.side .header input {
   line-height: 20px;
   border-radius: 10px;
   width: 86%;
-  margin: 0 7%;
-}
+  margin: 0 7%; }
+
 nav.side .toggle {
   display: none;
-  width: 40px;
-}
+  width: 40px; }
+
 /*
 * SIDE MENU LINKS
 */
@@ -1593,8 +1539,8 @@ nav.side .links {
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
-  transition: width 0.25s;
-}
+  transition: width 0.25s; }
+
 nav.side .links > a,
 nav.side .links > div,
 nav.side .links > :visited,
@@ -1612,23 +1558,23 @@ nav.side .links .submenu .dropdown > :visited {
   -webkit-transition: width 0.25s, font-size 0.25s;
   -moz-transition: width 0.25s, font-size 0.25s;
   -o-transition: width 0.25s, font-size 0.25s;
-  transition: width 0.25s, font-size 0.25s;
-}
+  transition: width 0.25s, font-size 0.25s; }
+
 nav.side .links > :not(.category):hover,
 nav.side .links .category > :not(span):hover,
 nav.side .links .submenu.active :first-child,
 nav.side .links .submenu.active .dropdown {
-  background-color: #282828;
-}
+  background-color: #282828; }
+
 /*
 * SIDE MENU DROPDOWN
 */
 nav.side .links .submenu {
-  padding: 0;
-}
+  padding: 0; }
+
 nav.side .links .submenu:hover {
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 nav.side .links .submenu .dropdown {
   max-height: 0;
   width: 100%;
@@ -1637,18 +1583,18 @@ nav.side .links .submenu .dropdown {
   -o-transition: max-height 0.4s ease, border-width 0.4s ease, border-color 0.4s ease;
   transition: max-height 0.4s ease, border-width 0.4s ease, border-color 0.4s ease;
   border-bottom: 0 solid transparent;
-  overflow: hidden;
-}
+  overflow: hidden; }
+
 nav.side .links .submenu.active .dropdown {
   max-height: 800px;
-  border-bottom: 2px solid #9d9d9d;
-}
+  border-bottom: 2px solid #9d9d9d; }
+
 nav.side .links .submenu > span {
   padding: 0 0.6em;
   display: block;
   line-height: 3;
-  width: 100%;
-}
+  width: 100%; }
+
 nav.side .links .submenu > span::before {
   content: '+';
   border: 1px solid #ecf0f1;
@@ -1657,42 +1603,42 @@ nav.side .links .submenu > span::before {
   display: inline-block;
   text-align: center;
   margin-right: 6px;
-  border-radius: 2px;
-}
+  border-radius: 2px; }
+
 nav.side .links .submenu.active > span::before {
   content: '-';
   background-color: #ecf0f1;
-  color: #0e0e0e;
-}
+  color: #0e0e0e; }
+
 nav.side .links .submenu .dropdown > a {
   width: 100%;
   display: block;
-  padding-left: 1.2em;
-}
+  padding-left: 1.2em; }
+
 nav.side .links .submenu .dropdown > :hover {
-  background-color: #1b1b1b;
-}
+  background-color: #1b1b1b; }
+
 /*
 * SIDE MENU CATEGORY
 */
 nav.side .links .category {
   width: 100%;
-  padding: 0;
-}
+  padding: 0; }
+
 nav.side .links .category > span {
   color: #848484;
   font-size: 90%;
-  padding: 0.4em 0.6em;
-}
+  padding: 0.4em 0.6em; }
+
 nav.side .links .category > a {
   font-size: 16px;
   border-left: 2px solid #296dd1;
-  padding-left: 1.2em;
-}
+  padding-left: 1.2em; }
+
 nav.side .links .category > div {
   font-size: 16px;
-  border-left: 2px solid #296dd1;
-}
+  border-left: 2px solid #296dd1; }
+
 /*
 * SIDE MENU FOOTER
 */
@@ -1705,8 +1651,8 @@ nav.side .footer {
   font-size: 18px;
   text-align: center;
   color: #ecf0f1;
-  overflow: hidden;
-}
+  overflow: hidden; }
+
 /*
 ********************************************************************************
 * ASIDE MENU
@@ -1715,8 +1661,8 @@ nav.side .footer {
 nav.aside {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-}
+  align-items: stretch; }
+
 nav.aside a,
 nav.aside .submenu :first-child,
 nav.aside .submenu .dropdown a {
@@ -1726,56 +1672,56 @@ nav.aside .submenu .dropdown a {
   border-left: 2px solid #ecf0f1;
   border-color: transparent;
   line-height: 1.2;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 nav.aside a:hover,
 nav.aside .submenu :first-child:hover,
 nav.aside .submenu .dropdown a:hover {
-  color: #6698e1;
-}
+  color: #6698e1; }
+
 nav.aside a,
 nav.aside .submenu :first-child {
   padding: 0 0.2em;
-  margin: 0.4em 0;
-}
+  margin: 0.4em 0; }
+
 nav.aside .submenu .dropdown a {
   width: calc(100% - 1em);
   margin: 0.3em 0;
   margin-left: 1em;
   padding: 0 0.4em;
-  font-size: 90%;
-}
+  font-size: 90%; }
+
 nav.aside .submenu,
 nav.aside .submenu .dropdown {
   margin: 0 !important;
-  padding: 0 !important;
-}
+  padding: 0 !important; }
+
 nav.aside .submenu :first-child:hover {
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 nav.aside .submenu .dropdown {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.4s ease;
   -moz-transition: max-height 0.4s ease;
   -o-transition: max-height 0.4s ease;
-  transition: max-height 0.4s ease;
-}
+  transition: max-height 0.4s ease; }
+
 nav.aside .submenu.active .dropdown {
-  max-height: 800px;
-}
+  max-height: 800px; }
+
 nav.aside a.current,
 nav.aside .submenu :first-child.current,
 nav.aside .submenu .dropdown a.current {
-  border-color: #296dd1;
-}
+  border-color: #296dd1; }
+
 nav.aside .category {
   font-size: 120%;
   color: #282828;
   font-style: bold;
   margin: 0.4em 0;
-  border-bottom: 1px dashed #848484;
-}
+  border-bottom: 1px dashed #848484; }
+
 /*
 ********************************************************************************
 * TABLETS / NARROW DISPLAYS
@@ -1783,23 +1729,21 @@ nav.aside .category {
 */
 @media (max-width: 1000px) {
   nav.side {
-    width: 150px;
-  }
+    width: 150px; }
+
   nav.side .header,
   nav.side .links,
   nav.side .links .submenu .dropdown > a,
   nav.side .links .category > div,
   nav.side .links .category > a {
-    font-size: calc(12.8px);
-  }
+    font-size: calc(16px * 0.8); }
+
   nav.side .links .category > span {
-    font-size: 100%;
-  }
+    font-size: 100%; }
+
   body.navside {
-    width: calc(100% -  150px );
-    margin-left: 150px;
-  }
-}
+    width: calc(100% - 150px);
+    margin-left: 150px; } }
 /*
 ********************************************************************************
 * MOBILE DEVICES / VERY NARROW DISPLAYS
@@ -1808,102 +1752,102 @@ nav.aside .category {
 @media (max-width: 600px) {
   nav.top {
     display: block;
-    background-color: #143566;
-  }
+    background-color: #143566; }
+
   nav.top .links {
     max-height: 0;
     overflow: hidden;
-    display: block;
-  }
+    display: block; }
+
   nav.top .links.show {
     max-height: 600px;
-    display: block;
-  }
+    display: block; }
+
   nav.top .links > a,
   nav.top .links > div {
     width: 100%;
     display: block;
-    font-size: 16px;
-  }
+    font-size: 16px; }
+
   nav.top .links > :not(.submenu),
   nav.top .links > .submenu span,
   nav.top .links > .submenu.active span {
-    padding: 0.8em 0;
-  }
+    padding: 0.8em 0; }
+
   nav.top .links > :not(:last-child) {
-    border-bottom: 2px solid #296dd1;
-  }
+    border-bottom: 2px solid #296dd1; }
+
   nav.top .submenu .dropdown {
     position: relative;
-    top: 0;
-  }
+    top: 0; }
+
   nav.top .submenu .dropdown > a,
   nav.top .submenu .dropdown > div {
     background-color: #1c4c91;
     padding: 0.8em 0;
-    border-top: 1px solid #143566;
-  }
+    border-top: 1px solid #143566; }
+
   nav.top .submenu .dropdown > :hover {
-    background-color: #143566;
-  }
+    background-color: #143566; }
+
   nav.top .submenu .dropdown {
-    max-height: 0;
-  }
+    max-height: 0; }
+
   nav.top {
-    padding-left: 0;
-  }
+    padding-left: 0; }
+
   nav.top .toggle {
     width: 80px;
     display: block;
     height: 50px;
     margin-right: calc(100% - 80px);
-    background-color: #1c4c91;
-  }
+    background-color: #1c4c91; }
+
   nav.top .toggle.right {
     margin-right: 0;
     margin-left: calc(100% - 80px);
-    display: block;
-  }
+    display: block; }
+
   /*************************** SIDE MENU MOBILE *******************************/
   body.navside {
     width: 100% !important;
-    margin-left: 0 !important;
-  }
+    margin-left: 0 !important; }
+
   nav.side {
     width: 0px;
-    overflow: visible;
-  }
+    overflow: visible; }
+
   nav.side:not(.active) .header {
-    padding: 0;
-  }
+    padding: 0; }
+
   nav.side .header {
-    font-size: 16px;
-  }
+    font-size: 16px; }
+
   nav.side .header,
   nav.side .links {
-    overflow: hidden;
-  }
+    overflow: hidden; }
+
   nav.side:not(.active) .toggle {
     width: 50px;
     background-color: #1c4c91;
     -webkit-border-radius: 0 0 4px 0;
     -moz-border-radius: 0 0 4px 0;
-    border-radius: 0 0 4px 0;
-  }
+    border-radius: 0 0 4px 0; }
+
   nav.side.active {
-    width: 100%;
-  }
+    width: 100%; }
+
   nav.side:not(.active) .links > a,
   nav.side:not(.active) .links > div {
     width: 100%;
     margin: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    border-radius: 0;
-  }
+    border-radius: 0; }
+
   nav.side.active .links {
-    width: 100%;
-  }
+    width: 100%; }
+
   nav.side.active .links > a,
   nav.side.active .links > div,
   nav.side.active .links .category > a,
@@ -1912,43 +1856,35 @@ nav.aside .category {
     width: 100%;
     margin: 0 auto;
     font-size: 18px;
-    text-align: center;
-  }
+    text-align: center; }
+
   nav.side .toggle {
-    display: block;
-  }
+    display: block; }
+
   nav.side.active .toggle {
-    width: 50px;
-  }
+    width: 50px; }
+
   nav.side .links .submenu .dropdown,
   nav.side .links .submenu.active .dropdown {
-    border-bottom: 0 solid #000;
-  }
+    border-bottom: 0 solid #000; }
+
   nav.side .links .category > span {
-    border-bottom: 2px solid #296dd1;
-  }
+    border-bottom: 2px solid #296dd1; }
+
   nav.side .links .category > a,
   nav.side .links .category > div {
-    border-left: 0 solid #000;
-  }
+    border-left: 0 solid #000; }
+
   nav.side:not(.active) .footer {
-    padding: 8px 0;
-  }
+    padding: 8px 0; }
+
   nav.side.active .footer {
     width: 100%;
-    padding: 8px;
-  }
-}
+    padding: 8px; } }
 /* We import the custom elements */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
-.soft-popup,
-.soft-progress,
-.soft-notif {
-  box-sizing: border-box;
-}
+.soft-popup, .soft-progress, .soft-notif {
+  box-sizing: border-box; }
+
 /*************** SOFT POPUPS ***************/
 .soft-popupmask {
   width: 100vw;
@@ -1958,8 +1894,8 @@ nav.aside .category {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
-  left: 0;
-}
+  left: 0; }
+
 .soft-popup {
   z-index: 7;
   position: fixed;
@@ -1977,50 +1913,50 @@ nav.aside .category {
   color: #0e0e0e;
   box-shadow: 0 4px 16px 0 #252525;
   vertical-align: middle;
-  overflow: hidden;
-}
+  overflow: hidden; }
+
 .soft-popup div {
   width: 100%;
-  height: calc(20%);
-  display: table;
-}
+  height: calc(100% - 5 * 16px);
+  display: table; }
+
 .soft-popup p {
   display: table-cell;
   vertical-align: middle;
-  line-height: normal;
-}
+  line-height: normal; }
+
 .soft-popup span:nth-child(1) {
   font-weight: bold;
-  font-size: calc(24px);
+  font-size: calc(16px * 1.5);
   line-height: 2;
   width: 100%;
   display: block;
-  color: #ffffff;
+  color: white;
   box-shadow: 0 -2px 16px 2px #121212;
   background-color: #9d9d9d;
-  border-bottom: 0.25em solid #848484;
-}
+  border-bottom: 0.25em solid #848484; }
+
 .soft-popup button {
   position: relative;
   padding: 0.5em 2em;
-  bottom: 2em;
-}
+  bottom: 2em; }
+
 .soft-popup.success span:nth-child(1) {
   background-color: #24762f;
-  border-color: #36b147;
-}
+  border-color: #36b147; }
+
 .soft-popup.info span:nth-child(1) {
   background-color: #1c4c91;
-  border-color: #296dd1;
-}
+  border-color: #296dd1; }
+
 .soft-popup.warning span:nth-child(1) {
   background-color: #b26a14;
-  border-color: #e7912c;
-}
+  border-color: #e7912c; }
+
 .soft-popup.danger span:nth-child(1) {
   background-color: #8e211e;
-  border-color: #cd2f2b;
-}
+  border-color: #cd2f2b; }
+
 /*************** SOFT PROGRESS BARS ***************/
 .soft-progress {
   width: 100%;
@@ -2029,28 +1965,28 @@ nav.aside .category {
   padding: 0 !important;
   border: none !important;
   height: 0.5em;
-  background-color: #cfd9db;
-}
+  background-color: #cfd9db; }
+
 .soft-progress div {
   height: 100%;
   text-align: center;
   border: inherit inherit inherit !important;
   margin: 0 !important;
   padding: 0 !important;
-  background-color: #296dd1;
-}
+  background-color: #296dd1; }
+
 /*************** SOFT TOOLTIPS ***************/
 .soft-tooltip {
-  position: relative;
-}
+  position: relative; }
+
 .tooltip {
   position: absolute;
   display: block;
   visibility: hidden;
   border-width: 0 !important;
   margin: 0 !important;
-  padding: 0 !important;
-}
+  padding: 0 !important; }
+
 .tooltip div {
   padding: 0.6em;
   font-size: 14px;
@@ -2068,8 +2004,8 @@ nav.aside .category {
   text-align: center;
   z-index: 2;
   animation: plop 0.2s 0s ease-in-out;
-  animation-fill-mode: both;
-}
+  animation-fill-mode: both; }
+
 .tooltip div::before,
 .tooltip div::after {
   width: 0;
@@ -2077,40 +2013,40 @@ nav.aside .category {
   content: '';
   display: block;
   animation: plop 0.2s 0s ease-in-out;
-  animation-fill-mode: both;
-}
+  animation-fill-mode: both; }
+
 .tooltip.top div::after {
   border: 12px solid;
   border-color: #222 transparent transparent transparent;
   border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
   position: absolute;
   left: calc(50% - 12px);
-  bottom: -24px;
-}
+  bottom: -24px; }
+
 .tooltip.right div::after {
   border: 12px solid;
   border-color: transparent #222 transparent transparent;
   border-color: transparent rgba(0, 0, 0, 0.75) transparent transparent;
   position: absolute;
   top: calc(50% - 12px);
-  left: -24px;
-}
+  left: -24px; }
+
 .tooltip.bottom div::before {
   border: 12px solid;
   border-color: transparent transparent #222 transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.75) transparent;
   position: absolute;
   left: calc(50% - 12px);
-  top: -24px;
-}
+  top: -24px; }
+
 .tooltip.left div::before {
   border: 12px solid;
   border-color: transparent transparent transparent #222;
   border-color: transparent transparent transparent rgba(0, 0, 0, 0.75);
   position: absolute;
   top: calc(50% - 12px);
-  right: -24px;
-}
+  right: -24px; }
+
 /************** SOFT NOTIFICATIONS ****************/
 .soft-notif {
   display: block;
@@ -2131,153 +2067,146 @@ nav.aside .category {
   z-index: 5;
   line-height: 40px;
   padding: 4px 16px !important;
-  animation: plop 0.2s 0s ease-in-out;
-}
+  animation: plop 0.2s 0s ease-in-out; }
+
 .soft-notif.info {
   border-color: #1c4c91;
   background-color: #90b4e9;
-  box-shadow: 1px 1px 2px 0 #1c4c91;
-}
+  box-shadow: 1px 1px 2px 0 #1c4c91; }
+
 .soft-notif.success {
   border-color: #24762f;
   background-color: #8bdc96;
-  box-shadow: 1px 1px 2px 0 #24762f;
-}
+  box-shadow: 1px 1px 2px 0 #24762f; }
+
 .soft-notif.warning {
   border-color: #b26a14;
   background-color: #f4cd9e;
-  box-shadow: 1px 1px 2px 0 #b26a14;
-}
+  box-shadow: 1px 1px 2px 0 #b26a14; }
+
 .soft-notif.danger {
   border-color: #8e211e;
   background-color: #e89290;
-  box-shadow: 1px 1px 2px 0 #8e211e;
-}
+  box-shadow: 1px 1px 2px 0 #8e211e; }
+
 @media screen and (max-width: 600px) {
   .soft-notif {
     width: 90%;
     max-width: 90%;
-    right: 5%;
-  }
-}
+    right: 5%; } }
 /* We import all the helpers classes */
 /********** TEXT **********/
 /* Makes the first letter of the paragraph shifted from the border */
 .first-letter-spacing {
-  text-indent: 2em;
-}
+  text-indent: 2em; }
+
 .first-letter-spacing :not(.first-letter-spacing) {
-  text-indent: 0;
-}
+  text-indent: 0; }
+
 /* Makes the first letter of the paragraph bigger */
 .first-letter-big::first-letter {
-  font-size: 200%;
-}
+  font-size: 200%; }
+
 .first-letter-huge::first-letter {
-  font-size: 400%;
-}
+  font-size: 400%; }
+
 /* Makes the text float on the left */
 .text-left {
-  text-align: left !important;
-}
+  text-align: left !important; }
+
 /* Makes the text justified */
 .text-justify {
-  text-align: justify !important;
-}
+  text-align: justify !important; }
+
 /* Makes the text float on the right */
 .text-right {
-  text-align: right !important;
-}
+  text-align: right !important; }
+
 /* Center the text */
 .text-center {
-  text-align: center !important;
-}
+  text-align: center !important; }
+
 /********** ELEMENTS PLACING **********/
 /* Hides the element */
-.hidden,
-[hidden] {
-  display: none !important;
-}
+.hidden, [hidden] {
+  display: none !important; }
+
 /* Makes the element float on the left */
 .left {
-  float: left !important;
-}
+  float: left !important; }
+
 /* Makes the element float on the right */
 .right {
-  float: right !important;
-}
+  float: right !important; }
+
 /* Clears the float: right so elements after aren't affected */
 article.right::after,
 div:not(.toggle).right::after {
   content: "";
   display: block;
   height: 0;
-  clear: both;
-}
+  clear: both; }
+
 /* Center the element ( suppposing it has a width and it's display: block ) */
 .center {
   margin-left: auto !important;
-  margin-right: auto !important;
-}
+  margin-right: auto !important; }
+
 /* Makes the element takes the full width of its parent */
 .fullWidth {
   width: 100% !important;
   margin-left: 0 !important;
-  margin-right: 0 !important;
-}
+  margin-right: 0 !important; }
+
 /* Makes the element takes the full height of its parent */
 .fullHeight {
   height: 100% !important;
   margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
+  margin-bottom: 0 !important; }
+
 /* Makes the element take the full height of the screen */
 .fullScreenH {
   height: 100vh !important;
   margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
+  margin-bottom: 0 !important; }
+
 /********** ELEMENTS BEHAVIOUR **********/
 .disabled {
-  pointer-events: none;
-}
+  pointer-events: none; }
+
 /********** ELEMENTS ASPECT **********/
 /* Sets a subtle background color */
 .bg-subtle {
-  background-color: #d0dff6 !important;
-}
+  background-color: #d0dff6 !important; }
+
 /* Sets a border */
 .border {
-  border: 1px solid #1c4c91;
-}
+  border: 1px solid #1c4c91; }
+
 /********** SMALL CORRECTIONS ********/
 /* Set a small padding */
 .padding-sm {
-  padding: 0.5em;
-}
+  padding: 0.5em; }
+
 /* Set a medium padding */
 .padding-md {
-  padding: 1em;
-}
+  padding: 1em; }
+
 /* Set a big padding */
 .padding-lg {
-  padding: 2em;
-}
+  padding: 2em; }
+
 /* The padding changes depending on the screen size */
 .padding-auto {
-  padding: 2em;
-}
+  padding: 2em; }
+
 /*******************************************************************************
 *** ELEMENTS SPECIFIC
 *******************************************************************************/
 ul.no-style li {
-  list-style: none;
-}
+  list-style: none; }
+
 /* We import the file adapting some things to mobile with media queries */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
 /*******************************************************************************
 ******************************** SCREEN SIZE ***********************************
 *******************************************************************************/
@@ -2287,18 +2216,14 @@ ul.no-style li {
 @media screen and (max-width: 780px) {
   /* The padding changes depending on the screen size */
   .padding-auto {
-    padding: 1em;
-  }
-}
+    padding: 1em; } }
 /***********
 * MOBILE
 ***********/
 @media screen and (max-width: 600px) {
   /* The padding changes depending on the screen size */
   .padding-auto {
-    padding: 0.5em;
-  }
-}
+    padding: 0.5em; } }
 /*******************************************************************************
 *************************** ELEMENT SPECIFIC QUERIES ***************************
 *******************************************************************************/
@@ -2308,13 +2233,11 @@ ul.no-style li {
 @media screen and (max-width: 1224px) {
   aside {
     display: block;
-    width: 100%;
-  }
+    width: 100%; }
+
   main {
     width: 100%;
-    display: block;
-  }
-}
+    display: block; } }
 /*******************************************************************************
 ***** CONTAINERS
 *******************************************************************************/
@@ -2326,8 +2249,7 @@ ul.no-style li {
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-left: 0 !important;
-  }
-}
+    margin-left: 0 !important; } }
 /*
 * MEDIUM
 */
@@ -2336,8 +2258,7 @@ ul.no-style li {
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-left: 0 !important;
-  }
-}
+    margin-left: 0 !important; } }
 /*
 * SMALL
 */
@@ -2346,29 +2267,20 @@ ul.no-style li {
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-left: 0 !important;
-  }
-}
+    margin-left: 0 !important; } }
 /**************
 * HEADER
 **************/
 @media screen and (max-width: 800px) {
   body > header {
-    font-size: 10vw;
-  }
-}
+    font-size: 10vw; } }
 /*************
 * NAVSIDE
 *************/
 @media screen and (max-width: 1040px) {
   body.navside > header {
-    font-size: 8vw;
-  }
-}
+    font-size: 8vw; } }
 /* We import the animations */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
 /* CONFIGURE THE ANIMATIONS HERE */
 /*************** CLASSES ***************/
 /*** PLOP ***/
@@ -2376,28 +2288,28 @@ ul.no-style li {
   animation: plop 200ms 0s ease-in-out;
   animation-fill-mode: both;
   -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
+  animation-iteration-count: 1; }
+
 /*** HEARTBEAT COLOR ***/
 .animation-heartbeat-color {
   animation: heartbeat-color 0.75s 0s ease;
-  animation-iteration-count: infinite;
-}
+  animation-iteration-count: infinite; }
+
 /*** HEARTBEAT SCALE ***/
 .animation-heartbeat-scale {
   animation: heartbeat-scale 0.75s 0s ease;
-  animation-iteration-count: infinite;
-}
+  animation-iteration-count: infinite; }
+
 /*** HEARTBEAT ***/
 .animation-heartbeat {
-  animation: heartbeat-color 0.75s 0s ease, heartbeat-scale 0.75s 0s ease;
-  animation-iteration-count: infinite;
-}
+  animation: heartbeat-color 0.75s 0s ease,  heartbeat-scale 0.75s 0s ease;
+  animation-iteration-count: infinite; }
+
 /*** FADEOUT ***/
 .animation-fadeout {
   animation: fadeout 2s 0s ease;
-  animation-fill-mode: both;
-}
+  animation-fill-mode: both; }
+
 #heartbeat {
   width: 100px;
   height: 100px;
@@ -2406,8 +2318,8 @@ ul.no-style li {
   border-radius: 20%;
   background-color: #de557a;
   border: 2px solid #cd2f2b;
-  margin-left: 50px;
-}
+  margin-left: 50px; }
+
 /*************** ANIMATIONS ***************/
 /*** PLOP ***/
 @keyframes plop {
@@ -2415,219 +2327,161 @@ ul.no-style li {
     -webkit-transform: scale(0.01, 0.01);
     -ms-transform: scale(0.01, 0.01);
     transform: scale(0.01, 0.01);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     transform: scale(1, 1);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 @-webkit-keyframes plop {
   0% {
     -webkit-transform: scale(0.01, 0.01);
     -ms-transform: scale(0.01, 0.01);
     transform: scale(0.01, 0.01);
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
     -webkit-transform: scale(1.3, 1.3);
     -ms-transform: scale(1.3, 1.3);
     transform: scale(1.3, 1.3);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
 /*** SLIDE DOWN ***/
 /*********** DISCONTINUED ***********/
 @keyframes slide-down {
   0% {
     -webkit-transform: scale(1, 0);
     -ms-transform: scale(1, 0);
-    transform: scale(1, 0);
-  }
+    transform: scale(1, 0); }
   100% {
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-}
+    transform: scale(1, 1); } }
 @-webkit-keyframes slide-down {
   0% {
     -webkit-transform: scale(1, 0);
     -ms-transform: scale(1, 0);
-    transform: scale(1, 0);
-  }
+    transform: scale(1, 0); }
   100% {
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-}
+    transform: scale(1, 1); } }
 /*** SLIDE ***/
 /************** DISCONTINUED *******/
 @keyframes slide {
   0% {
-    height: 0;
-  }
+    height: 0; }
   100% {
-    height: 200px;
-  }
-}
+    height: 200px; } }
 @-webkit-keyframes slide {
   0% {
-    height: 0;
-  }
+    height: 0; }
   100% {
-    height: 200px;
-  }
-}
+    height: 200px; } }
 /*** HEARTBEAT SCALE ***/
 @keyframes heartbeat-scale {
   0% {
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
+    transform: scale(1, 1); }
   40% {
     -webkit-transform: scale(1.02, 1.02);
     -ms-transform: scale(1.02, 1.02);
-    transform: scale(1.02, 1.02);
-  }
+    transform: scale(1.02, 1.02); }
   60% {
     -webkit-transform: scale(1.2, 1.2);
     -ms-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
-  }
+    transform: scale(1.2, 1.2); }
   70% {
     -webkit-transform: scale(1.15, 1.15);
     -ms-transform: scale(1.15, 1.15);
-    transform: scale(1.15, 1.15);
-  }
+    transform: scale(1.15, 1.15); }
   100% {
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-}
+    transform: scale(1, 1); } }
 @-webkit-keyframes heartbeat-scale {
   0% {
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
+    transform: scale(1, 1); }
   40% {
     -webkit-transform: scale(1.02, 1.02);
     -ms-transform: scale(1.02, 1.02);
-    transform: scale(1.02, 1.02);
-  }
+    transform: scale(1.02, 1.02); }
   60% {
     -webkit-transform: scale(1.2, 1.2);
     -ms-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
-  }
+    transform: scale(1.2, 1.2); }
   70% {
     -webkit-transform: scale(1.15, 1.15);
     -ms-transform: scale(1.15, 1.15);
-    transform: scale(1.15, 1.15);
-  }
+    transform: scale(1.15, 1.15); }
   100% {
     -webkit-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-}
+    transform: scale(1, 1); } }
 /*** HEARTBEAT COLOR ***/
 @keyframes heartbeat-color {
   0% {
-    background-color: #c82a2a;
-  }
+    background-color: #c82a2a; }
   40% {
-    background-color: #c33737;
-  }
+    background-color: #c33737; }
   60% {
-    background-color: #d66969;
-  }
+    background-color: #d66969; }
   70% {
-    background-color: #d75858;
-  }
+    background-color: #d75858; }
   100% {
-    background-color: #c82a2a;
-  }
-}
+    background-color: #c82a2a; } }
 @-webkit-keyframes heartbeat-color {
   0% {
-    background-color: #c82a2a;
-  }
+    background-color: #c82a2a; }
   40% {
-    background-color: #c33737;
-  }
+    background-color: #c33737; }
   60% {
-    background-color: #d66969;
-  }
+    background-color: #d66969; }
   70% {
-    background-color: #d75858;
-  }
+    background-color: #d75858; }
   100% {
-    background-color: #c82a2a;
-  }
-}
+    background-color: #c82a2a; } }
 /*** SPIN RIGHT ***/
 @keyframes spin-right {
   0% {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+    transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+    transform: rotate(360deg); } }
 @-webkit-keyframes spin-right {
   0% {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+    transform: rotate(0deg); }
   100% {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+    transform: rotate(360deg); } }
 /*** COLOR FADE OUT ***/
 @keyframes color-fadeout {
   0% {
-    background-color: #6698e1;
-  }
+    background-color: #6698e1; }
   100% {
-    background-color: inherit;
-  }
-}
+    background-color: inherit; } }
 @-webkit-keyframes color-fadeout {
   0% {
-    background-color: #6698e1;
-  }
+    background-color: #6698e1; }
   100% {
-    background-color: inherit;
-  }
-}
+    background-color: inherit; } }
 /*** OPACITY FADE OUT ***/
 @keyframes fadeout {
   0% {
-    opacity: 1;
-  }
+    opacity: 1; }
   100% {
-    opacity: 0;
-  }
-}
+    opacity: 0; } }
 @-webkit-keyframes fadeout {
   0% {
-    opacity: 1;
-  }
+    opacity: 1; }
   100% {
-    opacity: 0;
-  }
-}
+    opacity: 0; } }
+
+/*# sourceMappingURL=test.css.map */

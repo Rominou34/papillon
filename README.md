@@ -8,7 +8,7 @@
 
 Soft CSS is a CSS Framework allowing you to easily customize your website with modern design. You can either import the CSS directly from the CDN ( still not there ) if you're okay with the default settings, or clone the repo and tweak the settings as you wish.
 
-The framework works with [LESS](http://lesscss.org/) and every basic settings from the color palette to the body size can be found in the `config.less` file so you can quickly change the aspect of your site without having to crawl around thousands of lines of code
+The framework works with [SASS](http://sass-lang.com/) and every basic settings from the color palette to the body size can be found in the `config.sass` file so you can quickly change the aspect of your site without having to crawl around thousands of lines of code
 
 ## Installation
 
@@ -31,15 +31,11 @@ When the framework will be released I'll buy a sweet domain name and put the fil
 
 #### I want to change some things
 
-**If you have LESS**
+*Requires SASS*
 
-`git clone` the repo and change the things you want in the files located in the `src/less` folder.
+`git clone` the repo and change the things you want in the files located in the `src/sass` folder.
 
-When you're done, compile it using `lessc` and you're good to go
-
-**If you don't have LESS**
-
-After each big update, I'll compile each file separately into the `src/css` so you'll have `menus.css`, `tables.css`, `grid.css` etc.
+When you're done, compile it using SASS and you're good to go
 
 ## Documentation
 

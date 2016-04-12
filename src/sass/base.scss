@@ -10,15 +10,15 @@
 }
 
 .container-sm {
-  max-width: (@container-sm - @grid-margin);
+  max-width: ($container-sm - $grid-margin);
 }
 
 .container-md {
-  max-width: (@container-md - @grid-margin);
+  max-width: ($container-md - $grid-margin);
 }
 
 .container-lg {
-  max-width: (@container-lg - @grid-margin);
+  max-width: ($container-lg - $grid-margin);
 }
 
 /*
@@ -42,7 +42,7 @@
   height: 60%;
   top: 20%;
   left: -0.5em;
-  border-right: 6px solid @blue-default;
+  border-right: 6px solid $blue-default;
 }
 
 /********** ELEMENTS ASPECT **********/
@@ -50,7 +50,7 @@
 /* Change the apsect of a container to showcase something inside */
 .showcase {
   background-color: #fff;
-  border: @grey-light;
+  border: $grey-light;
   margin: 2em 1em;
   padding: 1em;
   box-shadow: 0 0 4px 0 #595959 inset;

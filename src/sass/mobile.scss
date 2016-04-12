@@ -6,7 +6,7 @@
 * TABLET
 ***********/
 
-@media screen and (max-width: @screen-width-md) {
+@media screen and (max-width: $screen-width-md) {
   /* The padding changes depending on the screen size */
   .padding-auto {
     padding: 1em;
@@ -17,7 +17,7 @@
 * MOBILE
 ***********/
 
-@media screen and (max-width: @screen-width-sm) {
+@media screen and (max-width: $screen-width-sm) {
   /* The padding changes depending on the screen size */
   .padding-auto {
     padding: 0.5em;
@@ -33,7 +33,7 @@
 /*******************
 * MAIN + ASIDE
 *******************/
-@media screen and (max-width: (@main-width + @aside-width)) {
+@media screen and (max-width: $main-width+$aside-width) {
   aside {
     display: block;
     width: 100%;
@@ -52,7 +52,7 @@
 /*
 * LARGE
 */
-@media screen and (max-width: @container-lg) {
+@media screen and (max-width: $container-lg) {
   .container-lg {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -64,7 +64,7 @@
 /*
 * MEDIUM
 */
-@media screen and (max-width: @container-md) {
+@media screen and (max-width: $container-md) {
   .container-md {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -76,7 +76,7 @@
 /*
 * SMALL
 */
-@media screen and (max-width: @container-sm) {
+@media screen and (max-width: $container-sm) {
   .container-sm {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -97,7 +97,7 @@
 /*************
 * NAVSIDE
 *************/
-@media screen and (max-width: round((800px + @navside-width))) {
+@media screen and (max-width: round(800px + $navside-width)) {
   body.navside > header {
     font-size: 8vw;
   }

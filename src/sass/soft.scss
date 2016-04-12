@@ -3,44 +3,46 @@
 * Romain Arnaud - 2016
 */
 
-@import url(config.less);
+@charset "UTF-8";
+
+@import "config.scss";
 
 /* We reset all the rules so it looks the same for all browsers */
-@import url(sanitize.less);
+@import "sanitize.scss";
 
 /* Then we initialize the default values ( must be imported first so they can be
 overridden ) */
-@import url(init.less);
+@import "init.scss";
 
 /* We import the base classes */
-@import url(base.less);
+@import "base.scss";
 
 /* We import the fonticons-related classes */
-@import url(fonticons.less);
+@import "fonticons.scss";
 
 /* We import the files for the tables */
-@import url(tables.less);
+@import "tables.scss";
 
 /* We import the classes for the forms */
-@import url(forms.less);
+@import "forms.scss";
 
 /* We import the layout for grids and columns */
-@import url(grid.less);
+@import "grid.scss";
 
 /* We import the classes for the buttons */
-@import url(buttons.less);
+@import "buttons.scss";
 
 /* We import the classes for the menus */
-@import url(menus.less);
+@import "menus.scss";
 
 /* We import the custom elements */
-@import url(custom.less);
+@import "custom.scss";
 
 /* We import all the helpers classes */
-@import url(helpers.less);
+@import "helpers.scss";
 
 /* We import the file adapting some things to mobile with media queries */
-@import url(mobile.less);
+@import "mobile.scss";
 
 /* We import the animations */
-@import url(animations.less);
+@import "animations.scss";

@@ -70,9 +70,9 @@ table.alt tbody > tr:nth-child(odd) {background: #fff}
 /******** REACTIVE DESIGN ********/
 
 table.reactive :not(thead):not(tfoot) tr:hover {
-  background-color: @primary-color-subtle;
+  background-color: $primary-color-subtle;
 }
 
 table.reactive :not(thead):not(tfoot) tr td:hover {
-  background-color: @primary-color-lighter;
+  background-color: $primary-color-lighter;
 }
