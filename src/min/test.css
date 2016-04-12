@@ -416,11 +416,11 @@ form {
 ****/
 /***** LINKS *****/
 a {
-  color: #2c72d9;
+  color: #296dd1;
 }
 a:hover,
 a:visited:hover {
-  color: #6d9de5;
+  color: #6698e1;
 }
 a:visited {
   color: #73289c;
@@ -437,7 +437,7 @@ aside {
   vertical-align: top;
   max-width: 200px;
   margin: auto;
-  background-color: #f2bfbd;
+  background-color: #f5d0cf;
 }
 /****
 * B *
@@ -489,14 +489,14 @@ caption {
 }
 /***** CODE *****/
 code {
-  background-color: #d9e6f8;
+  background-color: #d0dff6;
   font-family: "Source Code Pro", "Courier New", "monospace";
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   padding: 0 0.2em;
-  border: 1px solid #98baec;
-  color: #143a71;
+  border: 1px solid #90b4e9;
+  color: #143566;
 }
 pre > code {
   display: block;
@@ -515,7 +515,7 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: #98baec;
+  background-color: #90b4e9;
   position: relative;
   top: -1.33em;
   font-size: 150%;
@@ -551,7 +551,7 @@ body > header {
   font-size: 96px;
   font-family: Ubuntu, "sans-serif";
   color: #ecf0f1;
-  background-color: #2c72d9;
+  background-color: #296dd1;
   width: 100%;
   text-align: center;
 }
@@ -603,7 +603,7 @@ h4 a::before,
 h5 a::before,
 h6 a::before {
   content: '#';
-  color: #98baec;
+  color: #90b4e9;
   position: absolute;
   left: -0.75em;
   line-height: 250%;
@@ -615,7 +615,7 @@ h3 a:hover::before,
 h4 a:hover::before,
 h5 a:hover::before,
 h6 a:hover::before {
-  color: #2c72d9;
+  color: #296dd1;
 }
 h1 {
   font-size: 42px;
@@ -642,7 +642,7 @@ hr {
   display: block;
   margin: 2em auto;
   height: 3px;
-  background-color: #2c72d9;
+  background-color: #296dd1;
 }
 /****
 * I *
@@ -756,7 +756,7 @@ main {
   height: 60%;
   top: 20%;
   left: -0.5em;
-  border-right: 6px solid #2c72d9;
+  border-right: 6px solid #296dd1;
 }
 /********** ELEMENTS ASPECT **********/
 /* Change the apsect of a container to showcase something inside */
@@ -842,10 +842,10 @@ table.alt tbody > tr:nth-child(odd) {
 }
 /******** REACTIVE DESIGN ********/
 table.reactive :not(thead):not(tfoot) tr:hover {
-  background-color: #d9e6f8;
+  background-color: #d0dff6;
 }
 table.reactive :not(thead):not(tfoot) tr td:hover {
-  background-color: #98baec;
+  background-color: #90b4e9;
 }
 /* We import the classes for the forms */
 /*
@@ -1110,7 +1110,7 @@ button:focus,
 }
 button:not(:disabled):focus,
 .button:not(.disabled):focus {
-  border-color: #2c72d9;
+  border-color: #296dd1;
 }
 button:not(:disabled):not(.loading):active,
 .button:not(.disabled):not(.loading):active {
@@ -1211,100 +1211,100 @@ button.primary,
 */
 button.primary,
 .button.primary {
-  background-color: #2c72d9;
+  background-color: #296dd1;
   border-color: transparent;
 }
 button.primary:not(:disabled):not(.loading):hover,
 .button.primary:not(.disabled):not(.loading):hover {
-  background-color: #1c509c;
+  background-color: #1c4c91;
 }
 button.primary:not(:disabled):hover:focus,
 button.primary:not(:disabled):focus,
 .button.primary:not(.disabled):focus {
-  border-color: #143a71;
+  border-color: #143566;
 }
 button.primary:not(:disabled):not(.loading):active,
 .button.primary:not(.disabled):not(.loading):active {
-  background-color: #143a71;
+  background-color: #143566;
   box-shadow: 0 0 0 0 #000;
 }
 button.primary:disabled,
 .button.primary.disabled {
-  background-color: #6d9de5;
+  background-color: #6698e1;
 }
 /*
 * GREEN
 */
 button.success,
 .button.success {
-  background-color: #32a241;
+  background-color: #36b147;
   border-color: transparent;
 }
 button.success:not(:disabled):not(.loading):hover,
 .button.success:not(:disabled):not(.loading):hover {
-  background-color: #20682a;
+  background-color: #24762f;
 }
 button.success:not(:disabled):hover:focus,
 button.success:not(:disabled):focus,
 .button.success:not(.disabled):focus {
-  border-color: #14411a;
+  border-color: #184f20;
 }
 button.success:not(:disabled):not(.loading):active,
 .button.success:not(:disabled):not(.loading):active {
-  background-color: #14411a;
+  background-color: #184f20;
   box-shadow: 0 0 0 0 #000;
 }
 button.success:disabled,
 .button.success.disabled {
-  background-color: #56cb65;
+  background-color: #64d073;
 }
 /* BLUE */
 button.info,
 .button.info {
-  background-color: #2c72d9;
+  background-color: #296dd1;
   border-color: transparent;
 }
 button.info:not(:disabled):not(.loading):hover,
 .button.info:not(:disabled):not(.loading):hover {
-  background-color: #1c509c;
+  background-color: #1c4c91;
 }
 button.info:not(:disabled):hover:focus,
 button.info:not(:disabled):focus,
 .button.info:not(.disabled):focus {
-  border-color: #143a71;
+  border-color: #143566;
 }
 button.info:not(:disabled):not(.loading):active,
 .button.info:not(:disabled):not(.loading):active {
-  background-color: #143a71;
+  background-color: #143566;
   box-shadow: 0 0 0 0 #000;
 }
 button.info:disabled,
 .button.info.disabled {
-  background-color: #6d9de5;
+  background-color: #6698e1;
 }
 /* RED */
 button.danger,
 .button.danger {
-  background-color: #bd2a26;
+  background-color: #cd2f2b;
   border-color: transparent;
 }
 button.danger:not(:disabled):not(.loading):hover,
 .button.danger:not(:disabled):not(.loading):hover {
-  background-color: #7d1c19;
+  background-color: #8e211e;
 }
 button.danger:not(:disabled):hover:focus,
 button.danger:not(:disabled):focus,
 .button.danger:not(.disabled):focus {
-  border-color: #531211;
+  border-color: #641715;
 }
 button.danger:not(:disabled):not(.loading):active,
 .button.danger:not(:disabled):not(.loading):active {
-  background-color: #531211;
+  background-color: #641715;
   box-shadow: 0 0 0 0 #000;
 }
 button.danger:disabled,
 .button.danger.disabled {
-  background-color: #dc5753;
+  background-color: #df6966;
 }
 /* ORANGE */
 button.warning,
@@ -1422,7 +1422,7 @@ nav.top .links > a:visited {
   flex: 1;
   text-align: center;
   color: #ffffff;
-  background-color: #143a71;
+  background-color: #143566;
   z-index: 3;
 }
 nav.top .links > :not(.submenu),
@@ -1431,14 +1431,14 @@ nav.top .links > .submenu span {
 }
 nav.top .links > :hover,
 nav.top .links > a:visited:hover {
-  background-color: #1c509c;
+  background-color: #1c4c91;
   cursor: pointer;
 }
 /*
 * TOP NAVBAR SUBMENU
 */
 nav.top .submenu.active {
-  background-color: #1c509c;
+  background-color: #1c4c91;
 }
 nav.top .submenu {
   position: relative;
@@ -1495,7 +1495,7 @@ nav.top .submenu .dropdown div,
 nav.top .submenu .dropdown span {
   display: block;
   width: 100%;
-  background-color: #1c509c;
+  background-color: #1c4c91;
   color: #ffffff;
   -webkit-transition: padding 0.4s;
   -moz-transition: padding 0.4s;
@@ -1503,7 +1503,7 @@ nav.top .submenu .dropdown span {
   transition: padding 0.4s;
 }
 nav.top .submenu .dropdown :not(.category):hover {
-  background-color: #143a71;
+  background-color: #143566;
 }
 /*
 * TOP NAVBAR SUBMENU CATEGORY
@@ -1547,7 +1547,7 @@ nav.side {
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
-  background-color: #1c509c;
+  background-color: #1c4c91;
 }
 nav.side div,
 nav.side a,
@@ -1559,7 +1559,7 @@ nav.side input {
 * SIDE MENU HEADER
 */
 nav.side .header {
-  background-color: #1c509c;
+  background-color: #1c4c91;
   height: 150px;
   color: #ecf0f1;
   width: 100%;
@@ -1686,12 +1686,12 @@ nav.side .links .category > span {
 }
 nav.side .links .category > a {
   font-size: 16px;
-  border-left: 2px solid #2c72d9;
+  border-left: 2px solid #296dd1;
   padding-left: 1.2em;
 }
 nav.side .links .category > div {
   font-size: 16px;
-  border-left: 2px solid #2c72d9;
+  border-left: 2px solid #296dd1;
 }
 /*
 * SIDE MENU FOOTER
@@ -1722,7 +1722,7 @@ nav.aside .submenu :first-child,
 nav.aside .submenu .dropdown a {
   width: 100%;
   display: block;
-  color: #1c509c;
+  color: #1c4c91;
   border-left: 2px solid #ecf0f1;
   border-color: transparent;
   line-height: 1.2;
@@ -1731,7 +1731,7 @@ nav.aside .submenu .dropdown a {
 nav.aside a:hover,
 nav.aside .submenu :first-child:hover,
 nav.aside .submenu .dropdown a:hover {
-  color: #6d9de5;
+  color: #6698e1;
 }
 nav.aside a,
 nav.aside .submenu :first-child {
@@ -1767,7 +1767,7 @@ nav.aside .submenu.active .dropdown {
 nav.aside a.current,
 nav.aside .submenu :first-child.current,
 nav.aside .submenu .dropdown a.current {
-  border-color: #2c72d9;
+  border-color: #296dd1;
 }
 nav.aside .category {
   font-size: 120%;
@@ -1808,7 +1808,7 @@ nav.aside .category {
 @media (max-width: 600px) {
   nav.top {
     display: block;
-    background-color: #143a71;
+    background-color: #143566;
   }
   nav.top .links {
     max-height: 0;
@@ -1831,7 +1831,7 @@ nav.aside .category {
     padding: 0.8em 0;
   }
   nav.top .links > :not(:last-child) {
-    border-bottom: 2px solid #2c72d9;
+    border-bottom: 2px solid #296dd1;
   }
   nav.top .submenu .dropdown {
     position: relative;
@@ -1839,12 +1839,12 @@ nav.aside .category {
   }
   nav.top .submenu .dropdown > a,
   nav.top .submenu .dropdown > div {
-    background-color: #1c509c;
+    background-color: #1c4c91;
     padding: 0.8em 0;
-    border-top: 1px solid #143a71;
+    border-top: 1px solid #143566;
   }
   nav.top .submenu .dropdown > :hover {
-    background-color: #143a71;
+    background-color: #143566;
   }
   nav.top .submenu .dropdown {
     max-height: 0;
@@ -1857,7 +1857,7 @@ nav.aside .category {
     display: block;
     height: 50px;
     margin-right: calc(100% - 80px);
-    background-color: #1c509c;
+    background-color: #1c4c91;
   }
   nav.top .toggle.right {
     margin-right: 0;
@@ -1885,7 +1885,7 @@ nav.aside .category {
   }
   nav.side:not(.active) .toggle {
     width: 50px;
-    background-color: #1c509c;
+    background-color: #1c4c91;
     -webkit-border-radius: 0 0 4px 0;
     -moz-border-radius: 0 0 4px 0;
     border-radius: 0 0 4px 0;
@@ -1925,7 +1925,7 @@ nav.aside .category {
     border-bottom: 0 solid #000;
   }
   nav.side .links .category > span {
-    border-bottom: 2px solid #2c72d9;
+    border-bottom: 2px solid #296dd1;
   }
   nav.side .links .category > a,
   nav.side .links .category > div {
@@ -2006,20 +2006,20 @@ nav.aside .category {
   bottom: 2em;
 }
 .soft-popup.success span:nth-child(1) {
-  background-color: #20682a;
-  border-color: #32a241;
+  background-color: #24762f;
+  border-color: #36b147;
 }
 .soft-popup.info span:nth-child(1) {
-  background-color: #1c509c;
-  border-color: #2c72d9;
+  background-color: #1c4c91;
+  border-color: #296dd1;
 }
 .soft-popup.warning span:nth-child(1) {
   background-color: #b26a14;
   border-color: #e7912c;
 }
 .soft-popup.danger span:nth-child(1) {
-  background-color: #7d1c19;
-  border-color: #bd2a26;
+  background-color: #8e211e;
+  border-color: #cd2f2b;
 }
 /*************** SOFT PROGRESS BARS ***************/
 .soft-progress {
@@ -2037,7 +2037,7 @@ nav.aside .category {
   border: inherit inherit inherit !important;
   margin: 0 !important;
   padding: 0 !important;
-  background-color: #2c72d9;
+  background-color: #296dd1;
 }
 /*************** SOFT TOOLTIPS ***************/
 .soft-tooltip {
@@ -2114,9 +2114,9 @@ nav.aside .category {
 /************** SOFT NOTIFICATIONS ****************/
 .soft-notif {
   display: block;
-  border: 1px solid #1c509c;
-  background-color: #98baec;
-  box-shadow: 1px 1px 2px 0 #143a71;
+  border: 1px solid #1c4c91;
+  background-color: #90b4e9;
+  box-shadow: 1px 1px 2px 0 #143566;
   color: #1b1b1b;
   font-size: 18px;
   text-align: center;
@@ -2134,14 +2134,14 @@ nav.aside .category {
   animation: plop 0.2s 0s ease-in-out;
 }
 .soft-notif.info {
-  border-color: #1c509c;
-  background-color: #98baec;
-  box-shadow: 1px 1px 2px 0 #1c509c;
+  border-color: #1c4c91;
+  background-color: #90b4e9;
+  box-shadow: 1px 1px 2px 0 #1c4c91;
 }
 .soft-notif.success {
-  border-color: #20682a;
-  background-color: #7dd789;
-  box-shadow: 1px 1px 2px 0 #20682a;
+  border-color: #24762f;
+  background-color: #8bdc96;
+  box-shadow: 1px 1px 2px 0 #24762f;
 }
 .soft-notif.warning {
   border-color: #b26a14;
@@ -2149,64 +2149,15 @@ nav.aside .category {
   box-shadow: 1px 1px 2px 0 #b26a14;
 }
 .soft-notif.danger {
-  border-color: #7d1c19;
-  background-color: #e5807e;
-  box-shadow: 1px 1px 2px 0 #7d1c19;
+  border-color: #8e211e;
+  background-color: #e89290;
+  box-shadow: 1px 1px 2px 0 #8e211e;
 }
 @media screen and (max-width: 600px) {
   .soft-notif {
     width: 90%;
     max-width: 90%;
     right: 5%;
-  }
-}
-/* We import the file adapting some things to mobile with media queries */
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
-/* Replace max-width by the width of your main+aside ( calculate --main-width +
---aside-width ) if you want the aside to work properly on mobile ( media queries
-don't work with CSS variables ) */
-@media screen and (max-width: 1224px) {
-  aside {
-    display: block;
-    width: 100%;
-  }
-  main {
-    width: 100%;
-    display: block;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .container-lg {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-  }
-}
-@media screen and (max-width: 960px) {
-  .container-md {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-  }
-}
-@media screen and (max-width: 750px) {
-  .container-sm {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-  }
-}
-@media screen and (max-width: 800px) {
-  body > header {
-    font-size: 10vw;
-  }
-}
-@media screen and (max-width: 1040px) {
-  body.navside > header {
-    font-size: 8vw;
   }
 }
 /* We import all the helpers classes */
@@ -2293,20 +2244,27 @@ div:not(.toggle).right::after {
 /********** ELEMENTS ASPECT **********/
 /* Sets a subtle background color */
 .bg-subtle {
-  background-color: #d9e6f8 !important;
+  background-color: #d0dff6 !important;
 }
 /* Sets a border */
 .border {
-  border: 1px solid #1c509c;
+  border: 1px solid #1c4c91;
 }
 /********** SMALL CORRECTIONS ********/
+/* Set a small padding */
 .padding-sm {
   padding: 0.5em;
 }
+/* Set a medium padding */
 .padding-md {
   padding: 1em;
 }
+/* Set a big padding */
 .padding-lg {
+  padding: 2em;
+}
+/* The padding changes depending on the screen size */
+.padding-auto {
   padding: 2em;
 }
 /*******************************************************************************
@@ -2314,6 +2272,97 @@ div:not(.toggle).right::after {
 *******************************************************************************/
 ul.no-style li {
   list-style: none;
+}
+/* We import the file adapting some things to mobile with media queries */
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+/*******************************************************************************
+******************************** SCREEN SIZE ***********************************
+*******************************************************************************/
+/***********
+* TABLET
+***********/
+@media screen and (max-width: 780px) {
+  /* The padding changes depending on the screen size */
+  .padding-auto {
+    padding: 1em;
+  }
+}
+/***********
+* MOBILE
+***********/
+@media screen and (max-width: 600px) {
+  /* The padding changes depending on the screen size */
+  .padding-auto {
+    padding: 0.5em;
+  }
+}
+/*******************************************************************************
+*************************** ELEMENT SPECIFIC QUERIES ***************************
+*******************************************************************************/
+/*******************
+* MAIN + ASIDE
+*******************/
+@media screen and (max-width: 1224px) {
+  aside {
+    display: block;
+    width: 100%;
+  }
+  main {
+    width: 100%;
+    display: block;
+  }
+}
+/*******************************************************************************
+***** CONTAINERS
+*******************************************************************************/
+/*
+* LARGE
+*/
+@media screen and (max-width: 1200px) {
+  .container-lg {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+/*
+* MEDIUM
+*/
+@media screen and (max-width: 960px) {
+  .container-md {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+/*
+* SMALL
+*/
+@media screen and (max-width: 750px) {
+  .container-sm {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+/**************
+* HEADER
+**************/
+@media screen and (max-width: 800px) {
+  body > header {
+    font-size: 10vw;
+  }
+}
+/*************
+* NAVSIDE
+*************/
+@media screen and (max-width: 1040px) {
+  body.navside > header {
+    font-size: 8vw;
+  }
 }
 /* We import the animations */
 /*
@@ -2356,7 +2405,7 @@ ul.no-style li {
   -moz-border-radius: 20%;
   border-radius: 20%;
   background-color: #de557a;
-  border: 2px solid #bd2a26;
+  border: 2px solid #cd2f2b;
   margin-left: 50px;
 }
 /*************** ANIMATIONS ***************/
@@ -2551,7 +2600,7 @@ ul.no-style li {
 /*** COLOR FADE OUT ***/
 @keyframes color-fadeout {
   0% {
-    background-color: #6d9de5;
+    background-color: #6698e1;
   }
   100% {
     background-color: inherit;
@@ -2559,7 +2608,7 @@ ul.no-style li {
 }
 @-webkit-keyframes color-fadeout {
   0% {
-    background-color: #6d9de5;
+    background-color: #6698e1;
   }
   100% {
     background-color: inherit;

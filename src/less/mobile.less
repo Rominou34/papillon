@@ -3,9 +3,41 @@
 * Romain Arnaud - 2016
 */
 
-/* Replace max-width by the width of your main+aside ( calculate --main-width +
---aside-width ) if you want the aside to work properly on mobile ( media queries
-don't work with CSS variables ) */
+/*******************************************************************************
+******************************** SCREEN SIZE ***********************************
+*******************************************************************************/
+
+/***********
+* TABLET
+***********/
+
+@media screen and (max-width: @screen-width-md) {
+  /* The padding changes depending on the screen size */
+  .padding-auto {
+    padding: 1em;
+  }
+}
+
+/***********
+* MOBILE
+***********/
+
+@media screen and (max-width: @screen-width-sm) {
+  /* The padding changes depending on the screen size */
+  .padding-auto {
+    padding: 0.5em;
+  }
+}
+
+
+/*******************************************************************************
+*************************** ELEMENT SPECIFIC QUERIES ***************************
+*******************************************************************************/
+
+
+/*******************
+* MAIN + ASIDE
+*******************/
 @media screen and (max-width: (@main-width + @aside-width)) {
   aside {
     display: block;
@@ -18,6 +50,13 @@ don't work with CSS variables ) */
   }
 }
 
+/*******************************************************************************
+***** CONTAINERS
+*******************************************************************************/
+
+/*
+* LARGE
+*/
 @media screen and (max-width: @container-lg) {
   .container-lg {
     padding-left: 0 !important;
@@ -27,6 +66,9 @@ don't work with CSS variables ) */
   }
 }
 
+/*
+* MEDIUM
+*/
 @media screen and (max-width: @container-md) {
   .container-md {
     padding-left: 0 !important;
@@ -36,6 +78,9 @@ don't work with CSS variables ) */
   }
 }
 
+/*
+* SMALL
+*/
 @media screen and (max-width: @container-sm) {
   .container-sm {
     padding-left: 0 !important;
@@ -45,12 +90,18 @@ don't work with CSS variables ) */
   }
 }
 
+/**************
+* HEADER
+**************/
 @media screen and (max-width: 800px) {
   body > header {
     font-size: 10vw;
   }
 }
 
+/*************
+* NAVSIDE
+*************/
 @media screen and (max-width: round((800px + @navside-width))) {
   body.navside > header {
     font-size: 8vw;
