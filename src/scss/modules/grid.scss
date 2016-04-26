@@ -41,7 +41,7 @@
   flex: 1 0;
 }
 
-[class*="container"] div:not(.soft-row):not(.soft-col) {
+[class*="container"] div:not(.soft-row):not(.soft-col):not([class*="container"]) {
   padding: 0.5em;
   margin: $grid-margin-sm;
 }
@@ -82,7 +82,7 @@
 .space-8,
 .space-9,
 .space-10,
-.space-11, {
+.space-11 {
   padding: 0 !important;
   margin: 0 !important;
   border: none !important;
@@ -92,39 +92,42 @@
 
 /* LARGE */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: #{$container-lg}-#{$grid-margin}) {
-  .stack-lg.soft-col > div,
-  .stack-lg .soft-col:not(.stack-md):not(.stack-sm) > div {
-    width: calc(100% - 1em);
+@media screen and (max-width: #{$container-lg - $grid-margin}) {
+  .stack-lg:not(.soft-row) > div,
+  .stack-lg :not(.soft-row):not(.stack-md):not(.stack-sm) > div {
+    width: calc(100% - #{$grid-margin});
   }
 
   .stack-lg.soft-col > :not(.soft-row):not(.soft-col) {
     display: block;
+    width: calc(100% - #{$grid-margin});
   }
 }
 
 /* MEDIUM */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: #{$container-md}-#{$grid-margin}) {
-  .stack-md.soft-col > div,
-  .stack-md .soft-col:not(.stack-sm) > div {
-    width: calc(100% - 1em);
+@media screen and (max-width: #{$container-md - $grid-margin}) {
+  .stack-md:not(.soft-row) > div,
+  .stack-md :not(.soft-row):not(.stack-sm) > div {
+    width: calc(100% - #{$grid-margin});
   }
 
   .stack-md.soft-col > :not(.soft-row):not(.soft-col) {
     display: block;
+    width: calc(100% - #{$grid-margin});
   }
 }
 
 /* SMALL */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: #{$container-sm}-#{$grid-margin}) {
-  .stack-sm.soft-col > div,
-  .stack-sm .soft-col > div {
-    width: calc(100% - 1em);
+@media screen and (max-width: #{$container-sm - $grid-margin}) {
+  .stack-sm:not(.soft-row) > div,
+  .stack-sm :not(.soft-row) > div {
+    width: calc(100% - #{$grid-margin});
   }
 
   .stack-sm.soft-col > :not(.soft-row):not(.soft-col) {
     display: block;
+    width: calc(100% - #{$grid-margin});
   }
 }

@@ -39,7 +39,18 @@
 * ELEMENT COLORS
 */
 /* HEADER */
-/********** SIZES **********/
+  /*$bg-color-html: #fff;
+  $bg-color-body: #ecf0f1;
+  $bg-color-main: #ecf0f1;
+  $bg-color-aside: lighten($red-color, 40%);
+  $bg-color-footer: $black-color;
+
+  $bg-color-code: lighten($primary-color, 42%);
+
+  $font-color-text: $black-color;
+  $font-color-title: lighten($black-color, 4%);
+  $font-color-title-second: $grey-color;
+  $font-color-footer: #dcdcdc;*/
 /*
 ******************************************************************************
 * LAYOUT CONTROL
@@ -48,6 +59,7 @@
 /*
 ***** NAVIGATION *****
 */
+/********** SIZES **********/
 /*
 ***** GRID LAYOUT *****
 */
@@ -365,14 +377,14 @@ overridden ) */
 html {
   width: 100%;
   min-height: 100%;
-  background-color: #fff;
+  background-color: #101520;
   -webkit-font-smoothing: antialiased; }
 
 body {
   font-family: Arial, "sans-serif";
-  background-color: #ecf0f1;
+  background-color: #101520;
   line-height: 1.5;
-  color: #0e0e0e;
+  color: #e6e6e6;
   width: 100%;
   min-height: 100%;
   max-width: 100%;
@@ -420,28 +432,28 @@ aside {
   vertical-align: top;
   max-width: 200px;
   margin: auto;
-  background-color: #f5d0cf; }
+  background-color: #101520; }
 
 /****
 * B *
 ****/
 /***** BLOCKQUOTE *****/
 blockquote {
-  background: #f5f5f5;
+  background: #182534;
   padding: 1em;
   line-height: 1.5;
   width: auto;
   display: inline-block;
   margin: 0.8em;
-  border: 1px solid #ddd; }
+  border: 1px solid #182534; }
 
 blockquote:not(.reverse) {
-  border-left: 4px solid #bbb;
+  border-left: 4px solid #304760;
   text-align: left;
   float: left; }
 
 blockquote.reverse {
-  border-right: 4px solid #bbb;
+  border-right: 4px solid #304760;
   text-align: right;
   float: right; }
 
@@ -450,7 +462,7 @@ blockquote p {
 
 blockquote footer {
   font-size: calc(16px * 0.8);
-  color: #9d9d9d;
+  color: #6f7278;
   margin-top: 0.5em; }
 
 blockquote cite {
@@ -472,14 +484,14 @@ caption {
 
 /***** CODE *****/
 code {
-  background-color: #d2dff5;
+  background-color: #182534;
   font-family: "Source Code Pro", "Courier New", "monospace";
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   padding: 0 0.2em;
-  border: 1px solid #8bade6;
-  color: #14305d; }
+  border: 1px solid #304760;
+  color: #e6e6e6; }
 
 pre > code {
   display: block;
@@ -498,7 +510,7 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: #8bade6;
+  background-color: #304760;
   position: relative;
   top: -1.33em;
   font-size: 150%;
@@ -523,7 +535,7 @@ body > footer {
   width: 100%;
   padding: 2em 1em;
   background-color: #0e0e0e;
-  color: #dcdcdc;
+  color: #fff;
   text-align: center; }
 
 /****
@@ -555,7 +567,7 @@ h6 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #181818;
+  color: #e6e6e6;
   font-family: "Source Sans Pro", sans-serif;
   line-height: 2; }
 
@@ -565,7 +577,7 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-  color: #9d9d9d;
+  color: #6f7278;
   padding-left: 0;
   font-size: 60%; }
 
@@ -576,7 +588,7 @@ h4 a,
 h5 a,
 h6 a {
   position: relative;
-  color: #181818 !important;
+  color: #e6e6e6 !important;
   display: inline-block; }
 
 h1 a::before,
@@ -636,29 +648,30 @@ img {
   font-weight: 300;
   line-height: 2;
   text-align: center;
+  max-width: 100%;
   height: auto;
   display: block;
   position: relative;
-  min-height: 4em;
   box-sizing: border-box;
-  margin: 10px; }
+  margin-left: auto;
+  margin-right: auto; }
 
 img:after {
   content: 'Problem loading " ' attr(alt) ' "';
   font-size: 16px;
-  color: #9d9d9d;
+  color: #6f7278;
   display: block;
   position: absolute;
-  border: 2px dashed #bcbcbc;
+  border: 2px dashed #304760;
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   z-index: 2;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 4em;
-  background-color: #dcdcdc;
+  max-width: 100%;
+  height: auto;
+  background-color: #182534;
   box-sizing: border-box; }
 
 /****
@@ -666,13 +679,13 @@ img:after {
 ****/
 /***** KEYBOARD *****/
 kbd {
-  background-color: #f6efe0;
+  background-color: #182534;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
   border-width: 1px 1px 3px 1px;
   border-style: solid;
-  border-color: #8b7b6e;
+  border-color: #304760;
   padding: 0 2px; }
 
 /****
@@ -689,7 +702,7 @@ main {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  background-color: #ecf0f1; }
+  background-color: #101520; }
 
 /********** PSEUDO SELECTORS **********/
 :target {
@@ -739,11 +752,11 @@ main {
 /********** ELEMENTS ASPECT **********/
 /* Change the aspect of a container to showcase something inside */
 .showcase {
-  background-color: #fff;
-  border: #bcbcbc;
+  background-color: #182534;
+  border: #304760;
   margin: 2em 1em;
   padding: 1em;
-  box-shadow: 0 0 4px 0 #595959 inset;
+  box-shadow: 0 0 4px 0 #304760 inset;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px; }
@@ -864,7 +877,7 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
   -webkit-flex: 1 0;
   flex: 1 0; }
 
-[class*="container"] div:not(.soft-row):not(.soft-col) {
+[class*="container"] div:not(.soft-row):not(.soft-col):not([class*="container"]) {
   padding: 0.5em;
   margin: 10px; }
 
@@ -955,31 +968,34 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 /*************** RESPONSIVE DESIGN ***************/
 /* LARGE */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: 1200px (-20px)) {
-  .stack-lg.soft-col > div,
-  .stack-lg .soft-col:not(.stack-md):not(.stack-sm) > div {
-    width: calc(100% - 1em); }
+@media screen and (max-width: 1180px) {
+  .stack-lg:not(.soft-row) > div,
+  .stack-lg :not(.soft-row):not(.stack-md):not(.stack-sm) > div {
+    width: calc(100% - 20px); }
 
   .stack-lg.soft-col > :not(.soft-row):not(.soft-col) {
-    display: block; } }
+    display: block;
+    width: calc(100% - 20px); } }
 /* MEDIUM */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: 960px (-20px)) {
-  .stack-md.soft-col > div,
-  .stack-md .soft-col:not(.stack-sm) > div {
-    width: calc(100% - 1em); }
+@media screen and (max-width: 940px) {
+  .stack-md:not(.soft-row) > div,
+  .stack-md :not(.soft-row):not(.stack-sm) > div {
+    width: calc(100% - 20px); }
 
   .stack-md.soft-col > :not(.soft-row):not(.soft-col) {
-    display: block; } }
+    display: block;
+    width: calc(100% - 20px); } }
 /* SMALL */
 /* Set the value according to the one you put at the beginning */
-@media screen and (max-width: 750px (-20px)) {
-  .stack-sm.soft-col > div,
-  .stack-sm .soft-col > div {
-    width: calc(100% - 1em); }
+@media screen and (max-width: 730px) {
+  .stack-sm:not(.soft-row) > div,
+  .stack-sm :not(.soft-row) > div {
+    width: calc(100% - 20px); }
 
   .stack-sm.soft-col > :not(.soft-row):not(.soft-col) {
-    display: block; } }
+    display: block;
+    width: calc(100% - 20px); } }
 /* We import the classes for the buttons */
 button,
 .button {
@@ -1061,12 +1077,14 @@ button.loading:hover,
   cursor: wait; }
 
 button.primary.loading::after,
+button.secondary.loading::after,
 button.success.loading::after,
 button.info.loading::after,
 button.danger.loading::after,
 button.warning.loading::after,
 button.black.loading::after,
 .button.primary.loading:after,
+.button.secondary.loading::after,
 .button.success.loading::after,
 .button.info.loading::after,
 .button.danger.loading::after,
@@ -1103,8 +1121,20 @@ button.large.loading::after,
     position: absolute !important;
 }*/
 /*************** COLORS ***************/
-button.success, button.info, button.danger, button.warning, button.black, button.primary,
-.button.success, .button.info, .button.danger, .button.warning, .button.black, .button.primary {
+button.success,
+button.info,
+button.danger,
+button.warning,
+button.black,
+button.primary,
+button.secondary,
+.button.success,
+.button.info,
+.button.danger,
+.button.warning,
+.button.black,
+.button.primary,
+.button.secondary {
   color: #fff; }
 
 .button.success:hover,
@@ -1112,7 +1142,8 @@ button.success, button.info, button.danger, button.warning, button.black, button
 .button.danger:hover,
 .button.warning:hover,
 .button.black:hover,
-.button.primary:hover {
+.button.primary:hover,
+.button.secondary:hover {
   color: #fff; }
 
 /*
@@ -1140,6 +1171,32 @@ button.primary:not(:disabled):not(.loading):active,
 button.primary:disabled,
 .button.primary.disabled {
   background-color: #5486da; }
+
+/*
+* SECONDARY
+*/
+button.secondary,
+.button.secondary {
+  background-color: #9f24c9;
+  border-color: transparent; }
+
+button.secondary:not(:disabled):not(.loading):hover,
+.button.secondary:not(.disabled):not(.loading):hover {
+  background-color: #761b95; }
+
+button.secondary:not(:disabled):hover:focus,
+button.secondary:not(:disabled):focus,
+.button.secondary:not(.disabled):focus {
+  border-color: #49115d; }
+
+button.secondary:not(:disabled):not(.loading):active,
+.button.secondary:not(.disabled):not(.loading):active {
+  background-color: #49115d;
+  box-shadow: 0 0 0 0 #000; }
+
+button.secondary:disabled,
+.button.secondary.disabled {
+  background-color: #b94bdf; }
 
 /*
 * GREEN
@@ -1629,7 +1686,7 @@ nav.aside .submenu .dropdown a {
   width: 100%;
   display: block;
   color: #204b94;
-  border-left: 2px solid #ecf0f1;
+  border-left: 2px solid transparent;
   border-color: transparent;
   line-height: 1.2;
   box-sizing: border-box; }
@@ -2131,12 +2188,12 @@ nav.aside .category {
 
 /********** ELEMENTS ASPECT **********/
 /* Sets a subtle background color */
-.bg-subtle {
-  background-color: #cad9f3 !important; }
+.bg-color {
+  background-color: #182534 !important; }
 
 /* Sets a border */
 .border {
-  border: 1px solid #204b94; }
+  border: 1px solid #304760; }
 
 /********** SMALL CORRECTIONS ********/
 /* Set a small padding */
@@ -2203,8 +2260,8 @@ ul.no-style li {
   .container-lg {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-left: 0 !important; } }
+    margin-left: auto;
+    margin-right: auto; } }
 /*
 * MEDIUM
 */
@@ -2212,8 +2269,8 @@ ul.no-style li {
   .container-md {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-left: 0 !important; } }
+    margin-left: auto;
+    margin-right: auto; } }
 /*
 * SMALL
 */
@@ -2221,8 +2278,8 @@ ul.no-style li {
   .container-sm {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-left: 0 !important; } }
+    margin-left: auto;
+    margin-right: auto; } }
 /**************
 * HEADER
 **************/

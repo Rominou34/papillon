@@ -92,12 +92,14 @@ button.loading:hover,
 }
 
 button.primary.loading::after,
+button.secondary.loading::after,
 button.success.loading::after,
 button.info.loading::after,
 button.danger.loading::after,
 button.warning.loading::after,
 button.black.loading::after,
 .button.primary.loading:after,
+.button.secondary.loading::after,
 .button.success.loading::after,
 .button.info.loading::after,
 .button.danger.loading::after,
@@ -139,8 +141,20 @@ button.large.loading::after,
 
 /*************** COLORS ***************/
 
-button.success, button.info, button.danger, button.warning, button.black, button.primary,
-.button.success, .button.info, .button.danger, .button.warning, .button.black, .button.primary {
+button.success,
+button.info,
+button.danger,
+button.warning,
+button.black,
+button.primary,
+button.secondary,
+.button.success,
+.button.info,
+.button.danger,
+.button.warning,
+.button.black,
+.button.primary,
+.button.secondary {
   color: #fff;
 }
 
@@ -149,7 +163,8 @@ button.success, button.info, button.danger, button.warning, button.black, button
 .button.danger:hover,
 .button.warning:hover,
 .button.black:hover,
-.button.primary:hover {
+.button.primary:hover,
+.button.secondary:hover {
   color: #fff;
 }
 
@@ -182,6 +197,37 @@ button.primary:not(:disabled):not(.loading):active,
 button.primary:disabled,
 .button.primary.disabled {
   background-color: lighten($primary-color, 12%);
+}
+
+/*
+* SECONDARY
+*/
+button.secondary,
+.button.secondary {
+  background-color: $secondary-color;
+  border-color: transparent;
+}
+
+button.secondary:not(:disabled):not(.loading):hover,
+.button.secondary:not(.disabled):not(.loading):hover {
+  background-color: darken($secondary-color, 12%);
+}
+
+button.secondary:not(:disabled):hover:focus,
+button.secondary:not(:disabled):focus,
+.button.secondary:not(.disabled):focus {
+  border-color: darken($secondary-color, 25%);
+}
+
+button.secondary:not(:disabled):not(.loading):active,
+.button.secondary:not(.disabled):not(.loading):active {
+  background-color: darken($secondary-color, 25%);
+  box-shadow: 0 0 0 0 #000;
+}
+
+button.secondary:disabled,
+.button.secondary.disabled {
+  background-color: lighten($secondary-color, 12%);
 }
 
 /*

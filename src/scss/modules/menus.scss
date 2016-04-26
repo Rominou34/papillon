@@ -425,7 +425,7 @@ nav.aside .submenu .dropdown a {
   width: 100%;
   display: block;
   color: darken($primary-color, 12%);
-  border-left: 2px solid $bg-color-body;
+  border-left: 2px solid transparent;
   border-color: transparent;
   line-height: 1.2;
   box-sizing: border-box;

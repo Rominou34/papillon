@@ -49,11 +49,11 @@
 
 /* Change the aspect of a container to showcase something inside */
 .showcase {
-  background-color: #fff;
-  border: lighten($grey-color, 12%);
+  background-color: $bg-color-elements;
+  border: $border-color-elements;
   margin: 2em 1em;
   padding: 1em;
-  box-shadow: 0 0 4px 0 #595959 inset;
+  box-shadow: 0 0 4px 0 $border-color-elements inset;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;

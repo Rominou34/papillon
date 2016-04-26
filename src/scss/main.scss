@@ -5,7 +5,9 @@
 
 @charset "UTF-8";
 
-@import "config.scss";
+@import "config/colors.scss";
+
+@import "config/sizes.scss";
 
 /* We reset all the rules so it looks the same for all browsers */
 @import "vendor/sanitize.scss";

@@ -1,0 +1,25 @@
+/********** SIZES **********/
+
+$body-width: 100%;
+$main-width: 1024px;
+$aside-width: 200px;
+
+$screen-width-sm: 600px;
+$screen-width-md: 780px;
+$screen-width-lg: 960px;
+$screen-width-xl: 1200px;
+
+$navside-width: 240px;
+$navside-header-height: 150px;
+$navside-footer-height: 50px;
+
+/*
+***** GRID LAYOUT *****
+*/
+$grid-margin: 20px;
+$grid-margin-sm: ($grid-margin / 2);
+
+/* Container threshold sizes */
+$container-sm: 750px;
+$container-md: 960px;
+$container-lg: 1200px;
