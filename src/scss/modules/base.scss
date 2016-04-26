@@ -42,15 +42,15 @@
   height: 60%;
   top: 20%;
   left: -0.5em;
-  border-right: 6px solid $blue-default;
+  border-right: 6px solid $primary-color;
 }
 
 /********** ELEMENTS ASPECT **********/
 
-/* Change the apsect of a container to showcase something inside */
+/* Change the aspect of a container to showcase something inside */
 .showcase {
   background-color: #fff;
-  border: $grey-light;
+  border: lighten($grey-color, 12%);
   margin: 2em 1em;
   padding: 1em;
   box-shadow: 0 0 4px 0 #595959 inset;

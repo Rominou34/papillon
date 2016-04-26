@@ -8,41 +8,41 @@
 @import "config.scss";
 
 /* We reset all the rules so it looks the same for all browsers */
-@import "sanitize.scss";
+@import "vendor/sanitize.scss";
 
 /* Then we initialize the default values ( must be imported first so they can be
 overridden ) */
-@import "init.scss";
+@import "modules/init.scss";
 
 /* We import the base classes */
-@import "base.scss";
+@import "modules/base.scss";
 
 /* We import the fonticons-related classes */
-@import "fonticons.scss";
+@import "modules/fonticons.scss";
 
 /* We import the files for the tables */
-@import "tables.scss";
+@import "modules/tables.scss";
 
 /* We import the classes for the forms */
-@import "forms.scss";
+@import "modules/forms.scss";
 
 /* We import the layout for grids and columns */
-@import "grid.scss";
+@import "modules/grid.scss";
 
 /* We import the classes for the buttons */
-@import "buttons.scss";
+@import "modules/buttons.scss";
 
 /* We import the classes for the menus */
-@import "menus.scss";
+@import "modules/menus.scss";
 
 /* We import the custom elements */
-@import "custom.scss";
+@import "modules/custom.scss";
 
 /* We import all the helpers classes */
-@import "helpers.scss";
+@import "modules/helpers.scss";
 
 /* We import the file adapting some things to mobile with media queries */
-@import "mobile.scss";
+@import "modules/mobile.scss";
 
 /* We import the animations */
-@import "animations.scss";
+@import "modules/animations.scss";

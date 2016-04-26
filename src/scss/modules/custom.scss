@@ -27,8 +27,8 @@
   right: 0;
   margin: auto;
   text-align: center;
-  background-color: $white-default;
-  color: $black-default;
+  background-color: #efefef;
+  color: $black-color;
   box-shadow: 0 4px 16px 0 #252525;
   vertical-align: middle;
   overflow: hidden;
@@ -52,10 +52,10 @@
   line-height: 2;
   width: 100%;
   display: block;
-  color: $white-light;
+  color: #fff;
   box-shadow: 0 -2px 16px 2px #121212;
-  background-color: $grey-default;
-  border-bottom: 0.25em solid $grey-dark;
+  background-color: $grey-color;
+  border-bottom: 0.25em solid darken($grey-color, 12%);
 }
 
 .soft-popup button {
@@ -65,23 +65,23 @@
 }
 
 .soft-popup.success span:nth-child(1) {
-  background-color: $green-dark;
-  border-color: $green-default;
+  background-color: darken($green-color, 12%);
+  border-color: $green-color;
 }
 
 .soft-popup.info span:nth-child(1) {
-  background-color: $blue-dark;
-  border-color: $blue-default;
+  background-color: darken($blue-color, 12%);
+  border-color: $blue-color;
 }
 
 .soft-popup.warning span:nth-child(1) {
-  background-color: $orange-dark;
-  border-color: $orange-default;
+  background-color: darken($orange-color, 12%);
+  border-color: $orange-color;
 }
 
 .soft-popup.danger span:nth-child(1) {
-  background-color: $red-dark;
-  border-color: $red-default;
+  background-color: darken($red-color, 12%);
+  border-color: $red-color;
 }
 
 /*************** SOFT PROGRESS BARS ***************/
@@ -93,7 +93,6 @@
   padding: 0 !important;
   border: none !important;
   height: 0.5em;
-  background-color: $white-dark;
 }
 
 .soft-progress div {
@@ -191,10 +190,10 @@
 
 .soft-notif {
   display: block;
-  border: 1px solid $primary-color-dark;
-  background-color: $primary-color-lighter;
-  box-shadow: 1px 1px 2px 0 $primary-color-darker;
-  color: $black-light;
+  border: 1px solid darken($primary-color, 12%);
+  background-color: lighten($primary-color, 12%);
+  box-shadow: 1px 1px 2px 0 darken($primary-color, 25%);
+  color: lighten($black-color, 6%);
   font-size: 18px;
   text-align: center;
   -webkit-border-radius: 2px;
@@ -212,27 +211,27 @@
 }
 
 .soft-notif.info {
-  border-color: $blue-dark;
-  background-color: $blue-lighter;
-  box-shadow: 1px 1px 2px 0 $blue-dark;
+  border-color: darken($blue-color, 12%);
+  background-color: lighten($blue-color, 12%);
+  box-shadow: 1px 1px 2px 0 darken($blue-color, 12%);
 }
 
 .soft-notif.success {
-  border-color: $green-dark;
-  background-color: $green-lighter;
-  box-shadow: 1px 1px 2px 0 $green-dark;
+  border-color: darken($green-color, 12%);
+  background-color: lighten($green-color, 12%);
+  box-shadow: 1px 1px 2px 0 darken($green-color, 12%);
 }
 
 .soft-notif.warning {
-  border-color: $orange-dark;
-  background-color: $orange-lighter;
-  box-shadow: 1px 1px 2px 0 $orange-dark;
+  border-color: darken($orange-color, 12%);
+  background-color: lighten($orange-color, 12%);
+  box-shadow: 1px 1px 2px 0 darken($orange-color, 12%);
 }
 
 .soft-notif.danger {
-  border-color: $red-dark;
-  background-color: $red-lighter;
-  box-shadow: 1px 1px 2px 0 $red-dark;
+  border-color: darken($red-color, 12%);
+  background-color: lighten($red-color, 12%);
+  box-shadow: 1px 1px 2px 0 darken($red-color, 12%);
 }
 
 @media screen and (max-width: 600px) {

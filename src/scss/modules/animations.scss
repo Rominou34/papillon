@@ -4,7 +4,7 @@
 	$heartbeat-color-peak: #d66969;
 	$heartbeat-color-finish: #d75858;
 
-	$color-fadeout: $primary-color-light;
+	$color-fadeout: lighten($primary-color, 25%);
 
 /*************** CLASSES ***************/
 
@@ -47,7 +47,7 @@
 	-moz-border-radius: 20%;
 	border-radius: 20%;
 	background-color: $color-pink;
-	border: 2px solid $red-default;
+	border: 2px solid $red-color;
 	margin-left: 50px;
 }
 

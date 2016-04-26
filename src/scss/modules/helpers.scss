@@ -56,12 +56,8 @@
   float: right !important;
 }
 
-/* Clears the float: right so elements after aren't affected */
-article.right::after,
-div:not(.toggle).right::after {
-  content: "";
-  display: block;
-  height: 0;
+/* Clears the float on an element */
+.clearfix {
   clear: both;
 }
 
@@ -101,12 +97,12 @@ div:not(.toggle).right::after {
 
 /* Sets a subtle background color */
 .bg-subtle {
-  background-color: $primary-color-subtle !important;
+  background-color: lighten($primary-color, 40%) !important;
 }
 
 /* Sets a border */
 .border {
-  border: 1px solid $primary-color-dark;
+  border: 1px solid darken($primary-color, 12%);
 }
 
 /********** SMALL CORRECTIONS ********/
