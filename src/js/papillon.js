@@ -1,27 +1,30 @@
 /*
-* Soft CSS - The tweakable CSS framework
+* Papillon CSS - The beautiful CSS framework
 * Romain Arnaud - 2016
 */
 
-
-
-
-
-
-/****************************** CUSTOM ELEMENTS *******************************/
-
-/*************** SOFT POPUP ***************/
-
 /*
-* This function is the constructor to display <soft-popup> notifications
-* param is an array that looks like this:
-* params:
-* type = alert type ( defaults are success, info, warning and alert ),
-* header = Header message ( the message displayed in bold at the top ),
-* msg = Message ( the message displayed )
+* This is the papillon super variable
+* Pretty much every function of the framework except the one occuring automatically
+* are here.
+* You call the functions like that: p.notification(), p.animate(), etc.
 */
-var soft = {
+var p = {
+
+  /*
+  * An array containing the notifications ( used so they can pile up without
+  * covering each other )
+  */
   notifs: [],
+
+  /*
+  * Displays a big popup with a mask being it, covering all the screen
+  * Used for important messages
+  * -- PARAMS --
+  * type: type of popup ( info / success / warning / danger )
+  * header: Message to display in the header
+  * msg: Message
+  */
   popup: function(type, header, msg) {
     // Creating the element and the mask
     var softpopupmask = document.createElement("div");
@@ -49,9 +52,6 @@ var soft = {
     document.body.appendChild(softpopupmask);
     softpopupmask.appendChild(softpopup);
   },
-
-
-  /*************** SOFT PROGRESS BARS ***************/
 
   /*
   * Function used to create progress bars
@@ -83,11 +83,15 @@ var soft = {
     this.element.querySelector("div").style.width = percent + "%";
   },*/
 
-
-
-
-  /*************** SOFT NOTIFICATIONS ***************/
-
+  /*
+  * Function used to display a small notification in the bottom right corner,
+  * fading out after some time. Multiple notifications called at the same time
+  * pile up instead of covering each other
+  * -- PARAMS --
+  * type: The type of notification ( info / success / warning / danger )
+  * msg: The message to display
+  * t: The time ( in ms ) before the notification fades out
+  */
   notification: function(type, msg, t) {
     var not = document.createElement("div");
     var id = randomId(8);
@@ -113,20 +117,29 @@ var soft = {
     not.style.bottom = ((pos*56)+10) + "px";
     this.notifs.push([id,pos]);
     document.body.appendChild(not);
+
+    // Makes the notif disappear after the given time
     setTimeout(function() {
       fadeOut(not, t/2, 1);
       //not.remove();
       var rank;
+      // We get the pos of the div in the notifs array
       for(var j in this.notifs) {
         if(this.notifs[j][0]===id) {
           rank=j;
           break;
         }
       }
-      soft.notifs.splice(j,1);
+      // We delete the div from the array
+      p.notifs.splice(j,1);
     }, t);
   },
 
+  /*
+  * Function called every frame by the custom animate function
+  * It's using a polyfill of window.requestAnimationFrame to run 60 FPS
+  * For params, see animate()
+  */
   animateStep: function(timestamp, start, el, prop, st, en, un, dur) {
     var startTime;
     if (!start) {
@@ -144,6 +157,16 @@ var soft = {
     }
   },
 
+  /*
+  * Custom animate function, animating properties at 60 FPS
+  * -- PARAMS --
+  * el: The DOM element to animate
+  * prop: The property to animate ( width, height, padding, etc. )
+  * st: The starting value
+  * en: The ending value
+  * un: The unity ( px, %, etc. )
+  * dura: The duration of the animation ( in ms )
+  */
   animate: function(el, prop, st, en, un, dura) {
     window.softRequestAnimationFrame(soft.animateStep, null, el, prop, st, en, un, dura);
   }
