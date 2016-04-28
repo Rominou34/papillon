@@ -21,7 +21,7 @@
   $font-size-small: calc(#{$font-size-default} * 0.8); /* Basic text */
   $font-size-header: 96px; /* Header */
 
-  $line-height: 1.5;
+  $line-height: 1.4;
 
   /*
   ******************************************************************************
@@ -85,17 +85,21 @@
 
   $bg-color-base: #ecf0f1;
   $bg-color-elements: #dfe2e6;
+  $bg-color-elements-shade: #c3c4c6;
   $border-color-elements: #afb0b1;
 
-  $font-color-base: #101010;
+  $font-color-shade: #717171;
   $font-color-grey: #484848;
+  $font-color-base: #101010;
 
   $bg-color-base: #101520;
   $bg-color-elements: #182534;
+  $bg-color-elements-shade: #23364e;
   $border-color-elements: #304760;
 
-  $font-color-base: #e6e6e6;
+  $font-color-shade: #343b4d;
   $font-color-grey: #6f7278;
+  $font-color-base: #e6e6e6;
 
   $font-color-link: $blue-color;
   $font-color-link-h: lighten($blue-color, 12%);
