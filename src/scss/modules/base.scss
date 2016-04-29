@@ -58,3 +58,25 @@
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+
+/*** SPOILERS ***/
+
+/* Applied on a span, it hides the text and displays it on hover */
+span.spoiler {
+  color: $font-color-base;
+  background-color: $font-color-base;
+}
+
+span.spoiler:hover {
+  background-color: transparent;
+}
+
+/* Applied on a div with, it toggle the display with a button */
+div.spoiler-block button {
+  margin: 0.5em auto;
+  display: block;
+}
+
+div.spoiler-block .spoiler-content {
+  display: none;
+}

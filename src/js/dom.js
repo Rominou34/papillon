@@ -1,9 +1,12 @@
+"use strict";
+
 var navBar, navBarY, navSide;
 var d = -1;
 window.onload = function() {
   addToolTipListeners();
   addNavDropdownListener();
   addNavHidingLinks();
+  addSpoilerListeners();
 
   navBar = document.querySelector("nav.top");
   if(navBar !== null) {
@@ -43,12 +46,12 @@ window.onload = function() {
 
 var addToolTipListeners = function() {
   var toolTips = document.querySelectorAll(".soft-tooltip");
-  toolTipItems = [].slice.call(toolTips);
+  var toolTipItems = [].slice.call(toolTips);
   toolTipItems.forEach(function (item) {
     //Event listener for hover
     item.addEventListener("mouseover", function() {
       var tips = item.querySelectorAll(".tooltip");
-      tipItems = [].slice.call(tips);
+      var tipItems = [].slice.call(tips);
       var elH = item.offsetHeight;
       var elW = item.offsetWidth;
 
@@ -81,7 +84,7 @@ var addToolTipListeners = function() {
     //Event listener for mouse out
     item.addEventListener("mouseout", function() {
       var tips = item.querySelectorAll(".tooltip");
-      tipItems = [].slice.call(tips);
+      var tipItems = [].slice.call(tips);
       tipItems.forEach(function (tip) {
         tip.classList.remove("animation-plop");
         tip.style.visibility = "hidden";
@@ -95,7 +98,7 @@ var addToolTipListeners = function() {
 /************ NAVBAR ************/
 var addNavDropdownListener = function() {
   var dropMenus = document.querySelectorAll(".submenu");
-  dropItems = [].slice.call(dropMenus);
+  var dropItems = [].slice.call(dropMenus);
   dropItems.forEach(function (item) {
 
     if(item.getAttribute("data-toggle") === 'hover') {
@@ -157,11 +160,11 @@ var addNavSideToggle = function() {
   })
 }
 
-addNavHidingLinks = function() {
+var addNavHidingLinks = function() {
   var navLinks = document.querySelectorAll("nav a");
-  navL = [].slice.call(navLinks);
+  var navL = [].slice.call(navLinks);
   var navToggle = document.querySelectorAll("nav .toggle");
-  navT = [].slice.call(navToggle);
+  var navT = [].slice.call(navToggle);
   navL.forEach(function (link) {
     link.addEventListener("click", function() {
       document.querySelector("nav.side").classList.remove("active");
@@ -172,6 +175,22 @@ addNavHidingLinks = function() {
       });
     });
   });
+}
+
+var addSpoilerListeners = function() {
+  var spoilerBlocks = document.querySelectorAll(".spoiler-block");
+  var spoilerB = [].slice.call(spoilerBlocks);
+  spoilerB.forEach(function(spoilerBlock) {
+    var spoilerToggle = spoilerBlock.querySelector("button");
+    spoilerToggle.addEventListener("click", function() {
+      var spoilerContent = spoilerToggle.parentElement.querySelector(".spoiler-content");
+      if(spoilerContent.style.display == "block") {
+        spoilerContent.style.display = "none";
+      } else {
+        spoilerContent.style.display = "block";
+      }
+    })
+  })
 }
 
 /*
