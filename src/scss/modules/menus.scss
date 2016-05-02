@@ -424,17 +424,11 @@ nav.aside .submenu :first-child,
 nav.aside .submenu .dropdown a {
   width: 100%;
   display: block;
-  color: darken($primary-color, 12%);
+  color: $primary-color;
   border-left: 2px solid transparent;
   border-color: transparent;
   line-height: 1.2;
   box-sizing: border-box;
-}
-
-nav.aside a:hover,
-nav.aside .submenu :first-child:hover,
-nav.aside .submenu .dropdown a:hover {
-  color: lighten($primary-color, 12%);
 }
 
 nav.aside a,
@@ -462,16 +456,12 @@ nav.aside .submenu :first-child:hover {
 }
 
 nav.aside .submenu .dropdown {
-  max-height: 0;
+  display: none;
   overflow: hidden;
-  -webkit-transition: max-height 0.4s ease;
-  -moz-transition: max-height 0.4s ease;
-  -o-transition: max-height 0.4s ease;
-  transition: max-height 0.4s ease;
 }
 
 nav.aside .submenu.active .dropdown {
-  max-height: 800px;
+  display: block;
 }
 
 nav.aside a.current,
@@ -482,10 +472,10 @@ nav.aside .submenu .dropdown a.current {
 
 nav.aside .category {
   font-size: 120%;
-  color: lighten($black-color, 12%);
+  color: $font-color-grey;
   font-style: bold;
   margin: 0.4em 0;
-  border-bottom: 1px dashed darken($grey-color, 12%);
+  border-bottom: 1px dashed $font-color-shade;
 }
 
 /*

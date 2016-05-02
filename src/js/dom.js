@@ -3,9 +3,16 @@
 var navBar, navBarY, navSide;
 var d = -1;
 window.onload = function() {
+  // Add event listeners to display tooltips on hover
   addToolTipListeners();
+
+  // Add event listeners to display dropdown menus on action
   addNavDropdownListener();
+
+  // Add event listeners to hide dropdown menus on click
   addNavHidingLinks();
+
+  // Add event listeners for spoiler blocks
   addSpoilerListeners();
 
   navBar = document.querySelector("nav.top");
@@ -43,7 +50,6 @@ window.onload = function() {
 * This function adds and event listener to all tooltips so they appear on
 * hover
 */
-
 var addToolTipListeners = function() {
   var toolTips = document.querySelectorAll(".soft-tooltip");
   var toolTipItems = [].slice.call(toolTips);
@@ -95,7 +101,10 @@ var addToolTipListeners = function() {
 
 /***************************** OTHER FUNCTIONS ********************************/
 
-/************ NAVBAR ************/
+/*
+* This function adds an event listener on all submenus to display the
+* child dropdown menu on hover / click
+*/
 var addNavDropdownListener = function() {
   var dropMenus = document.querySelectorAll(".submenu");
   var dropItems = [].slice.call(dropMenus);
@@ -122,14 +131,22 @@ var addNavDropdownListener = function() {
   });
 }
 
+/*
+* This function is used so when you open a dropdown menu, all other open
+* dropdown menus get closed
+*/
 var disableNavDropdown = function() {
   var dropMenus = document.querySelectorAll(".submenu");
-  dropItems = [].slice.call(dropMenus);
+  var dropItems = [].slice.call(dropMenus);
   dropItems.forEach(function (item) {
     item.classList.remove("active");
   });
 }
 
+/*
+* This function adds an event listener to the window that fixes the nav
+* on top of the screen if you scroll past it
+*/
 var addNavScroll = function() {
   window.addEventListener('scroll', function(e) {
     var rect = navBar.getBoundingClientRect();
@@ -143,6 +160,10 @@ var addNavScroll = function() {
   });
 }
 
+/*
+* This function adds an event listener so a click on the toggle button
+* displays the links on mobile
+*/
 var addNavBarToggle = function() {
   var navToggle = navBar.querySelector(".toggle");
   navToggle.addEventListener('click', function(e) {
@@ -152,6 +173,9 @@ var addNavBarToggle = function() {
   })
 }
 
+/*
+* Same as addNavBarToggle(), but for nav.side
+*/
 var addNavSideToggle = function() {
   var navToggle = navSide.querySelector(".toggle");
   navToggle.addEventListener('click', function(e) {
@@ -160,6 +184,10 @@ var addNavSideToggle = function() {
   })
 }
 
+/*
+* This function adds an event listener on toggle so that when you click
+* on a toggle on mobile, it closes all other open nav menus
+*/
 var addNavHidingLinks = function() {
   var navLinks = document.querySelectorAll("nav a");
   var navL = [].slice.call(navLinks);
@@ -167,9 +195,22 @@ var addNavHidingLinks = function() {
   var navT = [].slice.call(navToggle);
   navL.forEach(function (link) {
     link.addEventListener("click", function() {
-      document.querySelector("nav.side").classList.remove("active");
-      document.querySelector("nav .toggle").classList.remove("cross");
-      document.querySelector("nav.top .links").classList.remove("show");
+      // nav.side
+      var navSide_t = document.querySelector("nav.side");
+      if(navSide_t != null) {
+        navSide_t.classList.remove("active");
+      }
+      // nav.toggle
+      var navToggle_t = document.querySelector("nav .toggle");
+      if(navToggle_t != null) {
+        navToggle_t.classList.remove("cross");
+      }
+      // nav.top
+      var navTop_t = document.querySelector("nav.top .links");
+      if(navTop_t != null) {
+        navTop_t.classList.remove("show");
+      }
+
       navT.forEach(function (toggle) {
         toggle.classList.remove("cross");
       });

@@ -265,6 +265,7 @@ h6 a {
   position: relative;
   color: $font-color-base !important;
   display: inline-block;
+  padding-left: 0.6em;
 }
 
 h1 a::before,
@@ -274,9 +275,9 @@ h4 a::before,
 h5 a::before,
 h6 a::before {
   content: '#';
-  color: lighten($primary-color, 25%);
+  color: transparentize(lighten($primary-color, 25%),0.25);
   position: absolute;
-  left: -0.75em;
+  left: 0;
   line-height: 250%;
   font-size: 80%;
 }
