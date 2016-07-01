@@ -1499,7 +1499,6 @@ nav.top .submenu {
   transition: background-color 0.1s, padding-bottom 0.4s; }
 
 nav.top .submenu span {
-  height: 100%;
   width: 100%;
   display: block; }
 
