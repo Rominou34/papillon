@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Documentation - Soft CSS</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href='../src/min/test.css' rel='stylesheet' type='text/css'>
+      <!--<link href='../src/min/soft.min.css' rel='stylesheet' type='text/css'>!-->
+      <script src="../src/js/misc.js"></script>
+      <script src="../src/js/dom.js"></script>
+      <script src="../src/js/soft.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="navside">
+    <header>Documentation</header>
+    <nav class="side">
+      <div class="toggle"></div>
+      <div class="header">
+        <h2>Soft CSS</h2>
+        <span>Documentation</span>
+      </div>
+      <div class="links">
+        <div class="category">
+          <span>CSS</span>
+          <div class="submenu">
+            <span>Basics</span>
+            <div class="dropdown">
+              <a href="#">Menus</a>
+              <a href="#">Grid Layout</a>
+              <a href="#">Tables</a>
+              <a href="#">Forms</a>
+              <a href="#">Configuration</a>
+            </div>
+          </div>
+          <div class="submenu">
+            <span>More</span>
+            <div class="dropdown">
+              <a href="#">Custom elements</a>
+              <a href="#">Helper classes</a>
+              <a href="#">Custom elements</a>
+              <a href="#">Helper classes</a>
+              <a href="#">Tables</a>
+            </div>
+          </div>
+        </div>
+        <div class="category">
+          <span>Javascript</span>
+          <a href="#">soft.js</a>
+          <a href="#">dom.js</a>
+          <a href="#">misc.js</a>
+        </div>
+      </div>
+      <div class="footer">
+        <span>Like me</span>
+      </div>
+    </nav>
+    <main class="padding-auto">
+      <h1 class="text-center">Navigation menus</h1>
+      <!--
+      ***** GLOBAL *****
+      !-->
+      <div class="container">
+        <h2>
+          <a id="global" href="#global">Global</a>
+        </h2>
+        <p>
+          Soft CSS comes with 3 types of intuitive menus:
+          <ul class="padding-sm">
+            <li>
+              <a href="#top-navbar">Top navigation bar</a>
+            </li>
+            <li>
+              <a href="#">Side navigation menu</a>
+            </li>
+            <li>
+              <a href="#">Aside navigation menu</a>
+            </li>
+          </ul>
+          Both were developped while thinking about responsive design,
+          so they change aspect to fit to all screen sizes.
+        </p>
+        <p>
+          <h4>Classes</h4>
+          <ul class="padding-md">
+            <li>
+              <b><code>nav.top</code>:</b> By putting the class "top" on the
+              <code>nav</code>, you define the menu as a top navbar
+            </li>
+            <li>
+              <b><code>div.header</code> and <code>div.footer</code>:</b>
+              These are used to define the header and footer of a side navigation
+              menu ( it does nothing when used on a top navigation bar )
+            </li>
+            <li>
+              <b><code>div.toggle</code>:</b>
+              Put a <code>div</code> with the class "toggle" at the beginning of
+              your <code>nav</code> structure. It will act as the toggle button
+              to display the menu on narrow displays, but it won't appear on wide displays
+            </li>
+            <li>
+              <b><code>div.links:</code></b> This will be the container for your links,
+              so put them here
+            </li>
+            <li>
+              <b><code>div.submenu</code>:</b> Instead of putting a link, you can put
+              a dropdown submenu containing multiple links by using a
+              <code>div</code> with the class "submenu"<br/>
+              You need to put an attribute named <code>data-toggle</code>
+              ( either "click" or "hover" ) to define which type of event will
+              trigger the dropdown<br/>
+            </li>
+            <li>
+              <b><code>div.submenu span</code>:</b> If you want to give a name to your
+                submenu, put it in a <code>span</code>, and then put the
+                <code>div.dropdown</code> after it
+            <li>
+              <b><code>div.dropdown</code>:</b> When using a submenu, this div will act
+              as the dropdown containing the link
+            </li>
+          </ul>
+        </p>
+        <p>
+          <h4>Attributes</h4>
+          <ul class="padding-md">
+            <li>
+              <b><code>data-follow</code>:</b>
+              If you put this attribute on
+              your <code>nav.top</code> element, it will be fixed at the top of
+              the screen when you will scroll past it
+            </li>
+            <li>
+              <b><code>data-toggle</code>:</b>
+              You can put this attribute with a value ( either "click" or
+              "hover" ) on your <code>div.submenu</code> if you have one to tell
+              which type of event you want to act as a toggle to display the
+              dropdown menu.<br/>
+              By default, the toggle will be set to "click"
+            </li>
+          </ul>
+        </p>
+      </div>
+      <!--
+      ***** TOP NAVBAR *****
+      !-->
+      <div class="container">
+        <h2>
+          <a id="top-navbar" href="#top-navbar">Top Navbar</a>
+        </h2>
+        <p>
+          <h4>Structure</h4>
+          Here is the basic HTML structure for a top navbar:
+          <pre>
+            <code data-lang="HTML">
+&lt;nav class="top" data-follow&gt;
+  &lt;div class="toggle right"&gt;&lt;/div&gt;
+  &lt;div class="links"&gt;
+    &lt;div class="submenu" data-toggle="click"&gt;
+      &lt;span&gt;
+        Submenu title
+      &lt;/span&gt;
+      &lt;div class="dropdown"&gt;
+        &lt;a href="target1">Submenu link 1&lt;/a&gt;
+        &lt;a href="target2">Submenu link 2&lt;/a&gt;
+        &lt;a href="target1">Submenu link 3&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href="target4"&gt;Normal link&lt;/a&gt;
+    &lt;a href="target5"&gt;Normal link&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+            </code>
+          </pre>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

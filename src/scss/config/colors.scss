@@ -1,0 +1,121 @@
+/*
+* Soft CSS - The tweakable CSS framework
+* Romain Arnaud - 2016
+*/
+
+  /*
+  ******************************************************************************
+  * FONTS
+  ******************************************************************************
+  */
+
+  $font-default: Arial, "sans-serif"; /* basic text */
+  $font-sans-serif: Impact, "sans-serif"; /* basic text sans serif */
+  $font-serif: "Times New Roman", "serif"; /* basic text serif ? */
+  $font-title: 'Source Sans Pro', sans-serif; /* h1, h2, h3, h4, h5, h6 */
+  $font-header: Ubuntu, "sans-serif"; /* Header */
+  $font-code: "Source Code Pro", "Courier New", "monospace"; /* code */
+
+  $font-size-default: 16px; /* Basic text */
+  $font-size-big: calc(#{$font-size-default} * 1.5); /* Basic text */
+  $font-size-small: calc(#{$font-size-default} * 0.8); /* Basic text */
+  $font-size-header: 96px; /* Header */
+
+  $line-height: 1.4;
+
+  /*
+  ******************************************************************************
+  * COLOR PALETTE
+  ******************************************************************************
+  */
+
+  /*
+  * HOW TO USE
+  * - Define the default color each time ( $blue-default, $red-default, etc. )
+  * - The shades will be automatically calculated using lighten() and darken()
+  * - At the end, choose the colors of elements using the color palette
+  *   so you have an uniform color scheme
+  */
+
+
+
+  /***** COLOR PALETTE *****/
+  $primary-color: #2b65c6;
+  $secondary-color: #9f24c9;
+  $grey-color: #9d9d9d;
+  $black-color: #0e0e0e;
+  $blue-color: #296dd1;
+  $green-color: #36b147;
+  $red-color: #cd2f2b;
+  $orange-color: #e7912c;
+
+  /*** OTHERS ***/
+  $color-brown: #79461c;
+  $color-gold: #d6aa27;
+  $color-yellow: #e8e62a;
+  $color-pink: #de557a;
+  $color-purple: #73289c;
+  $color-cyan: #36c7e0;
+
+
+  /*
+  * ELEMENT COLORS
+  */
+
+
+
+  /* HEADER */
+  $color-header: #ecf0f1;
+  $bg-color-header: $primary-color;
+
+
+
+  /*$bg-color-html: #fff;
+  $bg-color-body: #ecf0f1;
+  $bg-color-main: #ecf0f1;
+  $bg-color-aside: lighten($red-color, 40%);
+  $bg-color-footer: $black-color;
+
+  $bg-color-code: lighten($primary-color, 42%);
+
+  $font-color-text: $black-color;
+  $font-color-title: lighten($black-color, 4%);
+  $font-color-title-second: $grey-color;
+  $font-color-footer: #dcdcdc;*/
+
+  $bg-color-base: #ecf0f1;
+  $bg-color-elements: #dfe2e6;
+  $bg-color-elements-shade: #c3c4c6;
+  $border-color-elements: #afb0b1;
+
+  $font-color-shade: #717171;
+  $font-color-grey: #484848;
+  $font-color-base: #101010;
+
+  $bg-color-base: #101520;
+  $bg-color-elements: #182534;
+  $bg-color-elements-shade: #23364e;
+  $border-color-elements: #304760;
+
+  $font-color-shade: #343b4d;
+  $font-color-grey: #6f7278;
+  $font-color-base: #e6e6e6;
+
+  $font-color-link: $blue-color;
+  $font-color-link-h: lighten($blue-color, 12%);
+  $font-color-link-v: $color-purple;
+
+
+
+  /*
+  ******************************************************************************
+  * LAYOUT CONTROL
+  ******************************************************************************
+  */
+
+  /*
+  ***** NAVIGATION *****
+  */
+  $bg-color-nav: $blue-color;
+  $navside-header-color: darken($primary-color, 12%);
+  $navside-footer-color: $black-color;

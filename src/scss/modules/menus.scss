@@ -1,0 +1,678 @@
+nav {
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+}
+
+nav div,
+nav a,
+nav span {
+  box-sizing: border-box;
+}
+
+/*
+********************************************************************************
+* TOP NAVBAR
+********************************************************************************
+*/
+
+nav.top {
+  width: 100%;
+}
+
+nav.top.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+
+nav.top .links {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-transition: max-height 0.25s;
+  -moz-transition: max-height 0.25s;
+  -o-transition: max-height 0.25s;
+  transition: max-height 0.25s;
+}
+
+nav .toggle {
+  display: none;
+}
+
+nav .toggle:hover {
+  cursor: pointer;
+}
+
+nav .toggle::after {
+  content: '\2630';
+  color: #fff;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  display: block;
+  margin-left: calc(50% - 25px);
+  -webkit-transition: transform 0.25s;
+  -moz-transition: transform 0.25s;
+  -o-transition: transform 0.25s;
+  transition: transform 0.25s;
+}
+
+nav .toggle.cross::after {
+  content: '\2716';
+  transform: rotate(90deg);
+}
+
+nav.top .links > a,
+nav.top .links > div,
+nav.top .links > a:visited {
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  background-color: darken($primary-color, 25%);
+  z-index: 3;
+}
+
+nav.top .links > :not(.submenu),
+nav.top .links > .submenu span {
+  padding: 0.5em 0;
+}
+
+nav.top .links > :hover,
+nav.top .links > a:visited:hover {
+  background-color: darken($primary-color, 12%);
+  cursor: pointer;
+}
+
+/*
+* TOP NAVBAR SUBMENU
+*/
+
+nav.top .submenu.active {
+  background-color: darken($primary-color, 12%);
+}
+
+nav.top .submenu {
+  position: relative;
+  -webkit-transition: background-color 0.1s, padding-bottom 0.4s;
+  -moz-transition: background-color 0.1s, padding-bottom 0.4s;
+  -o-transition: background-color 0.1s, padding-bottom 0.4s;
+  transition: background-color 0.1s, padding-bottom 0.4s;
+}
+
+nav.top .submenu span {
+  width: 100%;
+  display: block;
+}
+
+nav.top .submenu span::before {
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  content: '\25BC';
+  display: block;
+  position: absolute;
+  left: 10%;
+  color: #fff;
+}
+nav.top .submenu:hover::before {
+  color: #fff;
+}
+
+nav.top .submenu.active::before {
+  color: transparent;
+}
+
+nav.top .submenu.active :not(.dropdown) {
+  padding: 0.5em 0;
+}
+
+/*
+* TOP NAVBAR SUBMENU DROPDOWN
+*/
+
+nav.top .submenu .dropdown {
+  display: block;
+  position: absolute;
+  top: calc(#{$line-height} * #{$font-size-default} + 1em);
+  width: 100%;
+  max-height: 0;
+  -webkit-transition: max-height 0.4s ease;
+  -moz-transition: max-height 0.4s ease;
+  -o-transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease;
+  overflow: hidden;
+}
+
+nav.top .submenu.active .dropdown {
+  max-height: 800px;
+}
+
+nav.top .submenu .dropdown a,
+nav.top .submenu .dropdown div,
+nav.top .submenu .dropdown span {
+  display: block;
+  width: 100%;
+  background-color: darken($primary-color, 12%);
+  color: #fff;
+  -webkit-transition: padding 0.4s;
+  -moz-transition: padding 0.4s;
+  -o-transition: padding 0.4s;
+  transition: padding 0.4s;
+}
+
+nav.top .submenu .dropdown :not(.category):hover {
+  background-color: darken($primary-color, 25%);
+}
+
+/*
+* TOP NAVBAR SUBMENU CATEGORY
+*/
+
+nav.top .submenu .dropdown .category {
+  padding: 0.4em 1em;
+  text-align: left;
+  color: $grey-color;
+}
+
+nav.top .submenu .dropdown .category:hover {
+  cursor: default;
+}
+
+nav.top .submenu .dropdown .category::before {
+  content: '';
+  width: 0;
+  height: 0;
+}
+
+
+/*
+********************************************************************************
+* SIDE MENU
+********************************************************************************
+*/
+
+/*
+* SIDE MENU BODY
+*/
+body.navside {
+  margin-left: $navside-width;
+  width: calc(100% - #{$navside-width});
+}
+
+nav.side {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  top: 0;
+  z-index: 3;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: $navside-width;
+  overflow: hidden;
+  -webkit-transition: width 0.25s;
+  -moz-transition: width 0.25s;
+  -o-transition: width 0.25s;
+  transition: width 0.25s;
+  background-color: $navside-header-color;
+}
+
+nav.side div,
+nav.side a,
+nav.side span,
+nav.side input {
+  z-index: 3;
+}
+
+/*
+* SIDE MENU HEADER
+*/
+nav.side .header {
+  width: 100%;
+  background-color: $navside-header-color;
+  height: $navside-header-height;
+  color: #ecf0f1;
+  width: 100%;
+  text-align: center;
+  padding: 0.4em;
+}
+
+nav.side .header * {
+  color: #ecf0f1;
+}
+
+nav.side .header input {
+  background-color: #ecf0f1;
+  border: 1px solid lighten($black-color, 12%);
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 10px;
+  width: 86%;
+  margin: 0 7%;
+}
+
+nav.side .toggle {
+  display: none;
+  width: 40px;
+}
+
+/*
+* SIDE MENU LINKS
+*/
+nav.side .links {
+  display: block;
+  height: calc(100vh - #{$navside-header-height} - #{$navside-footer-height});
+  background-color: lighten($black-color, 6%);
+  overflow: hidden;
+  -webkit-transition: width 0.25s;
+  -moz-transition: width 0.25s;
+  -o-transition: width 0.25s;
+  transition: width 0.25s;
+}
+
+nav.side .links > a,
+nav.side .links > div,
+nav.side .links > :visited,
+nav.side .links .category > a,
+nav.side .links .category > :visited,
+nav.side .links .submenu .dropdown > a,
+nav.side .links .submenu .dropdown > :visited {
+  color: lighten($grey-color, 25%);
+  padding: 0 0.6em;
+  display: block;
+  width: 100%;
+  line-height: 3;
+  text-align: left;
+  overflow: hidden;
+  -webkit-transition: width 0.25s, font-size 0.25s;
+  -moz-transition: width 0.25s, font-size 0.25s;
+  -o-transition: width 0.25s, font-size 0.25s;
+  transition: width 0.25s, font-size 0.25s;
+}
+
+nav.side .links > :not(.category):hover,
+nav.side .links .category > :not(span):hover,
+nav.side .links .submenu.active :first-child,
+nav.side .links .submenu.active .dropdown {
+  background-color: lighten($black-color, 12%);
+}
+
+/*
+* SIDE MENU DROPDOWN
+*/
+
+nav.side .links .submenu {
+  padding: 0;
+}
+
+nav.side .links .submenu:hover {
+  cursor: pointer;
+}
+
+nav.side .links .submenu .dropdown {
+  max-height: 0;
+  width: 100%;
+  -webkit-transition: max-height 0.4s ease, border-width 0.4s ease, border-color 0.4s ease;
+  -moz-transition: max-height 0.4s ease, border-width 0.4s ease, border-color 0.4s ease;
+  -o-transition: max-height 0.4s ease, border-width 0.4s ease, border-color 0.4s ease;
+  transition: max-height 0.4s ease, border-width 0.4s ease, border-color 0.4s ease;
+  border-bottom: 0 solid transparent;
+  overflow: hidden;
+}
+
+nav.side .links .submenu.active .dropdown {
+  max-height: 800px;
+  border-bottom: 2px solid $grey-color;
+}
+
+nav.side .links .submenu > span {
+  padding: 0 0.6em;
+  display: block;
+  line-height: 3;
+  width: 100%;
+}
+
+nav.side .links .submenu > span::before {
+  content: '+';
+  border: 1px solid #ecf0f1;
+  line-height: 1;
+  width: 16px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+nav.side .links .submenu.active > span::before {
+  content: '-';
+  background-color: #ecf0f1;
+  color: $black-color;
+}
+
+nav.side .links .submenu .dropdown > a {
+  width: 100%;
+  display: block;
+  padding-left: 1.2em;
+}
+
+nav.side .links .submenu .dropdown > :hover {
+  background-color: lighten($black-color, 6%);
+}
+
+/*
+* SIDE MENU CATEGORY
+*/
+
+nav.side .links .category {
+  width: 100%;
+  padding: 0;
+}
+
+nav.side .links .category > span {
+  color: darken($grey-color, 12%);
+  font-size: 90%;
+  padding: 0.4em 0.6em;
+}
+
+nav.side .links .category > a {
+  font-size: $font-size-default;
+  border-left: 2px solid $primary-color;
+  padding-left: 1.2em;
+}
+
+nav.side .links .category > div {
+  font-size: $font-size-default;
+  border-left: 2px solid $primary-color;
+}
+
+/*
+* SIDE MENU FOOTER
+*/
+
+nav.side .footer {
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  height: $navside-footer-height;
+  background-color: $navside-footer-color;
+  font-size: 18px;
+  text-align: center;
+  color: #ecf0f1;
+  overflow: hidden;
+}
+
+/*
+********************************************************************************
+* ASIDE MENU
+********************************************************************************
+*/
+
+nav.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+
+
+nav.aside a,
+nav.aside .submenu :first-child,
+nav.aside .submenu .dropdown a {
+  width: 100%;
+  display: block;
+  color: $primary-color;
+  border-left: 2px solid transparent;
+  border-color: transparent;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+nav.aside a,
+nav.aside .submenu :first-child {
+  padding: 0 0.2em;
+  margin: 0.4em 0;
+}
+
+nav.aside .submenu .dropdown a {
+  width: calc(100% - 1em);
+  margin: 0.3em 0;
+  margin-left: 1em;
+  padding: 0 0.4em;
+  font-size: 90%;
+}
+
+nav.aside .submenu,
+nav.aside .submenu .dropdown {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+nav.aside .submenu :first-child:hover {
+  cursor: pointer;
+}
+
+nav.aside .submenu .dropdown {
+  display: none;
+  overflow: hidden;
+}
+
+nav.aside .submenu.active .dropdown {
+  display: block;
+}
+
+nav.aside a.current,
+nav.aside .submenu :first-child.current,
+nav.aside .submenu .dropdown a.current {
+  border-color: $primary-color;
+}
+
+nav.aside .category {
+  font-size: 120%;
+  color: $font-color-grey;
+  font-style: bold;
+  margin: 0.4em 0;
+  border-bottom: 1px dashed $font-color-shade;
+}
+
+/*
+********************************************************************************
+* TABLETS / NARROW DISPLAYS
+********************************************************************************
+*/
+
+@media (max-width: 1000px) {
+  nav.side {
+    width: round($navside-width / 1.6);
+  }
+
+  nav.side .header,
+  nav.side .links,
+  nav.side .links .submenu .dropdown > a,
+  nav.side .links .category > div,
+  nav.side .links .category > a {
+    font-size: $font-size-small;
+  }
+
+  nav.side .links .category > span {
+    font-size: 100%;
+  }
+
+  body.navside {
+    $navside-width-sm: round($navside-width / 1.6);
+    width: calc(100% - #{$navside-width-sm});
+    margin-left: $navside-width-sm;
+  }
+}
+
+/*
+********************************************************************************
+* MOBILE DEVICES / VERY NARROW DISPLAYS
+********************************************************************************
+*/
+
+@media (max-width: 600px) {
+  nav.top {
+    display: block;
+    background-color: darken($primary-color, 25%);
+  }
+
+  nav.top .links {
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+  }
+
+  nav.top .links.show {
+    max-height: 600px;
+    display: block;
+  }
+
+  nav.top .links > a,
+  nav.top .links > div {
+    width: 100%;
+    display: block;
+    font-size: 16px;
+  }
+
+  nav.top .links > :not(.submenu),
+  nav.top .links > .submenu span,
+  nav.top .links > .submenu.active span {
+    padding: 0.8em 0;
+  }
+
+  nav.top .links > :not(:last-child) {
+    border-bottom: 2px solid $primary-color;
+  }
+
+  nav.top .submenu .dropdown {
+    position: relative;
+    top: 0;
+  }
+
+  nav.top .submenu .dropdown > a,
+  nav.top .submenu .dropdown > div {
+    background-color: darken($primary-color, 12%);
+    padding: 0.8em 0;
+    border-top: 1px solid darken($primary-color, 25%);
+  }
+
+  nav.top .submenu .dropdown > :hover {
+    background-color: darken($primary-color, 25%);
+  }
+
+  nav.top .submenu .dropdown {
+    max-height: 0;
+  }
+
+  nav.top {
+    padding-left: 0;
+  }
+
+  nav.top .toggle {
+    width: 80px;
+    display: block;
+    height: 50px;
+    margin-right: calc(100% - 80px);
+    background-color: darken($primary-color, 12%);
+  }
+
+  nav.top .toggle.right {
+    margin-right: 0;
+    margin-left: calc(100% - 80px);
+    display: block;
+  }
+
+  /*************************** SIDE MENU MOBILE *******************************/
+  body.navside {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  nav.side {
+    width: 0px;
+    overflow: visible;
+  }
+
+  nav.side:not(.active) .header {
+    padding: 0;
+  }
+
+  nav.side .header {
+    font-size: $font-size-default;
+  }
+
+  nav.side .header,
+  nav.side .links {
+    overflow: hidden;
+  }
+
+  nav.side:not(.active) .toggle {
+    width: 50px;
+    background-color: $navside-header-color;
+    -webkit-border-radius: 0 0 4px 0;
+    -moz-border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px 0;
+  }
+
+  nav.side.active {
+    width: 100%;
+  }
+
+  nav.side:not(.active) .links > a,
+  nav.side:not(.active) .links > div {
+    width: 100%;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  nav.side.active .links {
+    width: 100%;
+  }
+
+  nav.side.active .links > a,
+  nav.side.active .links > div,
+  nav.side.active .links .category > a,
+  nav.side.active .links .category > div,
+  nav.side.active .links .submenu .dropdown > a {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  nav.side .toggle {
+    display: block;
+  }
+
+  nav.side.active .toggle {
+    width: 50px;
+  }
+
+  nav.side .links .submenu .dropdown,
+  nav.side .links .submenu.active .dropdown {
+    border-bottom: 0 solid #000;
+  }
+
+  nav.side .links .category > span {
+    border-bottom: 2px solid $primary-color;
+  }
+
+  nav.side .links .category > a,
+  nav.side .links .category > div {
+    border-left: 0 solid #000;
+  }
+
+  nav.side:not(.active) .footer {
+    padding: 8px 0;
+  }
+
+  nav.side.active .footer {
+    width: 100%;
+    padding: 8px;
+  }
+}

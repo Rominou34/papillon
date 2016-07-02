@@ -2,44 +2,49 @@
 * Soft CSS - The tweakable CSS framework
 * Romain Arnaud - 2016
 */
-@import url(config.less);
+
+@charset "UTF-8";
+
+@import "config/colors.scss";
+
+@import "config/sizes.scss";
 
 /* We reset all the rules so it looks the same for all browsers */
-@import url(sanitize.less);
+@import "vendor/sanitize.scss";
 
 /* Then we initialize the default values ( must be imported first so they can be
 overridden ) */
-@import url(init.less);
+@import "modules/init.scss";
 
 /* We import the base classes */
-@import url(base.less);
+@import "modules/base.scss";
 
 /* We import the fonticons-related classes */
-@import url(fonticons.less);
+@import "modules/fonticons.scss";
 
 /* We import the files for the tables */
-@import url(tables.less);
+@import "modules/tables.scss";
 
 /* We import the classes for the forms */
-@import url(forms.less);
+@import "modules/forms.scss";
 
 /* We import the layout for grids and columns */
-@import url(grid.less);
+@import "modules/grid.scss";
 
 /* We import the classes for the buttons */
-@import url(buttons.less);
+@import "modules/buttons.scss";
 
 /* We import the classes for the menus */
-@import url(menus.less);
+@import "modules/menus.scss";
 
 /* We import the custom elements */
-@import url(custom.less);
-
-/* We import the file adapting some things to mobile with media queries */
-@import url(mobile.less);
+@import "modules/custom.scss";
 
 /* We import all the helpers classes */
-@import url(helpers.less);
+@import "modules/helpers.scss";
+
+/* We import the file adapting some things to mobile with media queries */
+@import "modules/mobile.scss";
 
 /* We import the animations */
-@import url(animations.less);
+@import "modules/animations.scss";

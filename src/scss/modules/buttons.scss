@@ -1,0 +1,456 @@
+button,
+.button {
+  padding: 0 1em;
+  line-height: 2em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0.5em;
+  font-family: $font-default;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: $bg-color-elements-shade;
+  color: $font-color-base;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button:hover,
+.button:hover,
+.button:visited:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  background-color: $border-color-elements;
+  color: $font-color-base;
+}
+
+.button:visited {
+  color: inherit;
+}
+
+button:disabled,
+.button.disabled {
+  background-color: $border-color-elements;
+  color: $font-color-grey;
+}
+
+button:disabled:hover {
+  background-color: $border-color-elements;
+  cursor: not-allowed;
+}
+
+button:focus,
+.button:focus {
+  outline: 0;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+button:not(:disabled):focus,
+.button:not(.disabled):focus {
+  border-color: $primary-color;
+}
+
+button:not(:disabled):not(.loading):active,
+.button:not(.disabled):not(.loading):active {
+  outline: 0;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+  background-color: $font-color-shade;
+}
+
+/********** MODIFIER CLASSES **********/
+
+button.large,
+.button.large {
+  padding: 0 1em;
+  font-size: 20px;
+}
+
+
+button.loading,
+.button.loading {
+  padding: 0.7em 2em;
+  content: '';
+  pointer-events: none;
+}
+
+button.large.loading,
+.button.large.loading {
+  padding: 0.8em 2.5em;
+}
+
+button.loading:hover,
+.button.loading:hover {
+  cursor: wait;
+}
+
+button.primary.loading::after,
+button.secondary.loading::after,
+button.success.loading::after,
+button.info.loading::after,
+button.danger.loading::after,
+button.warning.loading::after,
+button.black.loading::after,
+.button.primary.loading:after,
+.button.secondary.loading::after,
+.button.success.loading::after,
+.button.info.loading::after,
+.button.danger.loading::after,
+.button.warning.loading::after,
+.button.black.loading::after {
+    border-color: transparent transparent white white !important;
+}
+
+button.loading::after,
+.button.loading::after {
+    animation: spin-right 500ms infinite linear;
+    border: 2px solid #888;
+    -webkit-border-radius: 2000px;
+    -moz-border-radius: 2000px;
+    border-radius: 2000px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: $font-size-default;
+    position: relative;
+    width: $font-size-default;
+}
+
+button.large.loading::after,
+.button.large.loading::after {
+  height: $font-size-big;
+  width: $font-size-big;
+}
+
+button.btn-round,
+.button.btn-round {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+}
+
+button.outline,
+.button.outline {
+  border: 1px solid $font-color-base;
+  background-color: transparent;
+  color: $font-color-base;
+}
+
+/*button.loading:after {
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    position: absolute !important;
+}*/
+
+/*************** COLORS ***************/
+
+button.success,
+button.info,
+button.danger,
+button.warning,
+button.black,
+button.primary,
+button.secondary,
+.button.success,
+.button.info,
+.button.danger,
+.button.warning,
+.button.black,
+.button.primary,
+.button.secondary {
+  color: #fff;
+}
+
+.button.success:hover,
+.button.info:hover,
+.button.danger:hover,
+.button.warning:hover,
+.button.black:hover,
+.button.primary:hover,
+.button.secondary:hover {
+  color: #fff;
+}
+
+/*
+* PRIMARY
+*/
+button.primary,
+.button.primary {
+  background-color: $primary-color;
+}
+
+button.primary:not(:disabled):not(.loading):not(.outline):hover,
+.button.primary:not(.disabled):not(.loading):not(.outline):hover,
+button.primary:not(:disabled):focus,
+.button.primary:not(.disabled):focus {
+  background-color: lighten($primary-color, 12%);
+}
+
+button.primary:not(:disabled):not(.loading):active,
+.button.primary:not(.disabled):not(.loading):active {
+  background-color: darken($primary-color, 12%);
+}
+
+button.primary:disabled,
+.button.primary.disabled {
+  background-color: lighten($primary-color, 12%);
+}
+
+button.primary.outline,
+.button.primary.outline {
+  color: $primary-color;
+  background-color: transparent;
+  border-color: $primary-color;
+}
+
+button.primary.outline:hover,
+.button.primary.outline:hover,
+button.primary.outline:focus,
+.button.primary.outline:focus {
+  color: #fff;
+  background-color: $primary-color;
+}
+
+/*
+* SECONDARY
+*/
+button.secondary,
+.button.secondary {
+  background-color: $secondary-color;
+}
+
+button.secondary:not(:disabled):not(.loading):not(.outline):hover,
+.button.secondary:not(.disabled):not(.loading):not(.outline):hover,
+button.secondary:not(:disabled):focus,
+.button.secondary:not(.disabled):focus {
+  background-color: lighten($secondary-color, 12%);
+}
+
+button.secondary:not(:disabled):not(.loading):active,
+.button.secondary:not(.disabled):not(.loading):active {
+  background-color: darken($secondary-color, 12%);
+}
+
+button.secondary:disabled,
+.button.secondary.disabled {
+  background-color: lighten($secondary-color, 12%);
+}
+
+button.secondary.outline,
+.button.secondary.outline {
+  color: $secondary-color;
+  background-color: transparent;
+  border-color: $secondary-color;
+}
+
+button.secondary.outline:hover,
+.button.secondary.outline:hover,
+button.secondary.outline:focus,
+.button.secondary.outline:focus {
+  color: #fff;
+  background-color: $secondary-color;
+}
+
+/*
+* GREEN
+*/
+button.success,
+.button.success {
+  background-color: $green-color;
+}
+
+button.success:not(:disabled):not(.loading):not(.outline):hover,
+.button.success:not(:disabled):not(.loading):not(.outline):hover,
+button.success:not(:disabled):focus,
+.button.success:not(.disabled):focus {
+  background-color: lighten($green-color, 12%);
+}
+
+button.success:not(:disabled):not(.loading):active,
+.button.success:not(:disabled):not(.loading):active, {
+  background-color: darken($green-color, 12%);
+}
+
+button.success:disabled,
+.button.success.disabled {
+  background-color: lighten($green-color, 12%);
+}
+
+button.success.outline,
+.button.success.outline {
+  color: $green-color;
+  background-color: transparent;
+  border-color: $green-color;
+}
+
+button.success.outline:hover,
+.button.success.outline:hover,
+button.success.outline:focus,
+.button.success.outline:focus {
+  color: #fff;
+  background-color: $green-color;
+}
+
+/* BLUE */
+button.info,
+.button.info {
+  background-color: $blue-color;
+}
+
+button.info:not(:disabled):not(.loading):not(.outline):hover,
+.button.info:not(:disabled):not(.loading):not(.outline):hover,
+button.info:not(:disabled):focus,
+.button.info:not(.disabled):focus {
+  background-color: lighten($blue-color, 12%);
+}
+
+button.info:not(:disabled):not(.loading):active,
+.button.info:not(:disabled):not(.loading):active {
+  background-color: darken($blue-color, 12%);
+}
+
+button.info:disabled,
+.button.info.disabled {
+  background-color: lighten($blue-color, 12%);
+}
+
+button.info.outline,
+.button.info.outline {
+  color: $blue-color;
+  background-color: transparent;
+  border-color: $blue-color;
+}
+
+button.info.outline:hover,
+.button.info.outline:hover,
+button.info.outline:focus,
+.button.info.outline:focus {
+  color: #fff;
+  background-color: $blue-color;
+}
+
+/* RED */
+button.danger,
+.button.danger {
+  background-color: $red-color;
+}
+
+button.danger:not(:disabled):not(.loading):not(.outline):hover,
+.button.danger:not(:disabled):not(.loading):not(.outline):hover,
+button.danger:not(:disabled):focus,
+.button.danger:not(.disabled):focus {
+  background-color: lighten($red-color, 12%);
+}
+
+button.danger:not(:disabled):not(.loading):active,
+.button.danger:not(:disabled):not(.loading):active {
+  background-color: darken($red-color, 12%);
+}
+
+button.danger:disabled,
+.button.danger.disabled {
+  background-color: lighten($red-color, 12%);
+}
+
+button.danger.outline,
+.button.danger.outline {
+  color: $red-color;
+  background-color: transparent;
+  border-color: $red-color;
+}
+
+button.danger.outline:hover,
+.button.danger.outline:hover,
+button.danger.outline:focus,
+.button.danger.outline:focus {
+  color: #fff;
+  background-color: $red-color;
+}
+
+/* ORANGE */
+button.warning,
+.button.warning {
+  background-color: $orange-color;
+}
+
+button.warning:not(:disabled):not(.loading):not(.outline):hover,
+.button.warning:not(.disabled):not(.loading):not(.outline):hover,
+button.warning:not(:disabled):focus,
+.button.warning:not(.disabled):focus {
+  background-color: lighten($orange-color, 12%);
+}
+
+button.warning:not(:disabled):not(.loading):active,
+.button.warning:not(:disabled):not(.loading):active {
+  background-color: darken($orange-color, 12%);
+}
+
+button.warning:disabled,
+.button.warning.disabled {
+  background-color: lighten($orange-color, 12%);
+}
+
+button.warning.outline,
+.button.warning.outline {
+  color: $orange-color;
+  background-color: transparent;
+  border-color: $orange-color;
+}
+
+button.warning.outline:hover,
+.button.warning.outline:hover,
+button.warning.outline:focus,
+.button.warning.outline:focus {
+  color: #fff;
+  background-color: $orange-color;
+}
+
+/* BLACK */
+button.black,
+.button.black {
+  background-color: lighten($black-color, 12%);
+}
+
+button.black:not(:disabled):not(.loading):not(.outline):hover,
+.button.black:not(:disabled):not(.loading):not(.outline):hover,
+button.black:not(:disabled):focus,
+.button.black:not(.disabled):focus {
+  background-color: lighten($black-color, 18%);
+}
+
+button.black:not(:disabled):not(.loading):active,
+.button.black:not(:disabled):not(.loading):active {
+  background-color: lighten($black-color, 6%);
+}
+
+button.black:disabled,
+.button.black.disabled {
+  background-color: lighten($black-color, 18%);
+}
+
+button.black.outline,
+.button.black.outline {
+  color: $border-color-elements;
+  background-color: transparent;
+  border-color: $border-color-elements;
+}
+
+button.black.outline:hover,
+.button.black.outline:hover,
+button.black.outline:focus,
+.button.black.outline:focus {
+  color: #fff;
+  background-color: $border-color-elements;
+}

@@ -1,8 +1,3 @@
-/*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
-*/
-
 /********** CONTAINERS **********/
 .container,
 .container-sm,
@@ -15,15 +10,15 @@
 }
 
 .container-sm {
-  max-width: (@container-sm - @grid-margin);
+  max-width: ($container-sm - $grid-margin);
 }
 
 .container-md {
-  max-width: (@container-md - @grid-margin);
+  max-width: ($container-md - $grid-margin);
 }
 
 .container-lg {
-  max-width: (@container-lg - @grid-margin);
+  max-width: ($container-lg - $grid-margin);
 }
 
 /*
@@ -46,20 +41,42 @@
   width: 0;
   height: 60%;
   top: 20%;
-  left: 2%;
-  border-right: 6px solid @blue-default;
+  left: -0.5em;
+  border-right: 6px solid $primary-color;
 }
 
 /********** ELEMENTS ASPECT **********/
 
-/* Change the apsect of a container to showcase something inside */
+/* Change the aspect of a container to showcase something inside */
 .showcase {
-  background-color: #fff;
-  border: @grey-light;
+  background-color: $bg-color-elements;
+  border: $border-color-elements;
   margin: 2em 1em;
   padding: 1em;
-  box-shadow: 0 0 4px 0 #595959 inset;
+  box-shadow: 0 0 4px 0 $border-color-elements inset;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+}
+
+/*** SPOILERS ***/
+
+/* Applied on a span, it hides the text and displays it on hover */
+span.spoiler {
+  color: $font-color-base;
+  background-color: $font-color-base;
+}
+
+span.spoiler:hover {
+  background-color: transparent;
+}
+
+/* Applied on a div with, it toggle the display with a button */
+div.spoiler-block button {
+  margin: 0.5em auto;
+  display: block;
+}
+
+div.spoiler-block .spoiler-content {
+  display: none;
 }

@@ -1,0 +1,133 @@
+.soft-row,
+.soft-col {
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  align-items: stretch;
+  justify-content: space-between;;
+  padding: 0;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.soft-row,
+.soft-col,
+.soft-row div,
+.soft-col div {
+  box-sizing: border-box;
+  text-align: inherit;
+}
+
+.soft-row {
+  width: 100%;
+}
+
+.soft-row, .soft-col {
+  height: auto;
+  padding: 0;
+}
+/*
+.soft-col :first-child {
+  margin-top: 0;
+}
+
+.soft-col :last-child {
+  margin-bottom: 0;
+}*/
+
+.soft-col :not([class*="col"]):not(.soft-row),
+.soft-row :not([class*="col"]) {
+  -webkit-flex: 1 0;
+  flex: 1 0;
+}
+
+[class*="container"] div:not(.soft-row):not(.soft-col):not([class*="container"]) {
+  padding: 0.5em;
+  margin: $grid-margin-sm;
+}
+
+
+.col-1, .space-1 { width: calc(100% / 12 - #{$grid-margin}); }
+.col-2, .space-2 { width: calc(100% / 6 - #{$grid-margin}); }
+.col-3, .space-3 { width: calc(100% / 4 - #{$grid-margin}); }
+.col-4, .space-4 { width: calc(100% / 3 - #{$grid-margin}); }
+.col-5, .space-5 { width: calc(500% / 12 - #{$grid-margin}); }
+.col-6, .space-6 { width: calc(100% / 2 - #{$grid-margin}); }
+.col-7, .space-7 { width: calc(700% / 12 - #{$grid-margin}); }
+.col-8, .space-8 { width: calc(800% / 12 - #{$grid-margin}); }
+.col-9, .space-9 { width: calc(900% / 12 - #{$grid-margin}); }
+.col-10, .space-10 { width: calc(1000% / 12 - #{$grid-margin}); }
+.col-11, .space-11 { width: calc(1100% / 12 - #{$grid-margin}); }
+.col-12 { width: 100%; }
+
+.col-offset-1 { margin-left: calc(100% / 12); }
+.col-offset-2 { margin-left: calc(100% / 6); }
+.col-offset-3 { margin-left: calc(100% / 4); }
+.col-offset-4 { margin-left: calc(100% / 3); }
+.col-offset-5 { margin-left: calc(500% / 12); }
+.col-offset-6 { margin-left: calc(100% / 2); }
+.col-offset-7 { margin-left: calc(700% / 12); }
+.col-offset-8 { margin-left: calc(800% / 12); }
+.col-offset-9 { margin-left: calc(900% / 12); }
+.col-offset-10 { margin-left: calc(1000% / 12); }
+.col-offset-11 { margin-left: calc(1100% / 12); }
+
+.space-1,
+.space-2,
+.space-3,
+.space-4,
+.space-5,
+.space-6,
+.space-7,
+.space-8,
+.space-9,
+.space-10,
+.space-11 {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/*************** RESPONSIVE DESIGN ***************/
+
+/* LARGE */
+/* Set the value according to the one you put at the beginning */
+@media screen and (max-width: #{$container-lg - $grid-margin}) {
+  .stack-lg:not(.soft-row) > div,
+  .stack-lg :not(.soft-row):not(.stack-md):not(.stack-sm) > div {
+    width: calc(100% - #{$grid-margin});
+  }
+
+  .stack-lg.soft-col > :not(.soft-row):not(.soft-col) {
+    display: block;
+    width: calc(100% - #{$grid-margin});
+  }
+}
+
+/* MEDIUM */
+/* Set the value according to the one you put at the beginning */
+@media screen and (max-width: #{$container-md - $grid-margin}) {
+  .stack-md:not(.soft-row) > div,
+  .stack-md :not(.soft-row):not(.stack-sm) > div {
+    width: calc(100% - #{$grid-margin});
+  }
+
+  .stack-md.soft-col > :not(.soft-row):not(.soft-col) {
+    display: block;
+    width: calc(100% - #{$grid-margin});
+  }
+}
+
+/* SMALL */
+/* Set the value according to the one you put at the beginning */
+@media screen and (max-width: #{$container-sm - $grid-margin}) {
+  .stack-sm:not(.soft-row) > div,
+  .stack-sm :not(.soft-row) > div {
+    width: calc(100% - #{$grid-margin});
+  }
+
+  .stack-sm.soft-col > :not(.soft-row):not(.soft-col) {
+    display: block;
+    width: calc(100% - #{$grid-margin});
+  }
+}

@@ -1,0 +1,104 @@
+/*******************************************************************************
+******************************** SCREEN SIZE ***********************************
+*******************************************************************************/
+
+/***********
+* TABLET
+***********/
+
+@media screen and (max-width: $screen-width-md) {
+  /* The padding changes depending on the screen size */
+  .padding-auto {
+    padding: 1em;
+  }
+}
+
+/***********
+* MOBILE
+***********/
+
+@media screen and (max-width: $screen-width-sm) {
+  /* The padding changes depending on the screen size */
+  .padding-auto {
+    padding: 0.5em;
+  }
+}
+
+
+/*******************************************************************************
+*************************** ELEMENT SPECIFIC QUERIES ***************************
+*******************************************************************************/
+
+
+/*******************
+* MAIN + ASIDE
+*******************/
+@media screen and (max-width: $main-width+$aside-width) {
+  aside {
+    display: block;
+    width: 100%;
+  }
+
+  main {
+    width: 100%;
+    display: block;
+  }
+}
+
+/*******************************************************************************
+***** CONTAINERS
+*******************************************************************************/
+
+/*
+* LARGE
+*/
+@media screen and (max-width: $container-lg) {
+  .container-lg {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*
+* MEDIUM
+*/
+@media screen and (max-width: $container-md) {
+  .container-md {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*
+* SMALL
+*/
+@media screen and (max-width: $container-sm) {
+  .container-sm {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/**************
+* HEADER
+**************/
+@media screen and (max-width: 800px) {
+  body > header {
+    font-size: 10vw;
+  }
+}
+
+/*************
+* NAVSIDE
+*************/
+@media screen and (max-width: round(800px + $navside-width)) {
+  body.navside > header {
+    font-size: 8vw;
+  }
+}
