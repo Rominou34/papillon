@@ -57,8 +57,11 @@
 }
 
 /* Clears the float on an element */
-.clearfix {
-  clear: both;
+.clearfix:after {
+   content: " ";
+   display: block;
+   height: 0;
+   clear: both;
 }
 
 /* Center the element ( suppposing it has a width and it's display: block ) */
