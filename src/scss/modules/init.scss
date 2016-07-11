@@ -16,7 +16,7 @@ body {
   background-color: $bg-color-base;
   line-height: $line-height;
   color: $font-color-base;
-  width: $body-width;
+  width: 100%;
   min-height: 100%;
   max-width: $body-width;
   display: block;
@@ -150,12 +150,12 @@ code {
   padding: 0 0.2em;
   border: 1px solid $border-color-elements;
   color: $font-color-base;
+  font-size: 80%;
 }
 
 pre > code {
   display: block;
   margin: 0.4em 1em;
-  font-size: 80%;
   padding: 0.5em;
   text-align: left;
   border-width: 1px 1px 1px 3px;

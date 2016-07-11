@@ -21,9 +21,11 @@
 
 
 
-  /***** COLOR PALETTE *****/
-  $primary-color: #2b65c6;
-  $secondary-color: #9f24c9;
+  /********************
+  *   COLOR PALETTE   *
+  ********************/
+
+  /*** PRIMARY COLORS ***/
   $grey-color: #9d9d9d;
   $black-color: #0e0e0e;
   $blue-color: #296dd1;
@@ -31,7 +33,7 @@
   $red-color: #cd2f2b;
   $orange-color: #e7912c;
 
-  /*** OTHERS ***/
+  /*** COMPLEMENTARY ***/
   $color-brown: #79461c;
   $color-gold: #d6aa27;
   $color-yellow: #e8e62a;
@@ -39,6 +41,9 @@
   $color-purple: #73289c;
   $color-cyan: #36c7e0;
 
+  /* THEME */
+  $primary-color: #2b65c6;
+  $secondary-color: #9f24c9;
 
   /*
   * ELEMENT COLORS
