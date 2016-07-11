@@ -234,6 +234,59 @@
   box-shadow: 1px 1px 2px 0 darken($red-color, 12%);
 }
 
+/***************** BANNER **********************/
+
+.banner-top,
+.banner-bot {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  background-color: $black-color;
+  color: #ecf0f1;
+  z-index: 100;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.banner-top {
+  top: 0;
+}
+
+.banner-bot {
+  bottom: 0;
+}
+
+.banner-top .content,
+.banner-bot .content {
+  flex: 1 0;
+  padding: 4px;
+}
+
+.banner-top .close,
+.banner-bot .close {
+  flex: 0 0;
+  margin: auto 8px;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: $primary-color;
+  color: #ecf0f1;
+  font-size: $font-size-default;
+  line-height: 2em;
+  height: 2em;
+  box-sizing: content-box;
+}
+
+.banner-top .close:hover,
+.banner-bot .close:hover {
+  cursor: pointer;
+  background-color: darken($primary-color, 12%);
+}
+
+/**************************************
+*** MOBILE
+**************************************/
+
 @media screen and (max-width: 600px) {
   .soft-notif {
     width: 90%;
