@@ -40,16 +40,7 @@
   $font-color-title: lighten($black-color, 4%);
   $font-color-title-second: $grey-color;
   $font-color-footer: #dcdcdc;*/
-  /*$bg-color-base: #101520;
-  $bg-color-elements: #182534;
-  $bg-color-elements-shade: #23364e;
-  $border-color-elements: #304760;
-
-  $font-color-shade: #343b4d;
-  $font-color-grey: #6f7278;
-  $font-color-base: #e6e6e6;
-
-  $bg-color-base: #ffc9fe;
+  /*$bg-color-base: #ffc9fe;
   $bg-color-elements: #f2a1f1;
   $bg-color-elements-shade: #e77ee6;
   $border-color-elements: #cf4dce;
@@ -398,14 +389,14 @@ overridden ) */
 html {
   width: 100%;
   min-height: 100%;
-  background-color: #ecf0f1;
+  background-color: #101520;
   -webkit-font-smoothing: antialiased; }
 
 body {
   font-family: Arial, "sans-serif";
-  background-color: #ecf0f1;
+  background-color: #101520;
   line-height: 1.4;
-  color: #101010;
+  color: #e6e6e6;
   width: 100%;
   min-height: 100%;
   max-width: 100%;
@@ -454,28 +445,28 @@ aside {
   vertical-align: top;
   max-width: 200px;
   margin: auto;
-  background-color: #ecf0f1; }
+  background-color: #101520; }
 
 /****
 * B *
 ****/
 /***** BLOCKQUOTE *****/
 blockquote {
-  background: #dfe2e6;
+  background: #182534;
   padding: 1em;
   line-height: 1.5;
   width: auto;
   display: inline-block;
   margin: 0.8em;
-  border: 1px solid #dfe2e6; }
+  border: 1px solid #182534; }
 
 blockquote:not(.reverse) {
-  border-left: 4px solid #afb0b1;
+  border-left: 4px solid #304760;
   text-align: left;
   float: left; }
 
 blockquote.reverse {
-  border-right: 4px solid #afb0b1;
+  border-right: 4px solid #304760;
   text-align: right;
   float: right; }
 
@@ -484,7 +475,7 @@ blockquote p {
 
 blockquote footer {
   font-size: calc(18px * 0.8);
-  color: #484848;
+  color: #6f7278;
   margin-top: 0.5em; }
 
 blockquote cite {
@@ -506,14 +497,14 @@ caption {
 
 /***** CODE *****/
 code {
-  background-color: #dfe2e6;
+  background-color: #182534;
   font-family: "Source Code Pro", "Courier New", "monospace";
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   padding: 0 0.2em;
-  border: 1px solid #afb0b1;
-  color: #101010;
+  border: 1px solid #304760;
+  color: #e6e6e6;
   font-size: 80%; }
 
 pre > code {
@@ -532,7 +523,7 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: #afb0b1;
+  background-color: #304760;
   position: relative;
   top: -1.33em;
   font-size: 150%;
@@ -589,7 +580,7 @@ h6 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #101010;
+  color: #e6e6e6;
   font-family: "Source Sans Pro", sans-serif;
   line-height: 2; }
 
@@ -599,7 +590,7 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-  color: #484848;
+  color: #6f7278;
   padding-left: 0;
   font-size: 60%; }
 
@@ -610,7 +601,7 @@ h4 a,
 h5 a,
 h6 a {
   position: relative;
-  color: #101010 !important;
+  color: #e6e6e6 !important;
   display: inline-block;
   padding-left: 0.6em; }
 
@@ -682,10 +673,10 @@ img {
 img:after {
   content: 'Problem loading " ' attr(alt) ' "';
   font-size: 16px;
-  color: #484848;
+  color: #6f7278;
   display: block;
   position: absolute;
-  border: 2px dashed #afb0b1;
+  border: 2px dashed #304760;
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
@@ -694,7 +685,7 @@ img:after {
   left: 0;
   max-width: 100%;
   height: auto;
-  background-color: #dfe2e6;
+  background-color: #182534;
   box-sizing: border-box; }
 
 /****
@@ -702,13 +693,13 @@ img:after {
 ****/
 /***** KEYBOARD *****/
 kbd {
-  background-color: #dfe2e6;
+  background-color: #182534;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
   border-width: 1px 1px 3px 1px;
   border-style: solid;
-  border-color: #afb0b1;
+  border-color: #304760;
   padding: 0 2px; }
 
 /****
@@ -725,7 +716,7 @@ main {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  background-color: #ecf0f1; }
+  background-color: #101520; }
 
 /********** PSEUDO SELECTORS **********/
 :target {
@@ -775,11 +766,11 @@ main {
 /********** ELEMENTS ASPECT **********/
 /* Change the aspect of a container to showcase something inside */
 .showcase {
-  background-color: #dfe2e6;
-  border: #afb0b1;
+  background-color: #182534;
+  border: #304760;
   margin: 2em 1em;
   padding: 1em;
-  box-shadow: 0 0 4px 0 #afb0b1 inset;
+  box-shadow: 0 0 4px 0 #304760 inset;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px; }
@@ -787,8 +778,8 @@ main {
 /*** SPOILERS ***/
 /* Applied on a span, it hides the text and displays it on hover */
 span.spoiler {
-  color: #101010;
-  background-color: #101010; }
+  color: #e6e6e6;
+  background-color: #e6e6e6; }
 
 span.spoiler:hover {
   background-color: transparent; }
@@ -822,14 +813,14 @@ thead, tfoot {
   line-height: 2; }
 
 thead {
-  background-color: #c3c4c6; }
+  background-color: #23364e; }
 
 table {
-  border: 1px solid #afb0b1; }
+  border: 1px solid #304760; }
 
 table > :not(:last-child),
 tbody > :not(:last-child) {
-  border-bottom: 1px solid #afb0b1; }
+  border-bottom: 1px solid #304760; }
 
 /******** MINIMALISTIC DESIGN ********/
 table.min thead,
@@ -862,17 +853,17 @@ table.flat * {
 
 /******** ALTERNATING ROWS ********/
 table.alt tbody > tr:nth-child(even) {
-  background: #dfe2e6; }
+  background: #182534; }
 
 /*table.alt tbody > tr:nth-child(odd) {background: #fff}*/
 /******** REACTIVE DESIGN ********/
 table.reactive :not(thead):not(tfoot) tr:hover {
   background-color: #cad9f3;
-  background-color: #dfe2e6; }
+  background-color: #182534; }
 
 table.reactive :not(thead):not(tfoot) tr td:hover {
   background-color: #8bade6;
-  background-color: #c3c4c6; }
+  background-color: #23364e; }
 
 /* We import the classes for the forms */
 /*
@@ -1049,8 +1040,8 @@ button,
   font-family: Arial, "sans-serif";
   font-size: 14px;
   box-sizing: border-box;
-  background-color: #c3c4c6;
-  color: #101010;
+  background-color: #23364e;
+  color: #e6e6e6;
   display: inline-block;
   vertical-align: middle; }
 
@@ -1062,19 +1053,19 @@ button:hover,
   -moz-transition: all 0.25s ease-out;
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
-  background-color: #afb0b1;
-  color: #101010; }
+  background-color: #304760;
+  color: #e6e6e6; }
 
 .button:visited {
   color: inherit; }
 
 button:disabled,
 .button.disabled {
-  background-color: #afb0b1;
-  color: #484848; }
+  background-color: #304760;
+  color: #6f7278; }
 
 button:disabled:hover {
-  background-color: #afb0b1;
+  background-color: #304760;
   cursor: not-allowed; }
 
 button:focus,
@@ -1096,7 +1087,7 @@ button:not(:disabled):not(.loading):active,
   -moz-transition: all 0.1s;
   -o-transition: all 0.1s;
   transition: all 0.1s;
-  background-color: #717171; }
+  background-color: #343b4d; }
 
 /********** MODIFIER CLASSES **********/
 button.large,
@@ -1162,9 +1153,9 @@ button.btn-round,
 
 button.outline,
 .button.outline {
-  border: 1px solid #101010;
+  border: 1px solid #e6e6e6;
   background-color: transparent;
-  color: #101010; }
+  color: #e6e6e6; }
 
 /*button.loading:after {
     left: 50%;
@@ -1419,16 +1410,16 @@ button.black:disabled,
 
 button.black.outline,
 .button.black.outline {
-  color: #afb0b1;
+  color: #304760;
   background-color: transparent;
-  border-color: #afb0b1; }
+  border-color: #304760; }
 
 button.black.outline:hover,
 .button.black.outline:hover,
 button.black.outline:focus,
 .button.black.outline:focus {
   color: #fff;
-  background-color: #afb0b1; }
+  background-color: #304760; }
 
 /* We import the classes for the menus */
 nav {
@@ -1834,10 +1825,10 @@ nav.aside .submenu .dropdown a.current {
 
 nav.aside .category {
   font-size: 120%;
-  color: #484848;
+  color: #6f7278;
   font-style: bold;
   margin: 0.4em 0;
-  border-bottom: 1px dashed #717171; }
+  border-bottom: 1px dashed #343b4d; }
 
 /*
 ********************************************************************************
@@ -2214,7 +2205,9 @@ nav.aside .category {
   position: fixed;
   background-color: #0e0e0e;
   color: #ecf0f1;
-  z-index: 100; }
+  z-index: 100;
+  left: 0;
+  box-sizing: border-box; }
 
 .banner-top {
   top: 0; }
@@ -2224,17 +2217,21 @@ nav.aside .category {
 
 .banner-top .content,
 .banner-bot .content {
-  display: block;
   flex: 1 0;
   padding: 4px; }
 
 .banner-top .close,
 .banner-bot .close {
   flex: 0 0;
-  margin: 4px;
+  margin: auto 8px;
   border-radius: 4px;
   padding: 4px;
-  background-color: #2b65c6; }
+  background-color: #2b65c6;
+  color: #ecf0f1;
+  font-size: 18px;
+  line-height: 2em;
+  height: 2em;
+  box-sizing: content-box; }
 
 .banner-top .close:hover,
 .banner-bot .close:hover {
@@ -2331,28 +2328,52 @@ nav.aside .category {
 /********** ELEMENTS ASPECT **********/
 /* Sets a subtle background color */
 .bg-color {
-  background-color: #dfe2e6 !important; }
+  background-color: #182534 !important; }
 
 /* Sets a border */
 .border {
-  border: 1px solid #afb0b1; }
+  border: 1px solid #304760; }
 
 /********** SMALL CORRECTIONS ********/
+/* Set no padding */
+.no-padding {
+  padding: 0 !important; }
+
 /* Set a small padding */
 .padding-sm {
-  padding: 0.5em; }
+  padding: 0.5em !important; }
 
 /* Set a medium padding */
 .padding-md {
-  padding: 1em; }
+  padding: 1em !important; }
 
 /* Set a big padding */
 .padding-lg {
-  padding: 2em; }
+  padding: 2em !important; }
 
 /* The padding changes depending on the screen size */
 .padding-auto {
-  padding: 2em; }
+  padding: 2em !important; }
+
+/* Set no margin */
+.no-margin {
+  margin: 0 !important; }
+
+/* Set a small margin */
+.margin-sm {
+  margin: 0.5em !important; }
+
+/* Set a medium margin */
+.margin-md {
+  margin: 1em !important; }
+
+/* Set a big margin */
+.margin-lg {
+  margin: 2em !important; }
+
+/* The margin changes depending on the screen size */
+.margin-auto {
+  margin: 2em !important; }
 
 /*******************************************************************************
 *** ELEMENTS SPECIFIC
@@ -2638,4 +2659,4 @@ ul.no-style li {
   100% {
     opacity: 0; } }
 
-/*# sourceMappingURL=test.css.map */
+/*# sourceMappingURL=papillon-dark.min.css.map */

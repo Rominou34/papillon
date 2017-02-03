@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Soft CSS</title>
+        <title>Papillon - Demo</title>
         <meta charset="UTF-8">
         <head>
         <meta name="Content-Language" content="en">
@@ -14,18 +14,20 @@
         <meta name="Geography" content="Montpellier, France, 34000">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="../src/min/soft.min.css">
+        <link rel="stylesheet" type="text/css" href="../src/min/papillon.min.css" id="main-style">
         <script src="../src/js/misc.js"></script>
         <script src="../src/js/dom.js"></script>
-        <script src="../src/js/soft.js"></script>
+        <script src="../src/js/papillon.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
     </head>
     <body>
       <header>
-        Soft CSS
-        <small>The tweakable, simple to use CSS framework</small>
+        Papillon
+        <small>( pa.pi.jõ )<br/>The beautiful, easy to use CSS framework</small>
       </header>
       <nav class="top" data-follow>
         <div class="toggle"></div>
@@ -211,28 +213,28 @@
           on a link.
         </div>
         <div class="showcase">
-          <div class="container-sm">
+          <div class="container">
             <button>Default button</button>
-            <a href="#" class="button green">Green link</a>
-            <button class="blue">Blue button</button>
-            <a href="#" class="button red">Red link</a>
-            <button class="orange">Orange button</button>
+            <a href="#" class="button primary">Primary link</a>
+            <button class="secondary">Secondary button</button>
+            <a href="#" class="button danger">Danger link</a>
+            <button class="warning">Warning button</button>
             <button class="black">Black button</button>
           </div>
           You can use the class <code>.large</code> to mark a bigger button
           <div class="container-lg">
             <button class="large">Default button</button>
-            <button class="green large">Large Green</button>
-            <a href="#" class="button blue large">Large Blue link</a>
-            <button class="red large">Large Red</button>
-            <button class="orange large">Orange</button>
+            <button class="primary large">Large Primary</button>
+            <a href="#" class="button secondary large">Large Secondary link</a>
+            <button class="danger large">Large Danger</button>
+            <button class="warning large">Warning</button>
             <button class="black large">Black</button>
           </div>
           And you can also use <code>.loading</code> and <code>.disabled</code>
           <div class="container-md">
             <button class="loading"></button>
             <button class="primary loading"></button>
-            <button class="red large loading"></button>
+            <button class="danger large loading"></button>
             <button disabled>Disabled :s</button>
           </div>
         </div>
@@ -313,7 +315,7 @@
           and the redefined blockquote
         </div>
         <div class="showcase">
-          <article text-justify class="first-letter-big first-letter-spacing">
+          <article text-justify class="first-letter-big first-letter-spacing clearfix">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Vestibulum lobortis massa a tristique ultricies. Nullam non ex erat. Sed
              eu nisl a velit efficitur tristique. Duis bibendum mattis metus,
@@ -326,7 +328,7 @@
              Cras felis urna, iaculis at elementum sit amet, accumsan molestie enim.
               Suspendisse potenti. Suspendisse potenti. Integer pretium massa augue.
                Vivamus hendrerit eu nisl a tempor.
-               <blockquote class="reverse">
+               <blockquote class="reverse clearfix">
                  A reverse quote with the source
                  <footer>Romain Arnaud in
                    <cite>40 ans toujours puceau</cite>
@@ -388,8 +390,26 @@
           </table>
         </div>
       </main>
+      <div class="banner-bot">
+        <div class="content">
+          <div class="container no-margin text-center">Change the theme</div>
+          <div class="container no-margin no-padding soft-col stack-sm">
+            <div class="col-4 no-margin">
+              <button class="fullWidth primary large" id="classic-theme">Classic</button>
+            </div>
+            <div class="col-4 no-margin">
+              <button class="fullWidth black large" id="dark-theme">Dark</button>
+            </div>
+            <div class="col-4 no-margin">
+              <button class="fullWidth secondary large" id="flashy-theme">Flashy</button>
+            </div>
+          </div>
+        </div>
+        <button class="close">Close</button>
+      </div>
+      <script src="demo.js"></script>
       <footer>
-        Soft CSS 2016<br/>
+        Papillon CSS 2016<br/>
         Romain Arnaud
       </footer>
     </body>

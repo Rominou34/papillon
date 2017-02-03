@@ -35,3 +35,13 @@ function randomId(s)
         clearTimeout(id);
     };
 }());
+
+/*
+* Function changing the Papillon theme
+* Works by changing the stylesheet to another one with a different color theme
+* Stylesheet declaration ( <link href="STYLE"> ) must have the id "main-style"
+*/
+function changeStylesheet(newStyle) {
+  var styleElem = document.getElementById("main-style");
+  styleElem.href = newStyle;
+}

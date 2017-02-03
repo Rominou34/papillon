@@ -15,6 +15,9 @@ window.onload = function() {
   // Add event listeners for spoiler blocks
   addSpoilerListeners();
 
+  // Add listener to close a banner if there is one
+  addBannerListener();
+
   navBar = document.querySelector("nav.top");
   if(navBar !== null) {
     addNavBarToggle();
@@ -218,6 +221,7 @@ var addNavHidingLinks = function() {
   });
 }
 
+/* Adds spoiler listeners */
 var addSpoilerListeners = function() {
   var spoilerBlocks = document.querySelectorAll(".spoiler-block");
   var spoilerB = [].slice.call(spoilerBlocks);
@@ -232,6 +236,17 @@ var addSpoilerListeners = function() {
       }
     })
   })
+}
+
+var addBannerListener = function() {
+  var bannerElement = document.querySelectorAll(".banner-top, .banner-bot");
+  var banners = [].slice.call(bannerElement);
+  banners.forEach(function(banner) {
+    var closeElement = banner.querySelector(".close");
+    closeElement.addEventListener("click", function() {
+      this.parentElement.remove();
+    });
+  });
 }
 
 /*

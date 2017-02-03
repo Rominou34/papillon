@@ -3,25 +3,7 @@
 * Romain Arnaud - 2016
 */
 
-  /*
-  ******************************************************************************
-  * FONTS
-  ******************************************************************************
-  */
 
-  $font-default: Arial, "sans-serif"; /* basic text */
-  $font-sans-serif: Impact, "sans-serif"; /* basic text sans serif */
-  $font-serif: "Times New Roman", "serif"; /* basic text serif ? */
-  $font-title: 'Source Sans Pro', sans-serif; /* h1, h2, h3, h4, h5, h6 */
-  $font-header: Ubuntu, "sans-serif"; /* Header */
-  $font-code: "Source Code Pro", "Courier New", "monospace"; /* code */
-
-  $font-size-default: 16px; /* Basic text */
-  $font-size-big: calc(#{$font-size-default} * 1.5); /* Basic text */
-  $font-size-small: calc(#{$font-size-default} * 0.8); /* Basic text */
-  $font-size-header: 96px; /* Header */
-
-  $line-height: 1.4;
 
   /*
   ******************************************************************************
@@ -39,9 +21,11 @@
 
 
 
-  /***** COLOR PALETTE *****/
-  $primary-color: #2b65c6;
-  $secondary-color: #9f24c9;
+  /********************
+  *   COLOR PALETTE   *
+  ********************/
+
+  /*** PRIMARY COLORS ***/
   $grey-color: #9d9d9d;
   $black-color: #0e0e0e;
   $blue-color: #296dd1;
@@ -49,7 +33,7 @@
   $red-color: #cd2f2b;
   $orange-color: #e7912c;
 
-  /*** OTHERS ***/
+  /*** COMPLEMENTARY ***/
   $color-brown: #79461c;
   $color-gold: #d6aa27;
   $color-yellow: #e8e62a;
@@ -57,6 +41,9 @@
   $color-purple: #73289c;
   $color-cyan: #36c7e0;
 
+  /* THEME */
+  $primary-color: #2b65c6;
+  $secondary-color: #9f24c9;
 
   /*
   * ELEMENT COLORS
@@ -92,7 +79,7 @@
   $font-color-grey: #484848;
   $font-color-base: #101010;
 
-  $bg-color-base: #101520;
+  /*$bg-color-base: #101520;
   $bg-color-elements: #182534;
   $bg-color-elements-shade: #23364e;
   $border-color-elements: #304760;
@@ -100,6 +87,15 @@
   $font-color-shade: #343b4d;
   $font-color-grey: #6f7278;
   $font-color-base: #e6e6e6;
+
+  $bg-color-base: #ffc9fe;
+  $bg-color-elements: #f2a1f1;
+  $bg-color-elements-shade: #e77ee6;
+  $border-color-elements: #cf4dce;
+
+  $font-color-shade: #65265e;
+  $font-color-grey: #4b1a37;
+  $font-color-base: #2f0015;*/
 
   $font-color-link: $blue-color;
   $font-color-link-h: lighten($blue-color, 12%);
