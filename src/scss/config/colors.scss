@@ -42,8 +42,8 @@
   $color-cyan: #36c7e0;
 
   /* THEME */
-  $primary-color: #2b65c6;
-  $secondary-color: #9f24c9;
+  $primary-color: #4586e8;
+  $secondary-color: #9d43e8;
 
   /*
   * ELEMENT COLORS
@@ -71,9 +71,9 @@
   $font-color-footer: #dcdcdc;*/
 
   $bg-color-base: #ecf0f1;
-  $bg-color-elements: #dfe2e6;
+  $bg-color-elements: transparentize($primary-color, 0.85);
   $bg-color-elements-shade: #c3c4c6;
-  $border-color-elements: #afb0b1;
+  $border-color-elements: lighten($secondary-color, 10%);
 
   $font-color-shade: #717171;
   $font-color-grey: #484848;
@@ -97,9 +97,9 @@
   $font-color-grey: #4b1a37;
   $font-color-base: #2f0015;*/
 
-  $font-color-link: $blue-color;
-  $font-color-link-h: lighten($blue-color, 12%);
-  $font-color-link-v: $color-purple;
+  $font-color-link: darken($primary-color, 15%);
+  $font-color-link-h: $primary-color;
+  $font-color-link-v: darken($secondary-color, 15%);
 
 
 
@@ -113,5 +113,6 @@
   ***** NAVIGATION *****
   */
   $bg-color-nav: $blue-color;
+  $navside-bg-color: lighten($black-color, 6%);
   $navside-header-color: darken($primary-color, 12%);
   $navside-footer-color: $black-color;

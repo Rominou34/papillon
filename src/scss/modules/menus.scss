@@ -265,7 +265,7 @@ nav.side .toggle {
 nav.side .links {
   display: block;
   height: calc(100vh - #{$navside-header-height} - #{$navside-footer-height});
-  background-color: lighten($black-color, 6%);
+  background-color: $navside-bg-color;
   overflow: hidden;
   -webkit-transition: width 0.25s;
   -moz-transition: width 0.25s;
