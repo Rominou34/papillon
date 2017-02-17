@@ -25,30 +25,17 @@
   *   COLOR PALETTE   *
   ********************/
 
-  /*** PRIMARY COLORS ***/
+  /* THEME */
+  $primary-color: #4586e8;
+  $secondary-color: #9d43e8;
+
+  /*** COMPLEMENTARY COLORS ***/
   $grey-color: #9d9d9d;
   $black-color: #0e0e0e;
   $blue-color: #296dd1;
   $green-color: #36b147;
   $red-color: #cd2f2b;
   $orange-color: #e7912c;
-
-  /*** COMPLEMENTARY ***/
-  $color-brown: #79461c;
-  $color-gold: #d6aa27;
-  $color-yellow: #e8e62a;
-  $color-pink: #de557a;
-  $color-purple: #73289c;
-  $color-cyan: #36c7e0;
-
-  /* THEME */
-  $primary-color: #4586e8;
-  $secondary-color: #9d43e8;
-
-  /*
-  * ELEMENT COLORS
-  */
-
 
 
   /* HEADER */
@@ -70,7 +57,7 @@
   $font-color-title-second: $grey-color;
   $font-color-footer: #dcdcdc;*/
 
-  $bg-color-base: #ecf0f1;
+  $bg-color-base: #fff; /*#ecf0f1;*/
   $bg-color-elements: transparentize($primary-color, 0.85);
   $bg-color-elements-shade: #c3c4c6;
   $border-color-elements: lighten($secondary-color, 10%);
