@@ -24,18 +24,6 @@
 /* THEME */
 /*** COMPLEMENTARY COLORS ***/
 /* HEADER */
-  /*$bg-color-html: #fff;
-  $bg-color-body: #ecf0f1;
-  $bg-color-main: #ecf0f1;
-  $bg-color-aside: lighten($red-color, 40%);
-  $bg-color-footer: $black-color;
-
-  $bg-color-code: lighten($primary-color, 42%);
-
-  $font-color-text: $black-color;
-  $font-color-title: lighten($black-color, 4%);
-  $font-color-title-second: $grey-color;
-  $font-color-footer: #dcdcdc;*/
 /*#ecf0f1;*/
   /*$bg-color-base: #101520;
   $bg-color-elements: #182534;
@@ -1054,23 +1042,30 @@ button,
   background-color: #e4e4e4;
   color: #101010;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out; }
+
+button:hover,
+.button:hover {
+  cursor: pointer; }
+
+button:focus,
+.button:focus {
+  outline: 0; }
 
 button:hover,
 .button:hover,
 .button:visited:hover {
-  cursor: pointer;
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
   background-color: #efefef;
   color: #101010;
-  box-shadow: 1px 2px 6px 0 #b2b2b2; }
+  box-shadow: 1px 2px 6px 0 #a2a2a2; }
 
 button:focus,
 .button:focus {
-  box-shadow: 1px 2px 6px 0 #b2b2b2;
+  box-shadow: 1px 2px 6px 0 #a2a2a2;
   outline: 0; }
 
 .button:visited {
@@ -1088,10 +1083,6 @@ button:disabled:hover {
 button:not(:disabled):not(.loading):active,
 .button:not(.disabled):not(.loading):active {
   outline: 0;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
   background-color: #d8d8d8;
   box-shadow: 0 0 0 0 black; }
 
@@ -1101,9 +1092,9 @@ button.large,
   padding: 1rem;
   font-size: 1.5em; }
 
-button.large:hover,
-.button.large:hover {
-  box-shadow: 2px 4px 12px 0 #b2b2b2; }
+button.large:not(.outline):hover,
+.button.large:not(.outline):hover {
+  box-shadow: 2px 4px 12px 0 #a2a2a2; }
 
 button.loading,
 .button.loading {
@@ -1163,9 +1154,21 @@ button.btn-round,
 
 button.outline,
 .button.outline {
-  border: 1px solid #101010;
+  border: 2px solid #2d2d2d;
   background-color: transparent;
-  color: #101010; }
+  color: #2d2d2d;
+  border-radius: 4px; }
+
+button.outline:hover,
+.button.outline:hover,
+button.outline:focus,
+.button.outline:focus {
+  color: #fff;
+  background-color: #2d2d2d; }
+
+button.outline:not(:disabled):not(.loading):active,
+.button.outline:not(:disabled):not(.loading):active {
+  background-color: #0e0e0e; }
 
 /*button.loading:after {
     left: 50%;
@@ -1406,16 +1409,16 @@ button.black:disabled,
 
 button.black.outline,
 .button.black.outline {
-  color: #b570ee;
+  color: #2d2d2d;
   background-color: transparent;
-  border-color: #b570ee; }
+  border-color: #2d2d2d; }
 
 button.black.outline:hover,
 .button.black.outline:hover,
 button.black.outline:focus,
 .button.black.outline:focus {
   color: #fff;
-  background-color: #b570ee; }
+  background-color: #2d2d2d; }
 
 /* We import the classes for the menus */
 nav {

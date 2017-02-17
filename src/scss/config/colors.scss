@@ -37,25 +37,11 @@
   $red-color: #cd2f2b;
   $orange-color: #e7912c;
 
-
+  $shadow-color: #a2a2a2;
+  
   /* HEADER */
   $color-header: #ecf0f1;
   $bg-color-header: $primary-color;
-
-
-
-  /*$bg-color-html: #fff;
-  $bg-color-body: #ecf0f1;
-  $bg-color-main: #ecf0f1;
-  $bg-color-aside: lighten($red-color, 40%);
-  $bg-color-footer: $black-color;
-
-  $bg-color-code: lighten($primary-color, 42%);
-
-  $font-color-text: $black-color;
-  $font-color-title: lighten($black-color, 4%);
-  $font-color-title-second: $grey-color;
-  $font-color-footer: #dcdcdc;*/
 
   $bg-color-base: #fff; /*#ecf0f1;*/
   $bg-color-elements: transparentize($primary-color, 0.85);

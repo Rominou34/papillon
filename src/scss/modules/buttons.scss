@@ -12,24 +12,33 @@ button,
   color: $font-color-base;
   display: inline-block;
   vertical-align: middle;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+button:hover,
+.button:hover {
+  cursor: pointer;
+}
+
+button:focus,
+.button:focus {
+  outline: 0;
 }
 
 button:hover,
 .button:hover,
 .button:visited:hover {
-  cursor: pointer;
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
   background-color: #efefef;
   color: $font-color-base;
-  box-shadow: 1px 2px 6px 0 #b2b2b2;
+  box-shadow: 1px 2px 6px 0 $shadow-color;
 }
 
 button:focus,
 .button:focus {
-  box-shadow: 1px 2px 6px 0 #b2b2b2;
+  box-shadow: 1px 2px 6px 0 $shadow-color;
   outline: 0;
 }
 
@@ -51,10 +60,6 @@ button:disabled:hover {
 button:not(:disabled):not(.loading):active,
 .button:not(.disabled):not(.loading):active {
   outline: 0;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
   background-color: #d8d8d8;
   box-shadow: 0 0 0 0 black;
 }
@@ -67,9 +72,9 @@ button.large,
   font-size: 1.5em;
 }
 
-button.large:hover,
-.button.large:hover {
-  box-shadow: 2px 4px 12px 0 #b2b2b2;
+button.large:not(.outline):hover,
+.button.large:not(.outline):hover {
+  box-shadow: 2px 4px 12px 0 $shadow-color;
 }
 
 
@@ -138,9 +143,23 @@ button.btn-round,
 
 button.outline,
 .button.outline {
-  border: 1px solid $font-color-base;
+  border: 2px solid lighten($black-color, 12%);;
   background-color: transparent;
-  color: $font-color-base;
+  color: lighten($black-color, 12%);;
+  border-radius: 4px;
+}
+
+button.outline:hover,
+.button.outline:hover,
+button.outline:focus,
+.button.outline:focus {
+  color: #fff;
+  background-color: lighten($black-color, 12%);
+}
+
+button.outline:not(:disabled):not(.loading):active,
+.button.outline:not(:disabled):not(.loading):active {
+  background-color: $black-color;
 }
 
 /*button.loading:after {
@@ -426,9 +445,9 @@ button.black:disabled,
 
 button.black.outline,
 .button.black.outline {
-  color: $border-color-elements;
+  color: lighten($black-color, 12%);
   background-color: transparent;
-  border-color: $border-color-elements;
+  border-color: lighten($black-color, 12%);
 }
 
 button.black.outline:hover,
@@ -436,5 +455,5 @@ button.black.outline:hover,
 button.black.outline:focus,
 .button.black.outline:focus {
   color: #fff;
-  background-color: $border-color-elements;
+  background-color: lighten($black-color, 12%);
 }
