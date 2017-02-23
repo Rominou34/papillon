@@ -10,13 +10,13 @@ $font-sans-serif: Impact, "sans-serif"; /* basic text sans serif */
 $font-serif: "Times New Roman", "serif"; /* basic text serif ? */
 $font-title: 'Source Sans Pro', sans-serif; /* h1, h2, h3, h4, h5, h6 */
 $font-header: Ubuntu, "sans-serif"; /* Header */
-$font-code: "Source Code Pro", "Courier New", "monospace"; /* code */
+$font-code: "Cutive Mono", "Courier New", "monospace"; /* code */
 //$font-title: 'Lobster', cursive;
 $font-header: 'Lobster', cursive;
 
-$font-size-default: 18px; /* Basic text */
+$font-size-default: 16px; /* Basic text */
 $font-size-big: calc(#{$font-size-default} * 1.5); /* Basic text */
 $font-size-small: calc(#{$font-size-default} * 0.8); /* Basic text */
 $font-size-header: 96px; /* Header */
 
-$line-height: 1.4;
+$line-height: 1.4375;

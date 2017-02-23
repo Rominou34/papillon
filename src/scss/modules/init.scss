@@ -86,23 +86,23 @@ aside {
 /***** BLOCKQUOTE *****/
 
 blockquote {
-  background: $bg-color-elements;
+  background: $bg-color-primary;
   padding: 1em;
   line-height: 1.5;
   width: auto;
   display: inline-block;
   margin: 0.8em;
-  border: 1px solid $bg-color-elements;
+  border: 1px solid $bg-color-primary;
 }
 
 blockquote:not(.reverse) {
-  border-left: 4px solid $border-color-elements;
+  border-left: 4px solid $border-color-primary;
   text-align: left;
   float: left;
 }
 
 blockquote.reverse {
-  border-right: 4px solid $border-color-elements;
+  border-right: 4px solid $border-color-primary;
   text-align: right;
   float: right;
 }
@@ -113,7 +113,7 @@ blockquote p {
 
 blockquote footer {
   font-size: $font-size-small;
-  color: $font-color-grey;
+  color: $grey-medium;
   margin-top: 0.5em;
 }
 
@@ -142,15 +142,13 @@ caption {
 /***** CODE *****/
 
 code {
-  background-color: $bg-color-elements;
+  background-color: $bg-color-primary;
   font-family: $font-code;
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   padding: 0 0.2em;
-  border: 1px solid $border-color-elements;
   color: $font-color-base;
-  font-size: 80%;
 }
 
 pre > code {
@@ -158,6 +156,7 @@ pre > code {
   margin: 0.4em 1em;
   padding: 0.5em;
   text-align: left;
+  border: 1px solid $darker-grey;
   border-width: 1px 1px 1px 3px;
   word-wrap: break-word;
   max-width: 100%;
@@ -171,7 +170,8 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: $border-color-elements;
+  background-color: $darker-grey;
+  color: #fff;
   position: relative;
   top: -1.33em;
   font-size: 150%;
@@ -179,7 +179,7 @@ pre > code[data-lang]::before {
   -webkit-border-radius: 0 0 0.5em 0;
   -moz-border-radius: 0 0 0.5em 0;
   border-radius: 0 0 0.5em 0;
-  left: -0.5em;
+  left: calc(-0.5em + 3px);
   width: auto;
 }
 
@@ -229,6 +229,13 @@ body > header > small {
   padding-bottom: 2em;
 }
 
+body > header >img {
+  height: round($font-size-header / 1.5);
+  width: auto;
+  display: inline;
+  margin: round($font-size-header / 4);
+}
+
 /***** H1, H1, H2, H3, H4, H5, H6 *****/
 
 h1,
@@ -251,7 +258,7 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-  color: $font-color-grey;
+  color: $grey-medium;
   padding-left: 0;
   font-size: 60%;
 }
@@ -326,6 +333,10 @@ hr {
   background-color: $primary-color;
 }
 
+hr.secondary {
+  background-color: $secondary-color;
+}
+
 
 /****
 * I *
@@ -350,10 +361,10 @@ img {
 img:after {
   content: "Problem loading \" " attr(alt) " \"";
   font-size: 16px;
-  color: $font-color-grey;
+  color: $grey-medium;
   display: block;
   position: absolute;
-  border: 2px dashed $border-color-elements;
+  border: 2px dashed $border-color-primary;
   -webkit-border-radius: 0.2em;
   -moz-border-radius: 0.2em;
   border-radius: 0.2em;
@@ -362,7 +373,7 @@ img:after {
   left: 0;
   max-width: 100%;
   height: auto;
-  background-color: $bg-color-elements;
+  background-color: $bg-color-primary;
   box-sizing: border-box;
 }
 
@@ -374,13 +385,13 @@ img:after {
 /***** KEYBOARD *****/
 
 kbd {
-  background-color: $bg-color-elements;
+  background-color: $bg-color-primary;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
   border-width: 1px 1px 3px 1px;
   border-style: solid;
-  border-color: $border-color-elements;
+  border-color: $border-color-primary;
   padding: 0 2px;
 }
 

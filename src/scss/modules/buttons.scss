@@ -1,30 +1,36 @@
 button,
 .button {
-  padding: 0 1em;
-  line-height: 2em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  padding: 0.5rem;
+  line-height: 1em;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   margin: 0.5em;
   font-family: $font-default;
-  font-size: 14px;
   box-sizing: border-box;
-  background-color: $bg-color-elements-shade;
+  background-color: $lighter-grey;
   color: $font-color-base;
   display: inline-block;
   vertical-align: middle;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  position: relative;
+  text-align: center;
 }
 
 button:hover,
 .button:hover,
-.button:visited:hover {
+.button:visited:hover,
+button:focus,
+.button:focus {
   cursor: pointer;
-  -webkit-transition: all 0.25s ease-out;
-  -moz-transition: all 0.25s ease-out;
-  -o-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
-  background-color: $border-color-elements;
+  background-color: #efefef;
   color: $font-color-base;
+  box-shadow: 1px 2px 6px 0 $shadow-color;
+  outline: 0;
+  top: -1px;
 }
 
 .button:visited {
@@ -33,45 +39,35 @@ button:hover,
 
 button:disabled,
 .button.disabled {
-  background-color: $border-color-elements;
-  color: $font-color-grey;
+  background-color: $grey-medium;
 }
 
 button:disabled:hover {
-  background-color: $border-color-elements;
+  background-color: $border-color-primary;
   cursor: not-allowed;
-}
-
-button:focus,
-.button:focus {
-  outline: 0;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
-}
-
-button:not(:disabled):focus,
-.button:not(.disabled):focus {
-  border-color: $primary-color;
 }
 
 button:not(:disabled):not(.loading):active,
 .button:not(.disabled):not(.loading):active {
   outline: 0;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
-  background-color: $font-color-shade;
+  background-color: #d8d8d8;
+  box-shadow: 0 0 0 0 black;
 }
 
 /********** MODIFIER CLASSES **********/
 
 button.large,
 .button.large {
-  padding: 0 1em;
-  font-size: 20px;
+  padding: 1rem;
+  font-size: 1.5em;
+}
+
+button.large:hover,
+.button.large:hover,
+button.large:focus,
+.button.large:focus {
+  box-shadow: 2px 4px 12px 0 $shadow-color;
+  top: -2px;
 }
 
 
@@ -140,9 +136,23 @@ button.btn-round,
 
 button.outline,
 .button.outline {
-  border: 1px solid $font-color-base;
+  border: 2px solid lighten($black-color, 12%);;
   background-color: transparent;
-  color: $font-color-base;
+  color: lighten($black-color, 12%);;
+  border-radius: 4px;
+}
+
+button.outline:hover,
+.button.outline:hover,
+button.outline:focus,
+.button.outline:focus {
+  color: #fff;
+  background-color: lighten($black-color, 12%);
+}
+
+button.outline:not(:disabled):not(.loading):active,
+.button.outline:not(:disabled):not(.loading):active {
+  background-color: $black-color;
 }
 
 /*button.loading:after {
@@ -191,16 +201,14 @@ button.primary,
   background-color: $primary-color;
 }
 
-button.primary:not(:disabled):not(.loading):not(.outline):hover,
-.button.primary:not(.disabled):not(.loading):not(.outline):hover,
-button.primary:not(:disabled):focus,
-.button.primary:not(.disabled):focus {
-  background-color: lighten($primary-color, 12%);
+button.primary:not(:disabled):not(.loading):not(.outline):hover:not(:active),
+.button.primary:not(.disabled):not(.loading):not(.outline):hover:not(:active) {
+  background-color: lighten($primary-color, 6%);
 }
 
 button.primary:not(:disabled):not(.loading):active,
 .button.primary:not(.disabled):not(.loading):active {
-  background-color: darken($primary-color, 12%);
+  background-color: darken($primary-color, 6%);
 }
 
 button.primary:disabled,
@@ -231,16 +239,14 @@ button.secondary,
   background-color: $secondary-color;
 }
 
-button.secondary:not(:disabled):not(.loading):not(.outline):hover,
-.button.secondary:not(.disabled):not(.loading):not(.outline):hover,
-button.secondary:not(:disabled):focus,
-.button.secondary:not(.disabled):focus {
-  background-color: lighten($secondary-color, 12%);
+button.secondary:not(:disabled):not(.loading):not(.outline):hover:not(:active),
+.button.secondary:not(.disabled):not(.loading):not(.outline):hover:not(:active) {
+  background-color: lighten($secondary-color, 6%);
 }
 
 button.secondary:not(:disabled):not(.loading):active,
 .button.secondary:not(.disabled):not(.loading):active {
-  background-color: darken($secondary-color, 12%);
+  background-color: darken($secondary-color, 6%);
 }
 
 button.secondary:disabled,
@@ -271,16 +277,14 @@ button.success,
   background-color: $green-color;
 }
 
-button.success:not(:disabled):not(.loading):not(.outline):hover,
-.button.success:not(:disabled):not(.loading):not(.outline):hover,
-button.success:not(:disabled):focus,
-.button.success:not(.disabled):focus {
-  background-color: lighten($green-color, 12%);
+button.success:not(:disabled):not(.loading):not(.outline):hover:not(:active),
+.button.success:not(:disabled):not(.loading):not(.outline):hover:not(:active) {
+  background-color: lighten($green-color, 6%);
 }
 
 button.success:not(:disabled):not(.loading):active,
 .button.success:not(:disabled):not(.loading):active, {
-  background-color: darken($green-color, 12%);
+  background-color: darken($green-color, 6%);
 }
 
 button.success:disabled,
@@ -309,16 +313,14 @@ button.info,
   background-color: $blue-color;
 }
 
-button.info:not(:disabled):not(.loading):not(.outline):hover,
-.button.info:not(:disabled):not(.loading):not(.outline):hover,
-button.info:not(:disabled):focus,
-.button.info:not(.disabled):focus {
-  background-color: lighten($blue-color, 12%);
+button.info:not(:disabled):not(.loading):not(.outline):hover:not(:active),
+.button.info:not(:disabled):not(.loading):not(.outline):hover:not(:active) {
+  background-color: lighten($blue-color, 6%);
 }
 
 button.info:not(:disabled):not(.loading):active,
 .button.info:not(:disabled):not(.loading):active {
-  background-color: darken($blue-color, 12%);
+  background-color: darken($blue-color, 6%);
 }
 
 button.info:disabled,
@@ -347,16 +349,14 @@ button.danger,
   background-color: $red-color;
 }
 
-button.danger:not(:disabled):not(.loading):not(.outline):hover,
-.button.danger:not(:disabled):not(.loading):not(.outline):hover,
-button.danger:not(:disabled):focus,
-.button.danger:not(.disabled):focus {
-  background-color: lighten($red-color, 12%);
+button.danger:not(:disabled):not(.loading):not(.outline):hover:not(:active),
+.button.danger:not(:disabled):not(.loading):not(.outline):hover:not(:active) {
+  background-color: lighten($red-color, 6%);
 }
 
 button.danger:not(:disabled):not(.loading):active,
 .button.danger:not(:disabled):not(.loading):active {
-  background-color: darken($red-color, 12%);
+  background-color: darken($red-color, 6%);
 }
 
 button.danger:disabled,
@@ -385,16 +385,14 @@ button.warning,
   background-color: $orange-color;
 }
 
-button.warning:not(:disabled):not(.loading):not(.outline):hover,
-.button.warning:not(.disabled):not(.loading):not(.outline):hover,
-button.warning:not(:disabled):focus,
-.button.warning:not(.disabled):focus {
-  background-color: lighten($orange-color, 12%);
+button.warning:not(:disabled):not(.loading):not(.outline):hover:not(:active),
+.button.warning:not(.disabled):not(.loading):not(.outline):hover:not(:active) {
+  background-color: lighten($orange-color, 6%);
 }
 
 button.warning:not(:disabled):not(.loading):active,
 .button.warning:not(:disabled):not(.loading):active {
-  background-color: darken($orange-color, 12%);
+  background-color: darken($orange-color, 6%);
 }
 
 button.warning:disabled,
@@ -423,10 +421,8 @@ button.black,
   background-color: lighten($black-color, 12%);
 }
 
-button.black:not(:disabled):not(.loading):not(.outline):hover,
-.button.black:not(:disabled):not(.loading):not(.outline):hover,
-button.black:not(:disabled):focus,
-.button.black:not(.disabled):focus {
+button.black:not(:disabled):not(.loading):not(.outline):hover:not(:active),
+.button.black:not(:disabled):not(.loading):not(.outline):hover:not(:active) {
   background-color: lighten($black-color, 18%);
 }
 
@@ -442,9 +438,9 @@ button.black:disabled,
 
 button.black.outline,
 .button.black.outline {
-  color: $border-color-elements;
+  color: lighten($black-color, 12%);
   background-color: transparent;
-  border-color: $border-color-elements;
+  border-color: lighten($black-color, 12%);
 }
 
 button.black.outline:hover,
@@ -452,5 +448,5 @@ button.black.outline:hover,
 button.black.outline:focus,
 .button.black.outline:focus {
   color: #fff;
-  background-color: $border-color-elements;
+  background-color: lighten($black-color, 12%);
 }

@@ -14,16 +14,16 @@ thead, tfoot {
 }
 
 thead {
-  background-color: $bg-color-elements-shade;
+  background-color: $lighter-grey;
 }
 
 table {
-  border: 1px solid $border-color-elements;
+  border: 1px solid $dark-grey;
 }
 
 table > :not(:last-child),
 tbody > :not(:last-child) {
-  border-bottom: 1px solid $border-color-elements;
+  border-bottom: 1px solid $light-grey;
 }
 
 /******** MINIMALISTIC DESIGN ********/
@@ -65,17 +65,17 @@ table.flat * {
 
 /******** ALTERNATING ROWS ********/
 
-table.alt tbody > tr:nth-child(even) {background: $bg-color-elements}
+table.alt tbody > tr:nth-child(even) {background: $bg-color-primary}
 /*table.alt tbody > tr:nth-child(odd) {background: #fff}*/
 
 /******** REACTIVE DESIGN ********/
 
 table.reactive :not(thead):not(tfoot) tr:hover {
   background-color: lighten($primary-color, 40%);
-  background-color: $bg-color-elements;
+  background-color: $bg-color-primary;
 }
 
 table.reactive :not(thead):not(tfoot) tr td:hover {
   background-color: lighten($primary-color, 25%);
-  background-color: $bg-color-elements-shade;
+  background-color: $bg-color-primary;
 }

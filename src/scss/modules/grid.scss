@@ -41,7 +41,9 @@
   flex: 1 0;
 }
 
-[class*="container"] div:not(.soft-row):not(.soft-col):not([class*="container"]) {
+.container-sm div:not(.soft-row):not(.soft-col):not(.container-sm):not(.container-md):not(.container-lg),
+.container-md div:not(.soft-row):not(.soft-col):not(.container-sm):not(.container-md):not(.container-lg),
+.container-lg div:not(.soft-row):not(.soft-col):not(.container-sm):not(.container-md):not(.container-lg) {
   padding: 0.5em;
   margin: $grid-margin-sm;
 }
