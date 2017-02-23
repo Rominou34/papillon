@@ -99,13 +99,21 @@
 /********** ELEMENTS ASPECT **********/
 
 /* Sets a subtle background color */
-.bg-color {
-  background-color: $bg-color-elements !important;
+.bg-subtle {
+  background-color: $bg-color-primary !important;
+}
+
+.bg-subtle.secondary {
+  background-color: $bg-color-secondary !important;
 }
 
 /* Sets a border */
 .border {
-  border: 1px solid $border-color-elements;
+  border: 1px solid $border-color-primary;
+}
+
+.border.secondary {
+  border: 1px solid $border-color-secondary;
 }
 
 /********** SMALL CORRECTIONS ********/

@@ -8,7 +8,7 @@ button,
   margin: 0.5em;
   font-family: $font-default;
   box-sizing: border-box;
-  background-color: #e4e4e4;
+  background-color: $lighter-grey;
   color: $font-color-base;
   display: inline-block;
   vertical-align: middle;
@@ -16,30 +16,21 @@ button,
   -moz-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-}
-
-button:hover,
-.button:hover {
-  cursor: pointer;
-}
-
-button:focus,
-.button:focus {
-  outline: 0;
+  position: relative;
+  text-align: center;
 }
 
 button:hover,
 .button:hover,
-.button:visited:hover {
+.button:visited:hover,
+button:focus,
+.button:focus {
+  cursor: pointer;
   background-color: #efefef;
   color: $font-color-base;
   box-shadow: 1px 2px 6px 0 $shadow-color;
-}
-
-button:focus,
-.button:focus {
-  box-shadow: 1px 2px 6px 0 $shadow-color;
   outline: 0;
+  top: -1px;
 }
 
 .button:visited {
@@ -48,12 +39,11 @@ button:focus,
 
 button:disabled,
 .button.disabled {
-  background-color: $border-color-elements;
-  color: $font-color-grey;
+  background-color: $grey-medium;
 }
 
 button:disabled:hover {
-  background-color: $border-color-elements;
+  background-color: $border-color-primary;
   cursor: not-allowed;
 }
 
@@ -72,9 +62,12 @@ button.large,
   font-size: 1.5em;
 }
 
-button.large:not(.outline):hover,
-.button.large:not(.outline):hover {
+button.large:hover,
+.button.large:hover,
+button.large:focus,
+.button.large:focus {
   box-shadow: 2px 4px 12px 0 $shadow-color;
+  top: -2px;
 }
 
 

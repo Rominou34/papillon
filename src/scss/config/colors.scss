@@ -37,25 +37,32 @@
   $red-color: #cd2f2b;
   $orange-color: #e7912c;
 
+  /* GREY */
+  $lighter-grey: #ced7e2; /* Almost white */
+  $light-grey: #acb4bf;
+  $grey-medium: #848b96;
+  $dark-grey: #646a72;
+  $darker-grey: #44494f; /* Darky dark, almost light black */
+
+  /*** USED FOR THE ELEMENTS ***/
   $shadow-color: #a2a2a2;
-  
+
   /* HEADER */
   $color-header: #ecf0f1;
   $bg-color-header: $primary-color;
 
   $bg-color-base: #fff; /*#ecf0f1;*/
-  $bg-color-elements: transparentize($primary-color, 0.85);
-  $bg-color-elements-shade: #c3c4c6;
-  $border-color-elements: lighten($secondary-color, 10%);
+  $bg-color-primary: transparentize($primary-color, 0.85);
+  $border-color-primary: darken($primary-color, 10%);
+  $bg-color-secondary: transparentize($secondary-color, 0.85);
+  $border-color-secondary: darken($secondary-color, 10%);
 
-  $font-color-shade: #717171;
-  $font-color-grey: #484848;
   $font-color-base: #101010;
 
   /*$bg-color-base: #101520;
   $bg-color-elements: #182534;
   $bg-color-elements-shade: #23364e;
-  $border-color-elements: #304760;
+  $border-color-primary: #304760;
 
   $font-color-shade: #343b4d;
   $font-color-grey: #6f7278;
@@ -64,7 +71,7 @@
   $bg-color-base: #ffc9fe;
   $bg-color-elements: #f2a1f1;
   $bg-color-elements-shade: #e77ee6;
-  $border-color-elements: #cf4dce;
+  $border-color-primary: #cf4dce;
 
   $font-color-shade: #65265e;
   $font-color-grey: #4b1a37;

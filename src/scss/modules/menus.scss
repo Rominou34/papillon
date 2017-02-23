@@ -175,7 +175,7 @@ nav.top .submenu .dropdown :not(.category):hover {
 nav.top .submenu .dropdown .category {
   padding: 0.4em 1em;
   text-align: left;
-  color: $grey-color;
+  color: $light-grey;
 }
 
 nav.top .submenu .dropdown .category:hover {
@@ -471,10 +471,10 @@ nav.aside .submenu .dropdown a.current {
 
 nav.aside .category {
   font-size: 120%;
-  color: $font-color-grey;
+  color: $grey-medium;
   font-style: bold;
   margin: 0.4em 0;
-  border-bottom: 1px dashed $font-color-shade;
+  border-bottom: 1px dashed $border-color-primary;
 }
 
 /*

@@ -1,4 +1,4 @@
-# Soft CSS
+# Papillon
 
 ![License](https://img.shields.io/github/license/rominou34/soft-css.svg)
 [![Code Climate](https://codeclimate.com/github/Rominou34/soft-css/badges/gpa.svg)](https://codeclimate.com/github/Rominou34/soft-css)
@@ -6,7 +6,7 @@
 
 ## About
 
-Soft CSS is a CSS Framework allowing you to easily customize your website with modern design. You can either import the CSS directly from the CDN ( still not there ) if you're okay with the default settings, or clone the repo and tweak the settings as you wish.
+Papillon is a CSS Framework allowing you to easily customize your website with modern design. You can either import the CSS directly from the CDN ( still not there ) if you're okay with the default settings, or clone the repo and tweak the settings as you wish.
 
 The framework works with [SASS](http://sass-lang.com/) and every basic settings from the color palette to the body size can be found in the `config.sass` file so you can quickly change the aspect of your site without having to crawl around thousands of lines of code
 
@@ -33,7 +33,13 @@ When the framework will be released I'll buy a sweet domain name and put the fil
 
 *Requires SASS*
 
-`git clone` the repo and change the things you want in the files located in the `src/sass` folder.
+`git clone` the repo and change the things you want in the files located in the `src/scss/config` folder.
+
+By changing these values, you can control the visual identity of your site ( font, colours, etc. ).
+
+If you want to go even further and change some CSS classes then modify the files in `src/scss/modules`.
+
+When you're done, compile the main file using `sass src/scss/main.scss:papillon.css`
 
 When you're done, compile it using SASS and you're good to go
 

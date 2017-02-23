@@ -131,7 +131,15 @@ The shadows won't have any spread, as they need to only be slightly visible.
 
 The blur will be equal to `6px * the z-height of the element`
 
-#### 3.2.4 Examples
+#### 3.2.4 Shadow and interaction
+
+Some shadows will only show on interaction ( like hovering a button ).
+
+We must then ensure that the shadow just doesn't appear without any reason. That's why every element with shadow appearing because of an interaction must have some vertical movement equal to `1px * z-height` ( you can do this with `position: relative` and `top: -1px`)
+
+For example, when hovering a button, the button will move up for 1px and a shadow of 1 z-height will appear, creating an effect of 3d movement.
+
+#### 3.2.5 Examples
 
 Examples of real-life values:
 * A button, slightly floating on hover: `box-shadow: 1px 2px 6px 0 #949494`
@@ -168,6 +176,4 @@ Elements that interact with the user need to change colors when they do, it's an
 
 ### 3.4 Roundings
 
-All elements of the UI with a clear contrats of color between the inside and the outside of the block must have round corners, in order to ease the block corners and not have a staright colored monolith as part as the UI, which could catch the eye a little bit too much.
-
-For example, colored buttons have a small radius on their corners: `border-radius: 2px`
+In order to not make a rough appearance with edges on some elements like buttons, we can round the corners. However, as the framework is inspired from flat design these roundings must be really subtle ( 2 or 3 px )
