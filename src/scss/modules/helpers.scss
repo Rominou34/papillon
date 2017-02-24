@@ -77,6 +77,13 @@
   margin-right: 0 !important;
 }
 
+/* Makes the element takes the full width of the screen */
+.fullScreenW {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 /* Makes the element takes the full height of its parent */
 .fullHeight {
   height: 100% !important;
@@ -138,11 +145,6 @@
   padding: 2em !important;
 }
 
-/* The padding changes depending on the screen size */
-.padding-auto {
-  padding: 2em !important;
-}
-
 /* Set no margin */
 .no-margin {
   margin: 0 !important;
@@ -165,7 +167,7 @@
 
 /* The margin changes depending on the screen size */
 .margin-auto {
-  margin: 2em !important;
+  margin: auto !important;
 }
 
 /*******************************************************************************

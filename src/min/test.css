@@ -29,23 +29,6 @@
 /*** USED FOR THE ELEMENTS ***/
 /* HEADER */
 /*#ecf0f1;*/
-  /*$bg-color-base: #101520;
-  $bg-color-elements: #182534;
-  $bg-color-elements-shade: #23364e;
-  $border-color-primary: #304760;
-
-  $font-color-shade: #343b4d;
-  $font-color-grey: #6f7278;
-  $font-color-base: #e6e6e6;
-
-  $bg-color-base: #ffc9fe;
-  $bg-color-elements: #f2a1f1;
-  $bg-color-elements-shade: #e77ee6;
-  $border-color-primary: #cf4dce;
-
-  $font-color-shade: #65265e;
-  $font-color-grey: #4b1a37;
-  $font-color-base: #2f0015;*/
 /*
 ******************************************************************************
 * LAYOUT CONTROL
@@ -58,7 +41,12 @@
 /*
 ***** GRID LAYOUT *****
 */
-/* Container threshold sizes */
+/*
+* -- Container threshold sizes --
+* The name is a bit misleading as it isn't only used for containers but
+* for the whole responsiveness of the website ( it's the value used in the
+* media queries )
+*/
 /*
 ******************************************************************************
 * FONTS
@@ -496,10 +484,10 @@ caption {
 /***** CODE *****/
 code {
   background-color: rgba(69, 134, 232, 0.15);
-  font-family: "Cutive Mono", "Courier New", "monospace";
-  -webkit-border-radius: 0.2em;
-  -moz-border-radius: 0.2em;
-  border-radius: 0.2em;
+  font-family: "Source Code Pro", "monospace";
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   padding: 0 0.2em;
   color: #101010; }
 
@@ -509,7 +497,7 @@ pre > code {
   padding: 0.5em;
   text-align: left;
   border: 1px solid #44494f;
-  border-width: 1px 1px 1px 3px;
+  border-width: 1px 1px 1px 5px;
   word-wrap: break-word;
   max-width: 100%;
   white-space: pre-wrap; }
@@ -523,14 +511,14 @@ pre > code[data-lang]::before {
   background-color: #44494f;
   color: #fff;
   position: relative;
-  top: -1.33em;
+  top: calc(-1.33em - 1px);
+  width: calc(100% + 1em - 2px);
   font-size: 150%;
   padding: 0 0.6em;
-  -webkit-border-radius: 0 0 0.5em 0;
-  -moz-border-radius: 0 0 0.5em 0;
-  border-radius: 0 0 0.5em 0;
-  left: calc(-0.5em + 3px);
-  width: auto; }
+  left: calc(-0.5em - 1px);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0; }
 
 /****
 * D *
@@ -596,7 +584,7 @@ h5 small,
 h6 small {
   color: #848b96;
   padding-left: 0;
-  font-size: 60%; }
+  font-size: 75%; }
 
 h1 a,
 h2 a,
@@ -631,22 +619,22 @@ h6 a:hover::before {
   color: #4586e8; }
 
 h1 {
-  font-size: 42px; }
+  font-size: 40px; }
 
 h2 {
-  font-size: 36px; }
+  font-size: 32px; }
 
 h3 {
-  font-size: 30px; }
-
-h4 {
   font-size: 24px; }
 
+h4 {
+  font-size: 20px; }
+
 h5 {
-  font-size: 18px; }
+  font-size: 16px; }
 
 h6 {
-  font-size: 14px; }
+  font-size: 12px; }
 
 /***** HR *****/
 hr {
@@ -758,7 +746,8 @@ main {
 /********** TITLE **********/
 /* Titles of a section with special style added */
 .section-header {
-  position: relative; }
+  position: relative;
+  left: 0.5em; }
 
 .section-header::before {
   content: '';
@@ -922,6 +911,7 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
   padding: 0.5em;
   margin: 10px; }
 
+/* WIDTH */
 .col-1, .space-1 {
   width: calc(100% / 12 - 20px); }
 
@@ -958,38 +948,73 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 .col-12 {
   width: 100%; }
 
-.col-offset-1 {
-  margin-left: calc(100% / 12); }
+/* PUSH */
+.offset-left-1 {
+  margin-left: calc(100% / 12) !important; }
 
-.col-offset-2 {
-  margin-left: calc(100% / 6); }
+.offset-left-2 {
+  margin-left: calc(100% / 6) !important; }
 
-.col-offset-3 {
-  margin-left: calc(100% / 4); }
+.offset-left-3 {
+  margin-left: calc(100% / 4) !important; }
 
-.col-offset-4 {
-  margin-left: calc(100% / 3); }
+.offset-left-4 {
+  margin-left: calc(100% / 3) !important; }
 
-.col-offset-5 {
-  margin-left: calc(500% / 12); }
+.offset-left-5 {
+  margin-left: calc(500% / 12) !important; }
 
-.col-offset-6 {
-  margin-left: calc(100% / 2); }
+.offset-left-6 {
+  margin-left: calc(100% / 2) !important; }
 
-.col-offset-7 {
-  margin-left: calc(700% / 12); }
+.offset-left-7 {
+  margin-left: calc(700% / 12) !important; }
 
-.col-offset-8 {
-  margin-left: calc(800% / 12); }
+.offset-left-8 {
+  margin-left: calc(800% / 12) !important; }
 
-.col-offset-9 {
-  margin-left: calc(900% / 12); }
+.offset-left-9 {
+  margin-left: calc(900% / 12) !important; }
 
-.col-offset-10 {
-  margin-left: calc(1000% / 12); }
+.offset-left-10 {
+  margin-left: calc(1000% / 12) !important; }
 
-.col-offset-11 {
-  margin-left: calc(1100% / 12); }
+.offset-left-11 {
+  margin-left: calc(1100% / 12) !important; }
+
+/* PULL */
+.offset-right-1 {
+  margin-right: calc(100% / 12) !important; }
+
+.offset-right-2 {
+  margin-right: calc(100% / 6) !important; }
+
+.offset-right-3 {
+  margin-right: calc(100% / 4) !important; }
+
+.offset-right-4 {
+  margin-right: calc(100% / 3) !important; }
+
+.offset-right-5 {
+  margin-right: calc(500% / 12) !important; }
+
+.offset-right-6 {
+  margin-right: calc(100% / 2) !important; }
+
+.offset-right-7 {
+  margin-right: calc(700% / 12) !important; }
+
+.offset-right-8 {
+  margin-right: calc(800% / 12) !important; }
+
+.offset-right-9 {
+  margin-right: calc(900% / 12) !important; }
+
+.offset-right-10 {
+  margin-right: calc(1000% / 12) !important; }
+
+.offset-right-11 {
+  margin-right: calc(1100% / 12) !important; }
 
 .space-1,
 .space-2,
@@ -1016,7 +1041,13 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 
   .stack-lg.soft-col > :not(.soft-row):not(.soft-col) {
     display: block;
-    width: calc(100% - 20px); } }
+    width: calc(100% - 20px); }
+
+  [class*="offset-left"] {
+    margin-left: 0px !important; }
+
+  [class*="offset-right"] {
+    margin-right: 0px !important; } }
 /* MEDIUM */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 940px) {
@@ -1026,7 +1057,13 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
 
   .stack-md.soft-col > :not(.soft-row):not(.soft-col) {
     display: block;
-    width: calc(100% - 20px); } }
+    width: calc(100% - 20px); }
+
+  [class*="offset-left"] {
+    margin-left: 0px !important; }
+
+  [class*="offset-right"] {
+    margin-right: 0px !important; } }
 /* SMALL */
 /* Set the value according to the one you put at the beginning */
 @media screen and (max-width: 730px) {
@@ -1034,9 +1071,15 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
   .stack-sm :not(.soft-row) > div {
     width: calc(100% - 20px); }
 
-  .stack-sm.soft-col > :not(.soft-row):not(.soft-col) {
+  .soft-col > :not(.soft-row):not(.soft-col) {
     display: block;
-    width: calc(100% - 20px); } }
+    width: calc(100% - 20px); }
+
+  [class*="offset-left"] {
+    margin-left: 0px !important; }
+
+  [class*="offset-right"] {
+    margin-right: 0px !important; } }
 /* We import the classes for the buttons */
 button,
 .button {
@@ -1489,7 +1532,7 @@ nav.top .links > a:visited {
   flex: 1;
   text-align: center;
   color: #fff;
-  background-color: #13499a;
+  background-color: #0d346d;
   z-index: 3; }
 
 nav.top .links > :not(.submenu),
@@ -2314,6 +2357,12 @@ nav.aside .category {
   margin-left: 0 !important;
   margin-right: 0 !important; }
 
+/* Makes the element takes the full width of the screen */
+.fullScreenW {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
 /* Makes the element takes the full height of its parent */
 .fullHeight {
   height: 100% !important;
@@ -2362,10 +2411,6 @@ nav.aside .category {
 .padding-lg {
   padding: 2em !important; }
 
-/* The padding changes depending on the screen size */
-.padding-auto {
-  padding: 2em !important; }
-
 /* Set no margin */
 .no-margin {
   margin: 0 !important; }
@@ -2384,7 +2429,7 @@ nav.aside .category {
 
 /* The margin changes depending on the screen size */
 .margin-auto {
-  margin: 2em !important; }
+  margin: auto !important; }
 
 /*******************************************************************************
 *** ELEMENTS SPECIFIC
