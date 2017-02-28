@@ -29,6 +29,11 @@
   $primary-color: #4586e8;
   $secondary-color: #9d43e8;
 
+  $success-color: #36b147;
+  $info-color: #296dd1;
+  $danger-color: #cd2f2b;
+  $warning-color: #e7912c;
+
   /*** COMPLEMENTARY COLORS ***/
   $grey-color: #9d9d9d;
   $black-color: #0e0e0e;
@@ -74,7 +79,22 @@
   /*
   ***** NAVIGATION *****
   */
-  $bg-color-nav: #162740;
+  $navtop-font-color: #ecf0f1;
+  $navtop-bg-color: #13499a;
+  $navtop-links-bg-color: #0d346d;
+  $navtop-highlight-bg-color: #2569ce;
+  $navtop-dropdown-bg-color: #2569ce;
+  $navtop-dropdown-bg-color-hover: #13499a;
+  $navtop-toggle-bg-color: #1a65d5;
+  $navtop-toggle-font-color: #ecf0f1;
+
   $navside-bg-color: lighten($black-color, 6%);
-  $navside-header-color: darken($primary-color, 12%);
-  $navside-footer-color: $black-color;
+  $navside-font-color: #ecf0f1;
+  $navside-links-bg-color: lighten($black-color, 6%);
+  $navside-links-bg-color-hover: lighten($black-color, 10%);
+
+  $navside-header-bg-color: darken($primary-color, 12%);
+  $navside-header-font-color: #ecf0f1;
+
+  $navside-footer-bg-color: $black-color;
+  $navside-footer-font-color: #ecf0f1;

@@ -18,6 +18,8 @@ nav span {
 
 nav.top {
   width: 100%;
+  background-color: $navtop-bg-color;
+  color: $navtop-font-color;
 }
 
 nav.top.fixed {
@@ -46,7 +48,7 @@ nav .toggle:hover {
 
 nav .toggle::after {
   content: '\2630';
-  color: #fff;
+  color: $navtop-toggle-font-color;
   font-size: 32px;
   line-height: 50px;
   text-align: center;
@@ -70,8 +72,8 @@ nav.top .links > a:visited {
   -webkit-flex: 1;
   flex: 1;
   text-align: center;
-  color: #fff;
-  background-color: darken($primary-color, 35%);
+  color: $navtop-font-color;
+  background-color: $navtop-links-bg-color;
   z-index: 3;
 }
 
@@ -82,7 +84,7 @@ nav.top .links > .submenu span {
 
 nav.top .links > :hover,
 nav.top .links > a:visited:hover {
-  background-color: darken($primary-color, 12%);
+  background-color: $navtop-highlight-bg-color;
   cursor: pointer;
 }
 
@@ -91,7 +93,7 @@ nav.top .links > a:visited:hover {
 */
 
 nav.top .submenu.active {
-  background-color: darken($primary-color, 12%);
+  background-color: $navtop-highlight-bg-color;
 }
 
 nav.top .submenu {
@@ -116,10 +118,10 @@ nav.top .submenu span::before {
   display: block;
   position: absolute;
   left: 10%;
-  color: #fff;
+  color: $navtop-font-color;
 }
 nav.top .submenu:hover::before {
-  color: #fff;
+  color: $navtop-font-color;
 }
 
 nav.top .submenu.active::before {
@@ -156,8 +158,8 @@ nav.top .submenu .dropdown div,
 nav.top .submenu .dropdown span {
   display: block;
   width: 100%;
-  background-color: darken($primary-color, 12%);
-  color: #fff;
+  background-color: $navtop-dropdown-bg-color;
+  color: $navtop-font-color;
   -webkit-transition: padding 0.4s;
   -moz-transition: padding 0.4s;
   -o-transition: padding 0.4s;
@@ -165,7 +167,7 @@ nav.top .submenu .dropdown span {
 }
 
 nav.top .submenu .dropdown :not(.category):hover {
-  background-color: darken($primary-color, 25%);
+  background-color: $navtop-dropdown-bg-color-hover;
 }
 
 /*
@@ -217,7 +219,8 @@ nav.side {
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
-  background-color: $navside-header-color;
+  background-color: $navside-bg-color;
+  color: $navside-font-color;
 }
 
 nav.side div,
@@ -232,7 +235,8 @@ nav.side input {
 */
 nav.side .header {
   width: 100%;
-  background-color: $navside-header-color;
+  background-color: $navside-header-bg-color;
+  color: $navside-header-font-color;
   height: $navside-header-height;
   color: #ecf0f1;
   width: 100%;
@@ -280,7 +284,8 @@ nav.side .links .category > a,
 nav.side .links .category > :visited,
 nav.side .links .submenu .dropdown > a,
 nav.side .links .submenu .dropdown > :visited {
-  color: lighten($grey-color, 25%);
+  color: $navside-font-color;
+  background-color: $navside-links-bg-color;
   padding: 0 0.6em;
   display: block;
   width: 100%;
@@ -296,8 +301,9 @@ nav.side .links .submenu .dropdown > :visited {
 nav.side .links > :not(.category):hover,
 nav.side .links .category > :not(span):hover,
 nav.side .links .submenu.active :first-child,
-nav.side .links .submenu.active .dropdown {
-  background-color: lighten($black-color, 12%);
+nav.side .links .submenu.active .dropdown,
+nav.side .links .submenu.active .dropdown a {
+  background-color: $navside-links-bg-color-hover;
 }
 
 /*
@@ -337,7 +343,7 @@ nav.side .links .submenu > span {
 
 nav.side .links .submenu > span::before {
   content: '+';
-  border: 1px solid #ecf0f1;
+  border: 1px solid $navside-font-color;
   line-height: 1;
   width: 16px;
   display: inline-block;
@@ -358,8 +364,8 @@ nav.side .links .submenu .dropdown > a {
   padding-left: 1.2em;
 }
 
-nav.side .links .submenu .dropdown > :hover {
-  background-color: lighten($black-color, 6%);
+nav.side .links .submenu.active .dropdown > :hover {
+  background-color: $navside-bg-color;
 }
 
 /*
@@ -372,7 +378,7 @@ nav.side .links .category {
 }
 
 nav.side .links .category > span {
-  color: darken($grey-color, 12%);
+  color: $dark-grey;
   font-size: 90%;
   padding: 0.4em 0.6em;
 }
@@ -397,10 +403,10 @@ nav.side .footer {
   margin: 0;
   padding: 8px;
   height: $navside-footer-height;
-  background-color: $navside-footer-color;
+  background-color: $navside-footer-bg-color;
   font-size: 18px;
   text-align: center;
-  color: #ecf0f1;
+  color: $navside-footer-font-color;
   overflow: hidden;
 }
 
@@ -516,7 +522,6 @@ nav.aside .category {
 @media (max-width: 600px) {
   nav.top {
     display: block;
-    background-color: darken($primary-color, 25%);
   }
 
   nav.top .links {
@@ -554,13 +559,13 @@ nav.aside .category {
 
   nav.top .submenu .dropdown > a,
   nav.top .submenu .dropdown > div {
-    background-color: darken($primary-color, 12%);
+    background-color: $navtop-links-bg-color;
     padding: 0.8em 0;
-    border-top: 1px solid darken($primary-color, 25%);
+    border-top: 1px solid $navtop-links-bg-color;
   }
 
   nav.top .submenu .dropdown > :hover {
-    background-color: darken($primary-color, 25%);
+    background-color: $navtop-highlight-bg-color;
   }
 
   nav.top .submenu .dropdown {
@@ -576,7 +581,7 @@ nav.aside .category {
     display: block;
     height: 50px;
     margin-right: calc(100% - 80px);
-    background-color: darken($primary-color, 12%);
+    background-color: $navtop-toggle-bg-color;
   }
 
   nav.top .toggle.right {
@@ -611,7 +616,7 @@ nav.aside .category {
 
   nav.side:not(.active) .toggle {
     width: 50px;
-    background-color: $navside-header-color;
+    background-color: $navside-header-bg-color;
     -webkit-border-radius: 0 0 4px 0;
     -moz-border-radius: 0 0 4px 0;
     border-radius: 0 0 4px 0;

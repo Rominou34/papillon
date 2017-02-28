@@ -28,8 +28,16 @@ button:focus,
   cursor: pointer;
   background-color: #efefef;
   color: $font-color-base;
-  box-shadow: 1px 2px 6px 0 $shadow-color;
   outline: 0;
+  top: -1px;
+}
+
+button:not(.outline):hover,
+.button:not(.outline):hover,
+.button:not(.outline):visited:hover,
+button:not(.outline):focus,
+.button:not(.outline):focus {
+  box-shadow: 1px 2px 6px 0 $shadow-color;
   top: -1px;
 }
 
@@ -62,10 +70,10 @@ button.large,
   font-size: 1.5em;
 }
 
-button.large:hover,
-.button.large:hover,
-button.large:focus,
-.button.large:focus {
+button.large:not(.outline):hover,
+.button.large:not(.outline):hover,
+button.large:not(.outline):focus,
+.button.large:not(.outline):focus {
   box-shadow: 2px 4px 12px 0 $shadow-color;
   top: -2px;
 }

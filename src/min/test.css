@@ -1,6 +1,6 @@
 /*
 * Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
+* Romain Arnaud - 2016-2017
 */
 /*
 * Soft CSS - The tweakable CSS framework
@@ -862,10 +862,102 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
   background-color: rgba(69, 134, 232, 0.15); }
 
 /* We import the classes for the forms */
+/***** UI CONTROL *****/
+.input-group {
+  display: table;
+  width: 100%; }
+
+.input-group .input-addon {
+  width: 40px; }
+
+.input-group input {
+  display: table-cell;
+  width: calc(100%); }
+
+.input-group .input-addon {
+  position: relative;
+  display: table-cell;
+  background-color: #ced7e2; }
+
+.input-group .input-addon.required::before {
+  position: absolute;
+  content: '\2731';
+  color: #4586e8;
+  border: 1px solid #acb4bf;
+  font-size: 1em;
+  line-height: 2em;
+  width: 40px;
+  text-align: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0; }
+
+.input-group .input-addon.valid {
+  background-color: #d3f2d2; }
+
+.input-group .input-addon.valid::before {
+  position: absolute;
+  content: '\2714';
+  color: #36b147;
+  border: 1px solid #acb4bf;
+  font-size: 1em;
+  line-height: 2em;
+  width: 40px;
+  text-align: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0; }
+
+.input-group .input-addon.error {
+  background-color: #f1d1d1; }
+
+.input-group .input-addon.error::before {
+  position: absolute;
+  content: '\2716';
+  color: #cd2f2b;
+  border: 1px solid #acb4bf;
+  font-size: 1em;
+  line-height: 2em;
+  width: 40px;
+  text-align: center;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0; }
+
 /*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
+********** INPUT FIELDS **********
 */
+/*** TEXT ***/
+input {
+  line-height: 2em; }
+
+input:focus {
+  outline: 0; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"] {
+  border: 1px solid #acb4bf; }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus {
+  border-bottom: 3px solid #acb4bf; }
+
+input[type="text"].incomplete,
+input[type="email"].incomplete,
+input[type="password"].incomplete,
+input[type="search"].incomplete,
+input[type="url"].incomplete {
+  border-bottom: 3px solid red; }
+
 /* We import the layout for grids and columns */
 .soft-row,
 .soft-col {
@@ -905,9 +997,8 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
   -webkit-flex: 1 0;
   flex: 1 0; }
 
-.container-sm div:not(.soft-row):not(.soft-col):not(.container-sm):not(.container-md):not(.container-lg),
-.container-md div:not(.soft-row):not(.soft-col):not(.container-sm):not(.container-md):not(.container-lg),
-.container-lg div:not(.soft-row):not(.soft-col):not(.container-sm):not(.container-md):not(.container-lg) {
+.soft-col > div:not(.soft-row):not(.soft-col):not(.container-sm):not(.container-md):not(.container-lg),
+.soft-row > div:not(.soft-row):not(.soft-col):not(.container-sm):not(.container-md):not(.container-lg) {
   padding: 0.5em;
   margin: 10px; }
 
@@ -1110,8 +1201,15 @@ button:focus,
   cursor: pointer;
   background-color: #efefef;
   color: #101010;
-  box-shadow: 1px 2px 6px 0 #a2a2a2;
   outline: 0;
+  top: -1px; }
+
+button:not(.outline):hover,
+.button:not(.outline):hover,
+.button:not(.outline):visited:hover,
+button:not(.outline):focus,
+.button:not(.outline):focus {
+  box-shadow: 1px 2px 6px 0 #a2a2a2;
   top: -1px; }
 
 .button:visited {
@@ -1137,10 +1235,10 @@ button.large,
   padding: 1rem;
   font-size: 1.5em; }
 
-button.large:hover,
-.button.large:hover,
-button.large:focus,
-.button.large:focus {
+button.large:not(.outline):hover,
+.button.large:not(.outline):hover,
+button.large:not(.outline):focus,
+.button.large:not(.outline):focus {
   box-shadow: 2px 4px 12px 0 #a2a2a2;
   top: -2px; }
 
@@ -1485,7 +1583,9 @@ nav span {
 ********************************************************************************
 */
 nav.top {
-  width: 100%; }
+  width: 100%;
+  background-color: #13499a;
+  color: #ecf0f1; }
 
 nav.top.fixed {
   position: fixed;
@@ -1509,7 +1609,7 @@ nav .toggle:hover {
 
 nav .toggle::after {
   content: '\2630';
-  color: #fff;
+  color: #ecf0f1;
   font-size: 32px;
   line-height: 50px;
   text-align: center;
@@ -1531,7 +1631,7 @@ nav.top .links > a:visited {
   -webkit-flex: 1;
   flex: 1;
   text-align: center;
-  color: #fff;
+  color: #ecf0f1;
   background-color: #0d346d;
   z-index: 3; }
 
@@ -1541,14 +1641,14 @@ nav.top .links > .submenu span {
 
 nav.top .links > :hover,
 nav.top .links > a:visited:hover {
-  background-color: #1a65d5;
+  background-color: #2569ce;
   cursor: pointer; }
 
 /*
 * TOP NAVBAR SUBMENU
 */
 nav.top .submenu.active {
-  background-color: #1a65d5; }
+  background-color: #2569ce; }
 
 nav.top .submenu {
   position: relative;
@@ -1570,10 +1670,10 @@ nav.top .submenu span::before {
   display: block;
   position: absolute;
   left: 10%;
-  color: #fff; }
+  color: #ecf0f1; }
 
 nav.top .submenu:hover::before {
-  color: #fff; }
+  color: #ecf0f1; }
 
 nav.top .submenu.active::before {
   color: transparent; }
@@ -1604,8 +1704,8 @@ nav.top .submenu .dropdown div,
 nav.top .submenu .dropdown span {
   display: block;
   width: 100%;
-  background-color: #1a65d5;
-  color: #fff;
+  background-color: #2569ce;
+  color: #ecf0f1;
   -webkit-transition: padding 0.4s;
   -moz-transition: padding 0.4s;
   -o-transition: padding 0.4s;
@@ -1656,7 +1756,8 @@ nav.side {
   -moz-transition: width 0.25s;
   -o-transition: width 0.25s;
   transition: width 0.25s;
-  background-color: #1a65d5; }
+  background-color: #1d1d1d;
+  color: #ecf0f1; }
 
 nav.side div,
 nav.side a,
@@ -1670,6 +1771,7 @@ nav.side input {
 nav.side .header {
   width: 100%;
   background-color: #1a65d5;
+  color: #ecf0f1;
   height: 150px;
   color: #ecf0f1;
   width: 100%;
@@ -1712,7 +1814,8 @@ nav.side .links .category > a,
 nav.side .links .category > :visited,
 nav.side .links .submenu .dropdown > a,
 nav.side .links .submenu .dropdown > :visited {
-  color: #dddddd;
+  color: #ecf0f1;
+  background-color: #1d1d1d;
   padding: 0 0.6em;
   display: block;
   width: 100%;
@@ -1727,8 +1830,9 @@ nav.side .links .submenu .dropdown > :visited {
 nav.side .links > :not(.category):hover,
 nav.side .links .category > :not(span):hover,
 nav.side .links .submenu.active :first-child,
-nav.side .links .submenu.active .dropdown {
-  background-color: #2d2d2d; }
+nav.side .links .submenu.active .dropdown,
+nav.side .links .submenu.active .dropdown a {
+  background-color: #282828; }
 
 /*
 * SIDE MENU DROPDOWN
@@ -1779,7 +1883,7 @@ nav.side .links .submenu .dropdown > a {
   display: block;
   padding-left: 1.2em; }
 
-nav.side .links .submenu .dropdown > :hover {
+nav.side .links .submenu.active .dropdown > :hover {
   background-color: #1d1d1d; }
 
 /*
@@ -1790,7 +1894,7 @@ nav.side .links .category {
   padding: 0; }
 
 nav.side .links .category > span {
-  color: #7e7e7e;
+  color: #646a72;
   font-size: 90%;
   padding: 0.4em 0.6em; }
 
@@ -1906,8 +2010,7 @@ nav.aside .category {
 */
 @media (max-width: 600px) {
   nav.top {
-    display: block;
-    background-color: #13499a; }
+    display: block; }
 
   nav.top .links {
     max-height: 0;
@@ -1938,12 +2041,12 @@ nav.aside .category {
 
   nav.top .submenu .dropdown > a,
   nav.top .submenu .dropdown > div {
-    background-color: #1a65d5;
+    background-color: #0d346d;
     padding: 0.8em 0;
-    border-top: 1px solid #13499a; }
+    border-top: 1px solid #0d346d; }
 
   nav.top .submenu .dropdown > :hover {
-    background-color: #13499a; }
+    background-color: #2569ce; }
 
   nav.top .submenu .dropdown {
     max-height: 0; }
