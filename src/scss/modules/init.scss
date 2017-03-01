@@ -156,7 +156,7 @@ pre > code {
   margin: 0.4em 1em;
   padding: 0.5em;
   text-align: left;
-  border: 1px solid $darker-grey;
+  border: 1px solid $grey-darker;
   border-width: 1px 1px 1px 5px;
   word-wrap: break-word;
   max-width: 100%;
@@ -170,7 +170,7 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: $darker-grey;
+  background-color: $grey-darker;
   color: #fff;
   position: relative;
   top: calc(-1.33em - 1px);

@@ -177,7 +177,7 @@ nav.top .submenu .dropdown :not(.category):hover {
 nav.top .submenu .dropdown .category {
   padding: 0.4em 1em;
   text-align: left;
-  color: $light-grey;
+  color: $grey-light;
 }
 
 nav.top .submenu .dropdown .category:hover {
@@ -378,7 +378,7 @@ nav.side .links .category {
 }
 
 nav.side .links .category > span {
-  color: $dark-grey;
+  color: $grey-dark;
   font-size: 90%;
   padding: 0.4em 0.6em;
 }

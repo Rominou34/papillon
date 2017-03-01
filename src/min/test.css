@@ -862,77 +862,12 @@ table.reactive :not(thead):not(tfoot) tr td:hover {
   background-color: rgba(69, 134, 232, 0.15); }
 
 /* We import the classes for the forms */
-/***** UI CONTROL *****/
-.input-group {
-  display: table;
-  width: 100%; }
-
-.input-group .input-addon {
-  width: 40px; }
-
-.input-group input {
-  display: table-cell;
-  width: calc(100%); }
-
-.input-group .input-addon {
-  position: relative;
-  display: table-cell;
-  background-color: #ced7e2; }
-
-.input-group .input-addon.required::before {
-  position: absolute;
-  content: '\2731';
-  color: #4586e8;
-  border: 1px solid #acb4bf;
-  font-size: 1em;
-  line-height: 2em;
-  width: 40px;
-  text-align: center;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0; }
-
-.input-group .input-addon.valid {
-  background-color: #d3f2d2; }
-
-.input-group .input-addon.valid::before {
-  position: absolute;
-  content: '\2714';
-  color: #36b147;
-  border: 1px solid #acb4bf;
-  font-size: 1em;
-  line-height: 2em;
-  width: 40px;
-  text-align: center;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0; }
-
-.input-group .input-addon.error {
-  background-color: #f1d1d1; }
-
-.input-group .input-addon.error::before {
-  position: absolute;
-  content: '\2716';
-  color: #cd2f2b;
-  border: 1px solid #acb4bf;
-  font-size: 1em;
-  line-height: 2em;
-  width: 40px;
-  text-align: center;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0; }
-
 /*
 ********** INPUT FIELDS **********
 */
 /*** TEXT ***/
 input {
-  line-height: 2em; }
+  line-height: 1.5em; }
 
 input:focus {
   outline: 0; }
@@ -942,21 +877,30 @@ input[type="email"],
 input[type="password"],
 input[type="search"],
 input[type="url"] {
-  border: 1px solid #acb4bf; }
+  border: 1px solid #acb4bf;
+  border-radius: 2px;
+  padding: 0.25em 0.5em; }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="url"]:focus {
-  border-bottom: 3px solid #acb4bf; }
+  border-color: #4586e8; }
 
-input[type="text"].incomplete,
-input[type="email"].incomplete,
-input[type="password"].incomplete,
-input[type="search"].incomplete,
-input[type="url"].incomplete {
-  border-bottom: 3px solid red; }
+input[type="text"].invalid,
+input[type="email"].invalid,
+input[type="password"].invalid,
+input[type="search"].invalid,
+input[type="url"].invalid {
+  border-color: #cd2f2b !important; }
+
+input[type="text"].valid,
+input[type="email"].valid,
+input[type="password"].valid,
+input[type="search"].valid,
+input[type="url"].valid {
+  border-color: #36b147 !important; }
 
 /* We import the layout for grids and columns */
 .soft-row,

@@ -14,16 +14,16 @@ thead, tfoot {
 }
 
 thead {
-  background-color: $lighter-grey;
+  background-color: $grey-lighter;
 }
 
 table {
-  border: 1px solid $dark-grey;
+  border: 1px solid $grey-dark;
 }
 
 table > :not(:last-child),
 tbody > :not(:last-child) {
-  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px solid $grey-light;
 }
 
 /******** MINIMALISTIC DESIGN ********/

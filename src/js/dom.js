@@ -18,6 +18,8 @@ window.onload = function() {
   // Add listener to close a banner if there is one
   addBannerListener();
 
+  parseForms();
+
   navBar = document.querySelector("nav.top");
   if(navBar !== null) {
     addNavBarToggle();
@@ -100,6 +102,31 @@ var addToolTipListeners = function() {
       });
     });
   });
+}
+
+/***************************** FORMS ********************************/
+var parseForms = function() {
+  var inputs = document.querySelectorAll("input");
+  inputs.forEach(function(input) {
+    input.addEventListener("input", function() {
+      inputValidate(input);
+    });
+  });
+  console.log(inputs);
+}
+
+var inputValidate = function(inp) {
+  if(inp.checkValidity()) {
+    if(inp.classList.contains("invalid")) {
+      inp.classList.remove("invalid");
+    }
+    inp.classList.add("valid");
+  } else {
+    if(inp.classList.contains("valid")) {
+      inp.classList.remove("valid");
+    }
+    inp.classList.add("invalid");
+  }
 }
 
 /***************************** OTHER FUNCTIONS ********************************/

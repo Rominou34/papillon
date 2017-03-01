@@ -1,84 +1,10 @@
-/***** UI CONTROL *****/
-.input-group {
-  display: table;
-  width: 100%;
-}
-
-.input-group .input-addon {
-  width: 40px;
-}
-
-.input-group input {
-  display: table-cell;
-  width: calc(100%);
-}
-
-.input-group .input-addon {
-  position: relative;
-  display: table-cell;
-  background-color: $lighter-grey;
-}
-
-.input-group .input-addon.required::before {
-  position: absolute;
-  content: '\2731';
-  color: $primary-color;
-  border: 1px solid $light-grey;
-  font-size: 1em;
-  line-height: 2em;
-  width: 40px;
-  text-align: center;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.input-group .input-addon.valid {
-  background-color: #d3f2d2;
-}
-
-.input-group .input-addon.valid::before {
-  position: absolute;
-  content: '\2714';
-  color: $success-color;
-  border: 1px solid $light-grey;
-  font-size: 1em;
-  line-height: 2em;
-  width: 40px;
-  text-align: center;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.input-group .input-addon.error {
-  background-color: #f1d1d1
-}
-
-.input-group .input-addon.error::before {
-  position: absolute;
-  content: '\2716';
-  color: $danger-color;
-  border: 1px solid $light-grey;
-  font-size: 1em;
-  line-height: 2em;
-  width: 40px;
-  text-align: center;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
 /*
 ********** INPUT FIELDS **********
 */
 
 /*** TEXT ***/
 input {
-  line-height: 2em;
+  line-height: 1.5em;
 }
 
 input:focus {
@@ -90,7 +16,9 @@ input[type="email"],
 input[type="password"],
 input[type="search"],
 input[type="url"] {
-  border: 1px solid $light-grey;
+  border: 1px solid $grey-light;
+  border-radius: 2px;
+  padding: 0.25em 0.5em;
 }
 
 input[type="text"]:focus,
@@ -98,13 +26,21 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="url"]:focus {
-  border-bottom: 3px solid $light-grey;
+  border-color: $primary-color;
 }
 
-input[type="text"].incomplete,
-input[type="email"].incomplete,
-input[type="password"].incomplete,
-input[type="search"].incomplete,
-input[type="url"].incomplete {
-  border-bottom: 3px solid red;
+input[type="text"].invalid,
+input[type="email"].invalid,
+input[type="password"].invalid,
+input[type="search"].invalid,
+input[type="url"].invalid {
+  border-color: $danger-color !important;
+}
+
+input[type="text"].valid,
+input[type="email"].valid,
+input[type="password"].valid,
+input[type="search"].valid,
+input[type="url"].valid {
+  border-color: $success-color !important;
 }
