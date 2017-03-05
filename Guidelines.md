@@ -123,7 +123,7 @@ For example:
 
 Too much shadow is ugly and looks bad, that's why Papillon's shadows won't be totally black.
 
-The color for all shadows will be `#b2b2b2`
+The default color for all shadows will be `#a2a2a2`, but you can still change it to your need in `config/colors.scss`
 
 #### 3.2.3 The blur and spread
 
@@ -142,8 +142,8 @@ For example, when hovering a button, the button will move up for 1px and a shado
 #### 3.2.5 Examples
 
 Examples of real-life values:
-* A button, slightly floating on hover: `box-shadow: 1px 2px 6px 0 #949494`
-* A card, hovering at higher altitude, with a bigger and blurrier shadow: `box-shadow: 3px 6px 18px 0 #949494`
+* A button, slightly floating on hover: `box-shadow: 1px 2px 6px 0 #a2a2a2`
+* A card, hovering at higher altitude, with a bigger and blurrier shadow: `box-shadow: 3px 6px 18px 0 #a2a2a2`
 
 ### 3.3 Colors
 

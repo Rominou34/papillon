@@ -8,7 +8,11 @@ button,
   margin: 0.5em;
   font-family: $font-default;
   box-sizing: border-box;
-  background-color: $grey-lighter;
+  @if $night-theme {
+    background-color: $grey-darker;
+  } @else {
+    background-color: $grey-lighter;
+  }
   color: $font-color-base;
   display: inline-block;
   vertical-align: middle;
@@ -26,10 +30,9 @@ button:hover,
 button:focus,
 .button:focus {
   cursor: pointer;
-  background-color: #efefef;
+  background-color: $grey-lightest;
   color: $font-color-base;
   outline: 0;
-  top: -1px;
 }
 
 button:not(.outline):hover,
@@ -137,9 +140,9 @@ button.large.loading::after,
 
 button.btn-round,
 .button.btn-round {
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  border-radius: 1em;
+  -webkit-border-radius: 2em !important;
+  -moz-border-radius: 2em !important;
+  border-radius: 2em !important;
 }
 
 button.outline,

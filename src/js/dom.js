@@ -18,7 +18,11 @@ window.onload = function() {
   // Add listener to close a banner if there is one
   addBannerListener();
 
+  // Add event listeners to input in order to validate them
   parseForms();
+
+  // Create div containing the notifs
+  addNotifContainer();
 
   navBar = document.querySelector("nav.top");
   if(navBar !== null) {
@@ -265,6 +269,7 @@ var addSpoilerListeners = function() {
   })
 }
 
+/* Adds listener on the close button of the banner */
 var addBannerListener = function() {
   var bannerElement = document.querySelectorAll(".banner-top, .banner-bot");
   var banners = [].slice.call(bannerElement);
@@ -276,11 +281,17 @@ var addBannerListener = function() {
   });
 }
 
+/* Creates the div housing the notifications */
+var addNotifContainer = function() {
+  var not_cont = document.createElement("div");
+  not_cont.className = "notif-container";
+  document.body.appendChild(not_cont);
+}
+
 /*
 * Fades out an element e on a duration d
 * If the second argument is "rm", the element will be removed from the DOM
 */
-
 function fadeOut(e, d, rm) {
   e.classList.add("animation-fadeout");
   e.style.animationDuration = d+"ms";

@@ -185,53 +185,59 @@
   right: -24px;
 }
 
+/*************** NOTIFICATIONS *****************/
 
-/************** SOFT NOTIFICATIONS ****************/
+.notif-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
 
-.soft-notif {
+.notification {
   display: block;
-  border: 1px solid darken($primary-color, 12%);
-  background-color: lighten($primary-color, 12%);
-  box-shadow: 1px 1px 2px 0 darken($primary-color, 25%);
-  color: lighten($black-color, 6%);
+  margin: 0.5em;
+  display: block;
+  border: 1px solid $grey-medium;
+  @if $night-theme {
+    background-color: $grey-darkest;
+  } @else {
+    background-color: $grey-lightest;
+  }
+  box-shadow: 3px 6px 18px 0 $shadow-color;
   font-size: 18px;
   text-align: center;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
   max-width: 400px;
   min-width: 120px;
   z-index: 5;
-  line-height: 40px;
-  padding: 4px 16px !important;
+  padding: 1em !important;
   animation: plop 0.2s 0s ease-in-out;
 }
 
-.soft-notif.info {
-  border-color: darken($blue-color, 12%);
-  background-color: lighten($blue-color, 12%);
-  box-shadow: 1px 1px 2px 0 darken($blue-color, 12%);
+.notification.info {
+  border-color: transparentize($info-color, 0.7);
+  border-right: 8px solid $info-color;
 }
 
-.soft-notif.success {
-  border-color: darken($green-color, 12%);
-  background-color: lighten($green-color, 12%);
-  box-shadow: 1px 1px 2px 0 darken($green-color, 12%);
+.notification.success {
+  border-color: transparentize($success-color, 0.7);
+  border-right: 8px solid $success-color;
 }
 
-.soft-notif.warning {
-  border-color: darken($orange-color, 12%);
-  background-color: lighten($orange-color, 12%);
-  box-shadow: 1px 1px 2px 0 darken($orange-color, 12%);
+.notification.warning {
+  border-color: transparentize($warning-color, 0.7);
+  border-right: 8px solid $warning-color;
 }
 
-.soft-notif.danger {
-  border-color: darken($red-color, 12%);
-  background-color: lighten($red-color, 12%);
-  box-shadow: 1px 1px 2px 0 darken($red-color, 12%);
+.notification.danger {
+  border-color: transparentize($danger-color, 0.7);
+  border-right: 8px solid $danger-color;
 }
 
 /***************** BANNER **********************/

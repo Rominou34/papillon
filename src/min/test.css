@@ -22,10 +22,13 @@
 *   COLOR PALETTE   *
 ********************/
 /* THEME */
+/* Put true here if your theme is a night one ( dark bakcground and white font ) */
 /*** COMPLEMENTARY COLORS ***/
 /* GREY */
 /* Almost white */
-/* Darky dark, almost light black */
+/* Very light grey */
+/* Darky dark */
+/* Almost black */
 /*** USED FOR THE ELEMENTS ***/
 /* HEADER */
 /*#ecf0f1;*/
@@ -438,13 +441,13 @@ aside {
 ****/
 /***** BLOCKQUOTE *****/
 blockquote {
-  background: rgba(69, 134, 232, 0.15);
+  background: rgba(69, 134, 232, 0.1);
   padding: 1em;
   line-height: 1.5;
   width: auto;
   display: inline-block;
   margin: 0.8em;
-  border: 1px solid rgba(69, 134, 232, 0.15); }
+  border: 1px solid rgba(69, 134, 232, 0.1); }
 
 blockquote:not(.reverse) {
   border-left: 4px solid #1c69de;
@@ -483,7 +486,7 @@ caption {
 
 /***** CODE *****/
 code {
-  background-color: rgba(69, 134, 232, 0.15);
+  background-color: rgba(69, 134, 232, 0.1);
   font-family: "Source Code Pro", "monospace";
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -496,7 +499,7 @@ pre > code {
   margin: 0.4em 1em;
   padding: 0.5em;
   text-align: left;
-  border: 1px solid #44494f;
+  border: 1px solid #3e4349;
   border-width: 1px 1px 1px 5px;
   word-wrap: break-word;
   max-width: 100%;
@@ -508,7 +511,7 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: #44494f;
+  background-color: #3e4349;
   color: #fff;
   position: relative;
   top: calc(-1.33em - 1px);
@@ -680,7 +683,7 @@ img:after {
   left: 0;
   max-width: 100%;
   height: auto;
-  background-color: rgba(69, 134, 232, 0.15);
+  background-color: rgba(69, 134, 232, 0.1);
   box-sizing: border-box; }
 
 /****
@@ -688,7 +691,7 @@ img:after {
 ****/
 /***** KEYBOARD *****/
 kbd {
-  background-color: rgba(69, 134, 232, 0.15);
+  background-color: rgba(69, 134, 232, 0.1);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -762,11 +765,11 @@ main {
 /********** ELEMENTS ASPECT **********/
 /* Change the aspect of a container to showcase something inside */
 .showcase {
-  background-color: rgba(69, 134, 232, 0.15);
+  background-color: rgba(69, 134, 232, 0.1);
   border: #1c69de;
   margin: 2em 1em;
   padding: 1em;
-  box-shadow: 0 0 2px 1px #1c69de inset;
+  box-shadow: 0 0 3px 1px #1c69de inset;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px; }
@@ -809,7 +812,7 @@ thead, tfoot {
   line-height: 2; }
 
 thead {
-  background-color: #ced7e2; }
+  background-color: #ced3db; }
 
 table {
   border: 1px solid #646a72; }
@@ -849,17 +852,17 @@ table.flat * {
 
 /******** ALTERNATING ROWS ********/
 table.alt tbody > tr:nth-child(even) {
-  background: rgba(69, 134, 232, 0.15); }
+  background: rgba(69, 134, 232, 0.1); }
 
 /*table.alt tbody > tr:nth-child(odd) {background: #fff}*/
 /******** REACTIVE DESIGN ********/
 table.reactive :not(thead):not(tfoot) tr:hover {
   background-color: #fbfcfe;
-  background-color: rgba(69, 134, 232, 0.15); }
+  background-color: rgba(69, 134, 232, 0.1); }
 
 table.reactive :not(thead):not(tfoot) tr td:hover {
   background-color: #b6d0f6;
-  background-color: rgba(69, 134, 232, 0.15); }
+  background-color: rgba(69, 134, 232, 0.1); }
 
 /* We import the classes for the forms */
 /*
@@ -1021,6 +1024,43 @@ input[type="submit"] {
   width: calc(1100% / 12 - 20px); }
 
 .col-12 {
+  width: calc(100% - 20px); }
+
+/* DIVs that are containers of a grid don't need margin */
+.col-1.soft-col, .col-1.soft-row {
+  width: calc(100% / 12); }
+
+.col-2.soft-col, .col-2.soft-row {
+  width: calc(100% / 6); }
+
+.col-3.soft-col, .col-3.soft-row {
+  width: calc(100% / 4); }
+
+.col-4.soft-col, .col-4.soft-row {
+  width: calc(100% / 3); }
+
+.col-5.soft-col, .col-5.soft-row {
+  width: calc(500% / 12); }
+
+.col-6.soft-col, .col-6.soft-row {
+  width: calc(100% / 2); }
+
+.col-7.soft-col, .col-7.soft-row {
+  width: calc(700% / 12); }
+
+.col-8.soft-col, .col-8.soft-row {
+  width: calc(800% / 12); }
+
+.col-9.soft-col, .col-9.soft-row {
+  width: calc(900% / 12); }
+
+.col-10.soft-col, .col-10.soft-row {
+  width: calc(1000% / 12); }
+
+.col-11.soft-col, .col-11.soft-row {
+  width: calc(1100% / 12); }
+
+.col-12.soft-col, .col-12.soft-row {
   width: 100%; }
 
 /* PUSH */
@@ -1166,7 +1206,7 @@ button,
   margin: 0.5em;
   font-family: Arial, "sans-serif";
   box-sizing: border-box;
-  background-color: #ced7e2;
+  background-color: #ced3db;
   color: #101010;
   display: inline-block;
   vertical-align: middle;
@@ -1183,10 +1223,9 @@ button:hover,
 button:focus,
 .button:focus {
   cursor: pointer;
-  background-color: #efefef;
+  background-color: #edf1f7;
   color: #101010;
-  outline: 0;
-  top: -1px; }
+  outline: 0; }
 
 button:not(.outline):hover,
 .button:not(.outline):hover,
@@ -1278,9 +1317,9 @@ button.large.loading::after,
 
 button.btn-round,
 .button.btn-round {
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  border-radius: 1em; }
+  -webkit-border-radius: 2em !important;
+  -moz-border-radius: 2em !important;
+  border-radius: 2em !important; }
 
 button.outline,
 .button.outline {
@@ -2288,47 +2327,49 @@ nav.aside .category {
   top: calc(50% - 12px);
   right: -24px; }
 
-/************** SOFT NOTIFICATIONS ****************/
-.soft-notif {
+/*************** NOTIFICATIONS *****************/
+.notif-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: fixed;
+  right: 0;
+  bottom: 0; }
+
+.notification {
   display: block;
-  border: 1px solid #1a65d5;
-  background-color: #7ba9ef;
-  box-shadow: 1px 1px 2px 0 #13499a;
-  color: #1d1d1d;
+  margin: 0.5em;
+  display: block;
+  border: 1px solid #848b96;
+  background-color: #edf1f7;
+  box-shadow: 3px 6px 18px 0 #a2a2a2;
   font-size: 18px;
   text-align: center;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
   max-width: 400px;
   min-width: 120px;
   z-index: 5;
-  line-height: 40px;
-  padding: 4px 16px !important;
+  padding: 1em !important;
   animation: plop 0.2s 0s ease-in-out; }
 
-.soft-notif.info {
-  border-color: #1f529e;
-  background-color: #598fde;
-  box-shadow: 1px 1px 2px 0 #1f529e; }
+.notification.info {
+  border-color: rgba(41, 109, 209, 0.3);
+  border-right: 8px solid #296dd1; }
 
-.soft-notif.success {
-  border-color: #288234;
-  background-color: #58cc68;
-  box-shadow: 1px 1px 2px 0 #288234; }
+.notification.success {
+  border-color: rgba(54, 177, 71, 0.3);
+  border-right: 8px solid #36b147; }
 
-.soft-notif.warning {
-  border-color: #c07216;
-  background-color: #edae63;
-  box-shadow: 1px 1px 2px 0 #c07216; }
+.notification.warning {
+  border-color: rgba(231, 145, 44, 0.3);
+  border-right: 8px solid #e7912c; }
 
-.soft-notif.danger {
-  border-color: #9a2320;
-  background-color: #dc5c59;
-  box-shadow: 1px 1px 2px 0 #9a2320; }
+.notification.danger {
+  border-color: rgba(205, 47, 43, 0.3);
+  border-right: 8px solid #cd2f2b; }
 
 /***************** BANNER **********************/
 .banner-top,
@@ -2469,17 +2510,17 @@ nav.aside .category {
 /********** ELEMENTS ASPECT **********/
 /* Sets a subtle background color */
 .bg-subtle {
-  background-color: rgba(69, 134, 232, 0.15) !important; }
+  background-color: rgba(69, 134, 232, 0.1) !important; }
 
 .bg-subtle.secondary {
   background-color: rgba(157, 67, 232, 0.15) !important; }
 
 /* Sets a border */
 .border {
-  border: 1px solid #1c69de; }
+  border: 1px solid #1c69de !important; }
 
 .border.secondary {
-  border: 1px solid #851bdd; }
+  border: 1px solid #851bdd !important; }
 
 /********** SMALL CORRECTIONS ********/
 /* Set no padding */

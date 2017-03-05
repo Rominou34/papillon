@@ -116,11 +116,11 @@
 
 /* Sets a border */
 .border {
-  border: 1px solid $border-color-primary;
+  border: 1px solid $border-color-primary !important;
 }
 
 .border.secondary {
-  border: 1px solid $border-color-secondary;
+  border: 1px solid $border-color-secondary !important;
 }
 
 /********** SMALL CORRECTIONS ********/

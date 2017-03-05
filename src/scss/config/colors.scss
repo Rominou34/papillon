@@ -29,6 +29,9 @@
   $primary-color: #4586e8;
   $secondary-color: #9d43e8;
 
+  /* Put true here if your theme is a night one ( dark bakcground and white font ) */
+  $night-theme: false;
+
   $success-color: #36b147;
   $info-color: #296dd1;
   $danger-color: #cd2f2b;
@@ -43,11 +46,13 @@
   $orange-color: #e7912c;
 
   /* GREY */
-  $grey-lighter: #ced7e2; /* Almost white */
+  $grey-lightest: #edf1f7; /* Almost white */
+  $grey-lighter: #ced3db; /* Very light grey */
   $grey-light: #acb4bf;
   $grey-medium: #848b96;
   $grey-dark: #646a72;
-  $grey-darker: #44494f; /* Darky dark, almost light black */
+  $grey-darker: #3e4349; /* Darky dark */
+  $grey-darkest: #26292d; /* Almost black */
 
   /*** USED FOR THE ELEMENTS ***/
   $shadow-color: #a2a2a2;
@@ -57,7 +62,7 @@
   $bg-color-header: $primary-color;
 
   $bg-color-base: #fff; /*#ecf0f1;*/
-  $bg-color-primary: transparentize($primary-color, 0.85);
+  $bg-color-primary: transparentize($primary-color, 0.9);
   $border-color-primary: darken($primary-color, 10%);
   $bg-color-secondary: transparentize($secondary-color, 0.85);
   $border-color-secondary: darken($secondary-color, 10%);

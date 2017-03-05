@@ -9,13 +9,13 @@
 * are here.
 * You call the functions like that: p.notification(), p.animate(), etc.
 */
-var p = {
+function Papillon() {
 
   /*
   * An array containing the notifications ( used so they can pile up without
   * covering each other )
   */
-  notifs: [],
+  var notifs = [];
 
   /*
   * Displays a big popup with a mask being it, covering all the screen
@@ -25,7 +25,7 @@ var p = {
   * header: Message to display in the header
   * msg: Message
   */
-  popup: function(type, header, msg) {
+  this.popup = function(type, header, msg) {
     // Creating the element and the mask
     var softpopupmask = document.createElement("div");
     softpopupmask.className = "soft-popupmask";
@@ -51,7 +51,7 @@ var p = {
     });
     document.body.appendChild(softpopupmask);
     softpopupmask.appendChild(softpopup);
-  },
+  };
 
   /*
   * Function used to create progress bars
@@ -62,7 +62,7 @@ var p = {
   * type = boolean ( if 0, we display "currentValue/maxValue", if 1, we display
   * "x %" )
   */
-  progressBar: function(minV, maxV, elem, height) {
+  this.progressBar = function(minV, maxV, elem, height) {
     this.minV = minV;
     this.maxV = maxV;
     var softprogress = document.createElement("div");
@@ -75,7 +75,7 @@ var p = {
     softprogress.querySelector("div").style.width = 0 + "%";
     this.element = softprogress;
     elem.appendChild(softprogress);
-  },
+  };
 
   /*this.progressBar.prototype.setProgress = function(prog) {
     var percent = Math.round(((prog-this.minV) / (this.maxV-this.minV))*100);
@@ -84,26 +84,20 @@ var p = {
   },*/
 
   /*
-  * Function used to display a small notification in the bottom right corner,
-  * fading out after some time. Multiple notifications called at the same time
-  * pile up instead of covering each other
-  * -- PARAMS --
-  * type: The type of notification ( info / success / warning / danger )
-  * msg: The message to display
-  * t: The time ( in ms ) before the notification fades out
+  * DEPRECATED, TO BE DELETED SOON
   */
-  notification: function(type, msg, t) {
+  this.old_notif = function(type, msg, t) {
     var not = document.createElement("div");
     var id = randomId(8);
     not.className = "soft-notif " + type;
     not.innerHTML = msg;
     var pos = 0;
-    for(var k in this.notifs) {
-      if (this.notifs.hasOwnProperty(k)) {
-        for(var i=0; i<this.notifs.length+1; i++) {
+    for(var k in notifs) {
+      if (notifs.hasOwnProperty(k)) {
+        for(var i=0; i<notifs.length+1; i++) {
           var b = false;
-          for(var j in this.notifs) {
-            if(this.notifs[j][1]===i) {
+          for(var j in notifs) {
+            if(notifs[j][1]===i) {
               b=true;
             }
           }
@@ -115,7 +109,7 @@ var p = {
       }
     }
     not.style.bottom = ((pos*56)+10) + "px";
-    this.notifs.push([id,pos]);
+    notifs.push([id,pos]);
     document.body.appendChild(not);
 
     // Makes the notif disappear after the given time
@@ -124,23 +118,40 @@ var p = {
       //not.remove();
       var rank;
       // We get the pos of the div in the notifs array
-      for(var j in this.notifs) {
-        if(this.notifs[j][0]===id) {
+      for(var j in notifs) {
+        if(notifs[j][0]===id) {
           rank=j;
           break;
         }
       }
       // We delete the div from the array
-      p.notifs.splice(j,1);
+      notifs.splice(j,1);
     }, t);
-  },
+  };
+
+  /*
+  * Function used to display a small notification in the bottom right corner,
+  * fading out after some time. Multiple notifications called at the same time
+  * pile up instead of covering each other
+  * -- PARAMS --
+  * type: The type of notification ( info / success / warning / danger )
+  * msg: The message to display
+  * t: The time ( in ms ) before the notification fades out
+  */
+  this.notification = function(type, msg) {
+    var notif_container = document.querySelector(".notif-container");
+    var not = document.createElement("div");
+    not.className = "notification " + type;
+    not.innerHTML = msg;
+    notif_container.appendChild(not);
+  };
 
   /*
   * Function called every frame by the custom animate function
   * It's using a polyfill of window.requestAnimationFrame to run 60 FPS
   * For params, see animate()
   */
-  animateStep: function(timestamp, start, el, prop, st, en, un, dur) {
+  this.animateStep = function(timestamp, start, el, prop, st, en, un, dur) {
     var startTime;
     if (!start) {
       startTime = timestamp;
@@ -153,9 +164,9 @@ var p = {
     }
     el.style.setProperty(prop, (st+((progress/dur)*(en-st))) + un);
     if (progress < dur) {
-      window.softRequestAnimationFrame(soft.animateStep, startTime, el, prop, st, en, un, dur);
+      window.softRequestAnimationFrame(Papillon.animateStep, startTime, el, prop, st, en, un, dur);
     }
-  },
+  };
 
   /*
   * Custom animate function, animating properties at 60 FPS
@@ -167,8 +178,8 @@ var p = {
   * un: The unity ( px, %, etc. )
   * dura: The duration of the animation ( in ms )
   */
-  animate: function(el, prop, st, en, un, dura) {
+  this.animate = function(el, prop, st, en, un, dura) {
     window.softRequestAnimationFrame(soft.animateStep, null, el, prop, st, en, un, dura);
-  }
+  };
 
 };
