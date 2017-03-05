@@ -35,8 +35,8 @@
   margin-bottom: 0;
 }*/
 
-.soft-col :not([class*="col"]):not(.soft-row),
-.soft-row :not([class*="col"]) {
+.soft-col > div:not([class*="col"]):not(.soft-row),
+.soft-row > div:not([class*="col"]) {
   -webkit-flex: 1 0;
   flex: 1 0;
 }

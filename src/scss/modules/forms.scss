@@ -1,15 +1,58 @@
 /*
+********** INPUT GROUPS **********
+*/
+
+/* INPUT-COL */
+.input-col {
+  margin: 1em auto;
+  width: auto;
+}
+
+.input-col label {
+  display: block;
+
+}
+.input-col input {
+  display: block;
+  width: 100%;
+}
+
+.input-col.center label,
+.input-col.center input {
+  text-align: center;
+}
+
+/* INPUT-ROW */
+.input-row {
+  width: 100%;
+  display: flex;
+}
+
+.input-row label {
+  flex-basis: 25%;
+  flex: 1 0;
+  text-align: right;
+}
+
+.input-row input {
+  flex-basis: 75%;
+  flex: 3 1;
+}
+
+/*
 ********** INPUT FIELDS **********
 */
 
-/*** TEXT ***/
-input {
+input, label {
   line-height: 1.5em;
+  padding: 0.25em 0.5em;
 }
 
 input:focus {
-  outline: 0;
+  border: 1px solid $primary-color;
 }
+
+/*** TEXT ***/
 
 input[type="text"],
 input[type="email"],
@@ -26,6 +69,7 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="url"]:focus {
+  outline: 0;
   border-color: $primary-color;
 }
 
@@ -43,4 +87,11 @@ input[type="password"].valid,
 input[type="search"].valid,
 input[type="url"].valid {
   border-color: $success-color !important;
+}
+
+/*** BUTTON ***/
+
+input[type="submit"] {
+  display: block;
+  margin: 1em auto;
 }
