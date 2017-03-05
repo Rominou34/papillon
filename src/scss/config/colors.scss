@@ -29,6 +29,14 @@
   $primary-color: #4586e8;
   $secondary-color: #9d43e8;
 
+  /* Put true here if your theme is a night one ( dark bakcground and white font ) */
+  $night-theme: false;
+
+  $success-color: #36b147;
+  $info-color: #296dd1;
+  $danger-color: #cd2f2b;
+  $warning-color: #e7912c;
+
   /*** COMPLEMENTARY COLORS ***/
   $grey-color: #9d9d9d;
   $black-color: #0e0e0e;
@@ -38,11 +46,13 @@
   $orange-color: #e7912c;
 
   /* GREY */
-  $lighter-grey: #ced7e2; /* Almost white */
-  $light-grey: #acb4bf;
+  $grey-lightest: #edf1f7; /* Almost white */
+  $grey-lighter: #ced3db; /* Very light grey */
+  $grey-light: #acb4bf;
   $grey-medium: #848b96;
-  $dark-grey: #646a72;
-  $darker-grey: #44494f; /* Darky dark, almost light black */
+  $grey-dark: #646a72;
+  $grey-darker: #3e4349; /* Darky dark */
+  $grey-darkest: #26292d; /* Almost black */
 
   /*** USED FOR THE ELEMENTS ***/
   $shadow-color: #a2a2a2;
@@ -52,7 +62,7 @@
   $bg-color-header: $primary-color;
 
   $bg-color-base: #fff; /*#ecf0f1;*/
-  $bg-color-primary: transparentize($primary-color, 0.85);
+  $bg-color-primary: transparentize($primary-color, 0.9);
   $border-color-primary: darken($primary-color, 10%);
   $bg-color-secondary: transparentize($secondary-color, 0.85);
   $border-color-secondary: darken($secondary-color, 10%);
@@ -74,7 +84,22 @@
   /*
   ***** NAVIGATION *****
   */
-  $bg-color-nav: $blue-color;
+  $navtop-font-color: #ecf0f1;
+  $navtop-bg-color: #13499a;
+  $navtop-links-bg-color: #0d346d;
+  $navtop-highlight-bg-color: #2569ce;
+  $navtop-dropdown-bg-color: #2569ce;
+  $navtop-dropdown-bg-color-hover: #13499a;
+  $navtop-toggle-bg-color: #1a65d5;
+  $navtop-toggle-font-color: #ecf0f1;
+
   $navside-bg-color: lighten($black-color, 6%);
-  $navside-header-color: darken($primary-color, 12%);
-  $navside-footer-color: $black-color;
+  $navside-font-color: #ecf0f1;
+  $navside-links-bg-color: lighten($black-color, 6%);
+  $navside-links-bg-color-hover: lighten($black-color, 10%);
+
+  $navside-header-bg-color: darken($primary-color, 12%);
+  $navside-header-font-color: #ecf0f1;
+
+  $navside-footer-bg-color: $black-color;
+  $navside-footer-font-color: #ecf0f1;

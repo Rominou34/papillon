@@ -144,9 +144,9 @@ caption {
 code {
   background-color: $bg-color-primary;
   font-family: $font-code;
-  -webkit-border-radius: 0.2em;
-  -moz-border-radius: 0.2em;
-  border-radius: 0.2em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   padding: 0 0.2em;
   color: $font-color-base;
 }
@@ -156,8 +156,8 @@ pre > code {
   margin: 0.4em 1em;
   padding: 0.5em;
   text-align: left;
-  border: 1px solid $darker-grey;
-  border-width: 1px 1px 1px 3px;
+  border: 1px solid $grey-darker;
+  border-width: 1px 1px 1px 5px;
   word-wrap: break-word;
   max-width: 100%;
   white-space: pre-wrap;
@@ -170,17 +170,17 @@ pre > code[data-lang] {
 pre > code[data-lang]::before {
   content: attr(data-lang);
   display: inline-block;
-  background-color: $darker-grey;
+  background-color: $grey-darker;
   color: #fff;
   position: relative;
-  top: -1.33em;
+  top: calc(-1.33em - 1px);
+  width: calc(100% + 1em - 2px);
   font-size: 150%;
   padding: 0 0.6em;
-  -webkit-border-radius: 0 0 0.5em 0;
-  -moz-border-radius: 0 0 0.5em 0;
-  border-radius: 0 0 0.5em 0;
-  left: calc(-0.5em + 3px);
-  width: auto;
+  left: calc(-0.5em - 1px);
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 /****
@@ -260,7 +260,7 @@ h5 small,
 h6 small {
   color: $grey-medium;
   padding-left: 0;
-  font-size: 60%;
+  font-size: 75%;
 }
 
 h1 a,
@@ -299,27 +299,27 @@ h6 a:hover::before {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: #{2.5 * $font-size-default};
 }
 
 h2 {
-  font-size: 36px;
+  font-size: #{2 * $font-size-default};
 }
 
 h3 {
-  font-size: 30px;
+  font-size: #{1.5 * $font-size-default};
 }
 
 h4 {
-  font-size: 24px;
+  font-size: #{$font-size-default + 4};
 }
 
 h5 {
-  font-size: 18px;
+  font-size: $font-size-default;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: #{$font-size-default - 4};
 }
 
 /***** HR *****/

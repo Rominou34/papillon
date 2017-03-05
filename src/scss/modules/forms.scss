@@ -1,4 +1,97 @@
 /*
-* Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
+********** INPUT GROUPS **********
 */
+
+/* INPUT-COL */
+.input-col {
+  margin: 1em auto;
+  width: auto;
+}
+
+.input-col label {
+  display: block;
+
+}
+.input-col input {
+  display: block;
+  width: 100%;
+}
+
+.input-col.center label,
+.input-col.center input {
+  text-align: center;
+}
+
+/* INPUT-ROW */
+.input-row {
+  width: 100%;
+  display: flex;
+}
+
+.input-row label {
+  flex-basis: 25%;
+  flex: 1 0;
+  text-align: right;
+}
+
+.input-row input {
+  flex-basis: 75%;
+  flex: 3 1;
+}
+
+/*
+********** INPUT FIELDS **********
+*/
+
+input, label {
+  line-height: 1.5em;
+  padding: 0.25em 0.5em;
+}
+
+input:focus {
+  border: 1px solid $primary-color;
+}
+
+/*** TEXT ***/
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"] {
+  border: 1px solid $grey-light;
+  border-radius: 2px;
+  padding: 0.25em 0.5em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus {
+  outline: 0;
+  border-color: $primary-color;
+}
+
+input[type="text"].invalid,
+input[type="email"].invalid,
+input[type="password"].invalid,
+input[type="search"].invalid,
+input[type="url"].invalid {
+  border-color: $danger-color !important;
+}
+
+input[type="text"].valid,
+input[type="email"].valid,
+input[type="password"].valid,
+input[type="search"].valid,
+input[type="url"].valid {
+  border-color: $success-color !important;
+}
+
+/*** BUTTON ***/
+
+input[type="submit"] {
+  display: block;
+  margin: 1em auto;
+}

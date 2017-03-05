@@ -32,6 +32,7 @@
 /* Titles of a section with special style added */
 .section-header {
   position: relative;
+  left: 0.5em;
 }
 
 .section-header::before {
@@ -53,7 +54,7 @@
   border: $border-color-primary;
   margin: 2em 1em;
   padding: 1em;
-  box-shadow: 0 0 2px 1px $border-color-primary inset;
+  box-shadow: 0 0 3px 1px $border-color-primary inset;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;

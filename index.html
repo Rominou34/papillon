@@ -13,7 +13,6 @@
         <meta name="Geography" content="Montpellier, France, 34000">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-        <link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="src/min/papillon.min.css">
         <script src="src/js/misc.js"></script>
         <script src="src/js/papillon.js"></script>
@@ -42,15 +41,14 @@
         <div class="links">
           <a href="./demo">Demo</a>
           <a href="./doc">Documentation</a>
+          <a href="getting-started.html">Getting started</a>
           <a href="https://github.com/Rominou34/papillon">GitHub</a>
-          <a href="http://rominou34.github.io/">About me</a>
         </div>
       </nav>
       <main>
         <div class="container">
           <h1 class="text-center">Beautiful CSS. Easily. Quickly.</h1>
         </div>
-        <hr/>
         <div class="container-lg stack-lg soft-col">
           <div class="container stack-sm soft-col col-6">
             <div class="col-6">
@@ -89,10 +87,98 @@
             </div>
           </div>
         </div>
+        <div class="container-lg">
+          <h1 class="text-center">Quick tour</h1>
+          <section>
+            <h2 class="section-header">Grid and containers</h2>
+            <p>Papillon relies on containers and two classes, <code>.soft-col</code>
+              and <code>.soft-row</code> in order to have a fully responsive column system<br/>
+              More classes can be used to control the behaviour of your columns, if you want them
+              to stack or not depending on the screen size.
+            </p>
+            <div class="showcase">
+              <div class="container soft-col stack-sm text-center">
+                <div class="soft-col stack-lg col-6">
+                  <div class="col-4 border bg-subtle">1.1</div>
+                  <div class="col-4 border bg-subtle">1.2</div>
+                  <div class="col-4 border bg-subtle">1.3</div>
+                </div>
+                <div class="soft-col stack-lg col-6">
+                  <div class="col-4 border bg-subtle secondary">2.1</div>
+                  <div class="col-4 border bg-subtle secondary">2.2</div>
+                  <div class="col-4 border bg-subtle secondary">2.3</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2 class="section-header">Buttons</h2>
+            <p>The main goal of Papillon is to change the ugly default aspect of pretty
+              much every HTML element, and buttons are part of the party.<br/>
+              This is the default look for the <code>&lt;button></code> element,
+              but you can also use the <code>.button</code> class to enable it on a link
+              or a submit input.
+            </p>
+            <div class="showcase">
+              <h3>Basic buttons</h3>
+              <button>Default</button>
+              <button class="primary">Primary</button>
+              <button class="secondary">Secondary</button>
+              <button class="info">Info</button>
+              <button class="success">Success</button>
+              <button class="warning">Warning</button>
+              <button class="danger">Danger</button>
+
+              <h3>Modifier classes</h3>
+              <button class="primary large">Large primary</button>
+              <button class="secondary outline">Outline secondary</button>
+              <button class="warning btn-round">Round warning</button>
+              <button class="large danger btn-round outline">Large round outline danger</button>
+
+              <h3>Loading and disabled states</h3>
+              <button class="loading primary"></button>
+              <button class="large loading secondary"></button>
+              <button class="success large" disabled>Disabled</button>
+              <button class="outline btn-round loading"></button>
+            </div>
+          </section>
+          <section>
+            <h2 class="section-header">Custom elements</h2>
+            <p>Papillon isn't only CSS, it also ships with some JS. By importing
+              <code>papillon.min.js</code> into your website, some of it will automatically
+              run at the start ( such as the function validating inputs on a form ), while
+              the rest are only function provided by the framework that you can use
+              in order to gain time
+            </p>
+
+            <h3>How do I use them ?</h3>
+            <p>Just create on instance of <code>Papillon()</code> that you will
+              use to run the functions:
+              <pre>
+                <code>var p = new Papillon();</code>
+              </pre>
+            </p>
+
+            <h3>Example</h3>
+            <p>Here is an example of a function shipped in <code>papillon.min.js</code>.<br/>
+              Called "notification", this function allows you to easily create a notification
+              of 4 differents types ( info, success, warnig, danger ), appearing on the bottom
+              right corner of the screen.<br/>
+              <strong>Example use:</strong>
+              <pre>
+                <code>p.notification("success","Congratulations on being awesome ;)");</code>
+              </pre>
+              <button class="large success" onclick="p.notification('success','Congratulations on being awesome ;)');">
+                Run
+              </button>
+              <i><strong>Note:</strong> For now, you can't close notifications and nothing happen
+                when you click on them but it will be added in the near future</i>
+            </p>
+        </div>
         <hr/>
         <div class="container stack-lg col-12 soft-col text-center">
           <div class="col-4">
-            <h4>Want to see it at work ?</h4>
+            <h4>Want to take a look ?</h4>
             <a href="./demo" class="button primary large">
               Look at the demo
             </a>
@@ -116,16 +202,16 @@
           <div class="col-4">
             <h4>Want to check out the doc ?</h4>
             <a href="./doc" class="button primary large">
-              Go to the documentation
+              Documentation
             </a>
             <p>
               <br/>
               The documentation isn't there yet, I will start working on it soon.
             </p>
           </div>
-          <div class="col-12">
+          <div class="col-12 margin-lg">
             <i><b>Note:</b> The framework is still in development so
-            star the repo if you want to be aware of the latest features</i>
+            watch the repo if you want to be aware of the latest features</i>
           </div>
         </div>
       </main>
@@ -133,5 +219,6 @@
         Papillon CSS 2016<br/>
         Romain Arnaud
       </footer>
+      <script>var p = new Papillon();</script>
     </body>
 </html>

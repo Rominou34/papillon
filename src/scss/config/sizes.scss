@@ -19,7 +19,12 @@ $navside-footer-height: 50px;
 $grid-margin: 20px;
 $grid-margin-sm: ($grid-margin / 2);
 
-/* Container threshold sizes */
+/*
+* -- Container threshold sizes --
+* The name is a bit misleading as it isn't only used for containers but
+* for the whole responsiveness of the website ( it's the value used in the
+* media queries )
+*/
 $container-sm: 750px;
 $container-md: 960px;
 $container-lg: 1200px;

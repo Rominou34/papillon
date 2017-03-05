@@ -8,7 +8,11 @@ button,
   margin: 0.5em;
   font-family: $font-default;
   box-sizing: border-box;
-  background-color: $lighter-grey;
+  @if $night-theme {
+    background-color: $grey-darker;
+  } @else {
+    background-color: $grey-lighter;
+  }
   color: $font-color-base;
   display: inline-block;
   vertical-align: middle;
@@ -26,10 +30,17 @@ button:hover,
 button:focus,
 .button:focus {
   cursor: pointer;
-  background-color: #efefef;
+  background-color: $grey-lightest;
   color: $font-color-base;
-  box-shadow: 1px 2px 6px 0 $shadow-color;
   outline: 0;
+}
+
+button:not(.outline):hover,
+.button:not(.outline):hover,
+.button:not(.outline):visited:hover,
+button:not(.outline):focus,
+.button:not(.outline):focus {
+  box-shadow: 1px 2px 6px 0 $shadow-color;
   top: -1px;
 }
 
@@ -62,10 +73,10 @@ button.large,
   font-size: 1.5em;
 }
 
-button.large:hover,
-.button.large:hover,
-button.large:focus,
-.button.large:focus {
+button.large:not(.outline):hover,
+.button.large:not(.outline):hover,
+button.large:not(.outline):focus,
+.button.large:not(.outline):focus {
   box-shadow: 2px 4px 12px 0 $shadow-color;
   top: -2px;
 }
@@ -129,9 +140,9 @@ button.large.loading::after,
 
 button.btn-round,
 .button.btn-round {
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  border-radius: 1em;
+  -webkit-border-radius: 2em !important;
+  -moz-border-radius: 2em !important;
+  border-radius: 2em !important;
 }
 
 button.outline,

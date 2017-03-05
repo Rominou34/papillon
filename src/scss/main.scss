@@ -1,6 +1,6 @@
 /*
 * Soft CSS - The tweakable CSS framework
-* Romain Arnaud - 2016
+* Romain Arnaud - 2016-2017
 */
 
 @charset "UTF-8";
@@ -9,7 +9,7 @@
 
 @import "config/sizes.scss";
 
-@import "config/misc.scss";
+@import "config/fonts.scss";
 
 /* We reset all the rules so it looks the same for all browsers */
 @import "vendor/sanitize.scss";

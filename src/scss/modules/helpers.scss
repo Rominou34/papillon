@@ -77,6 +77,13 @@
   margin-right: 0 !important;
 }
 
+/* Makes the element takes the full width of the screen */
+.fullScreenW {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 /* Makes the element takes the full height of its parent */
 .fullHeight {
   height: 100% !important;
@@ -109,11 +116,11 @@
 
 /* Sets a border */
 .border {
-  border: 1px solid $border-color-primary;
+  border: 1px solid $border-color-primary !important;
 }
 
 .border.secondary {
-  border: 1px solid $border-color-secondary;
+  border: 1px solid $border-color-secondary !important;
 }
 
 /********** SMALL CORRECTIONS ********/
@@ -135,11 +142,6 @@
 
 /* Set a big padding */
 .padding-lg {
-  padding: 2em !important;
-}
-
-/* The padding changes depending on the screen size */
-.padding-auto {
   padding: 2em !important;
 }
 
@@ -165,7 +167,7 @@
 
 /* The margin changes depending on the screen size */
 .margin-auto {
-  margin: 2em !important;
+  margin: auto !important;
 }
 
 /*******************************************************************************
