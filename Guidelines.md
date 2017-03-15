@@ -113,7 +113,7 @@ For further rules declarations, this setting will be called `z-height`, and corr
 
 #### 3.2.1 The light source
 
-To have consistent shadows, the light source must always be positionned at the same point. The light source for Papillon UI will come from the top top left, hence all shadows must have an `Y offset` equal to the `z-height` parameter, and a `x offset` equald to `2 * zèheight`
+To have consistent shadows, the light source must always be positionned at the same point. The light source for Papillon UI will come from the top top left, hence all shadows must have an `Y offset` equal to the `z-height` parameter, and a `x offset` equald to `2 * z-height`
 For example:
 * An element on the z-plan 1: `box-shadow: 1px 2px ...`
 * An element on the z-plan 3: `box-shadow: 3px 6px ...`
@@ -123,7 +123,7 @@ For example:
 
 Too much shadow is ugly and looks bad, that's why Papillon's shadows won't be totally black.
 
-The default color for all shadows will be `#a2a2a2`, but you can still change it to your need in `config/colors.scss`
+The default color for all shadows will be `rgba(0,0,0,0.35)` ( so black with an opacity of 35% ), but you can still change it to your need in `config/colors.scss`
 
 #### 3.2.3 The blur and spread
 
@@ -139,11 +139,26 @@ We must then ensure that the shadow just doesn't appear without any reason. That
 
 For example, when hovering a button, the button will move up for 1px and a shadow of 1 z-height will appear, creating an effect of 3d movement.
 
-#### 3.2.5 Examples
+#### 3.2.5 Tiny shadows
+
+Sometimes you only want to put a little bit of shadow to give some perspective to an element without giving too much: the class `.shadow-tiny` is there for this !!
+
+It declares a very small shadow like this: `box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.2)`, not giving the impression that the element if floating, but that it's just a thin piece of paper on top of another one, perfect for all your lists;
+
+#### 3.2.6 Examples
 
 Examples of real-life values:
-* A button, slightly floating on hover: `box-shadow: 1px 2px 6px 0 #a2a2a2`
-* A card, hovering at higher altitude, with a bigger and blurrier shadow: `box-shadow: 3px 6px 18px 0 #a2a2a2`
+* A button, slightly floating on hover: `box-shadow: 1px 2px 6px 0 rgba(0,0,0,0.35)`
+* A card, hovering at higher altitude, with a bigger and blurrier shadow: `box-shadow: 3px 6px 18px 0 rgba(0,0,0,0.35)`
+
+**Important:** You can use the given helper classes `.shadow-x` ( form 1 to 5 ) in order to add a shadow of the *x* z-height to a given element.
+
+Example:
+```css
+.shadow-2 {
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.35);
+}
+```
 
 ### 3.3 Colors
 

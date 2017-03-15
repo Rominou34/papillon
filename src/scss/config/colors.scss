@@ -55,7 +55,8 @@
   $grey-darkest: #26292d; /* Almost black */
 
   /*** USED FOR THE ELEMENTS ***/
-  $shadow-color: #a2a2a2;
+  $shadow-normal: rgba(0,0,0,0.35);
+  $shadow-light: rgba(0,0,0,0.2);
 
   /* HEADER */
   $color-header: #ecf0f1;
