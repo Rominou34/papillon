@@ -40,7 +40,7 @@ button:not(.outline):hover,
 .button:not(.outline):visited:hover,
 button:not(.outline):focus,
 .button:not(.outline):focus {
-  box-shadow: 1px 2px 6px 0 $shadow-color;
+  box-shadow: 1px 2px 6px 0 $shadow-normal;
   top: -1px;
 }
 
@@ -77,7 +77,7 @@ button.large:not(.outline):hover,
 .button.large:not(.outline):hover,
 button.large:not(.outline):focus,
 .button.large:not(.outline):focus {
-  box-shadow: 2px 4px 12px 0 $shadow-color;
+  box-shadow: 2px 4px 12px 0 $shadow-normal;
   top: -2px;
 }
 

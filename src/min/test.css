@@ -1232,7 +1232,7 @@ button:not(.outline):hover,
 .button:not(.outline):visited:hover,
 button:not(.outline):focus,
 .button:not(.outline):focus {
-  box-shadow: 1px 2px 6px 0 #a2a2a2;
+  box-shadow: 1px 2px 6px 0 rgba(0, 0, 0, 0.35);
   top: -1px; }
 
 .button:visited {
@@ -1262,7 +1262,7 @@ button.large:not(.outline):hover,
 .button.large:not(.outline):hover,
 button.large:not(.outline):focus,
 .button.large:not(.outline):focus {
-  box-shadow: 2px 4px 12px 0 #a2a2a2;
+  box-shadow: 2px 4px 12px 0 rgba(0, 0, 0, 0.35);
   top: -2px; }
 
 button.loading,
@@ -2343,7 +2343,7 @@ nav.aside .category {
   display: block;
   border: 1px solid #848b96;
   background-color: #edf1f7;
-  box-shadow: 3px 6px 18px 0 #a2a2a2;
+  box-shadow: 3px 6px 18px 0 rgba(0, 0, 0, 0.35);
   font-size: 18px;
   text-align: center;
   -webkit-border-radius: 2px;
@@ -2521,6 +2521,24 @@ nav.aside .category {
 
 .border.secondary {
   border: 1px solid #851bdd !important; }
+
+.shadow-tiny {
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2); }
+
+.shadow-1 {
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.35); }
+
+.shadow-2 {
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.35); }
+
+.shadow-3 {
+  box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.35); }
+
+.shadow-4 {
+  box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.35); }
+
+.shadow-5 {
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.35); }
 
 /********** SMALL CORRECTIONS ********/
 /* Set no padding */
